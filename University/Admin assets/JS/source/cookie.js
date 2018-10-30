@@ -1,5 +1,3 @@
-// can we cache the cookie value?
-
 function setCharAt(str,strIndex,chr) {
    var index = Number(strIndex);
     if(index > str.length-1) return str;
@@ -19,7 +17,6 @@ function getPrefsUrl(){
   }
   
 }
-
 
 function getNoMediaText() {
   return "<p style='background-color:#808080;color:#ffffff;height:100%;display:inline-block;'>" +
@@ -77,9 +74,6 @@ function getCookie(cname) {
     return "";
 }                               
 
-
-// What happens if the cookie page is the first page they visit?
-
 function warningCookieRead(){
     var cookie = getCookie("_uhic");
   
@@ -104,8 +98,7 @@ function warningCookieRead(){
         }  
   }  
 }
-
-    
+   
 function firstView()
 {  
   var fired = false;  // only let this fire once
@@ -116,10 +109,8 @@ function firstView()
      }
      fired = true;    
   }); 
-  
-  }
+}
     
-
 function runGA(){
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -145,7 +136,6 @@ function showCookieMessage() {
             cAlert +='You can <a href="' + getPrefsUrl() + '">change your cookie settings for our site</a>, or if you choose you can continue and  ';
             cAlert +='we will assume that you are happy to receive all cookies from our site.</p>';
   			cAlert +='<div id="cookies-continue" onclick="warningCookieContinue();">Continue</div>';
-  		//	cAlert +='<div><a href="http://dev-www.uhi.ac.uk/en/cookies/change-cookie-settings">Change my settings</a></div >';
 			cAlert +='</div>';
       		$(".message").css('display', 'none');
       		$("body").prepend(cAlert)
@@ -159,9 +149,6 @@ function removeSocialMedia() {
   removeBBox() ;
   removeEmbeddedFeeds();
 }
-
-
-
 
 function removeIframes()   // mostly Youtube
 {
@@ -223,7 +210,6 @@ function removeEmbeddedFeeds()
     }
 }
 
-
 function warningCookieContinue(){
     var cookie = getCookie("_uhic");
     if (cookie == "9111") {
@@ -268,13 +254,5 @@ function cookieConfigChange(cInput){
   {
     document.cookie = 'slider-bigBG' +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     document.cookie = 'slider-smallBG' +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-  }
-  
+  }  
 }
-
-
-
-
-
-
-
