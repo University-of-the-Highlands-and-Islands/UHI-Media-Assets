@@ -2450,7 +2450,7 @@
     })();
 });
 
-/*
+/*!
  * Funnelback auto-completion plugin
  * version 2.6
  *

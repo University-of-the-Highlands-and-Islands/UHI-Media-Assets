@@ -1,3 +1,9 @@
+/*
+ Background Image Carousel
+ Created: Jan 17th, 2012 by DynamicDrive.com. This notice must stay intact for usage 
+ Author: Dynamic Drive at http://www.dynamicdrive.com/
+ Visit http://www.dynamicdrive.com/ for full source code
+*/
 var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.findInternal=function(a,c,d){a instanceof String&&(a=String(a));for(var b=a.length,e=0;e<b;e++){var g=a[e];if(c.call(d,g,e,a))return{i:e,v:g}}return{i:-1,v:void 0}};$jscomp.ASSUME_ES5=!1;$jscomp.ASSUME_NO_NATIVE_MAP=!1;$jscomp.ASSUME_NO_NATIVE_SET=!1;$jscomp.defineProperty=$jscomp.ASSUME_ES5||"function"==typeof Object.defineProperties?Object.defineProperty:function(a,c,d){a!=Array.prototype&&a!=Object.prototype&&(a[c]=d.value)};
 $jscomp.getGlobal=function(a){return"undefined"!=typeof window&&window===a?a:"undefined"!=typeof global&&null!=global?global:a};$jscomp.global=$jscomp.getGlobal(this);$jscomp.polyfill=function(a,c,d,b){if(c){d=$jscomp.global;a=a.split(".");for(b=0;b<a.length-1;b++){var e=a[b];e in d||(d[e]={});d=d[e]}a=a[a.length-1];b=d[a];c=c(b);c!=b&&null!=c&&$jscomp.defineProperty(d,a,{configurable:!0,writable:!0,value:c})}};
 $jscomp.polyfill("Array.prototype.find",function(a){return a?a:function(a,d){return $jscomp.findInternal(this,a,d).v}},"es6","es3");jQuery.noConflict();
@@ -10,5 +16,4 @@ c.displaymode.pause),this.curstep++},init:function(a,c){var d=this,b=this.settin
 this.$imageslides.eq(this.curslide).show().css(bgCarousel.routines.createobj(["opacity",.5],[this.posprop,0])).addClass(b.activeslideclass).stop().animate({opacity:1}).find("div.desc").slideDown(),"h"==b.orientation?b.navbuttons.slice(0,2):b.navbuttons.slice(2),a("").click(function(){var a=this.getAttribute("data-dir");b.curslide="right"==a?b.curslide==b.content.length-1?0:b.curslide+1:0==b.curslide?b.content.length-1:b.curslide-1;d.navigate(a)}).appendTo(this.$wrapperdiv),"auto"==b.displaymode.type&&
 (b.displaymode.pause+=b.slideduration,this.maxsteps=b.displaymode.cycles*this.$imageslides.length,b.displaymode.pauseonmouseover&&(this.$wrapperdiv.mouseenter(function(){d.ismouseover=!0}),this.$wrapperdiv.mouseleave(function(){d.ismouseover=!1})),this.rotatetimer=setTimeout(function(){d.rotate()},b.displaymode.pause)))}};
 bgCarousel.routines={getSlideHTML:function(a,c,d,b,e){return'<div class="background" style="background-image:url('+c[0]+");"+(e+":"+("left"==e?d:b))+'">'+(c[1]?'<div class="desc" style="display:none">'+c[1]+"</div>\n":"")+"</div>"},getCookie:function(a){a=new RegExp(a+"=[^;]+","i");return document.cookie.match(a)?document.cookie.match(a)[0].split("=")[1]:null},setCookie:function(a,c){document.cookie=a+"="+c+";path=/"},createobj:function(){for(var a={},c=0;c<arguments.length;c++)a[arguments[c][0]]=
-arguments[c][1];return a}};
-//# sourceMappingURL=/en/t4-media/one-web/university/admin-assets/js/map/bgcarousel-min.js.map
+arguments[c][1];return a}}; //# sourceMappingURL=/en/t4-media/one-web/university/admin-assets/js/map/bgcarousel-min.js.map

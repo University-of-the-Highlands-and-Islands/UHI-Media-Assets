@@ -12,6 +12,35 @@
  You may use hoverIntent under the terms of the MIT license. Basically that
  means you are free to use hoverIntent as long as this header is left intact.
  Copyright 2007, 2013 Brian Cherne
+ Copyright (c) 2007-2015 Ariel Flesler - aflesler<a>gmail<d>com | http://flesler.blogspot.com
+ Licensed under MIT
+ @author Ariel Flesler
+ @version 2.1.2
+ Plugin: jQuery Parallax
+Version 1.1
+Author: Ian Lunn
+Author URL: http://www.ianlunn.co.uk/
+Plugin URL: http://www.ianlunn.co.uk/plugins/jquery-parallax/
+
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+ scrollorama - The jQuery plugin for doing cool scrolly stuff
+ by John Polacek (@johnpolacek)
+
+ Dual licensed under MIT and GPL.
+ jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+
+ Uses the built in easing capabilities added In jQuery 1.1
+ to offer multiple easing options
+
+ TERMS OF USE - jQuery Easing
+
+ Open source under the BSD License. 
+
+ Copyright ? 2008 George McGinley Smith
+ All rights reserved.
+
  Background Image Carousel
  Created: Jan 17th, 2012 by DynamicDrive.com. This notice must stay intact for usage 
  Author: Dynamic Drive at http://www.dynamicdrive.com/
@@ -68,5 +97,4 @@ b.displaymode.pause),this.curstep++},init:function(d,b){var a=this,c=this.settin
 this.$imageslides.eq(this.curslide).show().css(bgCarousel.routines.createobj(["opacity",.5],[this.posprop,0])).addClass(c.activeslideclass).stop().animate({opacity:1}).find("div.desc").slideDown(),"h"==c.orientation?c.navbuttons.slice(0,2):c.navbuttons.slice(2),d("").click(function(){var b=this.getAttribute("data-dir");c.curslide="right"==b?c.curslide==c.content.length-1?0:c.curslide+1:0==c.curslide?c.content.length-1:c.curslide-1;a.navigate(b)}).appendTo(this.$wrapperdiv),"auto"==c.displaymode.type&&
 (c.displaymode.pause+=c.slideduration,this.maxsteps=c.displaymode.cycles*this.$imageslides.length,c.displaymode.pauseonmouseover&&(this.$wrapperdiv.mouseenter(function(){a.ismouseover=!0}),this.$wrapperdiv.mouseleave(function(){a.ismouseover=!1})),this.rotatetimer=setTimeout(function(){a.rotate()},c.displaymode.pause)))}};
 bgCarousel.routines={getSlideHTML:function(d,b,a,c,e){return'<div class="background" style="background-image:url('+b[0]+");"+(e+":"+("left"==e?a:c))+'">'+(b[1]?'<div class="desc" style="display:none">'+b[1]+"</div>\n":"")+"</div>"},getCookie:function(d){d=new RegExp(d+"=[^;]+","i");return document.cookie.match(d)?document.cookie.match(d)[0].split("=")[1]:null},setCookie:function(d,b){document.cookie=d+"="+b+";path=/"},createobj:function(){for(var d={},b=0;b<arguments.length;b++)d[arguments[b][0]]=
-arguments[b][1];return d}};
-//# sourceMappingURL=/en/t4-media/one-web/university/admin-assets/js/map/plugins-min.js.map
+arguments[b][1];return d}}; //# sourceMappingURL=/en/t4-media/one-web/university/admin-assets/js/map/plugins-min.js.map

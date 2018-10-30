@@ -1,4 +1,4 @@
-/* Background Image Carousel
+/*! Background Image Carousel
 * Created: Jan 17th, 2012 by DynamicDrive.com. This notice must stay intact for usage 
 * Author: Dynamic Drive at http://www.dynamicdrive.com/
 * Visit http://www.dynamicdrive.com/ for full source code

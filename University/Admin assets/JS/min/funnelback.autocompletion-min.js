@@ -2,6 +2,14 @@
  typeahead.js 0.11.1
  https://github.com/twitter/typeahead.js
  Copyright 2013-2015 Twitter, Inc. and other contributors; Licensed MIT
+ Funnelback auto-completion plugin
+ version 2.6
+
+ author: Liliana Nowak
+ Copyright Funnelback, 2015-2017
+
+ @requires jQuery https://jquery.com/
+ @requires typeahead.js https://twitter.github.io/typeahead.js/
 */
 var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.findInternal=function(a,e,l){a instanceof String&&(a=String(a));for(var r=a.length,n=0;n<r;n++){var v=a[n];if(e.call(l,v,n,a))return{i:n,v:v}}return{i:-1,v:void 0}};$jscomp.ASSUME_ES5=!1;$jscomp.ASSUME_NO_NATIVE_MAP=!1;$jscomp.ASSUME_NO_NATIVE_SET=!1;$jscomp.defineProperty=$jscomp.ASSUME_ES5||"function"==typeof Object.defineProperties?Object.defineProperty:function(a,e,l){a!=Array.prototype&&a!=Object.prototype&&(a[e]=l.value)};
 $jscomp.getGlobal=function(a){return"undefined"!=typeof window&&window===a?a:"undefined"!=typeof global&&null!=global?global:a};$jscomp.global=$jscomp.getGlobal(this);$jscomp.polyfill=function(a,e,l,r){if(e){l=$jscomp.global;a=a.split(".");for(r=0;r<a.length-1;r++){var n=a[r];n in l||(l[n]={});l=l[n]}a=a[a.length-1];r=l[a];e=e(r);e!=r&&null!=e&&$jscomp.defineProperty(l,a,{configurable:!0,writable:!0,value:e})}};
@@ -109,5 +117,4 @@ m={cursor:null,query:""};a.fn.autocompletion=function(){var b=[].slice.call(argu
 a.exist(b.facets.whitelist)&&0>b.facets.whitelist.indexOf(p.name)))for(var m=0,n=p.allValues.length;m<n&&!(a.exist(b.facets.show)&&m>parseInt(b.facets.show)-1);m++)p.allValues[m].count&&h.push({label:p.allValues[m].label,value:p.allValues[m].data,extra:{action:f(p.allValues[m]),action_t:"U"},category:p.name,rank:k++,dataset:e,query:g})}return h}}};a.exist=function(b,c){a.isDefinied(c)||(c=!1);b=c?b:a(b);return a.isDefinied(b)&&null!=b&&0<(a.isString(b)?b+"":b).length};a.hasContent=function(a){return a.html().trim().length?
 !0:!1};a.isDefinied=function(a){return"undefined"!==typeof a};a.isFunction=function(a){return"function"===typeof a};a.isString=function(a){return"string"===typeof a};a.isObject=function(a){return"object"===typeof a};a.dataKeys=function(b){function c(b,d){return a.map(Object.keys(b),function(e){return b[e]&&a.isObject(b[e])?c(b[e],e):d?d+"-"+e:e})}return c(b,"")};a.dataVals=function(a,b){var c=b.split(".");b=c.shift();if(c.length)for(var d=0,e=c.length;d<e;d++)a=a[b]||{},b=c[d];return a[b]};a.cssStyle=
 function(a){for(var b=window.document.styleSheets,c={},d=0,e=b.length;d<e;d++)if(!(b[d].href&&0>b[d].href.indexOf(window.location.host))){var f=b[d].rules||b[d].cssRules;if(f)for(var g=0,h=f.length;g<h;g++)if(f[g].selectorText==a)for(var m=f[g].style.cssText.split(";"),l=0,n=m.length;l<n;l++){var q=m[l].split(":");2==q.length&&(c[q[0].trim()]=q[1].trim())}}return c}})(jQuery);String.prototype.capitalize=function(){return this.charAt(0).toUpperCase()+this.slice(1)};
-jQuery(document).ready(function(){jQuery('input[name="query"]').closest("form").find('input[type="submit"][id="submit"]').removeAttr("id");jQuery('input[name="query"]').closest("form").find('input[type="submit"][name="submit"]').removeAttr("name");jQuery('input[name="query"]').autocompletion({datasets:{organic:{collection:"uhi-meta",profile:"_default",program:"https://search.uhi.ac.uk/s/suggest.json",format:"extended",alpha:"0.5",show:"10",sort:"0",group:!0}},typeahead:{hint:!0},length:3,logging:!1})});
-//# sourceMappingURL=/en/t4-media/one-web/university/admin-assets/js/map/funnelback.autocompletion-min.js.map
+jQuery(document).ready(function(){jQuery('input[name="query"]').closest("form").find('input[type="submit"][id="submit"]').removeAttr("id");jQuery('input[name="query"]').closest("form").find('input[type="submit"][name="submit"]').removeAttr("name");jQuery('input[name="query"]').autocompletion({datasets:{organic:{collection:"uhi-meta",profile:"_default",program:"https://search.uhi.ac.uk/s/suggest.json",format:"extended",alpha:"0.5",show:"10",sort:"0",group:!0}},typeahead:{hint:!0},length:3,logging:!1})}); //# sourceMappingURL=/en/t4-media/one-web/university/admin-assets/js/map/funnelback.autocompletion-min.js.map

@@ -1,4 +1,4 @@
-/**
+/*!
  * User editable tabs for WYSIWYG HTML editors using jQueryuery Tools.
  * 
  * Idea and code taken from Mikko Ohtamaa's wysiwygTabs with permission.
