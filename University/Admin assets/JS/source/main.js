@@ -77,7 +77,7 @@ function handheldNav() {
 
 function waypointsInit(){
 	$('.map .pin').waypoint(function(direction){
-		var that = $(this);
+		var that = $(this.element);
 	
 		if (direction === 'down') {
 			that.addClass('animated bounceInDown');
@@ -88,6 +88,9 @@ function waypointsInit(){
 		}
 	}, {offset: '90%'});
 }
+
+
+
 
 function hashlinks(){
 	$('a[href^="#"]').on('click',function(event){
