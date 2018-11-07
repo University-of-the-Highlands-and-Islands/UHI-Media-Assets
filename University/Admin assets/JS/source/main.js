@@ -116,8 +116,7 @@ function hashlinks(){
 
 
 function hashinurl(){
-
-	$(window).load(function(event){
+    $(window).on('load', function(event){
 		//get the full URL
 		//		var martinsurl = window.location.pathname;
 		
