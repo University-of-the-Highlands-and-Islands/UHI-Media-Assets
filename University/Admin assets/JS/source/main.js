@@ -47,11 +47,11 @@ function scrollingParallax() {
 	//adjuster - y position to start from
 	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	$('.no-touch .home .mountains3').parallax("50%", 455, -.35, true);
-	$('.no-touch .home .mountains2').parallax("50%", 455, -.2, true);
-	$('.no-touch .home .section.intro').parallax("50%", -780, -.05, true);
-	$('.no-touch .home .section.coursefinder').parallax("50%", 1600, .5, true);
-	$('.no-touch .home .section.connections').parallax("50%", 3040, .5, true);
+	$('.home .mountains3').parallax("50%", 455, -.35, true);
+	$('.home .mountains2').parallax("50%", 455, -.2, true);
+	$('.home .section.intro').parallax("50%", -780, -.05, true);
+	$('.home .section.coursefinder').parallax("50%", 1600, .5, true);
+	$('.home .section.connections').parallax("50%", 3040, .5, true);
 
 	$('.section.intro .background').parallax("50%", 230, .1, true);			// course pages
 	$('.campus .section.coursefinder').parallax("50%", 1000, .5, true);		// campus pages
