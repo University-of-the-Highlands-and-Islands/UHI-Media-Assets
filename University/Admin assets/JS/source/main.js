@@ -1,5 +1,5 @@
 $(function() {
-	$(".section.intro .video, .section.tour .video").fitVids();
+	$(".section.intro .video, .section.tour .video, .content-type--one-web-video-embed").fitVids( {customSelector: "iframe[src^='https://stream.uhi.ac.uk']"});
 	$(".lt-ie9 .header.banner .logo a").html('<img src="/img/logo.gif" alt="University of the Highlands and Islands"/>');
 	handheldNav();
 	siteMessage();
