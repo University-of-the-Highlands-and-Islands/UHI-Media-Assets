@@ -3147,4 +3147,5 @@ jQuery(document).ready(function() {
  //   interactionLog: 'https://search.uhi.ac.uk/s/log'
     logging: false
   });
+    jQuery('input[name="query"]').closest('form').find('input[type="text"]').first().attr('id', "funnelbackInjected");
 });
