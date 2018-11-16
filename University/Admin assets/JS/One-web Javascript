@@ -1,0 +1,84 @@
+One-web Javascript
+
+Last modified:  2018-11-16
+
+1. Overview
+
+All current source-controlled Javascript (and PHP) is stored in the Webteam GIT account: 
+
+https://github.com/UHIWebteam
+
+The "master" branch contains all files currently live on the "live" (production) website.
+The "dev" branch is work in progress most likely containing files live on "dev".  Once a file or files is removed to live, they should be merged back to "master".  "master" and live should always be in sync.
+
+The Javascript files can be found in the UHI-Media-Assets repository:
+
+https://github.com/University-of-the-Highlands-and-Islands/UHI-Media-Assets
+
+The repository is structured to mimic the T4 Media Library, so the Javascript section is here:
+
+https://github.com/University-of-the-Highlands-and-Islands/UHI-Media-Assets/tree/master/University/Admin%20assets/JS
+
+Note that Git only contains files that are compiled (minified) for the site.  There may be some live files in T4 that are not yet in the repository.  At the the time of writing these are the files related to maps/mapping and directions, although these will be added at some point.
+
+2. Structure
+
+There are currently four directories, matching the T4 Media Library:
+
+2.1  jquery
+
+Contains the standard jquery-3.3.1.min.js and jquery-ui.1.12.1.min.js files.
+
+2.2  map
+
+Contains map files for all Javascript files, see section xx
+
+2.3  min
+
+Contains minified versions of all UHI Javascipt files.  These are files used by the live website.
+
+2.4 plugins
+
+plugins-min.js is made up of a number of third party javascript files used across the sites.  The plugins dir contains all these source files which are then compiled into the single plugins-min.js and corresponding map file.  At the time of writing, these comprise:
+
+bgCarousel
+jquery.easing.1.3
+jquery.fitvids
+jquery.hoverIntent
+jquery.parallax-1.1
+jquery.scrollorama
+jquery.scrollTo
+jquery.waypoints
+
+In theory these should be the latest releases.  In practice the latest verion of parallax isn't working for us and bgCarousel possibly isn't OOB.
+
+2.5  snippets
+
+Files containing html markup.
+
+2.5.1 google-analytics.html 
+
+Embedded on all pages (within javascript-declarations) to allow GA tracking
+
+2.5.2 javascript-declarations-[dev/live].htm
+
+Contains T4 tags containing all standard Javascript files.  This single file is embedded on all Page Layouts so that we can quickly change Javascript files accross the site, without having to individually change each Page Layout.  There are currently two version of the file due to differing ids, the dev version will be obsolete after the next cut back.
+
+2.6  source
+
+Contains the Javascript source files.
+
+3.  Editing
+
+When changes need making to the files, only the files in the source folder should be edited.  Once changes are made, update-min-and-map-files.bat should be run (see Compiler section) which will automatically populate the map and min sections.  The new versions of any edited files (from source, map and min) should then be used to overwrite the corresponding files in T4.  Eg. if main.js is edited, then main.js,  main-min.js and main-min.js.map need moving to live.
+
+
+4 Compiler
+
+To compile the minified (and map) versions
+
+
+4 Using map files
+
+
+GIT
