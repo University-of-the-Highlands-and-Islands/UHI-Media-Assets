@@ -658,5 +658,4 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   if (window.Zepto) {
     window.Zepto.fn.waypoint = createExtension(window.Zepto)
   }
-}())
-;
+}());
