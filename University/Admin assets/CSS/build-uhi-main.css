@@ -1,0 +1,3696 @@
+﻿/********************************************
+
+Applies To        : UHI Site pages & all Partner pages
+Colour Main       : #572163
+Colour Secondary  : #eee8ef
+Description       : Screen styles for all UHI site pages, and partner pages.
+Media Type        : Screen
+Name & Filename   : build-uhi-main.css
+
+*********************************************/
+
+/****************************************
+
+MAIN #PORTAL-COLUMN LAYOUT
+
+****************************************/
+
+.main {
+  display: flex; /* make flex container */
+  flex-direction: column; /* for mobile */
+  margin: 1rem auto 0; /* center container, with top margin */
+  max-width: 1340px; /* max container width */
+  text-align: left; /* all left-aligned text within container by default */
+  width: 100%; /* full container width when < max container width */
+}
+
+/* all flex items have spacing by default */
+.main > aside,
+.main > div {
+  margin: 0 0 2rem 0;
+  padding: 0 .5rem;
+}
+
+/* flex rules at iPad landscape for introducing columns */
+@media (min-width: 1024px) {
+
+  .main {
+    flex-direction: row; /* to make columns */
+  }
+
+  .main > aside,
+  .main > div {
+    padding: 0 1rem; /* increase flex item gutter */
+  }
+
+  /* required content column is ordered first in Page Layout markup */
+  #portal-column-content {
+    flex: 3; /* column is thrice as wide as others */
+    order: 2; /* centre or right */
+  }
+
+  /* optional right column is ordered second in Page Layout markup */
+  #portal-column-two {
+    flex: 1; /* quarter column when shown */
+    order: 3; /* pushes to right */
+  }
+
+  /* optional left (navigation) column is ordered third in Page Layout markup */
+  #portal-column-one {
+    flex: 1; /* third or quarter column when shown */
+    min-width: 200px; /* e.g. wide central table */
+    order: 1; /* pushes to left */
+  }
+}
+
+/*
+main content links
+*/
+
+#content-core a,
+#portal-column-two div a,
+.courselist a {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+#content-core a:hover,
+#portal-column-two div a:hover,
+.courselist a:hover {
+  text-decoration: underline;
+}
+
+/*
+list resets
+https://www.inverness.uhi.ac.uk/business-and-training/
+https://www.nafc.uhi.ac.uk/courses/aquaculture-courses/
+*/
+#portal-column-two ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/********************************************
+
+CLASSES
+
+********************************************/
+
+/*
+pulls up first paragraph of Landing Page Text
+https://www.inverness.uhi.ac.uk/
+https://www.uhi.ac.uk/en/studying-at-uhi/nursing/
+*/
+.col.half p:first-child,
+.col.onequarter p:first-child,
+.col.threequarters p:first-child {
+  margin-top: 0;
+}
+
+/*
+content-button
+*/
+
+.content-button {
+  position: relative;
+  width: 225px;
+  height: 110px;
+  float: none;
+  display: inline-block;
+  margin: 0 15px 15px 0;
+  border: 5px solid #fff;
+  box-shadow: 5px 5px 11px #ddd;
+}
+
+.content-button img {
+  width: 225px;
+  height: 110px;
+}
+
+.content-button span {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  z-index: 2;
+  font-size: 24px;
+  text-shadow: 1px 1px #000;
+  opacity: 1.0;
+  text-transform: lowercase;
+  color: white;
+  font-weight: bold;
+}
+
+.content-button a {
+  color: #fff;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.content-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/*
+course-filter-title
+*/
+
+h3.course-filter-title {
+  font-size: 15px;
+  font-weight: normal;
+  padding: 5px 22px;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  h3.course-filter-title {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h3.course-filter-title {
+    font-size: 20px;
+  }
+}
+
+/*
+course-search-filter
+*/
+
+.course-search-filter {
+  display: block;
+}
+
+.course-search-filter > input {
+  font-size: 13px;
+  margin: 3px 0 3px 11px;
+}
+
+.course-search-filter {
+  margin: 3px 0 6px 0;
+}
+
+@media (min-width: 1000px) {
+  .course-search-filter {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .course-search-filter {
+    font-size: 17px;
+  }
+}
+
+/*
+header and buttons
+*/
+
+@media (min-width: 768px) {
+  .header.banner {
+    margin: 0 auto;
+    max-width: 1340px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header.banner .logo a {
+    width: 279px;
+    height: 89px;
+    margin: 18px auto -7px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header.banner .logo a {
+    margin: 0 0 0 20px;
+    float: left;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header.banner .nav.primary {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header.banner .nav.primary {
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header.banner .tools {
+    margin-right: 17px;
+    text-align: right;
+  }
+}
+
+.header.banner .tools li.students a {
+  background-color: #572163;
+  box-shadow: 0 0 0 1px #572163;
+}
+
+.header.banner .tools li.staff a {
+  background-color: #b74783;
+  box-shadow: 0 0 0 1px #b74783;
+}
+
+.header.banner .tools li.alumni a {
+  background-color: #cd4750; /* #d15861 */
+  box-shadow: 0 0 0 1px #cd4750; /* #d15861 */
+}
+
+.header.banner .tools li.language a {
+  background-color: #dd3113; /* #f1765f; */
+  box-shadow: 0 0 0 1px #dd3113; /* #f1765f; */
+}
+
+@media (min-width: 768px) {
+  .header.banner li form input[type="submit"] {
+    padding: 1px 7px;
+    font-size: 29px;
+  }
+}
+
+.hostingtext {
+  font-size: 35%;
+  display: block;
+  margin-top: -5px;
+}
+
+/*
+Unistats widget
+*/
+
+.kiswidget {
+  overflow: hidden !important;
+}
+
+@media (min-width: 768px) {
+  .kiswidget {
+    display: inline;
+  }
+}
+
+.kiswidget iframe {
+  background-color: #fff;
+  border: 0 none transparent;
+  height: 150px;
+  margin-bottom: 30px;
+  overflow: hidden !important;
+  width: 615px;
+}
+
+.kiswidget iframe * {
+  overflow: hidden !important;
+}
+
+.main .field {
+  margin: 0.5em 0;
+}
+
+.main label {
+  display: inline-block;
+  margin: 0.5em 0;
+  vertical-align: baseline;
+}
+
+.main input[type="submit"] {
+  background-color: #0f0f0f;
+  border: medium none;
+  border-radius: 0.25em;
+  color: white;
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  font-size: 1.33em;
+  font-weight: bold;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+
+.main img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+.main dl.info {
+  background-color: #999;
+  border-radius: .25em;
+  color: white;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin: 1em 0;
+  padding: 0.5em;
+}
+
+.main dl.info > dt {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.main dl.info > dt:after {
+  content: ': ';
+}
+
+.main dl.info > dd {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin: 0;
+}
+
+.main input[type="text"],
+.main input[type="password"],
+.main textarea {
+  border: 1px solid #d6d6d6;
+  border-radius: .25rem;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  width: auto;
+}
+
+/* Course search filters reset link */
+.reset-course-search {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.reset-course-search__top {
+  margin: 21px 32px 0 10px;
+}
+
+.reset-course-search__bottom {
+  margin: 10px 32px 21px 10px;
+}
+
+.search-filters {
+  padding: 0 22px 10px;
+}
+
+/* prospectus */
+
+.section.coursefinder .prospectus p {
+  background-color: #fff;
+  border: 8px solid #fff;
+}
+
+@media (min-width: 768px) {
+  .section.coursefinder .prospectus p {
+    box-shadow: 0 -25px 40px 0 rgba(0, 0, 0, 0.3), 0 -10px 40px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.section.coursefinder .prospectus .text {
+  background-color: #fff;
+  color: #5a5a5a;
+}
+
+/* both b and strong needed? */
+.section.coursefinder .prospectus b,
+.section.coursefinder .prospectus strong {
+  color: #0f0f0f;
+}
+
+.section.coursefinder .prospectus b:hover,
+.section.coursefinder .prospectus strong:hover {
+  color: #572163;
+}
+
+/*
+section coursefinder courses prospectus
+Action button with Ribbon
+*/
+
+.section.coursefinder.courses .prospectus {
+  margin-top: -230px;
+}
+
+@media (min-width: 768px) {
+  .section.coursefinder.courses .prospectus {
+    float: right;
+    margin-top: -138px;
+    margin-bottom: 50px; /* pushes content below Action button */
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursefinder.courses .prospectus {
+    margin-top: -178px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder.courses .prospectus {
+    margin-top: -208px;
+  }
+
+  /* course search and Ribbon text if there's an Action button adjacent */
+  .prospectus + p,
+  .prospectus + #coursesearch {
+    width: 80%;
+  }
+}
+
+/*
+section clearfix
+landing page row and column layout
+whitespace if row directly after banner
+http://stage-www.inverness.uhi.ac.uk/studying-at-ic/international/
+*/
+.section.clearfix.courselist {
+  margin-top: 30px;
+}
+
+/* collapses if rule below applies */
+
+/* whitespace after rows KIF 20180419 */
+.section.clearfix.courselist {
+  margin-bottom: 30px;
+}
+
+/* single column for mobile and tablet */
+.section.clearfix > .wrap > .col.half,
+.section.clearfix > .wrap > .col.onequarter,
+.section.clearfix > .wrap > .col.threequarters {
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: left;
+}
+
+/* multi column for desktop */
+@media (min-width: 768px) {
+  .section.clearfix > .wrap > .col.half {
+    float: left;
+    width: 48%;
+  }
+
+  .section.clearfix > .wrap > .col.onequarter {
+    float: left;
+    text-align: right;
+    width: 23%;
+  }
+
+  /* https://www.uhi.ac.uk/en/schools/sciences/ */
+  .section.clearfix > .wrap > .col.onequarter > p:first-child {
+    margin-top: 0;
+  }
+
+  .section.clearfix > .wrap > .col.threequarters {
+    float: left;
+    width: 73%;
+  }
+}
+
+/*
+section coursedetails
+*/
+
+.section.coursedetails {
+  position: relative;
+  background-color: #572163; /* url(<t4 type= "media" formatter= "image/path" id= "125" />) center bottom no-repeat; */
+  color: #fff;
+  font-size: 13px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursedetails {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursedetails {
+    font-size: 16px;
+  }
+}
+
+.section.coursedetails a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.section.coursedetails .apply {
+  float: right;
+  margin: 6px 10px 0 20px;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .apply {
+    position: relative;
+    margin-right: 20px;
+  }
+}
+
+.section.coursedetails .apply a {
+  display: inline-block;
+  padding: 3px 6px;
+  background-color: #fff;
+  color: #0f0f0f;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .apply a {
+    position: relative;
+    z-index: 2;
+    margin-top: 3px;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 3px 3px 0 0;
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursedetails .apply a {
+    padding: 10px 15px;
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursedetails .apply a {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .apply a:hover {
+    margin-top: 0;
+    padding-bottom: 8px;
+    transition: all 0.1s;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursedetails .apply a:hover {
+    padding-bottom: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .apply .arrow {
+    position: absolute;
+    width: 260px;
+    height: 17px;
+    left: -270px;
+    top: 13px;
+    background: url(<t4 type= "media" formatter= "image/path" id= "5589" />) no-repeat;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursedetails .apply .arrow {
+    top: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursedetails .apply .arrow {
+    top: 22px;
+  }
+}
+
+.section.coursedetails .tabnav {
+  margin: 4px 0 0 10px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .tabnav {
+    position: relative;
+    z-index: 1;
+    margin: -44px 0 0 20px; /* 20180515 */
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursedetails .tabnav {
+    margin-top: -58px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursedetails .tabnav {
+    margin-top: -61px;
+  }
+}
+
+.section.coursedetails .tabnav li {
+  display: inline-block;
+  list-style: none;
+  margin: 6px 3px 0 0;
+}
+
+.section.coursedetails .tabnav li h2 {
+  display: inline;
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+.section.coursedetails .tabnav li h2 a {
+  display: inline-block;
+  padding: 3px 6px;
+  background-color: #b74783;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .tabnav li h2 a {
+    margin-top: 3px;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 3px 3px 0 0;
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursedetails .tabnav li h2 a {
+    padding: 10px 15px;
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursedetails .tabnav li h2 a {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .tabnav li h2 a:hover {
+    margin-top: 0;
+    padding-bottom: 8px;
+    transition: all 0.1s;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursedetails .tabnav li h2 a:hover {
+    padding-bottom: 13px;
+  }
+}
+
+.section.coursedetails .tabnav li.ui-tabs-active h2 a {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .tabnav li.ui-tabs-active h2 a {
+    background-color: #572163;
+    outline: none;
+  }
+}
+
+.section.coursedetails .tab {
+  margin: 10px;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .tab {
+    overflow: hidden;
+    margin: 30px;
+  }
+}
+
+.section.coursedetails h3 {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails h3 {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursedetails h3 {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursedetails h3 {
+    font-size: 30px;
+  }
+}
+
+.section.coursedetails p,
+.section.coursedetails ul {
+  margin-top: 0;
+}
+
+.section.coursedetails ul li {
+  list-style: square;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .col.half {
+    float: left;
+    width: 46%;
+    margin-right: 4%;
+  }
+
+  .section.coursedetails .col.half:first-child {
+    margin-left: 0;
+  }
+}
+
+/*
+section coursefinder
+course search form sitewide
+also campus pages eg http://www.uhi.ac.uk/en/campuses/moray-college-uhi/
+removed background-image: url(<t4 type= "media" formatter= "image/path" id= "63" />);
+*/
+.section.coursefinder {
+  background-attachment: fixed; /* campus pages */
+  background-color: #eee8ef; /* course pages */
+  background-position: center center; /* campus pages */
+  background-repeat: no-repeat; /* campus pages */
+  background-size: cover; /* campus pages */
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .campus .section.coursefinder {
+    background-position: 50% 248px;
+  }
+}
+
+/*
+https://www.uhi.ac.uk/en/courses/hnd-administration-and-information-technology/
+https://www.uhi.ac.uk/en/campuses/north-highland-college-uhi/
+*/
+.section.coursefinder h2 {
+  margin: 30px 10px;
+  font: 28px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 3px white, -1px -1px 3px white;
+}
+
+.section.coursefinder p {
+  background-color: #0f0f0f; /* or 572163 - was in css-selector-default.css */
+  color: #fff;
+  margin: 0;
+  padding: 5px 15px;
+  text-align: left;
+}
+
+.section.coursefinder p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/*
+section courselist col onequarter
+*/
+.section.courselist .col.half .halflight {
+  border-radius: 5px;
+  border: 3px solid #fff;
+  box-shadow: 5px 5px 11px #ccc;
+}
+
+@media (min-width: 480px) {
+  .section.courselist .col.half .halflight {
+    float: left;
+    min-height: 210px;
+    width: 46%; /* 33% */
+  }
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.half .halflight {
+    /*height: auto !important;*/
+    min-height: 230px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.courselist .col.half .halflight {
+    min-height: 210px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.courselist .col.half .halflight {
+    min-height: 170px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .section.courselist .col.half .halflight {
+    min-height: 165px;
+  }
+}
+
+/* why?
+.section.courselist .col.half .halflight:nth-child(7) {
+  clear: left;
+}
+*/
+
+.section.courselist .col.half .halflight h3 {
+  margin-top: 0;
+}
+
+.section.courselist .col.half .halflight ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section.courselist .col.half .halflight ul li {
+  margin-bottom: 10px;
+}
+
+.section.courselist .col.half .halflight:hover {
+  box-shadow: 5px 5px 11px #572163;
+}
+
+/* why?
+.section.courselist .col.half.onecol h3 {
+  margin-top: 0;
+}
+*/
+
+.section.courselist .col.half.onecol .halflight {
+  width: 90%;
+  margin-bottom: 30px;
+  min-height: 0; /* https://www.uhi.ac.uk/en/research-enterprise/cultural/institute-for-northern-studies/ */
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+/*
+Content Boxes - make consistent width
+https://www.uhi.ac.uk/en/staff/
+*/
+.section.courselist .col.half.twocol .halflight {
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  margin: 0 4% 20px;
+  padding: 10px;
+}
+
+@media (min-width: 480px) {
+  .section.courselist .col.half.twocol .halflight {
+    margin: 0 2% 20px;
+  }
+}
+
+.section.courselist .col.half.noborder .halflight {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*
+section courselist col onequarter
+*/
+
+.section.courselist .col.onequarter > form > ul > li {
+  background-color: #b74783;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+/* extra course filter modules
+https://www.shetland.uhi.ac.uk/courses/
+*/
+.section.courselist .col.onequarter .extra {
+  margin-top: 35px;
+}
+
+.section.courselist .col.onequarter .extra h2 {
+  margin: 0;
+}
+
+/* 20180411 KIF */
+.section.courselist .col.onequarter .extra ul {
+  list-style: outside none none;
+  margin-left: 0;
+  padding-left: 10px;
+}
+
+.section.courselist .col.onequarter .extra ul li {
+  background: #b74783 none repeat scroll 0 0;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block; /* 20180411 KIF*/
+  font-size: 20px;
+  margin-bottom: 6px;
+  padding: 5px 15px; /* 20180411 KIF*/
+  max-width: 250px;
+}
+
+.section.courselist .col.onequarter .extra ul li a {
+  color: #fff;
+}
+
+.section.courselist .col.onequarter h2 {
+  margin: 0 10px;
+  font: bold 23px Oswald, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #572163;
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.onequarter h2 {
+    position: relative;
+    display: inline;
+    margin-right: 20px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.courselist .col.onequarter h2 {
+    margin-right: 40px;
+    font-size: 36px;
+  }
+}
+
+/*
+heading for News/Events feed list eg:
+https://www.inverness.uhi.ac.uk/
+...and other lists
+*/
+
+.section.courselist .col.onequarter > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section.courselist .col.onequarter > ul > li {
+  background-color: #572163;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.section.courselist .col.onequarter > ul > li:first-child {
+  padding: 2px 5px;
+}
+
+.section.courselist .col.onequarter > ul > li h3 {
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+@media (min-width: 1000px) {
+  .section.courselist .col.onequarter > ul > li h3 {
+    padding: 5px 30px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.courselist .col.onequarter > ul > li h3 {
+    font-size: 20px;
+  }
+}
+
+.section.courselist .col.onequarter > ul > li h3 .arrow {
+  float: right;
+  margin-left: 4px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.onequarter > ul > li h3 .arrow {
+    float: none;
+  }
+}
+
+.section.courselist .col.onequarter > ul > li ul {
+  margin: 0;
+  padding: 0 5px 10px;
+  list-style: none;
+}
+
+@media (min-width: 1000px) {
+  .section.courselist .col.onequarter > ul > li ul {
+    padding: 0 30px 10px;
+  }
+}
+
+.section.courselist .col.onequarter > ul > li ul li a {
+  display: inline-block;
+  margin: 3px 11px 3px 0;
+  padding: 0 5px;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+@media (min-width: 1000px) {
+  .section.courselist .col.onequarter > ul > li ul li a {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.courselist .col.onequarter > ul > li ul li a {
+    font-size: 17px;
+  }
+}
+
+/* https://www.uhi.ac.uk/en/research-enterprise/cultural/institute-for-northern-studies/ */
+.section.courselist .col.onequarter .quarterlight {
+  /*width: 80%;*/
+  padding: 10px;
+  margin: 0 0 2rem 0;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  /*float: left;*/
+  background-color: #fff;
+  box-shadow: 5px 5px 11px #ccc;
+  text-align: left;
+}
+
+.section.courselist .col.onequarter .quarterlight:hover {
+  box-shadow: 5px 5px 11px #572163;
+}
+
+.section.courselist .col.onequarter .quarterlight h3 {
+  margin-top: 0;
+}
+
+.section.courselist .col.onequarter .quarterlight a {
+  color: #572163;
+}
+
+/*
+section courselist col threequarters
+*/
+
+.section.courselist .col.threequarters > ul {
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.threequarters > ul li {
+    background: url(<t4 type= "media" formatter= "image/path" id= "5586" />) center bottom no-repeat;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.courselist .col.threequarters > ul li {
+    background-image: url(<t4 type= "media" formatter= "image/path" id= "5593" />);
+  }
+}
+
+.section.courselist .col.threequarters > ul li a {
+  border-bottom: 4px dotted #ccc;
+  color: #0f0f0f;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 15px;
+  overflow: hidden;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.threequarters > ul li a {
+    padding: 7px 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.courselist .col.threequarters > ul li a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.courselist .col.threequarters > ul li a {
+    font-size: 20px;
+  }
+}
+
+.section.courselist .col.threequarters > ul li a .course {
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.threequarters > ul li a .course {
+    width: 58%;
+    margin-right: 2%;
+  }
+}
+
+.section.courselist .col.threequarters > ul li a .level {
+  clear: left;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.threequarters > ul li a .level {
+    clear: none;
+    float: left;
+    width: 25%;
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.threequarters > ul li a .modes {
+    float: left;
+    width: 15%;
+    text-align: right;
+  }
+}
+
+.section.courselist .col.threequarters > ul li a .modes .mode {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 0 5px;
+  background-color: #e0e0e0;
+  color: #fff;
+  border-radius: 3px;
+  font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* should be #courselist a:hover etc? */
+.section.courselist .col.threequarters > ul li a:hover .modes .mode {
+  background-color: #ccc;
+}
+
+.section.courselist .col.threequarters > ul li a .modes .mode.active {
+  background-color: #f1765f;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.section.courselist .col.threequarters > ul li a .modes .mode.active:first-child {
+  background-color: #d15861;
+}
+
+/*
+section courses coursefinder
+*/
+
+.section.courses.coursefinder {
+  margin-bottom: 30px;
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .section.courses.coursefinder {
+    padding-top: 0;
+    background: none;
+  }
+}
+
+.section.courses.coursefinder form {
+  margin: 0;
+  padding: 10px;
+  background-color: #0f0f0f;
+}
+
+@media (min-width: 768px) {
+  .section.courses.coursefinder form {
+    padding: 10px;
+    text-align: left;
+  }
+}
+
+.section.courses.coursefinder form input[type="submit"] {
+  color: #ccc;
+}
+
+/* section ctas */
+.section.ctas {
+  background-color: #eee8ef;
+  background-image: url(<t4 type= "media" formatter= "image/path" id= "5600" />);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 550px;
+  padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .section.ctas {
+    background-image: url(<t4 type= "media" formatter= "image/path" id= "5599" />);
+    min-height: 790px;
+    padding: 30px 0;
+  }
+}
+
+.section.ctas .section.testimonials {
+  max-width: 640px;
+  margin: 0 auto;
+  background: none;
+  text-align: left
+}
+
+.section.ctas .section.testimonials h2 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.testimonials h2 {
+    margin-right: 0;
+  }
+}
+
+.section.ctas .section.testimonials h2 strong {
+  color: #d5dfff;
+}
+
+.section.ctas .section.testimonials blockquote p {
+  color: #fff;
+  margin: 0;
+}
+
+.section.ctas .section.testimonials blockquote p .quotee {
+  color: #fff;
+}
+
+.section.ctas .section.testimonials ul.thumbs {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.testimonials ul.thumbs {
+    float: left;
+    width: 100%;
+    display: block;
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .section.ctas .section.testimonials ul.thumbs li {
+    float: left;
+    width: 198px;
+    margin-left: 17px;
+  }
+
+  .section.ctas .section.testimonials ul.thumbs li:first-child {
+    margin-left: 0;
+  }
+
+  .section.ctas .section.testimonials ul.thumbs li .img {
+    display: block;
+    outline: none;
+    background-color: #000;
+  }
+
+  .section.ctas .section.testimonials ul.thumbs li .img img {
+    opacity: 0.5;
+  }
+
+  .section.ctas .section.testimonials ul.thumbs li.ui-state-active {
+    width: 210px;
+    margin-top: -10px;
+    padding-top: 10px;
+    background: url(<t4 type= "media" formatter= "image/path" id= "124" />) 20 px 0 no-repeat;
+  }
+
+  .section.ctas .section.testimonials ul.thumbs li.ui-state-active .img {
+    margin-top: -6px;
+    border: 6px solid #fff;
+  }
+
+  .section.ctas .section.testimonials ul.thumbs li.ui-state-active .img img {
+    opacity: 1;
+  }
+}
+
+.section.ctas .section.apply {
+  padding-top: 15px;
+  font: bold 13px Oswald, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  background: url(<t4 type= "media" formatter= "image/path" id= "5577" />) top center no-repeat;
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.apply {
+    padding-top: 30px;
+    font-size: 16px;
+    background-image: url(<t4 type= "media" formatter= "image/path" id= "5591" />);
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.ctas .section.apply {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.ctas .section.apply {
+    font-size: 18px;
+  }
+}
+
+.section.ctas .section.apply h2 {
+  margin: 0 10px;
+  font: 28px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
+  /* color: #572163; 20180502 */
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.apply h2 {
+    margin: 0 0 10px 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.ctas .section.apply h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.ctas .section.apply h2 {
+    font-size: 42px;
+  }
+}
+
+.section.ctas .section.apply a {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 2px 4px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-shadow: none;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.apply a {
+    padding: 10px 15px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.ctas .section.apply a {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.ctas .section.apply a {
+    font-size: 30px;
+  }
+}
+
+.section.ctas .section.apply a:hover {
+  color: #fff;
+  background-color: #572163;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.section.ctas .section.apply p.applyconditions {
+  background-color: #0f0f0f;
+  color: #fff;
+  font-family: "Glypha Web", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 15px;
+  margin-left: 35px;
+  margin-right: 35px;
+  padding: 10px;
+  text-transform: none;
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.apply p.applyconditions {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.ctas .section.apply p.applyconditions {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.section.ctas .section.apply p.applyconditions a {
+  background: transparent none repeat scroll 0 0;
+  border-radius: 0;
+  color: #fff;
+  font-size: 10px;
+  line-height: 15px;
+  padding: 0;
+  text-decoration: underline;
+  text-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.apply p.applyconditions a {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.ctas .section.apply p.applyconditions a {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.section.ctas .section.tour p {
+  margin: 0 10px 10px;
+  font-size: 16px;
+  line-height: 1;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.tour p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.ctas .section.tour p {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.ctas .section.tour p {
+    font-size: 24px;
+  }
+}
+
+.section.ctas .section.tour p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.section.ctas .section.tour p a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.tour .ctas ul {
+    margin: 15px 0;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.ctas .section.tour .ctas ul {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.ctas .section.tour .ctas ul {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.ctas .section.tour .ctas ul li a {
+    padding: 10px 15px;
+  }
+}
+
+/*
+section intro
+*/
+
+.section.intro h1 {
+  position: relative;
+  float: left;
+  margin: 15px 10px 0 0;
+  padding: 10px;
+  font: 23px Oswald, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  background-color: #0f0f0f;
+}
+
+@media (min-width: 768px) {
+  .section.intro h1 {
+    margin-top: 25px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro h1 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro h1 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro p {
+    font-size: 18px;
+  }
+}
+
+/* don't show wee course subheader box if no content */
+.section.intro p:empty {
+  display: none;
+}
+
+.section.intro p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.section.intro p sup a {
+  text-decoration: none;
+}
+
+/*
+section intro wrap background
+all course, landing and campus pages
+*/
+
+.section.intro > .wrap {
+  background-image: url(<t4 type= "navigation" name= "One-Web Default Course Banner Small Getter" id= "254" />);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 360px; /* height of native banner image minus 5px */
+  overflow: hidden;
+  position: relative;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .section.intro > .wrap {
+    background-image: none !important; /* image moves to contained .background div */
+  }
+}
+
+/*
+sets height of container and contained .background
+*/
+@media (min-width: 768px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 230px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.intro > .wrap > .background {
+    background-image: url(<t4 type= "navigation" name= "One-Web Default Course Banner Large Getter" id= "253" />);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1340px;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 245px;
+  }
+}
+
+@media (min-width: 900px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 270px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 330px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 370px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 415px;
+  }
+}
+
+/*
+partner map overlaying campus page banner
+margin and transform depends on banner height (above rules)
+*/
+
+@media (min-width: 768px) {
+  .section.intro .mapsingle {
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    float: right;
+    height: 365px;
+    margin-right: 2%;
+    margin-top: -60px;
+    /*position: relative;*/
+    transform: scale(0.6);
+    width: 257px;
+  }
+}
+
+@media (min-width: 800px) {
+  .section.intro .mapsingle {
+    margin-top: -65px;
+    transform: scale(0.7);
+  }
+}
+
+@media (min-width: 900px) {
+  .section.intro .mapsingle {
+    margin-top: -40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro .mapsingle {
+    margin-top: -25px;
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 1100px) {
+  .section.intro .mapsingle {
+    margin-top: -15px;
+    transform: scale(0.9);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro .mapsingle {
+    margin-top: 5px;
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 1340px) {
+  .section.intro .mapsingle {
+    margin-top: 50px;
+  }
+}
+
+/*
+section specialistsubjects
+*/
+
+.section.specialistsubjects {
+  position: relative;
+  padding: 10px 0;
+  background: #572163 url(<t4 type= "media" formatter= "image/path" id= "125" />) center bottom no-repeat;
+  color: #e9b6d2;
+}
+
+@media (min-width: 768px) {
+  .section.specialistsubjects {
+    padding: 30px 0;
+  }
+}
+
+.section.specialistsubjects h2 {
+  margin: 0 10px;
+  font-size: 28px;
+  line-height: 1;
+  font-family: inherit;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .section.specialistsubjects h2 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.specialistsubjects h2 {
+    font-size: 30px;
+  }
+}
+
+.section.specialistsubjects p {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .section.specialistsubjects p {
+    max-width: 770px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.specialistsubjects p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.specialistsubjects p {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.specialistsubjects > .wrap > .arrow {
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    margin-left: 10px;
+    width: 17px;
+    height: 157px;
+    background: url(<t4 type= "media" formatter= "image/path" id= "123" />) no-repeat;
+  }
+}
+
+/*
+section testimonials
+*/
+
+.section.testimonials {
+  background: #572163 url(<t4 type= "media" formatter= "image/path" id= "12" />) center bottom no-repeat;
+}
+
+.section.testimonials h2 strong,
+.section.testimonials h2 b {
+  color: #e9b6d2;
+  font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+/*
+t4-landing-page
+*/
+
+.t4-landing-page {
+  font-size: initial; /* standard 16px */
+}
+
+.t4-landing-page .col img {
+  max-width: 100%;
+  height: auto;
+}
+
+/****************************************
+
+HIDDEN COURSE DATA DISPLAY
+
+- https://www.uhi.ac.uk/en/assets/printed-course-info/
+- https://www.uhi.ac.uk/en/assets/prospectus/
+- https://www.uhi.ac.uk/en/courses/ba-hons-gaelic-language-and-culture/uq530.html
+- https://www.uhi.ac.uk/en/courses/ba-hons-business-and-management/unn21.html
+- etc
+****************************************/
+
+table.prospectus {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+table.prospectus .printlink {
+  display: none;
+}
+
+table.prospectus caption {
+  font-size: larger;
+  font-weight: bold;
+  padding: 0 0 15px 0;
+  text-align: left;
+}
+
+table.prospectus td,
+table.prospectus th {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.prospectus td:first-child,
+table.prospectus td:nth-child(3) {
+  width: 15%;
+}
+
+table.prospectus thead,
+table.prospectus tfoot {
+  background-color: #eee;
+}
+
+/****************************************
+
+FUNNELBACK SEARCH RESULTS
+
+partner colours are in their theme stylesheets
+****************************************/
+
+/* should be more specific - needs namespaced with container class */
+input[name="query"] {
+  box-sizing: border-box;
+  vertical-align: baseline !important;
+}
+
+.fb-search .form-group {
+  margin: 10px 0;
+}
+
+.fb-search .form-group #query {
+  padding: .5rem;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .fb-search .form-group #query {
+    padding: 1rem;
+    width: 95%;
+  }
+}
+
+.fb-search .form-group .btn.btn-primary {
+  background-color: #0f0f0f;
+  border-radius: 0.25em;
+  border: medium none;
+  color: white;
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 8px;
+  padding: 6px 16px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .fb-search .form-group .btn.btn-primary {
+    margin: 0;
+  }
+}
+
+.fb-search .seventyfiveper {
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0 15px 0 0;
+  width: 75%;
+}
+
+.fb-search .twentyfiveper {
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0 15px;
+  width: 25%;
+}
+
+@media (max-width: 767px) {
+  .fb-search .seventyfiveper,
+  .fb-search .twentyfiveper {
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.fb-search .clearboth:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.fb-search .badge,
+.fb-search .panel-heading {
+  background-color: #572163;
+}
+
+/* list defaults */
+.fb-search .list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.fb-search .result {
+  padding: 16px 0;
+}
+
+.fb-search .result strong {
+  font-weight: normal;
+  font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
+}
+
+/* search result lists */
+.fb-search #search-result-count {
+  color: #676767;
+  font-size: 13px;
+  margin: 10px 0 10px 0;
+  text-align: left;
+}
+
+.fb-search #search-best-bets {
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 8px 0 0 0;
+  padding: 8px;
+}
+
+.fb-search #search-best-bets h4,
+.fb-search #search-results h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.fb-search #search-best-bets p,
+.fb-search #search-results p {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 2px 0;
+}
+
+.fb-search #search-best-bets p {
+  color: #000;
+}
+
+.fb-search cite {
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+}
+
+.fb-search #search-results cite {
+  color: #888;
+}
+
+.fb-search #search-best-bets cite {
+  color: #666;
+}
+
+/* pagination */
+.fb-search .pagination.pagination-lg {
+  list-style: none;
+  padding: 0;
+}
+
+.fb-search .pagination.pagination-lg li {
+  display: inline;
+  margin-right: 8px;
+  padding: 6px;
+}
+
+.fb-search .pagination.pagination-lg li.active {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+/* filter (facet) list headings, labels, badges */
+.fb-search #search-facets .panel.panel-default {
+  margin-top: 44px;
+}
+
+.fb-search .checkbox-inline,
+.fb-search #search-facets-breadcrumb {
+  display: none;
+}
+
+.fb-search .panel-heading {
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 15px;
+  padding: 1px;
+}
+
+.fb-search .panel-heading .panel-toggle {
+  display: block;
+  margin: 5px;
+}
+
+.fb-search .list-group-item {
+  background-color: #eee;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.fb-search .list-group-item:hover {
+  background-color: #ccc;
+}
+
+.fb-search .list-group-item:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.fb-search .item-label {
+  color: black;
+  float: left;
+  margin: 5px 5px 5px 15px;
+}
+
+.fb-search .badge {
+  border-radius: 17px;
+  color: white;
+  float: right;
+  font-size: 13px;
+  margin: 5px;
+  min-width: 30px;
+  padding: 2px;
+  text-align: center;
+}
+
+/****************************************
+
+NAVIGATION
+
+Navigation Assets in T4
+****************************************/
+
+/*
+left hand side context navigation menu column
+*/
+
+/* make main navigation (top level ul) full width */
+.mainMenu {
+  list-style-type: none;
+  margin: 0 -.5rem 1rem;
+  padding: 0;
+}
+
+/* stretch left */
+@media (min-width: 1024px) {
+  .mainMenu {
+    margin: 0 0 1rem -1rem;
+  }
+}
+
+/* nested lists */
+.mainMenu ul {
+  padding-left: 9px;
+}
+
+/* nav lines and links */
+.mainMenu li,
+.mainMenu li a,
+.mainMenu span {
+  display: block;
+}
+
+/* make main links bold */
+.mainMenu li div,
+.mainMenu li span {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+/* black links except top one */
+.mainMenu li > a,
+.mainMenu li > span > a {
+  color: #0f0f0f;
+}
+
+/* top borders */
+.mainMenu li > a,
+.mainMenu span {
+  border-top: 1px solid #ddd;
+}
+
+/* background and padding */
+.mainMenu li > a,
+.mainMenu span,
+.navTreeTopNode div {
+  background-color: #eee;
+  cursor: pointer;
+  padding: 9px;
+  transition: .3s;
+}
+
+/* hover state */
+.mainMenu li > a:hover,
+.mainMenu span:hover,
+.navTreeTopNode div:hover {
+  background-color: #ddd;
+}
+
+/* active state */
+.mainMenu li > a:active,
+.mainMenu span:active,
+.navTreeTopNode div:active {
+  background-color: #ccc;
+}
+
+/*
+breadcrumb nav
+*/
+
+.navigation--breadcrumb {
+  text-transform: lowercase;
+}
+
+.navigation--breadcrumb ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation--breadcrumb li {
+  display: inline-block;
+  margin: 0 .5rem;
+}
+
+.navigation--breadcrumb li:first-child {
+  margin-left: 0;
+}
+
+/*
+Previous and Next links for News and Event fulltext layouts
+*/
+
+.navigation--previous-next {
+  border-top: 1px solid #ccc;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.navigation--previous-next a:hover {
+  text-decoration: none !important;
+}
+
+/*********************************************************************
+
+CONTENT TYPES
+
+discrete CTs as held in T4
+"originally known as" is needed for T4 Content Type Usage report
+*********************************************************************/
+
+/*****************************************************
+One-Web Expert
+
+originally known as:
+- Expert
+
+.content-type--expert {}
+******************************************************/
+
+/*****************************************************
+Landing Link List
+- Landing Link List Children
+- Landing Link List Custom
+
+originally known as:
+- Landing Children Links [TEST KIF]
+- ?
+
+inheriting from these rules, for some reason:
+  .section.courselist .col.onequarter.news
+styles these link lists, and other stuff for now probably
+******************************************************/
+
+.section.courselist .col.onequarter.news > p {
+  margin-right: 1rem;
+}
+
+/* parent */
+.content-type--landing-link-list,
+.section.courselist .col.onequarter.news > ul {
+  margin: 0 0 1rem;
+}
+
+/* list */
+.content-type--landing-link-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line default text color */
+.section.courselist .col.onequarter.news > ul > li {
+  color: #572163;
+}
+
+/* line blocks - structure */
+.content-type--landing-link-list li,
+.content-type--landing-link-list__heading,
+.section.courselist .col.onequarter.news > ul > li {
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 6px;
+  padding: 2px 5px;
+}
+
+/* line blocks - skin */
+.content-type--landing-link-list li,
+.section.courselist .col.onequarter.news > ul > li {
+  background-color: #f7f7f7;
+}
+
+/* line blocks - skin - heading */
+div.content-type--landing-link-list__heading,
+.section.courselist .col.onequarter.news > ul > li:first-child {
+  background-color: #572163;
+  color: #fff;
+}
+
+/* line blocks - hover & active */
+.content-type--landing-link-list li:hover,
+.content-type--landing-link-list li:active,
+.section.courselist .col.onequarter.news > ul > li:hover:not(:first-child) {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+/* link blocks */
+.content-type--landing-link-list a,
+.content-type--landing-link-list a:active,
+.content-type--landing-link-list a:visited,
+.section.courselist .col.onequarter.news > ul > li a {
+  color: #000;
+  display: block;
+  font-family: inherit;
+}
+
+/* link blocks - hover */
+.content-type--landing-link-list a:hover,
+.section.courselist .col.onequarter.news > ul > li a:hover {
+  text-decoration: none;
+}
+
+/****************************************************************
+Landing RSS Feed
+Landing RSS Feed - PHP - Positionable
+Landing RSS Feed - PHP - Positionable (Limited)
+Landing RSS Feed - Positionable
+
+.newsevents
+from Landing RSS feed text/header
+****************************************************************/
+
+div.newsevents h3,
+div.newsevents ul {
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
+}
+
+div.newsevents h3 {
+  margin-top: 0;
+}
+
+li.newsevents {
+  border-radius: 5px;
+  list-style-type: none;
+  margin-bottom: 10px;
+  /* padding: 5px; https://www.uhi.ac.uk/en/learning-and-teaching-academy/ */
+}
+
+li.newsevents span.datefield,
+li.newsevents span.labelfield a {
+  color: #000;
+  font-size: 11px;
+  font-family: inherit;
+}
+
+li.newsevents span.titlefield {
+  display: block;
+}
+
+.smalllabel li.newsevents span.labelfield {
+  font-size: 0.8em;
+}
+
+/****************************************
+Links Bars common styles
+
+Landing Image Links Bar
+originally known as: Home Page Image Links bar
+
+Landing Mixed Links Bar
+originally known as: Landing Page Mixed Content bar
+
+Landing Coloured Links Bar
+originally known as: Home Page Coloured Links bar
+****************************************/
+
+.content-type--links-bar {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+@media (min-width: 450px) {
+  .content-type--links-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.content-type--links-bar h3,
+.content-type--links-bar ul {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 450px) {
+  .content-type--links-bar__element {
+    flex: 1 1 49%;
+    margin: 0 1% 1rem 0;
+    opacity: .9;
+  }
+}
+
+@media (min-width: 960px) {
+  .content-type--links-bar__element {
+    flex: 1 1 2%;
+    margin-right: 2%;
+  }
+}
+
+.content-type--links-bar__element:hover,
+.content-type--links-bar__element:active {
+  opacity: 1;
+  text-decoration: none !important;
+}
+
+.content-type--links-bar__element img {
+  width: 100%;
+}
+
+.content-type--links-bar__contrasting-text {
+  color: #fff;
+  display: block;
+  font-size: 1.3em;
+  line-height: 1;
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.content-type--links-bar__contrasting-text a,
+.content-type--links-bar__contrasting-text a:hover,
+.content-type--links-bar__contrasting-text a:active,
+.content-type--links-bar__contrasting-text a:visited {
+  color: #fff !important;
+}
+
+.content-type--links-bar__background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 200px;
+}
+
+@media (min-width: 450px) {
+  .content-type--links-bar__background-image {
+    opacity: .9;
+  }
+
+  .content-type--links-bar__background-image:hover,
+  .content-type--links-bar__background-image:active {
+    opacity: 1;
+  }
+}
+
+/****************************************
+One-Web Callout
+
+originally known as: Callout
+****************************************/
+
+.callout, /* legacy Plone */
+.content-type--callout {
+  background-color: #eee;
+  border-left: 10px solid darkgrey;
+  font-size: 14px;
+  font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  margin: 2rem 5% 4rem 5%;
+  overflow: hidden; /* when Right Content present 20180426 */;
+  padding: 2%;
+}
+
+/*****************************************************
+One-Web Children Link List
+
+originally known as: One-Web Children Link List
+******************************************************/
+
+.content-type--one-web-children-link-list {
+  font-size: 18px;
+}
+
+.content-type--one-web-children-link-list ul {
+  margin-bottom: 2rem;
+}
+
+.content-type--one-web-children-link-list li {
+  margin-bottom: .5rem;
+}
+
+/****************************************
+One-Web General Content
+
+originally known as: General Content
+****************************************/
+
+/* https://css-tricks.com/snippets/css/clear-fix/ */
+.content-type--one-web-general-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/****************************************
+One-Web Highlight Content Box
+
+originally known as: Highlight Content Box
+****************************************/
+
+.content-type--one-web-highlight-content-box {
+  background-color: #e7e7e7;
+  box-sizing: border-box;
+  float: left;
+  font-size: 17px;
+  margin: 0 0 20px 0;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .content-type--one-web-highlight-content-box {
+    height: 300px;
+    margin-right: 20px;
+    opacity: .9;
+    width: 210px; /* allows 4 in a row on desktop view */
+  }
+
+  .content-type--one-web-highlight-content-box:hover {
+    opacity: 1;
+  }
+}
+
+.content-type--one-web-highlight-content-box img {
+  border: 1px solid #ccc;
+  max-width: 100%;
+}
+
+.content-type--one-web-highlight-content-box img,
+.content-type--one-web-highlight-content-box__title {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/*****************************************************
+One-Web Media Object
+
+originally known as: One-Web Media Object [TEST KIF]
+*****************************************************/
+
+.content-type--one-web-media-object {
+  margin: 0 0 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .content-type--one-web-media-object {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 1rem 0;
+  }
+}
+
+.content-type--one-web-media-object img {
+  border: 1px solid lightgray;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .content-type--one-web-media-object img {
+    margin: 0 1rem 0 0;
+    max-width: 200px;
+  }
+}
+
+.content-type--one-web-media-object ul {
+  padding-left: 20px;
+}
+
+.content-type--one-web-media-object li {
+  margin-bottom: 3px;
+}
+
+.content-type--one-web-media-object__heading {
+  margin: .5rem 0 0;
+}
+
+@media (min-width: 640px) {
+  .content-type--one-web-media-object__heading {
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .content-type--one-web-media-object > div {
+    flex: 1;
+  }
+}
+
+/****************************************
+One-Web News
+
+originally known as: News
+****************************************/
+
+.content-type--one-web-news time {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.content-type--one-web-news__image {
+  margin-bottom: 1rem;
+}
+
+.content-type--one-web-news__image img {
+  border: 1px solid #ccc;
+}
+
+.content-type--one-web-news__image p {
+  font-size: 14px;
+  font-style: italic;
+  margin: 5px 0 0;
+}
+
+@media (min-width: 1000px) {
+  .content-type--one-web-news__image {
+    float: right;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    max-width: 350px;
+  }
+}
+
+/****************************************
+One-Web News Listing
+
+originally known as: News Listing
+
+.content-type--one-web-news-listing
+****************************************/
+
+/*.content-type--one-web-news-listing__paginate {}*/
+
+.content-type--one-web-news-listing__article,
+.newslisting {
+  clear: both;
+  padding: 1rem .5rem;
+  overflow: hidden;
+}
+
+.content-type--one-web-news-listing__article,
+.content-type--one-web-news-listing__article img,
+.newslisting,
+.newslisting img {
+  border-radius: 5px;
+}
+
+.content-type--one-web-news-listing__article:nth-child(odd),
+.newslisting:nth-child(odd) {
+  background-color: #eee8ef;
+}
+
+.content-type--one-web-news-listing__article h3,
+.newslisting h3 {
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.content-type--one-web-news-listing__article img,
+.newslisting img {
+  border: 1px solid #ccc;
+  float: right;
+  margin-left: .5rem;
+  max-width: 150px;
+}
+
+.content-type--one-web-news-listing__article p,
+.newslisting p {
+  font-style: italic;
+  margin: 0;
+}
+
+/****************************************************************
+One-Web Page Button General & Right
+btn-content, btn-content-right became content-type--page-button
+
+Landing Page Buttons
+originally known as: Landing Image Boxes
+#piclinks became content-type--page-button--landing
+****************************************************************/
+
+.content-type--page-button--landing {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content-type--page-button,
+.content-type--page-button--landing li {
+  position: relative;
+  z-index: 1;
+}
+
+.content-type--page-button,
+.content-type--page-button--landing li,
+.content-type--page-button a,
+.content-type--page-button--landing a,
+.content-type--page-button img {
+  height: 110px;
+  width: 225px;
+}
+
+.content-type--page-button,
+.content-type--page-button--landing li {
+  border: 5px solid #fff;
+  box-shadow: 5px 5px 11px #ddd;
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
+  opacity: 0.9;
+}
+
+.content-type--page-button:hover,
+.content-type--page-button--landing li:hover {
+  opacity: 1;
+}
+
+.content-type--page-button a,
+.content-type--page-button--landing a {
+  border: none !important;
+  color: #fff !important;
+  display: block;
+  padding: 0 !important;
+}
+
+.content-type--page-button span,
+.content-type--page-button--landing b {
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  left: 5%;
+  line-height: 1;
+  padding-right: 5%;
+  position: absolute;
+  text-shadow: 0 0 8px #000, 0 0 3px #000;
+  text-transform: lowercase;
+  top: 5%;
+  z-index: 2;
+}
+
+/****************************************
+One-Web Right Content
+
+originally known as: Right Content
+****************************************/
+
+.content-type--one-web-right-content a:hover {
+  text-decoration: none !important;
+}
+
+/****************************************
+One-Web Text Banner
+
+****************************************/
+
+.content-type--one-web-text-banner {
+  background-color: #572163;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 2rem 0;
+  padding: 2rem 1rem;
+}
+
+.content-type--one-web-text-banner__col:first-child {
+  padding: 0 0 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .content-type--one-web-text-banner {
+    flex-direction: row;
+  }
+
+  .content-type--one-web-text-banner__col:first-child {
+    padding: 0 3rem 0 0;
+  }
+}
+
+aside.content-type--one-web-text-banner__col {
+  min-width: 20%;
+}
+
+.content-type--one-web-text-banner,
+.content-type--one-web-text-banner a {
+  color: white;
+}
+
+.content-type--one-web-text-banner h2 {
+  font-size: 2.074rem;
+  margin: 0 0 2rem;
+}
+
+.content-type--one-web-text-banner aside a {
+  font-family: Oswald, Helvetica, Arial, sans-serif !important;
+}
+
+.content-type--one-web-text-banner__refer {
+  font-size: 16px;
+  line-height: 1.1;
+  margin: 0 0 .5rem 0;
+}
+
+@media (min-width: 1200px) {
+  .content-type--one-web-text-banner__refer {
+    font-size: 20px;
+    margin: 0 0 1rem 0;
+  }
+}
+
+.content-type--one-web-text-banner__refer:last-child {
+  margin-bottom: 0;
+}
+
+.content-type--one-web-text-banner h2,
+.content-type--one-web-text-banner__refer {
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+}
+
+.content-type--one-web-text-banner__icon {
+  font-family: "Sosa Web", sans-serif !important;
+  font-size: 29px;
+}
+
+/*****************************************************
+One-Web Event
+
+originally known as: Event, Uni Event
+******************************************************/
+
+.content-type--one-web-event figcaption {
+  margin: .5rem 0;
+}
+
+.content-type--one-web-event figure {
+  margin-top: 2rem;
+}
+
+.content-type--one-web-event__data {
+  background-color: #eee8ef;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.content-type--one-web-event__data h2 {
+  display: inline-block;
+  margin: 0;
+}
+
+.content-type--one-web-event__data p {
+  margin: 0 0 1rem 0;
+}
+
+.content-type--one-web-event__data p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 480px) {
+  .content-type--one-web-event__data p {
+    margin-left: 41px;
+  }
+}
+
+.content-type--one-web-event__help {
+  font-size: 14px;
+}
+
+.content-type--one-web-event__icon {
+  font-family: "Sosa Web", sans-serif;
+  font-size: 32px;
+  display: inline-block;
+}
+
+/*****************************************************
+One-Web Event Listing with Calendar
+
+related to earlier CT: Uni Event Listing
+******************************************************/
+
+.content-type--one-web-event-listing {
+  margin: 0;
+  padding: 0;
+}
+
+.content-type--one-web-event-listing li {
+  display: block;
+  margin-bottom: .5rem
+}
+
+/*****************************************************
+One-Web Staff Profile
+
+.content-type--one-web-staff-profile
+******************************************************/
+
+/****************************************
+One-Web Video Embed (YouTube or Stream)
+
+originally known as: YouTube Video Embed
+
+responsive video wrapper handled with FitVids now
+https://github.com/davatron5000/FitVids.js
+****************************************/
+
+.content-type--one-web-video-embed {
+  margin-bottom: 3rem;
+  max-width: 640px;
+}
+
+.content-type--one-web-video-embed iframe {
+  border: 0;
+}
+
+/*****************************************************
+One Web Vacancy Listing
+
+originally known as: Uni Vacancy Listing
+
+.content-type--one-web-vacancy-listing
+******************************************************/
+
+/*
+https://www.uhi.ac.uk/en/staff/vacancies/
+*/
+.vac + .vaclink {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+/****************************************
+
+CONTENT TYPE MODIFIERS
+
+classes that can apply to existing CTs to adjust their appearance consistently with other CTs
+plus common styles across Content Types
+****************************************/
+
+/****************************************
+Collapsible
+
+expand and collapse content ('accordion')
+
+used in
+- One-Web General Content
+****************************************/
+
+.content-type-modifier--collapsible {
+  margin: 0 0 1rem 0;
+}
+
+/* menu */
+
+.content-type-modifier--collapsible__menu {
+  margin: 1rem 0;
+}
+
+@media (min-width: 400px) {
+  .content-type-modifier--collapsible__menu {
+    text-align: right;
+  }
+}
+
+.content-type-modifier--collapsible__label {
+  cursor: pointer;
+  font-family: Oswald, Arial, Helvetica, sans-serif !important;
+}
+
+.content-type-modifier--collapsible__label:hover {
+  text-decoration: none !important;
+}
+
+.content-type-modifier--collapsible__label:nth-child(1) {
+  margin-right: 1rem;
+}
+
+.content-type-modifier--collapsible__label:nth-child(1):after {
+  content: 'show all';
+}
+
+.content-type-modifier--collapsible__label:nth-child(2):after {
+  content: 'hide all';
+}
+
+/* content blocks */
+
+.content-type-modifier--collapsible__heading {
+  background-color: #eee8ef;
+  border-radius: 3px;
+  color: #572163;
+  cursor: pointer;
+  display: flex;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  transition: .2s;
+}
+
+.content-type-modifier--collapsible__heading:hover {
+  background-color: #eee;
+}
+
+.content-type-modifier--collapsible .content-type--one-web-general-content,
+.content-type-modifier--collapsible .content-type--one-web-general-content__heading,
+.content-type-modifier--collapsible .content-type--one-web-tabbed-content {
+  display: none;
+}
+
+.content-type-modifier--collapsible__control {
+  font-family: "Sosa Web", sans-serif;
+  font-size: 21px;
+}
+
+.content-type-modifier--collapsible__heading .content-type-modifier--collapsible__control {
+  margin-right: 1rem;
+}
+
+.content-type-modifier--collapsible__heading .content-type-modifier--collapsible__control::after {
+  content: 'ì'; /* short arrow down */
+}
+
+/* open state */
+
+.content-type-modifier--collapsible__heading.content-type-modifier--collapsible--open {
+  background-color: transparent;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.content-type-modifier--collapsible--open .content-type-modifier--collapsible__control::after {
+  content: 'í'; /* short arrow up */
+}
+
+/****************************************
+Shading
+
+light background colour in a padded container
+
+used in:
+- One-Web Right Content
+...
+****************************************/
+
+.content-type-modifier--shading {
+  background-color: #eee8ef;
+  border-color: #ddd;
+  border-radius: .5rem;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0 0 1rem;
+  padding: .5rem;
+}
+
+/* should be in One-Web Right Content instead? */
+.content-type-modifier--shading h2,
+.content-type-modifier--shading h3,
+.content-type-modifier--shading h5,
+.content-type-modifier--shading p,
+.content-type-modifier--shading a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/****************************************
+Typography
+
+heading and list styles with vertical rhythm
+from type scale - for mobile multiply by 14/16
+
+used in:
+- One-Web Event
+- One-Web Expert
+- One-Web General Content
+- One-Web News
+- One-Web Staff Profile
+- One Web Vacancy Listing
+
+.description also used in:
+- One-Web Vacancy
+
+table styles also used in:
+- Course pages
+
+****************************************/
+
+/* blockquote */
+
+.content-type-modifier--typography blockquote {
+  border-color: #eee8ef;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 0 0 0 .5rem;
+  font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding: 0 2rem 0 1rem;
+}
+
+/* headings and font sizes */
+
+.content-type-modifier--typography h2 {
+  font-size: 1.512rem;
+}
+
+.content-type--one-web-event-listing__title,
+.content-type--one-web-media-object__heading,
+.content-type-modifier--collapsible__heading,
+.content-type-modifier--typography h3,
+.content-type-modifier--typography table caption {
+  font-size: 1.26rem;
+}
+
+.content-type--one-web-event__summary,
+.content-type--one-web-general-content__description,
+.content-type--one-web-news time,
+.content-type--one-web-news__description,
+.content-type-modifier--typography blockquote,
+.content-type-modifier--typography h4,
+.description {
+  font-size: 17px;
+}
+
+@media (min-width: 1000px) {
+  .content-type-modifier--typography h2 {
+    font-size: 1.728rem;
+  }
+
+  .content-type-modifier--collapsible__heading,
+  .content-type-modifier--typography h3,
+  .content-type--one-web-media-object__heading {
+    font-size: 1.44rem;
+  }
+
+  .content-type--one-web-event__summary,
+  .content-type-modifier--typography h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* spacing between headed sections */
+.content-type-modifier--typography h2,
+.content-type-modifier--typography h3,
+.content-type-modifier--typography h4,
+.content-type-modifier--typography h5,
+.content-type-modifier--typography h6 {
+  margin: 1.728rem 0 1rem;
+}
+
+/* lists */
+
+.content-type-modifier--typography li {
+  padding-bottom: 8px;
+}
+
+/* nested lists */
+.content-type-modifier--typography li ol,
+.content-type-modifier--typography li ul {
+  padding-top: 8px;
+}
+
+.content-type-modifier--typography ol ol {
+  list-style-type: lower-roman;
+}
+
+.content-type-modifier--typography ol ol ol {
+  list-style-type: lower-latin;
+}
+
+/* tables
+
+don't use:
+- table-layout:fixed
+- width:100%
+(repercussions for cell widths etc)
+*/
+
+.content-type-modifier--typography table,
+.coursedetails table {
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  overflow-wrap: break-word;
+}
+
+.content-type-modifier--typography table,
+.content-type-modifier--typography td,
+.coursedetails td,
+.coursedetails th {
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* on light background */
+.content-type-modifier--typography table,
+.content-type-modifier--typography td {
+  border-color: #ddd;
+}
+
+/* on dark background */
+.coursedetails td,
+.coursedetails th {
+  border-color: #999;
+}
+
+/* consistent with <thead><th> */
+.content-type-modifier--typography thead td {
+  border: none;
+}
+
+/*
+in T4 a cell can be:
+- <th> but not inside a <thead><tr>
+- <td>         inside a <thead><tr>
+ */
+.content-type-modifier--typography th,
+.content-type-modifier--typography thead tr {
+  background-color: #eee;
+}
+
+.content-type-modifier--typography td,
+.content-type-modifier--typography th,
+.coursedetails td,
+.coursedetails th {
+  padding: 3px 6px;
+  word-wrap: break-word;
+}
+
+.content-type-modifier--typography td,
+.content-type-modifier--typography th,
+.coursedetails td {
+  vertical-align: top;
+}
+
+/* line up currency format */
+.coursedetails td {
+  text-align: right;
+}
+
+.coursedetails th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.coursedetails td p,
+.coursedetails th p {
+  margin: 0;
+}
+
+.content-type-modifier--typography table ol,
+.content-type-modifier--typography table p,
+.content-type-modifier--typography table ul {
+  margin-top: 0;
+}
+
+.content-type-modifier--typography table caption {
+  padding: 1rem;
+}
+
+/* table summary for accessibility */
+.mce-table-summary {
+  font-size: initial;
+  line-height: 1;
+}
+
+/****************************************
+Width
+
+shrink element to percentage width and float left
+for multiple content items to make double column
+
+used in
+- One-Web Media Object
+****************************************/
+
+@media (min-width: 480px) {
+  .content-type-modifier--width--half {
+    box-sizing: border-box;
+    float: left;
+    padding-right: 2rem;
+    width: 50%;
+  }
+}
+
+/****************************************
+Flexbox
+
+two column layout
+
+used in:
+- One-Web General Content
+****************************************/
+
+@media (min-width: 640px) {
+  .flex-cols {
+    display: flex;
+    width: 100%;
+  }
+
+  .flex-cols__col {
+    flex: 1;
+  }
+
+  .flex-cols__col--next {
+    padding-left: 4%;
+  }
+}
+
+/****************************************
+
+USER MODULES
+
+****************************************/
+
+/****************************************
+
+TinyMCE HTML editor styles
+
+prefixed 'UHI--'
+this section should be COPIED exactly from build-uhi-main.css into tiny-mce-css.css in T4
+- currently located in Media Library, University > Business
+
+they append default TinyMCE formats
+each colour contains duplicate styles, for preview in TinyMCE
+****************************************/
+
+/* single class selector rules will display on Format menu */
+
+/* buttons */
+
+.UHI--button-link--black {
+  background-color: #0f0f0f;
+  color: white; /* only if no link */
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+}
+
+.UHI--button-link--main {
+  background-color: #572163;
+  color: #eee8ef; /* only if no link (secondary colour) */
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+}
+
+.UHI--button-link--reverse {
+  background-color: #eee8ef;
+  border-color: #572163;
+  border-style: solid;
+  border-width: .3rem;
+  color: #572163; /* only if no link */
+  padding: .2rem .7rem;
+  text-transform: uppercase;
+}
+
+/* buttons additional */
+
+.UHI--button-link--black a,
+.UHI--button-link--black a:visited,
+.UHI--button-link--main a,
+.UHI--button-link--main a:visited {
+  color: white;
+}
+
+.UHI--button-link--reverse a,
+.UHI--button-link--reverse a:visited {
+  color: #572163;
+}
+
+.UHI--button-link--black,
+.UHI--button-link--main,
+.UHI--button-link--reverse {
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Oswald, Helvetica, Arial, sans-serif !important; /* if no link made */
+  font-size: 26px;
+  line-height: 1.1;
+  margin: 0 1rem 1rem 0;
+  transition: .3s;
+}
+
+/* shows when on coloured background */
+.UHI--button-link--main,
+.UHI--button-link--reverse {
+  outline: 1px solid white;
+}
+
+/* hover state above iPad landscape */
+@media (min-width: 1025px) {
+  .UHI--button-link--black,
+  .UHI--button-link--main,
+  .UHI--button-link--reverse {
+    opacity: .85;
+  }
+
+  .UHI--button-link--black:hover,
+  .UHI--button-link--main:hover,
+  .UHI--button-link--reverse:hover {
+    opacity: 1;
+  }
+}
+
+.UHI--button-link--black a,
+.UHI--button-link--main a,
+.UHI--button-link--reverse a {
+  font-family: Oswald, Helvetica, Arial, sans-serif !important;
+}
+
+.UHI--button-link--black a:hover,
+.UHI--button-link--main a:hover,
+.UHI--button-link--reverse a:hover {
+  text-decoration: none !important;
+}
+
+.UHI--button-link--black a:active,
+.UHI--button-link--main a:active,
+.UHI--button-link--reverse a:active {
+  opacity: .5;
+}
+
+/* image border */
+
+.UHI--image--outline img {
+  outline: 2px solid #eee;
+}
+
+/* monospace */
+
+.UHI--monospace {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+/* highlighted paragraph */
+
+.UHI--paragraph-highlight {
+  background-color: #eee8ef;
+  border-color: #572163;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0;
+  padding: .5rem;
+}
+
+/****************************************
+
+UTILITIES / HELPER CLASSES
+
+****************************************/
+
+/* float images only when sufficient screen width */
+@media (min-width: 480px) {
+
+  .image-left, /* legacy Plone */
+  .utils--float-left {
+    float: left;
+    margin: .5rem 1rem 1rem 0;
+  }
+
+  .image-right, /* legacy Plone */
+  .utils--float-right {
+    float: right;
+    margin: .5rem 0 1rem 1rem;
+  }
+
+}
+
+/* rounded corners */
+.utils--border-radius {
+  border-radius: 1rem;
+}
+
+/* half column width */
+@media (min-width: 1000px) {
+  .utils--width-half--1000 {
+    width: 50%;
+  }
+}
+
+/* e.g. for stacking images */
+.utils--padding {
+  padding: 1rem;
+}
+
+/* e.g. set on a container for horizontal scrolling of a wide table */
+.utils--scroll {
+  overflow: auto;
+}
+
+.utils--text-shadow {
+  text-shadow: 0 0 8px #000, 0 0 3px #000;
+}
+
+/****************************************
+
+more IDs
+
+at the end due to high specificity
+****************************************/
+
+@media (max-width: 767px) {
+  #bigBG {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* fits scrolling banner images into container without unnecessary zoom */
+  .section.intro #bigBG .background {
+    background-size: cover;
+  }
+}
+
+#coursefilter li.open:nth-child(even) {
+  background-color: #572163;
+}
+
+/*
+main Course listing block
+https://www.uhi.ac.uk/en/courses/
+*/
+#courselist a:hover {
+  background-color: #eaeaea;
+}
+
+/*
+#coursesearch-filters
+*/
+
+.section.courselist .col.onequarter #coursesearch-filters ul {
+  list-style: none;
+}
+
+#coursesearch-filters li.open:nth-child(4) ul.search-filters li:nth-child(14) {
+  display: none;
+}
+
+/* Landing Page news and event feeds */
+#feeds {
+  margin-bottom: 30px;
+}
+
+#parent-fieldname-description {
+  margin-bottom: 15px;
+}
+
+/* QR code for print only */
+#printQR {
+  display: none;
+}
+
+/* https://www.inverness.uhi.ac.uk/ */
+#rssFeed {
+  padding: 0;
+  margin: 0;
+}
+
+#smallBG {
+  min-height: 340px;
+}
+
+@media (min-width: 768px) {
+  #smallBG {
+    display: none;
+  }
+}
+
+/****************************************
+
+CANDIDATES FOR REMOVAL/REPLACEMENT
+
+****************************************/
+
+#mode1ft li,
+#mode1pt li,
+#mode2ft li,
+#mode2pt li,
+#mode3ft li,
+#mode3pt li,
+#mode4ft li,
+#mode4pt li {
+  list-style-type: none;
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  #mode1 a,
+  #mode1ft a,
+  #mode1pt a,
+  #mode2 a,
+  #mode2ft a,
+  #mode2pt a,
+  #mode3 a,
+  #mode3ft a,
+  #mode3pt a,
+  #mode4 a,
+  #mode4ft a,
+  #mode4pt a,
+  #year a {
+    font-size: 22px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #mode1 a,
+  #mode1ft a,
+  #mode1pt a,
+  #mode2 a,
+  #mode2ft a,
+  #mode2pt a,
+  #mode3 a,
+  #mode3ft a,
+  #mode3pt a,
+  #mode4 a,
+  #mode4ft a,
+  #mode4pt a,
+  #year a {
+    font-size: 27px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #mode1 a,
+  #mode1ft a,
+  #mode1pt a,
+  #mode2 a,
+  #mode2ft a,
+  #mode2pt a,
+  #mode3 a,
+  #mode3ft a,
+  #mode3pt a,
+  #mode4 a,
+  #mode4ft a,
+  #mode4pt a,
+  #year a {
+    font-size: 30px;
+    height: 45px;
+  }
+}
+
+/* https://www.nafc.uhi.ac.uk/courses/aquaculture-apprenticeships/ */
+.image-sponsor-logo {
+  margin: 1rem 1.25rem;
+  max-height: 130px;
+  max-width: 240px;
+}
+
+/* .description */
+
+/****************************************
+
+IN DEVELOPMENT
+
+****************************************/
