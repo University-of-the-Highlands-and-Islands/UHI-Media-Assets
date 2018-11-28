@@ -1,0 +1,174 @@
+/********************************************
+
+partner theme for
+Orkney College UHI
+
+changes to this stylesheet should be mirrored across all partners
+
+Block colour: #005a65
+10% colour:   #e5eeef
+**************************************/
+
+/**********************
+colours common to all partners
+**********************/
+
+.footer,
+.footer p a {
+  color: #fff;
+}
+
+.footer p a {
+  border-bottom: 1px solid #fff;
+}
+
+/* course page tabs */
+.section.coursedetails .tabnav li h2 a {
+  color: #000;
+}
+
+/**********************
+Block colours
+**********************/
+
+#visual-portal-wrapper h1,
+#visual-portal-wrapper h2,
+#visual-portal-wrapper h3,
+#visual-portal-wrapper h4,
+#visual-portal-wrapper h5,
+#visual-portal-wrapper h6,
+.content h1,
+.content-type-modifier--collapsible__heading,
+.header.banner .nav.primary ul li a,
+.header.banner .nav.primary ul li.active a,
+.newsevents,
+.section.coursefinder .prospectus strong:hover,
+.section.courselist .col.onequarter > ul > li a,
+.section.courselist .col.onequarter h2,
+.studying a,
+.studying a:visited,
+.studying h3,
+.studying h5,
+.UHI--button-link--reverse,
+.UHI--button-link--reverse a,
+.UHI--button-link--reverse a:visited,
+a,
+a:active,
+a:visited {
+  color: #005a65;
+}
+
+#coursefilter li.open:nth-child(even),
+.content-type--one-web-text-banner,
+.fb-search .badge,
+.fb-search .panel-heading,
+.footer,
+.footer ul.nav li a:hover,
+.header.banner .tools li.alumni a,
+.header.banner .tools li.language a,
+.header.banner .tools li.staff a,
+.header.banner .tools li.students a,
+.section.connections .ctas ul li a:hover,
+.section.coursedetails,
+.section.coursedetails .tabnav li.ui-tabs-active h2 a,
+.section.courselist .col.onequarter .extra ul li,
+.section.courselist .col.onequarter > form > ul > li,
+.section.courselist .col.onequarter > ul > li ul li.active a,
+.section.courselist .col.onequarter > ul > li:first-child,
+.section.courselist .col.onequarter > ul > li:nth-child(odd) ul li.active a,
+.section.courselist .col.onequarter.news > ul > li:first-child:hover,
+.section.ctas .section.apply a:hover,
+.section.ctas .section.tour .ctas ul li a:hover,
+.section.intro h1,
+.section.intro p,
+.tt-menu .tt-suggestion:hover,
+.tt-menu .tt-cursor,
+.UHI--button-link--main,
+div.content-type--landing-link-list__heading {
+  background-color: #005a65;
+}
+
+.section.courselist .col.onequarter.news > ul > li:first-child {
+  background: #005a65 none repeat scroll 0 0;
+}
+
+.section.specialistsubjects,
+.section.testimonials {
+  background: #005a65 url(<t4 type= "media" formatter= "image/path" id= "5576" />) center bottom no-repeat;
+}
+
+.UHI--button-link--reverse {
+  border-color: #005a65;
+}
+
+.header.banner .nav.primary ul li a,
+.header.banner .nav.primary ul li.active a {
+  border-bottom-color: #005a65;
+  border-top-color: #005a65;
+}
+
+.section.courselist .col.half .halflight:hover {
+  box-shadow: 5px 5px 11px #005a65;
+}
+
+.header.banner .tools li.students a,
+.header.banner .tools li.staff a,
+.header.banner .tools li.alumni a,
+.header.banner .tools li.language a {
+  box-shadow: 0 0 0 1px #005a65;
+}
+
+/**********************
+10% colours
+**********************/
+
+.UHI--button-link--main,
+a.t4Edit-page,
+a.t4Edit-page:visited,
+a.t4Edit-page:active {
+  color: #e5eeef;
+}
+
+.content-type--one-web-event__data,
+.content-type-modifier--collapsible__heading,
+.content-type-modifier--shading,
+.newsevents,
+.content-type--one-web-news-listing__article:nth-child(odd),
+.newslisting:nth-child(odd),
+.section.coursedetails .tabnav li h2 a,
+.section.coursefinder,
+.studying,
+.UHI--button-link--reverse,
+.UHI--paragraph-highlight {
+  background-color: #e5eeef;
+}
+
+.courses .section.coursefinder.coursepage {
+  background: #e5eeef none repeat scroll 0 0 !important;
+}
+
+.content-type-modifier--typography blockquote {
+  border-color: #e5eeef;
+}
+
+/**********************
+header logo image and size
+native 74px x 312px
+**********************/
+
+.header.banner .logo a {
+  background-image: url(<t4 type= "media" formatter= "image/path" id= "205145" />);
+  height: 57px;
+  width: 241px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header.banner .logo a {
+    height: 74px;
+    width: 312px;
+  }
+}
+
+/***************************************************
+rules not in other partner-specific stylesheets
+***************************************************/

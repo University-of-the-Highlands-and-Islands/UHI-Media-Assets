@@ -1,0 +1,243 @@
+/********************************************
+
+partner theme for
+Highland Theological College UHI
+
+changes to this stylesheet should be mirrored across all partners
+
+Block colour: #761640
+10% colour:   #f1e7ec
+**************************************/
+
+/**********************
+colours common to all partners
+**********************/
+
+.footer,
+.footer p a {
+  color: #fff;
+}
+
+.footer p a {
+  border-bottom: 1px solid #fff;
+}
+
+/* course page tabs */
+.section.coursedetails .tabnav li h2 a {
+  color: #000;
+}
+
+/**********************
+Block colours
+**********************/
+
+#visual-portal-wrapper h1,
+#visual-portal-wrapper h2,
+#visual-portal-wrapper h3,
+#visual-portal-wrapper h4,
+#visual-portal-wrapper h5,
+#visual-portal-wrapper h6,
+.content h1,
+.content-type-modifier--collapsible__heading,
+.header.banner .nav.primary ul li a,
+.header.banner .nav.primary ul li.active a,
+.newsevents,
+.section.coursefinder .prospectus strong:hover,
+.section.courselist .col.onequarter > ul > li a,
+.section.courselist .col.onequarter h2,
+.studying a,
+.studying a:visited,
+.studying h3,
+.studying h5,
+.UHI--button-link--reverse,
+.UHI--button-link--reverse a,
+.UHI--button-link--reverse a:visited,
+a,
+a:active,
+a:visited {
+  color: #761640;
+}
+
+#coursefilter li.open:nth-child(even),
+.content-type--one-web-text-banner,
+.fb-search .badge,
+.fb-search .panel-heading,
+.footer,
+.footer ul.nav li a:hover,
+.header.banner .tools li.alumni a,
+.header.banner .tools li.language a,
+.header.banner .tools li.staff a,
+.header.banner .tools li.students a,
+.section.connections .ctas ul li a:hover,
+.section.coursedetails,
+.section.coursedetails .tabnav li.ui-tabs-active h2 a,
+.section.courselist .col.onequarter .extra ul li,
+.section.courselist .col.onequarter > form > ul > li,
+.section.courselist .col.onequarter > ul > li ul li.active a,
+.section.courselist .col.onequarter > ul > li:first-child,
+.section.courselist .col.onequarter > ul > li:nth-child(odd) ul li.active a,
+.section.courselist .col.onequarter.news > ul > li:first-child:hover,
+.section.ctas .section.apply a:hover,
+.section.ctas .section.tour .ctas ul li a:hover,
+.section.intro h1,
+.section.intro p,
+.tt-menu .tt-suggestion:hover,
+.tt-menu .tt-cursor,
+.UHI--button-link--main,
+div.content-type--landing-link-list__heading {
+  background-color: #761640;
+}
+
+.section.courselist .col.onequarter.news > ul > li:first-child {
+  background: #761640 none repeat scroll 0 0;
+}
+
+.section.specialistsubjects,
+.section.testimonials {
+  background: #761640 url(<t4 type= "media" formatter= "image/path" id= "5576" />) center bottom no-repeat;
+}
+
+.UHI--button-link--reverse {
+  border-color: #761640;
+}
+
+.header.banner .nav.primary ul li a,
+.header.banner .nav.primary ul li.active a {
+  border-bottom-color: #761640;
+  border-top-color: #761640;
+}
+
+.section.courselist .col.half .halflight:hover {
+  box-shadow: 5px 5px 11px #761640;
+}
+
+.header.banner .tools li.students a,
+.header.banner .tools li.staff a,
+.header.banner .tools li.alumni a,
+.header.banner .tools li.language a {
+  box-shadow: 0 0 0 1px #761640;
+}
+
+/**********************
+10% colours
+**********************/
+
+.UHI--button-link--main,
+a.t4Edit-page,
+a.t4Edit-page:visited,
+a.t4Edit-page:active {
+  color: #f1e7ec;
+}
+
+.content-type--one-web-event__data,
+.content-type-modifier--collapsible__heading,
+.content-type-modifier--shading,
+.newsevents,
+.content-type--one-web-news-listing__article:nth-child(odd),
+.newslisting:nth-child(odd),
+.section.coursedetails .tabnav li h2 a,
+.section.coursefinder,
+.studying,
+.UHI--button-link--reverse,
+.UHI--paragraph-highlight {
+  background-color: #f1e7ec;
+}
+
+.courses .section.coursefinder.coursepage {
+  background: #f1e7ec none repeat scroll 0 0 !important;
+}
+
+.content-type-modifier--typography blockquote {
+  border-color: #f1e7ec;
+}
+
+/**********************
+header logo image and size
+native 79px x 400px
+**********************/
+
+.header.banner .logo a {
+  background-image: url(<t4 type= "media" formatter= "image/path" id= "163277" />);
+  height: 57px;
+  width: 290px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header.banner .logo a {
+    height: 71px;
+    width: 360px;
+  }
+}
+
+@media only screen and (min-width: 1340px) {
+  .header.banner .logo a {
+    height: 75px;
+    width: 380px;
+  }
+}
+
+/***************************************************
+rules not in other partner-specific stylesheets
+***************************************************/
+
+/*
+Course button links
+https://www.htc.uhi.ac.uk/courses/
+*/
+
+#buttonlinks {
+  clear: both;
+  margin-top: 25px;
+}
+
+#buttonlinks li {
+  float: left;
+  list-style-type: none;
+  margin: 0 30px 30px 0;
+  height: 75px;
+  width: 95%;
+  text-align: right;
+  border: 5px solid #fff;
+  box-shadow: 5px 5px 11px #761640;
+  background-color: #761640;
+}
+
+#buttonlinks li:hover {
+  opacity: 0.8;
+}
+
+#buttonlinks li a {
+  height: 110px;
+  width: 225px;
+}
+
+#buttonlinks li b {
+  display: block;
+  margin: -0 10px 0 0;
+  font-family: "Oswald", arial, helvetica, sans-serif;
+  color: #fff;
+  text-transform: lowercase;
+  font-size: 18pt;
+  text-shadow: 1px 1px #555;
+}
+
+/*
+Home page slogan
+https://www.htc.uhi.ac.uk/
+*/
+
+#slogan {
+  color: #82234f;
+  font-size: 120%;
+  font-style: italic;
+  margin-right: 20px;
+  text-align: right;
+  float: right;
+  clear: right;
+  line-height: 1;
+}
+
+#slogan p {
+  padding-top: 0;
+  margin-top: 0;
+}

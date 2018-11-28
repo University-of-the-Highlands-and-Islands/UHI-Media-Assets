@@ -1,0 +1,174 @@
+/********************************************
+
+partner theme for
+North Highland College UHI
+
+changes to this stylesheet should be mirrored across all partners
+
+Block colour: #562e8f
+10% colour:   #eeeaf4
+**************************************/
+
+/**********************
+colours common to all partners
+**********************/
+
+.footer,
+.footer p a {
+  color: #fff;
+}
+
+.footer p a {
+  border-bottom: 1px solid #fff;
+}
+
+/* course page tabs */
+.section.coursedetails .tabnav li h2 a {
+  color: #000;
+}
+
+/**********************
+Block colours
+**********************/
+
+#visual-portal-wrapper h1,
+#visual-portal-wrapper h2,
+#visual-portal-wrapper h3,
+#visual-portal-wrapper h4,
+#visual-portal-wrapper h5,
+#visual-portal-wrapper h6,
+.content h1,
+.content-type-modifier--collapsible__heading,
+.header.banner .nav.primary ul li a,
+.header.banner .nav.primary ul li.active a,
+.newsevents,
+.section.coursefinder .prospectus strong:hover,
+.section.courselist .col.onequarter > ul > li a,
+.section.courselist .col.onequarter h2,
+.studying a,
+.studying a:visited,
+.studying h3,
+.studying h5,
+.UHI--button-link--reverse,
+.UHI--button-link--reverse a,
+.UHI--button-link--reverse a:visited,
+a,
+a:active,
+a:visited {
+  color: #562e8f;
+}
+
+#coursefilter li.open:nth-child(even),
+.content-type--one-web-text-banner,
+.fb-search .badge,
+.fb-search .panel-heading,
+.footer,
+.footer ul.nav li a:hover,
+.header.banner .tools li.alumni a,
+.header.banner .tools li.language a,
+.header.banner .tools li.staff a,
+.header.banner .tools li.students a,
+.section.connections .ctas ul li a:hover,
+.section.coursedetails,
+.section.coursedetails .tabnav li.ui-tabs-active h2 a,
+.section.courselist .col.onequarter .extra ul li,
+.section.courselist .col.onequarter > form > ul > li,
+.section.courselist .col.onequarter > ul > li ul li.active a,
+.section.courselist .col.onequarter > ul > li:first-child,
+.section.courselist .col.onequarter > ul > li:nth-child(odd) ul li.active a,
+.section.courselist .col.onequarter.news > ul > li:first-child:hover,
+.section.ctas .section.apply a:hover,
+.section.ctas .section.tour .ctas ul li a:hover,
+.section.intro h1,
+.section.intro p,
+.tt-menu .tt-suggestion:hover,
+.tt-menu .tt-cursor,
+.UHI--button-link--main,
+div.content-type--landing-link-list__heading {
+  background-color: #562e8f;
+}
+
+.section.courselist .col.onequarter.news > ul > li:first-child {
+  background: #562e8f none repeat scroll 0 0;
+}
+
+.section.specialistsubjects,
+.section.testimonials {
+  background: #562e8f url(<t4 type= "media" formatter= "image/path" id= "5576" />) center bottom no-repeat;
+}
+
+.UHI--button-link--reverse {
+  border-color: #562e8f;
+}
+
+.header.banner .nav.primary ul li a,
+.header.banner .nav.primary ul li.active a {
+  border-bottom-color: #562e8f;
+  border-top-color: #562e8f;
+}
+
+.section.courselist .col.half .halflight:hover {
+  box-shadow: 5px 5px 11px #562e8f;
+}
+
+.header.banner .tools li.students a,
+.header.banner .tools li.staff a,
+.header.banner .tools li.alumni a,
+.header.banner .tools li.language a {
+  box-shadow: 0 0 0 1px #562e8f;
+}
+
+/**********************
+10% colours
+**********************/
+
+.UHI--button-link--main,
+a.t4Edit-page,
+a.t4Edit-page:visited,
+a.t4Edit-page:active {
+  color: #eeeaf4;
+}
+
+.content-type--one-web-event__data,
+.content-type-modifier--collapsible__heading,
+.content-type-modifier--shading,
+.newsevents,
+.content-type--one-web-news-listing__article:nth-child(odd),
+.newslisting:nth-child(odd),
+.section.coursedetails .tabnav li h2 a,
+.section.coursefinder,
+.studying,
+.UHI--button-link--reverse,
+.UHI--paragraph-highlight {
+  background-color: #eeeaf4;
+}
+
+.courses .section.coursefinder.coursepage {
+  background: #eeeaf4 none repeat scroll 0 0 !important;
+}
+
+.content-type-modifier--typography blockquote {
+  border-color: #eeeaf4;
+}
+
+/**********************
+header logo image and size
+native 79px x 298px
+**********************/
+
+.header.banner .logo a {
+  background-image: url(<t4 type= "media" formatter= "image/path" id= "237455" />);
+  height: 57px;
+  width: 216px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header.banner .logo a {
+    height: 79px;
+    width: 298px;
+  }
+}
+
+/***************************************************
+rules not in other partner-specific stylesheets
+***************************************************/

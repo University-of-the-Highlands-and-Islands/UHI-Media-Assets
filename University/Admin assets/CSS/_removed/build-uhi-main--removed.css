@@ -1,0 +1,1032 @@
+.flex-cols__col > h2:first-child,
+.flex-cols__col > h3:first-child,
+.flex-cols__col > p:first-child {
+  margin-top: 0;
+}
+.flex-cols__col {
+  overflow: hidden; /* will hide very wide content */
+}
+
+#portal-column-one .research {
+  margin-top: 15px;
+}
+
+#portal-breadcrumbs {
+  text-transform: lowercase;
+}
+
+/****************************************
+One-Web Tabbed Content
+
+originally known as: Tabbed Content Item
+phasing out
+
+.content-type--one-web-tabbed-content
+****************************************/
+
+.videowrapper {
+  float: none;
+  height: 0;
+  max-width: 640px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 52.25%;
+  padding-top: 25px;
+  width: 100%;
+}
+
+.videowrapper iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.portlet {
+  margin: 0;
+}
+
+.portlet .portletHeader {
+  display: none;
+}
+
+.portlet .portletItem {
+  margin: 0;
+}
+
+/* Course Pages - fee tables */
+
+table.fees2col th,
+table.fees2col td {
+  width: 52%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees3col th,
+table.fees3col td {
+  width: 26%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees4col th,
+table.fees4col td {
+  width: 18%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees7col th,
+table.fees7col td {
+  width: 10%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees7col tr:first-child,
+table.fees4col tr:first-child,
+table.fees3col tr:first-child,
+table.fees2col tr:first-child {
+  background: transparent;
+}
+
+div#Fees div table.fees7col tr:first-child,
+div#Fees div table.fees6col tr:first-child,
+div#Fees div table.fees4col tr:first-child,
+div#Fees div table.fees3col tr:first-child,
+div#Fees div table.fees2col tr:first-child {
+  background-color: #572163;
+}
+
+table.fees7col th ul,
+table.fees6col th ul,
+table.fees4col th ul,
+table.fees3col th ul,
+table.fees2col th ul {
+  margin: 0;
+  padding: 0;
+}
+
+table.fees7col th ul li,
+table.fees6col th ul li,
+table.fees4col th ul li,
+table.fees3col th ul li,
+table.fees2col th ul li {
+  font-weight: normal;
+  list-style-type: none;
+}
+
+table.fees7col th,
+table.fees6col th,
+table.fees4col th,
+table.fees3col th,
+table.fees2col th {
+  vertical-align: bottom;
+}
+
+table.fees2col th,
+table.fees2col td {
+  width: 52%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees2col th:first-child {
+  width: 48%;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table.fees2col td:first-child {
+  width: 48%;
+  text-align: right;
+  border: 1px solid #ddd;
+}
+
+table.fees3col th,
+table.fees3col td {
+  width: 26%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees3col th:first-child {
+  width: 48%;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table.fees3col td:first-child {
+  width: 48%;
+  text-align: right;
+  border: 1px solid #ddd;
+}
+
+table.fees4col th,
+table.fees4col td {
+  width: 18%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees4col th:first-child {
+  width: 46%;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table.fees4col td:first-child {
+  width: 46%;
+  text-align: right;
+  border: 1px solid #ddd;
+}
+
+table.fees6col th,
+table.fees6col td {
+  width: 12%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees6col th:first-child {
+  width: 34%;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table.fees6col td:first-child {
+  width: 34%;
+  text-align: right;
+  border: 1px solid #ddd;
+}
+
+/*fees7col not in any markup*/
+
+table.fees7col th,
+table.fees7col td {
+  width: 10%;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+table.fees7col th:first-child {
+  width: 30%;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table.fees7col td:first-child {
+  width: 30%;
+  text-align: right;
+  border: 1px solid #ddd;
+}
+
+table.fees7col,
+table.fees6col,
+table.fees4col,
+table.fees3col,
+table.fees2col {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 50px;
+}
+
+/*#Fees not in any markup*/
+
+div#Fees div table.fees7col tr:first-child,
+div#Fees div table.fees4col tr:first-child,
+div#Fees div table.fees3col tr:first-child,
+div#Fees div table.fees2col tr:first-child {
+  background-color: #572163;
+}
+
+.default-content-tab {
+}
+
+.pane-break {
+}
+
+.t4-landing-page table.prospectus {
+  width: 90%;
+  margin: 40px;
+}
+
+.t4-landing-page table.prospectus .printlink {
+  display: inline;
+}
+
+/*
+https://www.inverness.uhi.ac.uk/about-us/foi/
+https://www.moray.uhi.ac.uk/news/free-2-day-intro-courses-this-june--july.html
+*/
+.table-style--1 {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-style--1 th,
+.table-style--1 td {
+  border: 1px solid #ccc;
+
+  padding: .5rem;
+  vertical-align: top;
+
+}
+
+/* https://www.moray.uhi.ac.uk/studying-at-mc/study-choices/first-aid/ */
+.table-style--1 ul {
+  padding-left: 20px;
+}
+
+.table-style--1 li {
+  padding: 0;
+}
+
+table.plain th {
+  padding: 5px;
+  text-align: left;
+  vertical-align: top;
+  background-color: #eee8ef;
+}
+
+table.plain td {
+  padding: 5px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* js-generated .pane-container code removed now tabr.js is gone */
+
+div.pane-container {
+  margin-bottom: 1em;
+}
+
+div.pane-container ul.tabs {
+  margin: 0 !important;
+  padding: 0;
+  list-style: none !important;
+  height: 2em;
+  border-bottom: 1px solid #666;
+}
+
+div.pane-container ul.tabs li {
+  float: left;
+  background: url(<t4 type= "media" formatter= "image/path" id= "5578" />) no-repeat left top;
+  padding: 0 0 0 5px;
+  margin: 0 1px 0 0;
+}
+
+div.pane-container ul.tabs li:hover,
+div.pane-container ul.tabs li:hover a {
+  background-position: 0 -150px;
+  border-width: 0;
+  color: #000;
+}
+
+div.pane-container ul.tabs li:hover a {
+  background-position: 100% -150px;
+}
+
+div.pane-container ul.tabs li.ui-tabs-active {
+  background-position: 0 -150px;
+}
+
+div.pane-container ul.tabs li.ui-tabs-active a {
+  background-position: 100% -150px;
+  color: #000;
+}
+
+div.pane-container ul.tabs a {
+  float: left;
+  display: block;
+  width: .1em;
+  background: url(<t4 type= "media" formatter= "image/path" id= "5579" />) no-repeat right top;
+  padding: 0 5px;
+  text-decoration: none;
+  color: #fff;
+  line-height: 2em;
+}
+
+div.pane-container ul.tabs a:active {
+  outline: none;
+}
+
+div.pane-container > ul.tabs a {
+  width: auto;
+}
+
+div.pane-container div.pane {
+  background-color: #fff;
+  border: 1px solid #999;
+  border-top: 0;
+  display: none;
+  /* overflow: hidden; breaks layout when 'last tab' is not selected */
+  padding: 15px 10px;
+}
+
+/* Argyll only - #portal-column-two padding */
+
+#portal-column-two {
+  padding-top: 108px;
+}
+
+@media only screen and (min-width: 768px) {
+  div#portal-column-two {
+    padding-top: 88px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  div#portal-column-two {
+    padding-top: 108px;
+  }
+}
+
+/*********
+old MAIN #PORTAL-COLUMN LAYOUT
+
+T4 dev Page Layouts updated:
+X * One Web - Left Nav Level 3
+* One Web - Left Nav Level 3 - PHP (dev only)
+X * One Web - Left Nav Level 4
+X * One Web - Left Nav Level 5
+X * One Web - Left Nav Level 6
+X * One Web - No Left Nav with Right Column
+              * One Web - No Left Nav with Right Column - No Title (dev only)
+
+remove from main.js line 5ish:
+$("#portal-column-two").prev("#portal-column-content").css('width', '46%');
+
+<div id="portal-columns">
+  <div class="main">
+  <div id="portal-column-content">…
+  <div id="portal-column-two">… <!— right col -->
+  <div id="portal-column-one">… <!— left  col -->
+  ...
+
+********/
+
+#portal-breadcrumbs {
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  #portal-breadcrumbs {
+    margin: 8px 0 0 0;
+  }
+}
+
+.main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 1000px) {
+  .main > #portal-column-one {
+    width: 125px !important;
+  }
+}
+
+.main > #portal-column-one {
+  margin-top: 1.66em;
+  float: left;
+  padding: 0 1em;
+  text-align: left;
+  width: 20% !important;
+  border-right: none !important;
+}
+
+.main > #portal-column-one + #portal-column-content {
+  width: 70%;
+}
+
+@media (max-width: 767px) {
+  .main > #portal-column-one {
+    display: table-footer-group;
+    float: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .main > #portal-column-two {
+    display: table-footer-group;
+    float: none !important;
+    width: 100%;
+  }
+}
+
+.main > #portal-column-two {
+  float: right;
+  text-align: left;
+  width: 21%;
+  margin-top: 1.66em;
+}
+
+@media (min-width: 768px) {
+  .main > #portal-column-two {
+    padding-left: 1.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .main > #portal-column-two + #portal-column-content {
+    float: none;
+    margin: 0 22% 0 0;
+  }
+}
+
+.main > #portal-column-two + #portal-column-content {
+  width: auto !important;
+}
+
+.main > #portal-column-one + #portal-column-two + #portal-column-content {
+  width: auto !important;
+  margin: 0 0 0 22% !important;
+  float: none !important;
+}
+
+@media (max-width: 767px) {
+  .main > #portal-column-one + #portal-column-two + #portal-column-content #content {
+    padding: 1em 1em 1em 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .main > #portal-column-one + #portal-column-two + #portal-column-content .pane-container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 767px) {
+  #portal-column-content {
+    display: table-header-group;
+    width: auto !important;
+    margin-right: 1em !important;
+    float: left !important;
+  }
+}
+
+.main > #portal-column-content {
+  float: left;
+  padding: 1em 1em 1em 2em;
+  text-align: left;
+}
+
+/*.mainMenu span > a {*/
+/*font-weight: normal;*/
+/*}*/
+
+@media (max-width: 767px) {
+  .mainMenu li > a,
+  .mainMenu span a,
+  .mainMenu span:last-child {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+}
+
+/*.multilevel-linkul-0,*/
+/*.multilevel-linkul-1,*/
+/*.multilevel-linkul-2 */
+
+/*
+.currentbranch0,
+.currentbranch1,
+.currentbranch2,
+.currentbranch3,
+.currentbranch4,
+.navTreeTopNode div {
+*/
+
+/* nested in each li */
+.mainMenu span {
+  margin-left: -1em;
+  margin-right: -1em;
+  text-decoration: none;
+}
+
+/* top level item */
+.navTreeTopNode div {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  .navTreeTopNode div {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+}
+
+/* next level items */
+
+/* main menu changes PAW 2016-11-28 */
+.mainMenu span.currentbranch0,
+.mainMenu span.currentbranch1,
+.mainMenu span.currentbranch2,
+.mainMenu span.currentbranch3,
+.mainMenu span.currentbranch4 {
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  #portal-breadcrumbs {
+    margin-left: 1rem;
+  }
+}
+
+/*
+vcard is only in text/fulltext layout
+table.listing used elsewhere
+*/
+
+.vcard .listing {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .vcard .listing {
+    max-width: 50%;
+  }
+}
+
+#content-core div.vcard table.listing {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+#content-core div.vcard table.listing th,
+#content-core div.vcard table.listing td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+body {
+  *zoom: 1;
+}
+
+div.highlightContainer {
+  width: 100%;
+}
+
+.highlightContainer .highlight h3,
+.highlightContainer .highlight div {
+  margin: 0 0 1rem 0;
+}
+
+.highlightContainer div.highlight {
+  background-color: #e7e7e7;
+  border-bottom: 20px solid white;
+  border-left: 0 solid white;
+  border-right: 20px solid white;
+  border-top: 0 solid white;
+  float: left;
+  height: 286px;
+  min-width: 200px;
+  overflow: hidden;
+  padding: 1em 1em 0 1em;
+  text-align: center;
+  width: 20%;
+}
+
+div.highlightContainer:last-of-type:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* what is updates? */
+.highlightContainer .updates p {
+  height: 70%;
+}
+
+.highlightContainer .updates h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.highlightContainer .updates img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.visualClear {
+  clear: both;
+}
+
+/* unused arrow_coursefilter.png
+.section.courselist .col.onequarter h2 .arrow {
+  position: absolute;
+  width: 151px;
+  height: 93px;
+  left: -158px;
+  bottom: 20px;
+  background: url(<t4 type= "media" formatter= "image/path" id= "5592" /> no-repeat);
+}
+*/
+
+/* same as Glypha Web Bold Italic
+@font-face {
+  font-family: "Glypha Web Light BoldItalic";
+  src: url("<t4 type=" media " formatter=" path/* " id=" 44 " />?#iefix");
+  src: url("<t4 type=" media " formatter=" path/* " id=" 44 " />?#iefix") format("eot"),url("<t4 type="media" formatter="path!*" id="30" />") format("woff"),url("<t4 type="media" formatter="path!*" id="21" />") format("truetype"),url("<t4 type="media" formatter="path!*" id="40" />#929328f7-c744-496f-98ee-d385c7dfc1a6") format("svg");
+}
+*/
+
+/* same as Glypha Web Bold
+@font-face {
+  font-family: "Glypha Web Light Bold";
+  src: url("<t4 type=" media " formatter=" path/* " id=" 43 " />?#iefix");
+  src: url("<t4 type=" media " formatter=" path/* " id=" 43 " />?#iefix") format("eot"),url("<t4 type="media" formatter="path!*" id="31" />") format("woff"),url("<t4 type="media" formatter="path!*" id="50" />") format("truetype"),url("<t4 type="media" formatter="path!*" id="33" />#124daf03-3c02-409f-aa57-3b8cb061723e") format("svg");
+}
+*/
+
+/* rules moved from Landing Ribbon Action content type text/header layout */
+
+/* needs to go back into text/header? 20180419 KIF
+@media only screen and (min-width: 768px) {
+  form#coursesearch {
+    margin-right: 150px;
+  }
+}
+*/
+
+/*@media only screen and (min-width: 768px) {
+.section.courselist .col.half,
+.section.courselist .col.onequarter,
+.section.courselist .col.threequarters {
+  margin-top:    30px;
+  margin-bottom: 30px;
+}
+*/
+
+/*}*/
+
+/* really?
+@media only screen and (max-width: 767px) {
+  .section.courselist .col.onequarter {
+    width: 96% !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .section.courselist .col.onequarter {
+    clear: none !important;
+  }
+}
+*/
+
+/* 20180417 KIF
+
+.section.courselist .col.threequarters {
+  padding-left: 15px;
+}
+
+.section.courselist .col.half {
+  margin-top:    20px; (was 55px KIF 20180417)
+  margin-bottom: 30px;
+}
+
+.section.courselist .col.onequarter {
+  margin-bottom: 10px;
+  text-align:    left;
+}
+
+.section.courselist .col.threequarters {
+  padding-bottom: 10px;
+  text-align:     left;
+}
+*/
+
+/* needed?
+.section.clearfix > .wrap > .col.half {
+  text-align: left;
+}
+body.t4-landing-page div.section.clearfix.courselist div.wrap div.col.threequarters p:first-child {
+  margin-top: 60px;
+}
+*/
+
+/*
+unnecessary, it's a 'heading' - KIF
+.section.courselist .col.onequarter.news > ul > li:first-child:hover {
+  background: #572163;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+}
+*/
+
+.main {
+  /* display: table;                removed 20170804 by KIF due to IE11 layout bug */
+}
+
+/*
+@media only screen and (min-width: 1200px) {
+  .section.courselist .col.half .halflight {
+    min-height: 140px;
+    width:      46%; (41% 20180417 KIF)
+  }
+}
+*/
+
+.section.courselist .col.threequarters > ul li {
+  overflow: hidden;
+  background: url(<t4 type= "media" formatter= "image/path" id= "55" />) center bottom no-repeat;
+  background-size: 100% 100%;
+}
+
+.footer {
+  background: #0f0f0f;
+  /* imperceptible gradient image - url(<t4 type= "media" formatter= "image/path" id= "126" />) center top no-repeat; */
+  color: #bebebe;
+  font-size: 13px;
+  /* margin-top: 30px; causes white band above https://www.uhi.ac.uk/en/courses/pda-accommodation-management/ */
+  padding: 10px 10px 0 10px;
+}
+
+/* handled consistently by browsers now
+::-moz-selection {
+  background:  #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background:  #b3d4fc;
+  text-shadow: none;
+}
+*/
+
+/* img.image-right {clear: both; float: right; margin: 0 0 0.5rem 0.5rem;} */
+
+/*
+  .mainMenu li > a, .mainMenu span a {
+    background-color: #eee;
+    border-top: 1px solid #d6d6d6;
+    color: #0f0f0f;
+    display: block;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding: 0.7em;
+    text-decoration: none; }
+  .mainMenu span.currentbranch0, .mainMenu span.currentbranch1, .mainMenu span.currentbranch2, .mainMenu span.currentbranch3, .mainMenu span.currentbranch4 {
+    background-color: #572163;
+    color: white;
+}
+  .mainMenu span:last-child {
+    display: block;
+    background-color: #572163;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding: 0.7em; }
+
+*/
+
+/* search input box should always be open KIF 20180301 */
+.header.banner li form .keyword {
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid #d6d6d6;
+  font-family: 'Glypha Web Light Bold', 'Helvetica', 'Arial', 'sans-serif';
+  /*
+  position: absolute;
+  clip: rect(0px 0 0 0);
+  width: 0;
+  height: 0;
+  */
+}
+
+/*
+.section.courses.coursefinder form .keyword {
+  width: 75%;
+}
+*/
+
+.section.courses.coursefinder .prospectus p {
+  border-color: #fff;
+  /*background:   #fff;*/
+  /* from main-partner.css - I'd rather simply remove this from the main css but I'm wary it'll break something.  2017 PAW */
+  background: #fff none repeat scroll 0 0 !important;
+}
+
+/*
+pulls list up under Search bar
+could later be applied more generally to:
+.section.courselist .col.threequarters
+
+only works when Actoin button present
+
+@media only screen and (min-width: 768px) {
+  #courselist {
+    margin-top: -30px;
+  }
+}
+*/
+
+/* not needed?
+#courselist p {
+  font-size: medium;
+}
+#courselist a {
+  font-weight: normal;
+}
+*/
+
+.section.intro > .wrap > .background {
+  background-position: 0 -4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 365px;
+  max-width: 1340px; /* KIF 20180227 */
+  position: absolute;
+  width: 100%;
+  /*
+    improve course banner image display? - 20171208 KIF
+    but see https://www.uhi.ac.uk/en/courses/
+    background-position: 50% center;
+    */
+}
+
+/* moved
+.section.courselist .col.threequarters {
+  padding-bottom: 30px;
+}
+
+not needed now
+.section.courselist .col.threequarters > ul {
+  margin: 0 0 0 10px;
+}
+*/
+
+/*
+.section.courses.coursefinder form .keyword {
+  width: 58%; (73%)
+}
+*/
+
+/* Additional styling for fullwidth images in landing page Michael @ TERMINALFOUR
+.t4-landing-page .col img {  max-width: 100%; } */
+
+/***
+	Additional styling for course search page Michael @ TERMINALFOUR
+***/
+
+.fb-search .form-group #query {
+  /* background: none repeat scroll 0% 0% white !important;
+  border: 1px solid #d6d6d6; */
+  padding: 8px;
+  width: 80%;
+}
+
+/* now unused 20180307 KIF
+.fb-search .eightyper {
+    display: inline-block;
+    float: left;
+    width: 80%;
+}
+.fb-search .twentyper {
+    display: inline-block;
+    float: left;
+    width: 20%;
+}
+*/
+
+/*
+.fb-search .form-group input#query {
+    width: 85% !important;
+}
+*/
+
+/*
+@media screen and (max-width: 430px) {
+    .fb-search .form-group input#query {
+        width: 70% !important;
+    }
+}
+*/
+
+/* not necessary now
+.clearfix {
+  *zoom: 1;
+}
+*/
+
+/*
+https://www.uhi.ac.uk/en/research-enterprise/resource/pure-info/
+https://www.uhi.ac.uk/en/studying-at-uhi/online-learning/online-degrees/
+these break with this rule:
+div.gencont + div.gencont {clear: right;}
+*/
+
+/* 20180411 KIF
+.content-type--links-bar:first-child {
+  margin-top: 1rem;
+}
+*/
+
+/*
+Landing Page and Right Content 20180426
+https://www.inverness.uhi.ac.uk/business-and-training/
+
+#rssFeed {
+  padding-left: 0;
+  margin: 0 10px 0 10px;
+}
+*/
+
+/*.listingBar {*/
+/*margin-bottom: 2rem;*/
+/*}*/
+
+/*
+course search form at foot of course pages
+.section.courses.coursefinder is used for course listing page
+
+.section.course.coursefinder {
+  padding-top: 30px;
+}
+*/
+
+a:visited {
+  text-decoration: underline;
+}
+
+.js .section.courselist .col.onequarter > ul > li ul {
+  display: none;
+}
+
+/* 20180508 */
+.section.courses.coursefinder .prospectus p:hover {
+  border-color: #fff;
+  background: #fff;
+}
+
+.section.courses.coursefinder .prospectus p:hover b {
+  color: #b74783;
+}
+
+.section.courses.coursefinder .prospectus p:hover a strong {
+  color: #b74783;
+}
+
+.section.coursefinder .prospectus p a .text {
+  background: #4f7fb8 none repeat scroll 0 0;
+  color: #d5dfff;
+}

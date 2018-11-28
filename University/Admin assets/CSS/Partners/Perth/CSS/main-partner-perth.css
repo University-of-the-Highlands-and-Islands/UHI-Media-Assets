@@ -1,0 +1,274 @@
+/********************************************
+
+partner theme for
+Perth College UHI
+
+changes to this stylesheet should be mirrored across all partners
+
+Block colour: #b0121e
+10% colour:   #f7e7e8
+**************************************/
+
+/**********************
+colours common to all partners
+**********************/
+
+.footer,
+.footer p a {
+  color: #fff;
+}
+
+.footer p a {
+  border-bottom: 1px solid #fff;
+}
+
+/* course page tabs */
+.section.coursedetails .tabnav li h2 a {
+  color: #000;
+}
+
+/**********************
+Block colours
+**********************/
+
+#visual-portal-wrapper h1,
+#visual-portal-wrapper h2,
+#visual-portal-wrapper h3,
+#visual-portal-wrapper h4,
+#visual-portal-wrapper h5,
+#visual-portal-wrapper h6,
+.content h1,
+.content-type-modifier--collapsible__heading,
+.header.banner .nav.primary ul li a,
+.header.banner .nav.primary ul li.active a,
+.newsevents,
+.section.coursefinder .prospectus strong:hover,
+.section.courselist .col.onequarter > ul > li a,
+.section.courselist .col.onequarter h2,
+.studying a,
+.studying a:visited,
+.studying h3,
+.studying h5,
+.UHI--button-link--reverse,
+.UHI--button-link--reverse a,
+.UHI--button-link--reverse a:visited,
+a,
+a:active,
+a:visited {
+  color: #b0121e;
+}
+
+#coursefilter li.open:nth-child(even),
+.content-type--one-web-text-banner,
+.fb-search .badge,
+.fb-search .panel-heading,
+.footer ul.nav li a:hover,
+.footer,
+.header.banner .tools li.alumni a,
+.header.banner .tools li.language a,
+.header.banner .tools li.staff a,
+.header.banner .tools li.students a,
+.section.connections .ctas ul li a:hover,
+.section.coursedetails .tabnav li.ui-tabs-active h2 a,
+.section.coursedetails,
+.section.courselist .col.onequarter .extra ul li,
+.section.courselist .col.onequarter > form > ul > li,
+.section.courselist .col.onequarter > ul > li ul li.active a,
+.section.courselist .col.onequarter > ul > li:first-child,
+.section.courselist .col.onequarter > ul > li:nth-child(odd) ul li.active a,
+.section.courselist .col.onequarter.news > ul > li:first-child:hover,
+.section.ctas .section.apply a:hover,
+.section.ctas .section.tour .ctas ul li a:hover,
+.section.intro h1,
+.section.intro p,
+.tt-menu .tt-suggestion:hover,
+.tt-menu .tt-cursor,
+.UHI--button-link--main,
+div.content-type--landing-link-list__heading {
+  background-color: #b0121e;
+}
+
+.section.courselist .col.onequarter.news > ul > li:first-child {
+  background: #b0121e none repeat scroll 0 0;
+}
+
+.section.specialistsubjects,
+.section.testimonials {
+  background: #b0121e url(<t4 type= "media" formatter= "image/path" id= "5576" />) center bottom no-repeat;
+}
+
+.UHI--button-link--reverse {
+  border-color: #b0121e;
+}
+
+.header.banner .nav.primary ul li a,
+.header.banner .nav.primary ul li.active a {
+  border-bottom-color: #b0121e;
+  border-top-color: #b0121e;
+}
+
+.section.courselist .col.half .halflight:hover {
+  box-shadow: 5px 5px 11px #b0121e;
+}
+
+.header.banner .tools li.students a,
+.header.banner .tools li.staff a,
+.header.banner .tools li.alumni a,
+.header.banner .tools li.language a {
+  box-shadow: 0 0 0 1px #b0121e;
+}
+
+/**********************
+10% colours
+**********************/
+
+.UHI--button-link--main,
+a.t4Edit-page,
+a.t4Edit-page:visited,
+a.t4Edit-page:active {
+  color: #f7e7e8;
+}
+
+.content-type--one-web-event__data,
+.content-type-modifier--collapsible__heading,
+.content-type-modifier--shading,
+.newsevents,
+.content-type--one-web-news-listing__article:nth-child(odd),
+.newslisting:nth-child(odd),
+.section.coursedetails .tabnav li h2 a,
+.section.coursefinder,
+.studying,
+.UHI--button-link--reverse,
+.UHI--paragraph-highlight {
+  background-color: #f7e7e8;
+}
+
+.courses .section.coursefinder.coursepage {
+  background: #f7e7e8 none repeat scroll 0 0 !important;
+}
+
+.content-type-modifier--typography blockquote {
+  border-color: #f7e7e8;
+}
+
+/**********************
+header logo image and size
+native 128px x 440px
+**********************/
+
+.header.banner .logo a {
+  background-image: url(<t4 type= "media" formatter= "image/path" id= "206264" />);
+  height: 57px;
+  width: 197px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header.banner .logo a {
+    height: 89px;
+    width: 306px;
+  }
+}
+
+@media only screen and (min-width: 1340px) {
+  .header.banner .logo a {
+    height: 98px;
+    width: 337px;
+  }
+}
+
+/***************************************************
+rules not in other partner-specific stylesheets
+***************************************************/
+
+/* home page */
+
+.content-type--links-bar h3 {
+  padding-left: 5px
+}
+
+.content-type--links-bar .newsevents {
+  background: none;
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.content-type--links-bar__contrasting-text {
+  font-size: 1.2rem;
+}
+
+#imagelinkrow .col.onequarter {
+  padding-left: 0 !important;
+  padding-right: 2% !important;
+}
+
+/*
+Subject Areas Staff Lists - unsupported as a Content Type - 20171206 KIF
+eg: subject areas > art and creative technologies > staff
+improved flexbox rules to use
+*/
+
+.staff-listing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.staff-listing__member {
+  margin: 0 1rem 1rem 0;
+}
+
+.staff-listing__member img {
+  max-height: 160px;
+}
+
+/* legacy Plone rules to support other pages */
+
+.staff-list {
+  width: 150px;
+  margin: 10px;
+  float: left;
+  min-height: 215px;
+}
+
+.staff-list img {
+  border: 0;
+  width: 150px;
+  height: 150px;
+}
+
+/* Subject Areas home page */
+
+.subject-areas-image {
+  margin-bottom: 1rem;
+}
+
+.subject-areas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subject-areas__subject-area {
+  flex: 1 1 auto;
+  margin-bottom: 1rem;
+}
+
+.subject-areas__subject-area h3 {
+  margin: 0 0 1rem;
+}
+
+.subject-areas__subject-area ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 641px) {
+  .subject-areas__subject-area {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 5px 11px #ccc;
+    box-sizing: border-box;
+    margin: 0 2% 2rem 0;
+    padding: 1rem;
+    width: 31%;
+  }
+}
