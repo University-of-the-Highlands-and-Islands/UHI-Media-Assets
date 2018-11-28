@@ -1,7 +1,6 @@
  @echo off
  echo running
 
- REM PAW account GH
  REM compile all source files
  FOR %%I in (source/*.js) DO (
 
