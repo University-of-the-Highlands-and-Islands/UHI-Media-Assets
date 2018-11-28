@@ -69,6 +69,7 @@
         var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
             width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
             aspectRatio = height / width;
+        if(aspectRatio == 0.5) aspectRatio = 9 / 16;  // shoddy hack to get around YouTube default values
         if(!$this.attr('name')){
           var videoName = 'fitvid' + $.fn.fitVids._count;
           $this.attr('name', videoName);
