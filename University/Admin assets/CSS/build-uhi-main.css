@@ -99,14 +99,27 @@ CLASSES
 
 /*
 pulls up first paragraph of Landing Page Text
-https://www.inverness.uhi.ac.uk/
+eg home pages for:
+- Moray
+- Orkney
+- Inverness
+- HTC
+- WHC
 https://www.uhi.ac.uk/en/studying-at-uhi/nursing/
 */
+
+.col h2:first-of-type,
+.col p:first-of-type {
+  margin-top: 0;
+}
+
+/* PREVIOUS
 .col.half p:first-child,
 .col.onequarter p:first-child,
 .col.threequarters p:first-child {
   margin-top: 0;
 }
+*/
 
 /*
 content-button
@@ -2257,7 +2270,9 @@ Previous and Next links for News and Event fulltext layouts
 CONTENT TYPES
 
 discrete CTs as held in T4
-"originally known as" is needed for T4 Content Type Usage report
+- act as a pointer from front-end source to back-end location
+- so these classes SHOULDN't be used outside of their CT
+- "originally known as" is needed for T4 Content Type Usage report
 *********************************************************************/
 
 /*****************************************************
@@ -2352,6 +2367,25 @@ div.content-type--landing-link-list__heading,
   text-decoration: none;
 }
 
+/*****************************************************
+Landing Page Text
+
+fitvids.js targets this - 3 layouts in CT
+******************************************************/
+
+.content-type--landing-page-text__video {
+  margin-bottom: 2rem;
+  max-width: 640px;
+}
+
+@media (min-width: 768px) {
+  .col.threequarters .content-type--landing-page-text__video--half {
+    float: right;
+    padding-left: 2rem;
+    width: 50%;
+  }
+}
+
 /****************************************************************
 Landing RSS Feed
 Landing RSS Feed - PHP - Positionable
@@ -2376,8 +2410,8 @@ div.newsevents h3 {
 li.newsevents {
   border-radius: 5px;
   list-style-type: none;
-  margin-bottom: 10px;
-  /* padding: 5px; https://www.uhi.ac.uk/en/learning-and-teaching-academy/ */
+  margin: .5rem 0;
+  padding: .25rem .5rem;
 }
 
 li.newsevents span.datefield,
@@ -2430,7 +2464,7 @@ originally known as: Home Page Coloured Links bar
 @media (min-width: 450px) {
   .content-type--links-bar__element {
     flex: 1 1 49%;
-    margin: 0 1% 1rem 0;
+    margin: 0 1% 1.25rem 0;
     opacity: .9;
   }
 }
@@ -2676,41 +2710,34 @@ originally known as: News Listing
 
 /*.content-type--one-web-news-listing__paginate {}*/
 
-.content-type--one-web-news-listing__article,
-.newslisting {
+.content-type--one-web-news-listing__article {
   clear: both;
   padding: 1rem .5rem;
   overflow: hidden;
 }
 
 .content-type--one-web-news-listing__article,
-.content-type--one-web-news-listing__article img,
-.newslisting,
-.newslisting img {
+.content-type--one-web-news-listing__article img {
   border-radius: 5px;
 }
 
-.content-type--one-web-news-listing__article:nth-child(odd),
-.newslisting:nth-child(odd) {
+.content-type--one-web-news-listing__article:nth-child(odd) {
   background-color: #eee8ef;
 }
 
-.content-type--one-web-news-listing__article h3,
-.newslisting h3 {
+.content-type--one-web-news-listing__article h3 {
   margin: 0 0 4px;
   line-height: 1.2;
 }
 
-.content-type--one-web-news-listing__article img,
-.newslisting img {
+.content-type--one-web-news-listing__article img {
   border: 1px solid #ccc;
   float: right;
   margin-left: .5rem;
   max-width: 150px;
 }
 
-.content-type--one-web-news-listing__article p,
-.newslisting p {
+.content-type--one-web-news-listing__article p {
   font-style: italic;
   margin: 0;
 }
@@ -3043,8 +3070,7 @@ used in
 }
 
 .content-type-modifier--collapsible .content-type--one-web-general-content,
-.content-type-modifier--collapsible .content-type--one-web-general-content__heading,
-.content-type-modifier--collapsible .content-type--one-web-tabbed-content {
+.content-type-modifier--collapsible .content-type--one-web-general-content__heading {
   display: none;
 }
 

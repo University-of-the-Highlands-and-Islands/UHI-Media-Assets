@@ -15,6 +15,18 @@
   text-transform: lowercase;
 }
 
+@media (max-width: 767px) {
+  #portal-breadcrumbs {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #portal-breadcrumbs {
+    margin: 8px 0 0 0;
+  }
+}
+
 /****************************************
 One-Web Tabbed Content
 
@@ -420,15 +432,9 @@ $("#portal-column-two").prev("#portal-column-content").css('width', '46%');
 
 ********/
 
-#portal-breadcrumbs {
-  margin: 0 1rem;
-}
 
-@media (min-width: 768px) {
-  #portal-breadcrumbs {
-    margin: 8px 0 0 0;
-  }
-}
+
+
 
 .main:after {
   content: "";
@@ -586,11 +592,7 @@ $("#portal-column-two").prev("#portal-column-content").css('width', '46%');
   color: #000;
 }
 
-@media (max-width: 767px) {
-  #portal-breadcrumbs {
-    margin-left: 1rem;
-  }
-}
+
 
 /*
 vcard is only in text/fulltext layout
@@ -975,25 +977,25 @@ these break with this rule:
 div.gencont + div.gencont {clear: right;}
 */
 
-/* 20180411 KIF
+
 .content-type--links-bar:first-child {
   margin-top: 1rem;
 }
-*/
+
 
 /*
 Landing Page and Right Content 20180426
 https://www.inverness.uhi.ac.uk/business-and-training/
-
+*/
 #rssFeed {
   padding-left: 0;
   margin: 0 10px 0 10px;
 }
-*/
 
-/*.listingBar {*/
-/*margin-bottom: 2rem;*/
-/*}*/
+
+.listingBar {
+margin-bottom: 2rem;
+}
 
 /*
 course search form at foot of course pages
