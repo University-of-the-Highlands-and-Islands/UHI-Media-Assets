@@ -214,3 +214,28 @@ rules not in other partner-specific stylesheets
 .discovery-zone-map-list li:hover a {
   color: #fff;
 }
+
+/*
+course list
+https://www.nafc.uhi.ac.uk/courses/
+*/
+
+.nafc--course-list h2 {
+  margin: 50px 0px 5px 25px;
+}
+
+.nafc--course-list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nafc--course-list ul li {
+  font-size: 1.25rem;
+  list-style-type: none;
+  border-bottom: 2px dotted #ccc;
+  padding: 5px 5px 5px 25px;
+}
+
+.nafc--course-list ul li:hover {
+  background-color: #e5ecf0;
+}

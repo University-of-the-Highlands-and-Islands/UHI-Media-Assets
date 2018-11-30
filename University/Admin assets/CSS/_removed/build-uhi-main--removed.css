@@ -1,8 +1,10 @@
+
 .flex-cols__col > h2:first-child,
 .flex-cols__col > h3:first-child,
 .flex-cols__col > p:first-child {
   margin-top: 0;
 }
+
 .flex-cols__col {
   overflow: hidden; /* will hide very wide content */
 }
@@ -433,9 +435,6 @@ $("#portal-column-two").prev("#portal-column-content").css('width', '46%');
 ********/
 
 
-
-
-
 .main:after {
   content: "";
   display: table;
@@ -591,7 +590,6 @@ $("#portal-column-two").prev("#portal-column-content").css('width', '46%');
 .mainMenu span.currentbranch4 {
   color: #000;
 }
-
 
 
 /*
@@ -974,14 +972,14 @@ not needed now
 https://www.uhi.ac.uk/en/research-enterprise/resource/pure-info/
 https://www.uhi.ac.uk/en/studying-at-uhi/online-learning/online-degrees/
 these break with this rule:
-div.gencont + div.gencont {clear: right;}
 */
-
+div.gencont + div.gencont {
+  clear: right;
+}
 
 .content-type--links-bar:first-child {
   margin-top: 1rem;
 }
-
 
 /*
 Landing Page and Right Content 20180426
@@ -992,9 +990,8 @@ https://www.inverness.uhi.ac.uk/business-and-training/
   margin: 0 10px 0 10px;
 }
 
-
 .listingBar {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 /*

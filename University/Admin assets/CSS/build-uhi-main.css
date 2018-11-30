@@ -2243,11 +2243,18 @@ breadcrumb nav
 
 .navigation--breadcrumb li {
   display: inline-block;
+}
+
+.navigation--breadcrumb li a {
   margin: 0 .5rem;
 }
 
-.navigation--breadcrumb li:first-child {
+.navigation--breadcrumb li:first-child a {
   margin-left: 0;
+}
+
+.navigation--breadcrumb li:not(:last-child)::after {
+  content: "›";
 }
 
 /*
@@ -2982,6 +2989,19 @@ https://github.com/davatron5000/FitVids.js
 }
 
 /*****************************************************
+One Web Vacancy
+
+originally known as: Vacancy
+
+.content-type--one-web-vacancy
+******************************************************/
+
+.content-type--one-web-vacancy table,
+.content-type--one-web-vacancy td {
+  border-color: white !important;
+}
+
+/*****************************************************
 One Web Vacancy Listing
 
 originally known as: Uni Vacancy Listing
@@ -3142,9 +3162,11 @@ used in:
 - One-Web General Content
 - One-Web News
 - One-Web Staff Profile
+- One Web Vacancy
 - One Web Vacancy Listing
 
-.description also used in:
+.description used in:
+- One-Web General Content
 - One-Web Vacancy
 
 table styles also used in:
@@ -3182,6 +3204,7 @@ table styles also used in:
 .content-type--one-web-general-content__description,
 .content-type--one-web-news time,
 .content-type--one-web-news__description,
+.content-type--one-web-vacancy__description,
 .content-type-modifier--typography blockquote,
 .content-type-modifier--typography h4,
 .description {
@@ -3637,6 +3660,8 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
 
 ****************************************/
 
+/* .description */
+
 #mode1ft li,
 #mode1pt li,
 #mode2ft li,
@@ -3712,8 +3737,6 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   max-height: 130px;
   max-width: 240px;
 }
-
-/* .description */
 
 /****************************************
 
