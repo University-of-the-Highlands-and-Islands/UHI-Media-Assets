@@ -2229,6 +2229,7 @@ left hand side context navigation menu column
 
 /*
 breadcrumb nav
+last crumb is sometimes a link, sometimes not
 */
 
 .navigation--breadcrumb {
@@ -2245,11 +2246,16 @@ breadcrumb nav
   display: inline-block;
 }
 
+.navigation--breadcrumb li:last-child {
+  margin-left: .5rem;
+}
+
 .navigation--breadcrumb li a {
   margin: 0 .5rem;
 }
 
-.navigation--breadcrumb li:first-child a {
+.navigation--breadcrumb li:first-child a,
+.navigation--breadcrumb li:last-child a {
   margin-left: 0;
 }
 
@@ -2281,15 +2287,6 @@ discrete CTs as held in T4
 - so these classes SHOULDN't be used outside of their CT
 - "originally known as" is needed for T4 Content Type Usage report
 *********************************************************************/
-
-/*****************************************************
-One-Web Expert
-
-originally known as:
-- Expert
-
-.content-type--expert {}
-******************************************************/
 
 /*****************************************************
 Landing Link List
@@ -2563,6 +2560,15 @@ originally known as: One-Web Children Link List
 .content-type--one-web-children-link-list li {
   margin-bottom: .5rem;
 }
+
+/*****************************************************
+One-Web Expert
+
+originally known as:
+- Expert
+
+.content-type--expert {}
+******************************************************/
 
 /****************************************
 One-Web General Content
