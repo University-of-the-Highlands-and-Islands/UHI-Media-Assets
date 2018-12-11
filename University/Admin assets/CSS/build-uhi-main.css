@@ -2286,6 +2286,8 @@ discrete CTs as held in T4
 - act as a pointer from front-end source to back-end location
 - so these classes SHOULDN't be used outside of their CT
 - "originally known as" is needed for T4 Content Type Usage report
+
+Can all of these go AFTER content-type-modifiers?
 *********************************************************************/
 
 /*****************************************************
@@ -2906,55 +2908,6 @@ aside.content-type--one-web-text-banner__col {
 }
 
 /*****************************************************
-One-Web Event
-
-originally known as: Event, Uni Event
-******************************************************/
-
-.content-type--one-web-event figcaption {
-  margin: .5rem 0;
-}
-
-.content-type--one-web-event figure {
-  margin-top: 2rem;
-}
-
-.content-type--one-web-event__data {
-  background-color: #eee8ef;
-  border-radius: 5px;
-  padding: 1rem;
-}
-
-.content-type--one-web-event__data h2 {
-  display: inline-block;
-  margin: 0;
-}
-
-.content-type--one-web-event__data p {
-  margin: 0 0 1rem 0;
-}
-
-.content-type--one-web-event__data p:last-child {
-  margin-bottom: 0;
-}
-
-@media (min-width: 480px) {
-  .content-type--one-web-event__data p {
-    margin-left: 41px;
-  }
-}
-
-.content-type--one-web-event__help {
-  font-size: 14px;
-}
-
-.content-type--one-web-event__icon {
-  font-family: "Sosa Web", sans-serif;
-  font-size: 32px;
-  display: inline-block;
-}
-
-/*****************************************************
 One-Web Event Listing with Calendar
 
 related to earlier CT: Uni Event Listing
@@ -3399,6 +3352,62 @@ used in:
   .flex-cols__col--next {
     padding-left: 4%;
   }
+}
+
+/****************************************
+
+CONTENT TYPES (more)
+
+already tested to go AFTER content-type-modifiers
+****************************************/
+
+/*****************************************************
+One-Web Event
+
+originally known as: Event, Uni Event
+******************************************************/
+
+.content-type--one-web-event figcaption {
+  margin: .5rem 0;
+}
+
+.content-type--one-web-event figure {
+  margin-top: 2rem;
+}
+
+.content-type--one-web-event__data {
+  background-color: #eee8ef;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.content-type--one-web-event__data h2 {
+  display: inline-block;
+  margin: 0;
+}
+
+.content-type--one-web-event__data p {
+  margin: 0 0 1rem 0;
+}
+
+.content-type--one-web-event__data p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 480px) {
+  .content-type--one-web-event__data p {
+    margin-left: 41px;
+  }
+}
+
+.content-type--one-web-event__help {
+  font-size: 14px;
+}
+
+.content-type--one-web-event__icon {
+  font-family: "Sosa Web", sans-serif;
+  font-size: 32px;
+  display: inline-block;
 }
 
 /****************************************
