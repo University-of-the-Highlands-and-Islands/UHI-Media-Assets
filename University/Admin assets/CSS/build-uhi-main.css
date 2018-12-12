@@ -3152,6 +3152,8 @@ table styles also used in:
 }
 
 .content-type--one-web-event-listing__title,
+.content-type--one-web-event__data h2,
+.content-type--one-web-event__details h2,
 .content-type--one-web-media-object__heading,
 .content-type-modifier--collapsible__heading,
 .content-type-modifier--typography h3,
@@ -3175,9 +3177,10 @@ table styles also used in:
     font-size: 1.728rem;
   }
 
+  .content-type--one-web-event__details h2,
+  .content-type--one-web-media-object__heading,
   .content-type-modifier--collapsible__heading,
-  .content-type-modifier--typography h3,
-  .content-type--one-web-media-object__heading {
+  .content-type-modifier--typography h3 {
     font-size: 1.44rem;
   }
 
@@ -3409,6 +3412,15 @@ originally known as: Event, Uni Event
   font-size: 32px;
   display: inline-block;
 }
+
+/*****************************************************
+One-Web Right Image
+
+originally known as: ?
+
+.content-type--one-web-right-image {}
+******************************************************/
+
 
 /****************************************
 
