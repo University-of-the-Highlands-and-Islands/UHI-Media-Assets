@@ -847,8 +847,11 @@ https://www.uhi.ac.uk/en/campuses/north-highland-college-uhi/
 }
 
 /*
-section courselist col onequarter
+Landing Content Boxes
+e.g. https://www.uhi.ac.uk/en/staff/
+migrating to .content-type--landing-content-boxes
 */
+
 .section.courselist .col.half .halflight {
   border-radius: 5px;
   border: 3px solid #fff;
@@ -865,7 +868,6 @@ section courselist col onequarter
 
 @media (min-width: 768px) {
   .section.courselist .col.half .halflight {
-    /*height: auto !important;*/
     min-height: 230px;
   }
 }
@@ -888,12 +890,6 @@ section courselist col onequarter
   }
 }
 
-/* why?
-.section.courselist .col.half .halflight:nth-child(7) {
-  clear: left;
-}
-*/
-
 .section.courselist .col.half .halflight h3 {
   margin-top: 0;
 }
@@ -911,24 +907,14 @@ section courselist col onequarter
   box-shadow: 5px 5px 11px #572163;
 }
 
-/* why?
-.section.courselist .col.half.onecol h3 {
-  margin-top: 0;
-}
-*/
-
 .section.courselist .col.half.onecol .halflight {
   width: 90%;
   margin-bottom: 30px;
-  min-height: 0; /* https://www.uhi.ac.uk/en/research-enterprise/cultural/institute-for-northern-studies/ */
+  min-height: 0;
   padding: 10px;
   background-color: #f7f7f7;
 }
 
-/*
-Content Boxes - make consistent width
-https://www.uhi.ac.uk/en/staff/
-*/
 .section.courselist .col.half.twocol .halflight {
   background-color: #f7f7f7;
   box-sizing: border-box;
@@ -2236,7 +2222,7 @@ last crumb is sometimes a link, sometimes not
   text-transform: lowercase;
 }
 
-.navigation--breadcrumb ul {
+.navigation--breadcrumb ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -2589,6 +2575,8 @@ originally known as: General Content
 One-Web Highlight Content Box
 
 originally known as: Highlight Content Box
+
+see
 ****************************************/
 
 .content-type--one-web-highlight-content-box {
@@ -3151,6 +3139,7 @@ table styles also used in:
   font-size: 1.512rem;
 }
 
+.content-type--landing-content-boxes h2,
 .content-type--one-web-event-listing__title,
 .content-type--one-web-event__data h2,
 .content-type--one-web-event__details h2,
@@ -3365,6 +3354,50 @@ already tested to go AFTER content-type-modifiers
 ****************************************/
 
 /*****************************************************
+Landing Content Boxes
+
+originally known as: ?
+
+previously used .halflight
+******************************************************/
+
+.content-type--landing-content-boxes {
+  display: grid;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) and (max-width:767px), (min-width: 1024px) {
+  .twocol .content-type--landing-content-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.content-type--landing-content-boxes__box {
+  background-color: #f7f7f7;
+  border: 3px solid #fff;
+  border-radius: .5rem;
+  box-shadow: 5px 5px 11px #ccc;
+  padding: 1rem;
+}
+
+.content-type--landing-content-boxes__box:hover {
+  box-shadow: 5px 5px 11px #572163;
+}
+
+/* lists within boxes */
+
+.content-type--landing-content-boxes ol,
+.content-type--landing-content-boxes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-type--landing-content-boxes li {
+  margin-bottom: .5rem;
+}
+
+/*****************************************************
 One-Web Event
 
 originally known as: Event, Uni Event
@@ -3420,7 +3453,6 @@ originally known as: ?
 
 .content-type--one-web-right-image {}
 ******************************************************/
-
 
 /****************************************
 
