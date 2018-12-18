@@ -43,22 +43,23 @@ MAIN #PORTAL-COLUMN LAYOUT
     padding: 0 1rem; /* increase flex item gutter */
   }
 
+  /* full flex: declaration for IE11 benefit */
   /* required content column is ordered first in Page Layout markup */
   #portal-column-content {
-    flex: 3; /* column is thrice as wide as others */
+    flex: 3 1 75%; /* column is 3x as wide as others */
     order: 2; /* centre or right */
   }
 
   /* optional right column is ordered second in Page Layout markup */
   #portal-column-two {
-    flex: 1; /* quarter column when shown */
+    flex: 1 1 25%; /* quarter or one-fifth column when shown */
     order: 3; /* pushes to right */
   }
 
   /* optional left (navigation) column is ordered third in Page Layout markup */
   #portal-column-one {
-    flex: 1; /* third or quarter column when shown */
-    min-width: 200px; /* e.g. wide central table */
+    flex: 1 1 25%; /* quarter or one-fifth column when shown */
+    min-width: 250px; /* for IE11 */
     order: 1; /* pushes to left */
   }
 }
@@ -3358,18 +3359,40 @@ Landing Content Boxes
 
 originally known as: ?
 
-previously used .halflight
+previously used .halflight (TODO lose this later)
 ******************************************************/
 
+/* Flexbox for container in IE11 */
 .content-type--landing-content-boxes {
-  display: grid;
-  grid-gap: 1rem;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@media (min-width: 640px) and (max-width:767px), (min-width: 1024px) {
-  .twocol .content-type--landing-content-boxes {
-    grid-template-columns: 1fr 1fr;
+.content-type--landing-content-boxes__box {
+  margin: 0 16px 16px 0;
+  width: 39%;
+}
+
+/* end IE11 */
+
+/* less uncool browsers */
+@supports (display: grid) {
+  .content-type--landing-content-boxes {
+    display: grid;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+
+  .content-type--landing-content-boxes__box {
+    margin: 0;
+    width: auto;
+  }
+
+  @media (min-width: 640px) and (max-width: 767px), (min-width: 1024px) {
+    .twocol .content-type--landing-content-boxes {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
