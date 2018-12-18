@@ -107,6 +107,7 @@ div.content-type--landing-link-list__heading {
   border-top-color: #5a2b82;
 }
 
+.content-type--landing-content-boxes__box:hover,
 .section.courselist .col.half .halflight:hover {
   box-shadow: 5px 5px 11px #5a2b82;
 }

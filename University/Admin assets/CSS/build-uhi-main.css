@@ -43,22 +43,23 @@ MAIN #PORTAL-COLUMN LAYOUT
     padding: 0 1rem; /* increase flex item gutter */
   }
 
+  /* full flex: declaration for IE11 benefit */
   /* required content column is ordered first in Page Layout markup */
   #portal-column-content {
-    flex: 3; /* column is thrice as wide as others */
+    flex: 3 1 75%; /* column is 3x as wide as others */
     order: 2; /* centre or right */
   }
 
   /* optional right column is ordered second in Page Layout markup */
   #portal-column-two {
-    flex: 1; /* quarter column when shown */
+    flex: 1 1 25%; /* quarter or one-fifth column when shown */
     order: 3; /* pushes to right */
   }
 
   /* optional left (navigation) column is ordered third in Page Layout markup */
   #portal-column-one {
-    flex: 1; /* third or quarter column when shown */
-    min-width: 200px; /* e.g. wide central table */
+    flex: 1 1 25%; /* quarter or one-fifth column when shown */
+    min-width: 250px; /* for IE11 */
     order: 1; /* pushes to left */
   }
 }
@@ -99,14 +100,27 @@ CLASSES
 
 /*
 pulls up first paragraph of Landing Page Text
-https://www.inverness.uhi.ac.uk/
+eg home pages for:
+- Moray
+- Orkney
+- Inverness
+- HTC
+- WHC
 https://www.uhi.ac.uk/en/studying-at-uhi/nursing/
 */
+
+.col h2:first-of-type,
+.col p:first-of-type {
+  margin-top: 0;
+}
+
+/* PREVIOUS
 .col.half p:first-child,
 .col.onequarter p:first-child,
 .col.threequarters p:first-child {
   margin-top: 0;
 }
+*/
 
 /*
 content-button
@@ -834,8 +848,11 @@ https://www.uhi.ac.uk/en/campuses/north-highland-college-uhi/
 }
 
 /*
-section courselist col onequarter
+Landing Content Boxes
+e.g. https://www.uhi.ac.uk/en/staff/
+migrating to .content-type--landing-content-boxes
 */
+
 .section.courselist .col.half .halflight {
   border-radius: 5px;
   border: 3px solid #fff;
@@ -852,7 +869,6 @@ section courselist col onequarter
 
 @media (min-width: 768px) {
   .section.courselist .col.half .halflight {
-    /*height: auto !important;*/
     min-height: 230px;
   }
 }
@@ -875,12 +891,6 @@ section courselist col onequarter
   }
 }
 
-/* why?
-.section.courselist .col.half .halflight:nth-child(7) {
-  clear: left;
-}
-*/
-
 .section.courselist .col.half .halflight h3 {
   margin-top: 0;
 }
@@ -898,24 +908,14 @@ section courselist col onequarter
   box-shadow: 5px 5px 11px #572163;
 }
 
-/* why?
-.section.courselist .col.half.onecol h3 {
-  margin-top: 0;
-}
-*/
-
 .section.courselist .col.half.onecol .halflight {
   width: 90%;
   margin-bottom: 30px;
-  min-height: 0; /* https://www.uhi.ac.uk/en/research-enterprise/cultural/institute-for-northern-studies/ */
+  min-height: 0;
   padding: 10px;
   background-color: #f7f7f7;
 }
 
-/*
-Content Boxes - make consistent width
-https://www.uhi.ac.uk/en/staff/
-*/
 .section.courselist .col.half.twocol .halflight {
   background-color: #f7f7f7;
   box-sizing: border-box;
@@ -2216,13 +2216,14 @@ left hand side context navigation menu column
 
 /*
 breadcrumb nav
+last crumb is sometimes a link, sometimes not
 */
 
 .navigation--breadcrumb {
   text-transform: lowercase;
 }
 
-.navigation--breadcrumb ul {
+.navigation--breadcrumb ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -2230,11 +2231,23 @@ breadcrumb nav
 
 .navigation--breadcrumb li {
   display: inline-block;
+}
+
+.navigation--breadcrumb li:last-child {
+  margin-left: .5rem;
+}
+
+.navigation--breadcrumb li a {
   margin: 0 .5rem;
 }
 
-.navigation--breadcrumb li:first-child {
+.navigation--breadcrumb li:first-child a,
+.navigation--breadcrumb li:last-child a {
   margin-left: 0;
+}
+
+.navigation--breadcrumb li:not(:last-child)::after {
+  content: "›";
 }
 
 /*
@@ -2257,17 +2270,12 @@ Previous and Next links for News and Event fulltext layouts
 CONTENT TYPES
 
 discrete CTs as held in T4
-"originally known as" is needed for T4 Content Type Usage report
+- act as a pointer from front-end source to back-end location
+- so these classes SHOULDN't be used outside of their CT
+- "originally known as" is needed for T4 Content Type Usage report
+
+Can all of these go AFTER content-type-modifiers?
 *********************************************************************/
-
-/*****************************************************
-One-Web Expert
-
-originally known as:
-- Expert
-
-.content-type--expert {}
-******************************************************/
 
 /*****************************************************
 Landing Link List
@@ -2352,6 +2360,25 @@ div.content-type--landing-link-list__heading,
   text-decoration: none;
 }
 
+/*****************************************************
+Landing Page Text
+
+fitvids.js targets this - 3 layouts in CT
+******************************************************/
+
+.content-type--landing-page-text__video {
+  margin-bottom: 2rem;
+  max-width: 640px;
+}
+
+@media (min-width: 768px) {
+  .col.threequarters .content-type--landing-page-text__video--half {
+    float: right;
+    padding-left: 2rem;
+    width: 50%;
+  }
+}
+
 /****************************************************************
 Landing RSS Feed
 Landing RSS Feed - PHP - Positionable
@@ -2376,8 +2403,8 @@ div.newsevents h3 {
 li.newsevents {
   border-radius: 5px;
   list-style-type: none;
-  margin-bottom: 10px;
-  /* padding: 5px; https://www.uhi.ac.uk/en/learning-and-teaching-academy/ */
+  margin: .5rem 0;
+  padding: .25rem .5rem;
 }
 
 li.newsevents span.datefield,
@@ -2430,7 +2457,7 @@ originally known as: Home Page Coloured Links bar
 @media (min-width: 450px) {
   .content-type--links-bar__element {
     flex: 1 1 49%;
-    margin: 0 1% 1rem 0;
+    margin: 0 1% 1.25rem 0;
     opacity: .9;
   }
 }
@@ -2523,6 +2550,15 @@ originally known as: One-Web Children Link List
   margin-bottom: .5rem;
 }
 
+/*****************************************************
+One-Web Expert
+
+originally known as:
+- Expert
+
+.content-type--expert {}
+******************************************************/
+
 /****************************************
 One-Web General Content
 
@@ -2540,6 +2576,8 @@ originally known as: General Content
 One-Web Highlight Content Box
 
 originally known as: Highlight Content Box
+
+see
 ****************************************/
 
 .content-type--one-web-highlight-content-box {
@@ -2676,41 +2714,34 @@ originally known as: News Listing
 
 /*.content-type--one-web-news-listing__paginate {}*/
 
-.content-type--one-web-news-listing__article,
-.newslisting {
+.content-type--one-web-news-listing__article {
   clear: both;
   padding: 1rem .5rem;
   overflow: hidden;
 }
 
 .content-type--one-web-news-listing__article,
-.content-type--one-web-news-listing__article img,
-.newslisting,
-.newslisting img {
+.content-type--one-web-news-listing__article img {
   border-radius: 5px;
 }
 
-.content-type--one-web-news-listing__article:nth-child(odd),
-.newslisting:nth-child(odd) {
+.content-type--one-web-news-listing__article:nth-child(odd) {
   background-color: #eee8ef;
 }
 
-.content-type--one-web-news-listing__article h3,
-.newslisting h3 {
+.content-type--one-web-news-listing__article h3 {
   margin: 0 0 4px;
   line-height: 1.2;
 }
 
-.content-type--one-web-news-listing__article img,
-.newslisting img {
+.content-type--one-web-news-listing__article img {
   border: 1px solid #ccc;
   float: right;
   margin-left: .5rem;
   max-width: 150px;
 }
 
-.content-type--one-web-news-listing__article p,
-.newslisting p {
+.content-type--one-web-news-listing__article p {
   font-style: italic;
   margin: 0;
 }
@@ -2866,55 +2897,6 @@ aside.content-type--one-web-text-banner__col {
 }
 
 /*****************************************************
-One-Web Event
-
-originally known as: Event, Uni Event
-******************************************************/
-
-.content-type--one-web-event figcaption {
-  margin: .5rem 0;
-}
-
-.content-type--one-web-event figure {
-  margin-top: 2rem;
-}
-
-.content-type--one-web-event__data {
-  background-color: #eee8ef;
-  border-radius: 5px;
-  padding: 1rem;
-}
-
-.content-type--one-web-event__data h2 {
-  display: inline-block;
-  margin: 0;
-}
-
-.content-type--one-web-event__data p {
-  margin: 0 0 1rem 0;
-}
-
-.content-type--one-web-event__data p:last-child {
-  margin-bottom: 0;
-}
-
-@media (min-width: 480px) {
-  .content-type--one-web-event__data p {
-    margin-left: 41px;
-  }
-}
-
-.content-type--one-web-event__help {
-  font-size: 14px;
-}
-
-.content-type--one-web-event__icon {
-  font-family: "Sosa Web", sans-serif;
-  font-size: 32px;
-  display: inline-block;
-}
-
-/*****************************************************
 One-Web Event Listing with Calendar
 
 related to earlier CT: Uni Event Listing
@@ -2952,6 +2934,19 @@ https://github.com/davatron5000/FitVids.js
 
 .content-type--one-web-video-embed iframe {
   border: 0;
+}
+
+/*****************************************************
+One Web Vacancy
+
+originally known as: Vacancy
+
+.content-type--one-web-vacancy
+******************************************************/
+
+.content-type--one-web-vacancy table,
+.content-type--one-web-vacancy td {
+  border-color: white !important;
 }
 
 /*****************************************************
@@ -3043,8 +3038,7 @@ used in
 }
 
 .content-type-modifier--collapsible .content-type--one-web-general-content,
-.content-type-modifier--collapsible .content-type--one-web-general-content__heading,
-.content-type-modifier--collapsible .content-type--one-web-tabbed-content {
+.content-type-modifier--collapsible .content-type--one-web-general-content__heading {
   display: none;
 }
 
@@ -3116,9 +3110,11 @@ used in:
 - One-Web General Content
 - One-Web News
 - One-Web Staff Profile
+- One Web Vacancy
 - One Web Vacancy Listing
 
-.description also used in:
+.description used in:
+- One-Web General Content
 - One-Web Vacancy
 
 table styles also used in:
@@ -3144,7 +3140,10 @@ table styles also used in:
   font-size: 1.512rem;
 }
 
+.content-type--landing-content-boxes h2,
 .content-type--one-web-event-listing__title,
+.content-type--one-web-event__data h2,
+.content-type--one-web-event__details h2,
 .content-type--one-web-media-object__heading,
 .content-type-modifier--collapsible__heading,
 .content-type-modifier--typography h3,
@@ -3156,6 +3155,7 @@ table styles also used in:
 .content-type--one-web-general-content__description,
 .content-type--one-web-news time,
 .content-type--one-web-news__description,
+.content-type--one-web-vacancy__description,
 .content-type-modifier--typography blockquote,
 .content-type-modifier--typography h4,
 .description {
@@ -3167,9 +3167,10 @@ table styles also used in:
     font-size: 1.728rem;
   }
 
+  .content-type--one-web-event__details h2,
+  .content-type--one-web-media-object__heading,
   .content-type-modifier--collapsible__heading,
-  .content-type-modifier--typography h3,
-  .content-type--one-web-media-object__heading {
+  .content-type-modifier--typography h3 {
     font-size: 1.44rem;
   }
 
@@ -3345,6 +3346,136 @@ used in:
     padding-left: 4%;
   }
 }
+
+/****************************************
+
+CONTENT TYPES (more)
+
+already tested to go AFTER content-type-modifiers
+****************************************/
+
+/*****************************************************
+Landing Content Boxes
+
+originally known as: ?
+
+previously used .halflight (TODO lose this later)
+******************************************************/
+
+/* Flexbox for container in IE11 */
+.content-type--landing-content-boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-type--landing-content-boxes__box {
+  margin: 0 16px 16px 0;
+  width: 39%;
+}
+
+/* end IE11 */
+
+/* less uncool browsers */
+@supports (display: grid) {
+  .content-type--landing-content-boxes {
+    display: grid;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+
+  .content-type--landing-content-boxes__box {
+    margin: 0;
+    width: auto;
+  }
+
+  @media (min-width: 640px) and (max-width: 767px), (min-width: 1024px) {
+    .twocol .content-type--landing-content-boxes {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.content-type--landing-content-boxes__box {
+  background-color: #f7f7f7;
+  border: 3px solid #fff;
+  border-radius: .5rem;
+  box-shadow: 5px 5px 11px #ccc;
+  padding: 1rem;
+}
+
+.content-type--landing-content-boxes__box:hover {
+  box-shadow: 5px 5px 11px #572163;
+}
+
+/* lists within boxes */
+
+.content-type--landing-content-boxes ol,
+.content-type--landing-content-boxes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-type--landing-content-boxes li {
+  margin-bottom: .5rem;
+}
+
+/*****************************************************
+One-Web Event
+
+originally known as: Event, Uni Event
+******************************************************/
+
+.content-type--one-web-event figcaption {
+  margin: .5rem 0;
+}
+
+.content-type--one-web-event figure {
+  margin-top: 2rem;
+}
+
+.content-type--one-web-event__data {
+  background-color: #eee8ef;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.content-type--one-web-event__data h2 {
+  display: inline-block;
+  margin: 0;
+}
+
+.content-type--one-web-event__data p {
+  margin: 0 0 1rem 0;
+}
+
+.content-type--one-web-event__data p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 480px) {
+  .content-type--one-web-event__data p {
+    margin-left: 41px;
+  }
+}
+
+.content-type--one-web-event__help {
+  font-size: 14px;
+}
+
+.content-type--one-web-event__icon {
+  font-family: "Sosa Web", sans-serif;
+  font-size: 32px;
+  display: inline-block;
+}
+
+/*****************************************************
+One-Web Right Image
+
+originally known as: ?
+
+.content-type--one-web-right-image {}
+******************************************************/
 
 /****************************************
 
@@ -3611,6 +3742,8 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
 
 ****************************************/
 
+/* .description */
+
 #mode1ft li,
 #mode1pt li,
 #mode2ft li,
@@ -3686,8 +3819,6 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   max-height: 130px;
   max-width: 240px;
 }
-
-/* .description */
 
 /****************************************
 
