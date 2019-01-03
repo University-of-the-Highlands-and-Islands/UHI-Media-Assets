@@ -2577,7 +2577,7 @@ One-Web Highlight Content Box
 
 originally known as: Highlight Content Box
 
-see
+TODO move to CSS Grid with Flexbox fallback
 ****************************************/
 
 .content-type--one-web-highlight-content-box {
@@ -2593,7 +2593,7 @@ see
 
 @media (min-width: 500px) {
   .content-type--one-web-highlight-content-box {
-    height: 300px;
+    height: 320px;
     margin-right: 20px;
     opacity: .9;
     width: 210px; /* allows 4 in a row on desktop view */
