@@ -3619,21 +3619,27 @@ UTILITIES / HELPER CLASSES
 
 ****************************************/
 
-/* float images only when sufficient screen width */
-@media (min-width: 480px) {
+/* float images when sufficient screen width, otherwise block */
 
-  .image-left, /* legacy Plone */
+.image-left,  /* legacy Plone */
+.image-right, /* legacy Plone */
+.utils--float-left,
+.utils--float-right {
+  display: block;
+}
+
+@media (min-width: 480px) {
+  .image-left,
   .utils--float-left {
     float: left;
     margin: .5rem 1rem 1rem 0;
   }
 
-  .image-right, /* legacy Plone */
+  .image-right,
   .utils--float-right {
     float: right;
     margin: .5rem 0 1rem 1rem;
   }
-
 }
 
 /* rounded corners */
