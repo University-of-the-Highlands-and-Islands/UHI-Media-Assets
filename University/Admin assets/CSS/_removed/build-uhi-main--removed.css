@@ -1,3 +1,103 @@
+/*
+Landing Content Boxes
+e.g. https://www.uhi.ac.uk/en/staff/
+migrating to .content-type--landing-content-boxes
+*/
+
+.section.courselist .col.half .halflight {
+  border-radius: 5px;
+  border: 3px solid #fff;
+  box-shadow: 5px 5px 11px #ccc;
+}
+
+@media (min-width: 480px) {
+  .section.courselist .col.half .halflight {
+    float: left;
+    min-height: 210px;
+    width: 46%; /* 33% */
+  }
+}
+
+@media (min-width: 768px) {
+  .section.courselist .col.half .halflight {
+    min-height: 230px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.courselist .col.half .halflight {
+    min-height: 210px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.courselist .col.half .halflight {
+    min-height: 170px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .section.courselist .col.half .halflight {
+    min-height: 165px;
+  }
+}
+
+.section.courselist .col.half .halflight h3 {
+  margin-top: 0;
+}
+
+.section.courselist .col.half .halflight ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section.courselist .col.half .halflight ul li {
+  margin-bottom: 10px;
+}
+
+.section.courselist .col.half .halflight:hover {
+  box-shadow: 5px 5px 11px #572163;
+}
+
+.section.courselist .col.half.onecol .halflight {
+  width: 90%;
+  margin-bottom: 30px;
+  min-height: 0;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+.section.courselist .col.half.twocol .halflight {
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  margin: 0 4% 20px;
+  padding: 10px;
+}
+
+@media (min-width: 480px) {
+  .section.courselist .col.half.twocol .halflight {
+    margin: 0 2% 20px;
+  }
+}
+
+.section.courselist .col.half.noborder .halflight {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.navigation--breadcrumb li:last-child {
+  margin-left: .5rem;
+}
+
+.navigation--breadcrumb li a {
+  margin: 0 .5rem;
+}
+
+.navigation--breadcrumb li:first-child a,
+.navigation--breadcrumb li:last-child a {
+  margin-left: 0;
+}
 
 .flex-cols__col > h2:first-child,
 .flex-cols__col > h3:first-child,
