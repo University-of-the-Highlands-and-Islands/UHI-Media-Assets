@@ -2156,12 +2156,24 @@ Previous and Next links for News and Event fulltext layouts
 
 .navigation--previous-next {
   border-top: 1px solid #ccc;
+  font-size: 1.2rem; /* matches Summary size */
   margin-top: 2rem;
   overflow: hidden;
   padding-top: 2rem;
 }
 
-.navigation--previous-next a:hover {
+.navigation--previous-next__pagination {
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 640px) {
+  .navigation--previous-next__pagination {
+    float: right;
+    margin: 0 0 0 2rem;
+  }
+}
+
+.navigation--previous-next__pagination a:hover {
   text-decoration: none !important;
 }
 
@@ -3547,13 +3559,6 @@ UTILITIES / HELPER CLASSES
   border-radius: 1rem;
 }
 
-/* half column width */
-@media (min-width: 1000px) {
-  .utils--width-half--1000 {
-    width: 50%;
-  }
-}
-
 /* e.g. for stacking images */
 .utils--padding {
   padding: 1rem;
@@ -3566,6 +3571,13 @@ UTILITIES / HELPER CLASSES
 
 .utils--text-shadow {
   text-shadow: 0 0 8px #000, 0 0 3px #000;
+}
+
+/* half column width */
+@media (min-width: 1000px) {
+  .utils--width-half--1000 {
+    width: 50%;
+  }
 }
 
 /****************************************
