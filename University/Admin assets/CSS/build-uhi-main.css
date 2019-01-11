@@ -3267,6 +3267,56 @@ already tested to go AFTER content-type-modifiers
 ****************************************/
 
 /*****************************************************
+Media Library Category Gallery
+
+originally known as: ?
+
+TODO transfer inline styles from CT prog layout and rename class BEM
+******************************************************/
+
+.galleryBottom {
+  margin-top: auto;
+}
+
+.galleryBottom,
+.galleryContainer a span {
+  display: inline-block;
+  padding: 3px;
+}
+
+.galleryContainer {
+  float: left;
+  height: 190px;
+  padding: 0 .5rem .5rem 0;
+  width: 300px;
+}
+
+.galleryContainer a {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.galleryContainer a,
+.galleryContainer a:active {
+  color: #fff !important;
+}
+
+.galleryContainer a:active {
+  text-shadow: none;
+}
+
+.galleryContainer a:hover {
+  text-decoration: none !important;
+}
+
+.galleryContainer a span {
+  background-color: rgba(128, 128, 128, 0.5);
+  text-align: center;
+}
+
+/*****************************************************
 Landing Content Boxes
 
 originally known as: ?
@@ -3294,7 +3344,6 @@ previously used .halflight
     grid-gap: 1rem;
     margin-bottom: 2rem;
   }
-
 
   .content-type--landing-content-boxes__box {
     margin: 0;
@@ -3533,7 +3582,7 @@ UTILITIES / HELPER CLASSES
 
 /* float images when sufficient screen width, otherwise block */
 
-.image-left,  /* legacy Plone */
+.image-left, /* legacy Plone */
 .image-right, /* legacy Plone */
 .utils--float-left,
 .utils--float-right {
