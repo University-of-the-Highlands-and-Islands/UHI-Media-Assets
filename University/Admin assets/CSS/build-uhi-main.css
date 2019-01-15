@@ -3270,50 +3270,49 @@ already tested to go AFTER content-type-modifiers
 Media Library Category Gallery
 
 originally known as: ?
-
-TODO transfer inline styles from CT prog layout and rename class BEM
 ******************************************************/
 
-.galleryBottom {
-  margin-top: auto;
-}
-
-.galleryBottom,
-.galleryContainer a span {
-  display: inline-block;
-  padding: 3px;
-}
-
-.galleryContainer {
+.content-type--media-library-category-gallery {
   float: left;
-  height: 190px;
   padding: 0 .5rem .5rem 0;
-  width: 300px;
 }
 
-.galleryContainer a {
+.content-type--media-library-category-gallery a {
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   font-size: 17px;
+  margin-left: 0;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
-.galleryContainer a,
-.galleryContainer a:active {
+.content-type--media-library-category-gallery a,
+.content-type--media-library-category-gallery a:active {
   color: #fff !important;
 }
 
-.galleryContainer a:active {
+.content-type--media-library-category-gallery a:active {
   text-shadow: none;
 }
 
-.galleryContainer a:hover {
+.content-type--media-library-category-gallery a:hover {
   text-decoration: none !important;
 }
 
-.galleryContainer a span {
+.content-type--media-library-category-gallery a span {
   background-color: rgba(128, 128, 128, 0.5);
   text-align: center;
+}
+
+.content-type--media-library-category-gallery__label {
+  margin-top: auto;
+}
+
+.content-type--media-library-category-gallery__label,
+.content-type--media-library-category-gallery a span {
+  display: inline-block;
+  padding: 3px;
 }
 
 /*****************************************************
