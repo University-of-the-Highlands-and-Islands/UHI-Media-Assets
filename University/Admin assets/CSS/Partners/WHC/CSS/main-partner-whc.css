@@ -5,6 +5,7 @@ West Highland College UHI
 
 changes to this stylesheet should be mirrored across all partners
 
+
 Block colour: #00665c
 10% colour:   #e5efee
 **************************************/
@@ -107,6 +108,7 @@ div.content-type--landing-link-list__heading {
   border-top-color: #00665c;
 }
 
+.content-type--landing-content-boxes__box:hover,
 .section.courselist .col.half .halflight:hover {
   box-shadow: 5px 5px 11px #00665c;
 }

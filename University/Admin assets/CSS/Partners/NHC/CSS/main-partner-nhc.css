@@ -5,6 +5,7 @@ North Highland College UHI
 
 changes to this stylesheet should be mirrored across all partners
 
+
 Block colour: #562e8f
 10% colour:   #eeeaf4
 **************************************/
@@ -107,6 +108,7 @@ div.content-type--landing-link-list__heading {
   border-top-color: #562e8f;
 }
 
+.content-type--landing-content-boxes__box:hover,
 .section.courselist .col.half .halflight:hover {
   box-shadow: 5px 5px 11px #562e8f;
 }

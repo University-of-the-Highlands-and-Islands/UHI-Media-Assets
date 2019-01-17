@@ -1,0 +1,23 @@
+<!-- ** Landing Banner Ribbon and Action Button text/html ** -->
+<div class="section clearfix courses coursefinder">
+  <div class="wrap">
+    <t4 type="content" name="Action button image" output="selective-output" process-format="true" format="
+             <div class=&quot;prospectus&quot;>
+              <p>
+                <a href=&quot;<t4 type=&quot;content&quot; name=&quot;Action button link (internal)&quot; output=&quot;linkurl&quot; modifiers=&quot;nav_sections&quot; /><t4 type=&quot;content&quot; name=&quot;Action button link (external)&quot; output=&quot;normal&quot; /><t4 type=&quot;content&quot; name=&quot;Action button link (media)&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />&quot; title=&quot;<t4 type=&quot;content&quot; name=&quot;Action button link (internal)&quot; output=&quot;linktext&quot; modifiers=&quot;nav_sections&quot; /><t4 type=&quot;content&quot; name=&quot;Action button link title (external)&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format=&quot;$value&quot; />&quot;>
+                <span class=&quot;text&quot;>
+                    <t4 type=&quot;content&quot; name=&quot;Link text (before bold)&quot; output=&quot;normal&quot; modifiers=&quot;nl2br&quot; />
+                    <strong><t4 type=&quot;content&quot; name=&quot;Link text (bold)&quot; output=&quot;normal&quot; modifiers=&quot;nl2br&quot; /></strong>
+                    <t4 type=&quot;content&quot; name=&quot;Link text (after bold)&quot; output=&quot;normal&quot; modifiers=&quot;nl2br&quot; />
+                 </span>
+                </a>
+              </p>
+            </div>" formatter="" />
+    <t4 type="content" name="Ribbon bar text" output="selective-output" modifiers="medialibrary,nav_sections" format="$value" />
+    <t4 type="content" name="Display course search bar?" output="selective-output"  process-format="true" format="<form method=&quot;get&quot; id=&quot;coursesearch&quot; action=&quot;<t4 type=&quot;navigation&quot; name=&quot;Course search page path getter&quot; id=&quot;90&quot; />&quot;>
+              <input id=&quot;auto&quot; type=&quot;text&quot; name=&quot;auto&quot; style=&quot;display:none&quot;><input id=&quot;keyword&quot; type=&quot;text&quot; name=&quot;keyword&quot; class=&quot;keyword&quot; placeholder=&quot;Search courses&quot; autocomplete=&quot;off&quot;><span role=&quot;status&quot; aria-live=&quot;polite&quot; class=&quot;ui-helper-hidden-accessible&quot;></span>
+              <input type=&quot;submit&quot; value=&quot;]&quot;>
+</form>" />
+  </div>
+</div>
+<!-- ** End Landing Banner Ribbon and Action Button text/html ** -->

@@ -1,6 +1,7 @@
  @echo off
  echo running
 
+ REM
  REM compile all source files
  FOR %%I in (source/*.js) DO (
 
