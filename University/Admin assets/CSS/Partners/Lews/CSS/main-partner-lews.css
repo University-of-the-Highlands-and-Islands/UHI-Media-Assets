@@ -5,8 +5,9 @@ Lews Castle College UHI
 
 changes to this stylesheet should be mirrored across all partners
 
-Block colour: #008eaa
-10% colour:   #e5f3f6
+[accessibility adjustment 20190117]
+Block colour: #007E99 [originally #008eaa]
+10% colour:   #F7FBFC [originally #e5f3f6]
 **************************************/
 
 /**********************
@@ -55,7 +56,7 @@ Block colours
 a,
 a:active,
 a:visited {
-  color: #008eaa;
+  color: #007E99;
 }
 
 #coursefilter li.open:nth-child(even),
@@ -85,38 +86,38 @@ a:visited {
 .tt-menu .tt-cursor,
 .UHI--button-link--main,
 div.content-type--landing-link-list__heading {
-  background-color: #008eaa;
+  background-color: #007E99;
 }
 
 .section.courselist .col.onequarter.news > ul > li:first-child {
-  background: #008eaa none repeat scroll 0 0;
+  background: #007E99 none repeat scroll 0 0;
 }
 
 .section.specialistsubjects,
 .section.testimonials {
-  background: #008eaa url(<t4 type= "media" formatter= "image/path" id= "5576" />) center bottom no-repeat;
+  background: #007E99 url(<t4 type= "media" formatter= "image/path" id= "5576" />) center bottom no-repeat;
 }
 
 .UHI--button-link--reverse {
-  border-color: #008eaa;
+  border-color: #007E99;
 }
 
 .header.banner .nav.primary ul li a,
 .header.banner .nav.primary ul li.active a {
-  border-bottom-color: #008eaa;
-  border-top-color: #008eaa;
+  border-bottom-color: #007E99;
+  border-top-color: #007E99;
 }
 
 .content-type--landing-content-boxes__box:hover,
 .section.courselist .col.half .halflight:hover {
-  box-shadow: 5px 5px 11px #008eaa;
+  box-shadow: 5px 5px 11px #007E99;
 }
 
 .header.banner .tools li.students a,
 .header.banner .tools li.staff a,
 .header.banner .tools li.alumni a,
 .header.banner .tools li.language a {
-  box-shadow: 0 0 0 1px #008eaa;
+  box-shadow: 0 0 0 1px #007E99;
 }
 
 /**********************
@@ -127,7 +128,7 @@ div.content-type--landing-link-list__heading {
 a.t4Edit-page,
 a.t4Edit-page:visited,
 a.t4Edit-page:active {
-  color: #e5f3f6;
+  color: #F7FBFC;
 }
 
 .content-type--one-web-event__data,
@@ -141,15 +142,15 @@ a.t4Edit-page:active {
 .studying,
 .UHI--button-link--reverse,
 .UHI--paragraph-highlight {
-  background-color: #e5f3f6;
+  background-color: #F7FBFC;
 }
 
 .courses .section.coursefinder.coursepage {
-  background: #e5f3f6 none repeat scroll 0 0 !important;
+  background: #F7FBFC none repeat scroll 0 0 !important;
 }
 
 .content-type-modifier--typography blockquote {
-  border-color: #e5f3f6;
+  border-color: #F7FBFC;
 }
 
 /**********************
