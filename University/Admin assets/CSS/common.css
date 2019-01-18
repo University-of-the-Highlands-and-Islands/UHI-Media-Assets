@@ -569,7 +569,7 @@ h4, h5, h6 {
 bold font-family
 don't use font-weight: bold
 */
-b, h1, h2, h3, h4, h5, h6, strong, th, thead td,
+b, dt, h1, h2, h3, h4, h5, h6, strong, th, thead td,
 .footer .nav,
 .header.banner li form .keyword,
 .header.banner .tools li a,
@@ -580,6 +580,15 @@ b, h1, h2, h3, h4, h5, h6, strong, th, thead td,
   font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
+}
+
+dd {
+  margin: 0;
+}
+
+dt {
+  font-size: 17px;
+  margin-top: 1rem;
 }
 
 figcaption {
