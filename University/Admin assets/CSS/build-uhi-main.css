@@ -1131,12 +1131,12 @@ section courselist col threequarters
 }
 
 .section.courselist .col.threequarters > ul li a .modes .mode.active {
-  background-color: #f1765f;
+  background-color: #f1765f; /* for green try #3F6511 - complementary to main purple */
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .section.courselist .col.threequarters > ul li a .modes .mode.active:first-child {
-  background-color: #d15861;
+  background-color: #d15861; /* for green try #528316 - lighter shade but still accessible contrast */
 }
 
 /*
