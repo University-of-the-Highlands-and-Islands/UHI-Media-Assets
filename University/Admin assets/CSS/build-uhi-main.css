@@ -3443,6 +3443,20 @@ originally known as: ?
 .content-type--one-web-right-image {}
 ******************************************************/
 
+
+/*****************************************************
+Site_Config
+
+.content-type--site-config--search {}
+******************************************************/
+
+/* search box in header */
+
+.content-type--site-config--search label {
+  display: none;
+}
+
+
 /****************************************
 
 USER MODULES
