@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<t4 type="lang-var" default-language="en" en="<html lang='en'>" gd="<html lang='gd'>" />
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8"/>
+  <meta name="googlebot" content="NOODP">
+  <meta name="slurp" content="NOYDIR">
+  <meta name="msnbot" content="NOODP">
+  <title><t4 type="lang-var" default-language="en" en="University of the Highlands and Islands" gd="Oilthigh na Gàidhealtachd agus nan Eilean" /></title>
+
+  <!-- ^^ UHI Header CSS getter nav object #31 ^^ -->
+  <t4 type="navigation" name="UHI Header CSS getter nav object" id="31" />
+
+  <t4 type="meta" id="12" />
+  <t4 type="meta" id="15" />
+
+  <link rel="alternate" type="application/rss+xml" title="University of the Highlands and Islands Press Releases" href="http://feeds.feedburner.com/uhinews">
+  <link rel="alternate" type="application/rss+xml" title="University of the Highlands and Islands Events" href="http://feeds.feedburner.com/uhievents">
+  <link rel="alternate" type="application/rss+xml" title="University of the Highlands and Islands Jobs" href="http://feeds.feedburner.com/uhijobs">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700" />
+  <t4 type="media" formatter="css/*" id="5543" /><!--common.css-->
+  <t4 type="media" formatter="css/*" id="118" /><!--reverse.css-->
+  <t4 type="media" formatter="css/print" id="275010" /><!--print.css-->
+
+  <t4 type="media" id="96" />
+
+  <t4 type="media" formatter="inline/*" id="276807" /> <!-- javacript declarations -->
+
+  <!-- Course search auto-complete -->
+  <script>
+      $(function() {
+          $("#keyword").autocomplete({
+              delay: 400,
+              minLength: 3,
+              position: {
+                  my: 'right top',
+                  at: 'right bottom'
+              },
+              //     source: 'http://dev-www.uhi.ac.uk/en/t4-media/one-web/university/admin-assets/php/php-search-auto-complete.php',
+              source: '<t4 type="media" formatter="image/path" id="278301" />',
+              response: function (event, ui) {
+                  // event before the menu opens
+                  //        console.log(ui);
+              },
+              select: function(event, ui) {
+                  $('#coursesearch').val(ui.item.value);
+                  $('#keyword').val(ui.item.value);
+                  if(ui.item.label.substring(0,6) === "Search")
+                      $('#auto').val("0");
+                  else $('#auto').val("1");
+                  $('#coursesearch').submit();
+              }
+          });
+      });
+  </script>
+
+</head>
+
+<body class='home <t4 type="navigation" name="Uni HP language class" id="13" />'>
+
+<t4 type="navigation" name="One-Web HP Top Message" id="14" />
+
+<header class="header clearfix banner">
+  <ul class="tools">
+    <t4 type="navigation" name="Header tools links getter" id="33" />
+    <li class="language">
+      <t4 type="lang-var" default-language="en" en="" gd="<!--" /><t4 type="navigation" id="9"/><t4 type="lang-var" default-language="en" en="" gd="-->" />
+      <t4 type="lang-var" default-language="en" en="<!--" gd="" /><t4 type="navigation" id="1"/><t4 type="lang-var" default-language="en" en="-->" gd="" />
+    </li>
+    <t4 type="navigation" name="Site search form code getter" id="38" />
+  </ul>
+  <t4 type="navigation" name="Uni Signpost" id="5" />
+  <nav class="nav primary" aria-label="primary">
+    <!-- ^^ Primary nav getter nav object #36 -->
+    <t4 type="navigation" name="Primary nav getter " id="36" />
+  </nav>
+</header>
+
+<main role="main">
