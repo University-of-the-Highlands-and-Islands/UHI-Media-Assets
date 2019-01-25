@@ -3450,29 +3450,28 @@ USER MODULES
 ****************************************/
 
 /*****************************************************
-
-Payment forms
-
+Responsive forms
+e.g.
 https://www.uhi.ac.uk/en/payments/
 ******************************************************/
 
-.payments-form fieldset {
+.form--responsive fieldset {
   border: none;
   padding: 0;
 }
 
-.payments-form legend {
+.form--responsive legend {
   font-size: 24px;
   padding: 2rem 0 1rem 0;
 }
 
-.payments-form input {
+.form--responsive input {
   margin-bottom: 1rem !important;
 }
 
-.payments-form input,
-.payments-form label,
-.payments-form select {
+.form--responsive input,
+.form--responsive label,
+.form--responsive select {
   display: block;
 }
 
