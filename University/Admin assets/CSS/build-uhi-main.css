@@ -3449,6 +3449,29 @@ USER MODULES
 
 ****************************************/
 
+/*****************************************************
+
+Payment forms
+
+https://www.uhi.ac.uk/en/payments/
+******************************************************/
+
+.payments-form fieldset {
+  border: none;
+  padding: 0;
+}
+
+.payments-form legend {
+  font-size: 24px;
+  padding: 2rem 0 1rem 0;
+}
+
+.payments-form input,
+.payments-form label,
+.payments-form select {
+  display: block;
+}
+
 /****************************************
 
 TinyMCE HTML editor styles
