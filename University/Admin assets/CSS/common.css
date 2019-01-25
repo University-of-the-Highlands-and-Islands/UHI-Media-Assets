@@ -1715,6 +1715,18 @@ Twitter Typeahead autocomplete suggestions
   }
 }
 
+/*****************************************************
+
+Site_Config
+
+******************************************************/
+
+/* search box in header */
+
+.content-type--site-config--search label {
+  display: none;
+}
+
 /****************************************
 
 UTILITIES / HELPER CLASSES
