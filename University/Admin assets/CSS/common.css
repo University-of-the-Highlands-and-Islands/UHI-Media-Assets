@@ -389,8 +389,8 @@ use ONLY font-family rules NOT font-weight
 
 @font-face {
   font-family: "Glypha Web Light";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 28 " />");
-  src: url("<t4 type=" media " formatter=" path/* " id=" 28 " />?#iefix") format("embedded-opentype"),
+  src: url("<t4 type="media" formatter="path/*" id="28" />");
+  src: url("<t4 type="media" formatter="path/*" id="28" />?#iefix") format("embedded-opentype"),
 url("<t4 type="media" formatter="path/*" id="269485" />") format("woff2"),
 url("<t4 type="media" formatter="path/*" id="34" />") format("woff"),
 url("<t4 type="media" formatter="path/*" id="38" />") format("truetype"),
@@ -402,8 +402,8 @@ url("<t4 type="media" formatter="path/*" id="41" />#4024835f-8aea-4b85-a0e1-d0ed
 
 @font-face {
   font-family: "Glypha Web";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 22 " />");                                        /* IE9 Compat Modes */
-  src: url("<t4 type=" media " formatter=" path/* " id=" 22 " />?#iefix") format("embedded-opentype"),     /* IE6-IE8 */
+  src: url("<t4 type="media" formatter="path/*" id="22" />");                                        /* IE9 Compat Modes */
+  src: url("<t4 type="media" formatter="path/*" id="22" />?#iefix") format("embedded-opentype"),     /* IE6-IE8 */
 url("<t4 type="media" formatter="path/*" id="269468" />") format("woff2"),                                 /* Super Modern Browsers */
 url("<t4 type="media" formatter="path/*" id="20" />") format("woff"),                                      /* Pretty Modern Browsers */
 url("<t4 type="media" formatter="path/*" id="37" />") format("truetype"),                                  /* Safari, Android, iOS */
@@ -415,8 +415,8 @@ url("<t4 type="media" formatter="path/*" id="25" />#9afb9aeb-d1ab-4165-858b-a9f6
 
 @font-face {
   font-family: "Glypha Web Bold";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 43 " />");
-  src: url("<t4 type=" media " formatter=" path/* " id=" 43 " />?#iefix") format("embedded-opentype"),
+  src: url("<t4 type="media" formatter="path/*" id="43" />");
+  src: url("<t4 type="media" formatter="path/*" id="43" />?#iefix") format("embedded-opentype"),
 url("<t4 type="media" formatter="path/*" id="269488" />") format("woff2"),
 url("<t4 type="media" formatter="path/*" id="31" />") format("woff"),
 url("<t4 type="media" formatter="path/*" id="50" />") format("truetype"),
@@ -428,8 +428,8 @@ url("<t4 type="media" formatter="path/*" id="33" />#124daf03-3c02-409f-aa57-3b8c
 
 @font-face {
   font-family: "Glypha Web Black";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 27 " />");
-  src: url("<t4 type=" media " formatter=" path/* " id=" 27 " />?#iefix") format("embedded-opentype"),
+  src: url("<t4 type="media" formatter="path/*" id="27" />");
+  src: url("<t4 type="media" formatter="path/*" id="27" />?#iefix") format("embedded-opentype"),
 url("<t4 type="media" formatter="path/*" id="269490" />") format("woff2"),
 url("<t4 type="media" formatter="path/*" id="48" />") format("woff"),
 url("<t4 type="media" formatter="path/*" id="51" />") format("truetype"),
@@ -441,8 +441,8 @@ url("<t4 type="media" formatter="path/*" id="23" />#5dd3e112-c1ab-4286-8da3-226d
 
 @font-face {
   font-family: "Glypha Web Light Italic";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 32 " />");
-  src: url("<t4 type=" media " formatter=" path/* " id=" 32 " />?#iefix") format("embedded-opentype"),
+  src: url("<t4 type="media" formatter="path/*" id="32" />");
+  src: url("<t4 type="media" formatter="path/*" id="32" />?#iefix") format("embedded-opentype"),
 url("<t4 type="media" formatter="path/*" id="269486" />") format("woff2"),
 url("<t4 type="media" formatter="path/*" id="36" />") format("woff"),
 url("<t4 type="media" formatter="path/*" id="39" />") format("truetype"),
@@ -454,8 +454,8 @@ url("<t4 type="media" formatter="path/*" id="49" />#daa02aa9-fa6d-4fea-acfe-45bc
 
 @font-face {
   font-family: "Glypha Web Italic";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 24 " />");
-  src: url("<t4 type=" media " formatter=" path/* " id=" 24 " />?#iefix") format("embedded-opentype"),
+  src: url("<t4 type="media" formatter="path/*" id="24" />");
+  src: url("<t4 type="media" formatter="path/*" id="24" />?#iefix") format("embedded-opentype"),
 url("<t4 type="media" formatter="path/*" id="269487" />") format("woff2"),
 url("<t4 type="media" formatter="path/*" id="47" />") format("woff"),
 url("<t4 type="media" formatter="path/*" id="35" />") format("truetype"),
@@ -467,8 +467,8 @@ url("<t4 type="media" formatter="path/*" id="29" />#31abaea4-3db9-4be2-9da2-c7d6
 
 @font-face {
   font-family: "Glypha Web Bold Italic";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 44 " />");
-  src: url("<t4 type=" media " formatter=" path/* " id=" 44 " />?#iefix") format("embedded-opentype"),
+  src: url("<t4 type="media" formatter="path/*" id="44" />");
+  src: url("<t4 type="media" formatter="path/*" id="44" />?#iefix") format("embedded-opentype"),
 url("<t4 type="media" formatter="path/*" id="269489" />") format("woff2"),
 url("<t4 type="media" formatter="path/*" id="30" />") format("woff"),
 url("<t4 type="media" formatter="path/*" id="21" />") format("truetype"),
@@ -480,8 +480,8 @@ url("<t4 type="media" formatter="path/*" id="40" />#929328f7-c744-496f-98ee-d385
 
 @font-face {
   font-family: "Glypha Web Black Italic";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 19 " />");
-  src: url("<t4 type=" media " formatter=" path/* " id=" 19 " />?#iefix") format("embedded-opentype"),
+  src: url("<t4 type="media" formatter="path/*" id="19" />");
+  src: url("<t4 type="media" formatter="path/*" id="19" />?#iefix") format("embedded-opentype"),
 url("<t4 type="media" formatter="path/*" id="269491" />") format("woff2"),
 url("<t4 type="media" formatter="path/*" id="26" />") format("woff"),
 url("<t4 type="media" formatter="path/*" id="42" />") format("truetype"),
@@ -497,8 +497,8 @@ http://tenbytwenty.com/?xxxx_posts=sosa
 */
 @font-face {
   font-family: "Sosa Web";
-  src: url("<t4 type=" media " formatter=" path/* " id=" 52 " />");
-  src: url("<t4 type=" media " formatter=" path/* " id=" 52 " />?#iefix") format("embedded-opentype"),
+  src: url("<t4 type="media" formatter="path/*" id="52" />");
+  src: url("<t4 type="media" formatter="path/*" id="52" />?#iefix") format("embedded-opentype"),
 url("<t4 type="media" formatter="path/*" id="55" />") format("woff"),
 url("<t4 type="media" formatter="path/*" id="54" />") format("truetype"),
 url("<t4 type="media" formatter="path/*" id="53" />#sosa-regular-webfont") format("svg");
