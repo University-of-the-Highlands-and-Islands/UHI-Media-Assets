@@ -3443,25 +3443,37 @@ originally known as: ?
 .content-type--one-web-right-image {}
 ******************************************************/
 
-
-/*****************************************************
-Site_Config
-
-.content-type--site-config--search {}
-******************************************************/
-
-/* search box in header */
-
-.content-type--site-config--search label {
-  display: none;
-}
-
-
 /****************************************
 
 USER MODULES
 
 ****************************************/
+
+/*****************************************************
+Responsive forms
+e.g.
+https://www.uhi.ac.uk/en/payments/
+******************************************************/
+
+.form--responsive fieldset {
+  border: none;
+  padding: 0;
+}
+
+.form--responsive legend {
+  font-size: 24px;
+  padding: 2rem 0 1rem 0;
+}
+
+.form--responsive input {
+  margin-bottom: 1rem !important;
+}
+
+.form--responsive input,
+.form--responsive label,
+.form--responsive select {
+  display: block;
+}
 
 /****************************************
 
