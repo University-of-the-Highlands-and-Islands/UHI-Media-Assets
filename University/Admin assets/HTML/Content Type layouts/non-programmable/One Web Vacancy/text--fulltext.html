@@ -38,17 +38,22 @@
   <t4 type="content" name="Interview Week" output="selective-output" modifiers="" process-format="true" format="<t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;<p><b>Interviews</b> will be held $value.</p>&quot; gd=&quot;<p>Thèid <b>agallamhan</b> a chumail $value.</p>&quot; />" />
 
   <ul>
+
     <li><a href='<t4 type="content" name="Job Description" output="file" />'><t4 type="lang-var" default-language="en" en="Job description" gd="Tuairisgeul obrach" /></a></li>
     <t4 type="content" name="No PS" output="selective-output" format="<!-- " /><li><a href='<t4 type="content" name="Person Specification" output="file" />'><t4 type="lang-var" default-language="en" en="Person specification" gd="Sònrachadh pearsa" /></a></li><t4 type="content" name="No PS" output="selective-output" format=" -->" />
     <t4 type="content" name="No FI" output="selective-output" format="<!-- " /><li><a href='<t4 type="content" name="Further Information" output="file" />'><t4 type="lang-var" default-language="en" en="Further information" gd="Tuilleadh fiosrachaidh" /></a></li><t4 type="content" name="No FI" output="selective-output" format=" -->" />
     <t4 type="content" name="No TC" output="selective-output" format="<!-- " /><li><a href='<t4 type="content" name="TC" output="file" />'><t4 type="lang-var" default-language="en" en="Terms and conditions" gd="Cumhaichean is cùmhnantan" /></a></li><t4 type="content" name="No TC" output="selective-output" format=" -->" />
 
-
     <t4 type="navigation" name="One-Web Vacancy Guide and TC" id="226" />
     <t4 type="navigation" name="One-Web Vacancy Eq Mon" id="334" />
-    <t4 type="navigation" name="One-Web Vacancy Offline" id="286" />
-    <t4 type="content" name="Enable Application Form" output="selective-output" format="<li><a href='" /><t4 type="content" name="App Form" output="file" /><t4 type="content" name="Enable Application Form" output="selective-output" modifiers="" process-format="true" format="<t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;'>Application Form</a></li>&quot; gd=&quot;'>Foirm iarrtais</a></li>&quot; />" />
-    <t4 type="content" name="Apply Online" output="selective-output" modifiers="" process-format="true" format="<t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;<li><a href='$value'>Apply online</a></li>&quot; gd=&quot;<li><a href='$value'>Dèan tagradh air-loidhne</a></li>&quot; />" />
+
+    <t4 type="content" name="Enable Application Form" output="selective-output" format="<!--" />
+      <t4 type="navigation" name="One-Web Vacancy Offline" id="286" />
+    <t4 type="content" name="Enable Application Form" output="selective-output" format="-->" />
+
+    <t4 type="content" name="Enable Application Form" output="selective-output" process-format="true" format="<li><a href='<t4 type=&quot;content&quot; name=&quot;App Form&quot; output=&quot;file&quot; /><t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;'>Application Form</a></li>&quot; gd=&quot;'>Foirm iarrtais</a></li>&quot; />" />
+
+    <t4 type="content" name="Apply Online URL" output="selective-output" modifiers="" process-format="true" format="<t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;<li><a href='$value'>Apply online</a></li>&quot; gd=&quot;<li><a href='$value'>Dèan tagradh air-loidhne</a></li>&quot; />" />
 
   </ul>
 
