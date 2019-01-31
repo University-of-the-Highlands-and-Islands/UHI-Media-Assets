@@ -1726,14 +1726,3 @@ Site_Config
 .content-type--site-config--search label {
   display: none;
 }
-
-/****************************************
-
-UTILITIES / HELPER CLASSES
-
-****************************************/
-
-/* the Sledgehammer! */
-.utils--hidden {
-  display: none !important;
-}

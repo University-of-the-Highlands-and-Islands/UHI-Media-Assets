@@ -894,8 +894,3 @@ Action button on Home page
     padding-top: 30px;
   }
 }
-
-/* the Sledgehammer! */
-.utils--hidden {
-  display: none !important;
-}
