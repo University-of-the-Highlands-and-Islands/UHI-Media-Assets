@@ -1,0 +1,29 @@
+<article class="content-type--one-web-news  content-type-modifier--typography">
+
+  <h1><t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" /></h1>
+
+  <p>
+    <time datetime='<t4 type="content" name="Date released" output="normal" date_format="yyyy-MM-dd" />'><t4 type="content" name="Date released" output="normal" date_format="EEEE d MMMM yyyy" /></time>
+  </p>
+
+  <t4 type="content" name="Summary" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;content-type--one-web-news__description&quot;>$value</p>" />
+
+  <t4 type="content" name="Feature image" output="selective-output" format="<div class='content-type--one-web-news__image'><a href='" formatter="" />
+  <t4 type="content" name="Feature image" output="normal" formatter="path/*" />
+  <t4 type="content" name="Feature image" output="selective-output" format="' id='parent-fieldname-image'>" formatter="" />
+  <t4 type="content" name="Feature image" output="selective-output" format="<img src='" formatter="" />
+  <t4 type="content" name="Feature image" output="normal" formatter="path/*" />
+  <t4 type="content" name="Feature image" output="selective-output" format="' alt=&quot;see full size image&quot; title=&quot;see full size image&quot; />" formatter="" />
+  <t4 type="content" name="Feature image" output="selective-output" format="</a>" formatter="" />
+  <t4 type="content" name="Feature image caption" output="selective-output" modifiers="" format="<p>$value</p>" />
+  <t4 type="content" name="Feature image" output="selective-output" format="</div>" formatter="" />
+
+  <t4 type="content" name="Main body" output="normal" modifiers="medialibrary,nav_sections" />
+
+  <nav class="navigation--previous-next" aria-label="pagination">
+    <div class="navigation--previous-next__pagination"><t4 type="navigation" name="News Previous Next links" id="195" /></div>
+
+    <div class="navigation--previous-next__up"><a href="./">See listing of all news articles</a></div>
+  </nav>
+
+</article>

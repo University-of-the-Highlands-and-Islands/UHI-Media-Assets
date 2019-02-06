@@ -1901,12 +1901,6 @@ input[name="query"] {
   }
 }
 
-.fb-search .clearboth:after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
 .fb-search .badge,
 .fb-search .panel-heading {
   background-color: #572163;
@@ -2023,6 +2017,7 @@ input[name="query"] {
   background-color: #ccc;
 }
 
+.fb-search .clearboth:after,
 .fb-search .list-group-item:after {
   clear: both;
   content: "";
@@ -2484,6 +2479,19 @@ originally known as: General Content
   clear: both;
 }
 
+.content-type--one-web-general-content__last-updated {
+  background-color: #eee;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 1rem 0;
+  padding: .5rem;
+}
+
+.content-type--one-web-general-content__last-updated time {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
 /****************************************
 One-Web Highlight Content Box
 
@@ -2815,7 +2823,7 @@ related to earlier CT: Uni Event Listing
 ******************************************************/
 
 .content-type--one-web-event-listing {
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
 }
 

@@ -1,0 +1,196 @@
+<!-- https://developers.google.com/search/docs/data-types/event -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Event",
+    "name": "<t4 type='content' name='Title' output='normal' />",
+    "startDate": "<t4 type='content' name='Start date and time' output='normal' date_format='yyyy-MM-dd hh:mm'/>+00:00",
+    "endDate": "<t4 type='content' name='End date and time' output='normal' date_format='yyyy-MM-dd hh:mm'/>+00:00",
+    "location": {
+      "@type": "Place",
+      "name": "<t4 type='content' name='Venue' output='normal' />",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "",
+        "postalCode": "",
+        "addressRegion": "Highlands and Islands",
+        "addressCountry": "GB"
+      }
+    },
+    "description": "<t4 type='content' name='Event summary' output='normal' />",
+    "image": "<t4 type='navigation' name='Root getter' id='234' /><t4 type='content' name='Image' output='normal' formatter='path/*' />",
+    "offers": {
+      "@type": "Offer",
+      "availability": "http://schema.org/InStock",
+      "price": "<t4 type='content' name='Cost, if not free' output='normal' />",
+      "priceCurrency": "GBP",
+      "url": "<t4 type='content' name='More event information URL' output='normal' />",
+      "validFrom": "2018-09-19T00:00+00:00"
+    },
+    "performer": ""
+  }
+</script>
+<article class="content-type--one-web-event">
+
+  <h1>
+    <t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities"/>
+  </h1>
+
+  <p class="content-type--one-web-event__summary">
+    <t4 type="content" name="Event summary" output="normal" modifiers="htmlentities,nl2br"/>
+  </p>
+
+  <div class="flex-cols">
+
+    <div class="flex-cols__col content-type--one-web-event__data">
+
+      <h2>
+        <span class="content-type--one-web-event__icon">[</span>
+        <t4 type="lang-var" default-language="en" en="When" gd="Cuin"/>
+      </h2>
+
+      <p>
+        <time datetime='<t4 type="content" name="Start date and time" output="normal" date_format="yyyy-MM-dd" />'>
+          <t4 type="content" name="Start date and time" output="normal" date_format="h.mma EEE dd MMMM yyyy"/>
+        </time>
+
+        <t4 type="content" name="End date and time" output="selective-output" process-format="true" format="
+          <br>to<br>
+		  <time datetime='<t4 type=&quot;content&quot; name=&quot;End date and time&quot; output=&quot;normal&quot; date_format=&quot;yyyy-MM-dd&quot; />'>
+            <t4 type=&quot;content&quot; name=&quot;End date and time&quot; output=&quot;normal&quot; date_format=&quot;h.mma EEE dd MMMM&quot;/>
+          </time>
+        "/>
+      </p>
+
+
+      <h2>
+        <span class="content-type--one-web-event__icon">o</span>
+        <t4 type="lang-var" default-language="en" en="Where" gd="Càite" />
+      </h2>
+
+      <p>
+        <t4 type="content" name="Venue" output="selective-output"  process-format="true" format="<t4 type=&quot;content&quot; name=&quot;Venue&quot; output=&quot;normal&quot; /><br>" />
+        <t4 type="content" name="Venue address" output="normal" modifiers="nl2br" />
+      </p>
+
+
+      <h2>
+        <span class="content-type--one-web-event__icon">8</span>
+        <t4 type="lang-var" default-language="en" en="Remote access" gd="Co-labhairt bhidio" />
+      </h2>
+
+
+      <t4 type="content" name="Remote access" output="selective-output"  process-format="true" format="<!--" />
+      <p>Not available</p>
+      <t4 type="content" name="Remote access" output="selective-output"  process-format="true" format="-->" />
+
+
+      <t4 type="content" name="Remote access" output="selective-output"  process-format="true" format="
+        <t4 type=&quot;content&quot; name=&quot;Remote access&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,nav_sections&quot; />
+		<p class=content-type--one-web-event__help>
+          <a href=https://www.uhi.ac.uk/en/lis/vc/ target=_blank>Video Conferencing help</a><br>
+          <a href=https://www.uhi.ac.uk/en/lis/software-downloads/ target=_blank>Cisco Webex Teams help</a><br>
+          <a href=https://www.uhi.ac.uk/en/lis/online-training/blackboard-collaborate/ target=_blank>Blackboard Collaborate help</a><br>
+          &hellip;or contact the event organiser for more help on Remote Access.
+		</p>"
+      />
+
+
+      <h2>
+        <span class="content-type--one-web-event__icon">£</span>
+        <t4 type="lang-var" default-language="en" en="Cost" gd="Free"/>
+      </h2>
+
+      <t4 type="content" name="Cost, if not free" output="selective-output" format="<!--" />
+      <p>Free</p>
+      <t4 type="content" name="Cost, if not free" output="selective-output" format="-->" />
+
+      <t4 type="content" name="Cost, if not free" output="selective-output" format="<p>&pound;$value</p>" />
+
+
+      <h2>
+        <span class="content-type--one-web-event__icon">É</span>
+        <t4 type="lang-var" default-language="en" en="Contact" gd="Ainm neach-conaltraidh"/>
+      </h2>
+
+      <p>
+        <t4 type="content" name="Contact name" output="selective-output" modifiers="striptags,htmlentities" format="$value<br>" />
+        email:
+        <a href='mailto:<t4 type="content" name="Contact email" output="normal" />'>
+          <t4 type="content" name="Contact email" output="normal"/>
+        </a>
+        <t4 type="content" name="Contact phone" output="selective-output" modifiers="striptags,htmlentities" format="<br>tel: $value" />
+      </p>
+
+
+      <h2>
+        <span class="content-type--one-web-event__icon">à</span>
+        <t4 type="lang-var" default-language="en" en="Add to Calendar" gd="Cuir an tachartas ris a’ mhìosachan"/>
+      </h2>
+
+      <p>
+        <a href='<t4 type="navigation" name="Current section path" id="63" />uhi-vcard-event-<t4 type="meta" meta="content_id" />.vcal' title="Download this event in vCal format">vCal</a>
+        &nbsp;&nbsp;
+        <a href='<t4 type="navigation" name="Current section path" id="63" />uhi-event-<t4 type="meta" meta="content_id" />.ics' title='Download this event in iCal format'>iCal</a>
+      </p>
+
+    </div><!-- flex-cols__col -->
+
+
+    <div class="flex-cols__col  flex-cols__col--next  content-type-modifier--typography  content-type--one-web-event__details">
+
+      <t4 type="content" name="Main body" output="normal" modifiers="medialibrary,nav_sections" />
+
+
+      <t4 type="content" name="Book online" output="selective-output" process-format="true" format="<!--" />
+      <t4 type="content" name="More event information URL" output="selective-output" process-format="true" format="
+        <p class=UHI--button-link--main>
+          <a href=$value target=_blank>
+            <t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;more event information&quot; gd=&quot;Tuillidh fiosrachaidh mun tachartas seo&quot; />
+          </a>
+        </p>
+      "/>
+      <t4 type="content" name="Book online" output="selective-output" process-format="true" format="-->" />
+
+      <t4 type="content" name="Book online" output="selective-output" process-format="true" format="
+        <p class=UHI--button-link--main>
+          <a href=<t4 type=&quot;content&quot; name=&quot;More event information URL&quot; output=&quot;normal&quot; modifiers=&quot;medialibrary,striptags,htmlentities&quot; /> target=_blank>
+            <t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;book online now&quot; gd=&quot;clàraich air-loidhne an dràsta&quot; />
+          </a>
+        </p>
+      "/>
+
+
+      <t4 type="content" name="URL for event evaluation survey" output="selective-output" modifiers="" process-format="true" format="
+        <p class=UHI--button-link--reverse>
+          <a href=$value target=_blank>
+            <t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;fill in event survey&quot; gd=&quot;fill in event survey&quot; />
+          </a>
+        </p>
+      "/>
+
+
+      <t4 type="navigation" name="One-Web Event Privacy Statement" id="396" />
+
+
+      <t4 type="content" name="Image" output="selective-output" process-format="true" format="
+      <figure>
+        <t4 type=&quot;content&quot; name=&quot;Image&quot; output=&quot;normal&quot; formatter=&quot;image/*&quot; />
+        <figcaption>
+          <t4 type=&quot;content&quot; name=&quot;Image caption&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format=&quot;$value&quot; />
+        </figcaption>
+      </figure>
+      " />
+
+    </div><!-- flex-cols__col -->
+
+  </div><!-- flex-cols -->
+
+  <nav class="navigation--previous-next" aria-label="pagination">
+    <div class="navigation--previous-next__pagination"><t4 type="navigation" name="Events Previous Next links" id="399" /></div>
+
+    <div class="navigation--previous-next__up"><a href="./">See listing of all events</a></div>
+  </nav>
+
+</article>
