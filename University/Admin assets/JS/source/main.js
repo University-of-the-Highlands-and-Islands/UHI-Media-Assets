@@ -210,6 +210,7 @@ function callQR(){
 
 function addClearFix(){ 
   $(".content-type--one-web-highlight-content-box").wrapAll("<div class='clearfix'/>");
+  $(".content-type--one-web-media-object").wrapAll("<div class='clearfix'/>");
 }
 
 function uhicollapsibleSections(){
