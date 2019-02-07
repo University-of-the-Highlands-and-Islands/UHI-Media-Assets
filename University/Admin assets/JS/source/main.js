@@ -255,6 +255,22 @@ function uhiCollapseSection(open){
   }
 }
 
+function lastModified(slastmodified,rootUrl){
+	if(rootUrl.includes("t4help") || rootUrl.includes("dev-www.t4.uhi.ac.uk")){
+    var dlastmodified = new Date(slastmodified);
+    var cutOff = new Date().setDate(new Date().getDate()-60);
+    var markup = '<div class="meta--last-updated">This page was last updated <time datetime=' + $.datepicker.formatDate("yy-MM-dd+00:00", new Date(dlastmodified)) + '>' + $.datepicker.formatDate("d MM yy", new Date(dlastmodified)) + '</time></div>';   
+
+    if(dlastmodified < cutOff)
+    {
+      document.write("<!--" + markup + "-->");
+    }
+  else
+    {
+      document.write(markup);
+    }
+  }
+}
 
 
 
