@@ -2479,19 +2479,6 @@ originally known as: General Content
   clear: both;
 }
 
-.content-type--one-web-general-content__last-updated {
-  background-color: #eee;
-  border-radius: 3px;
-  display: inline-block;
-  margin: 1rem 0;
-  padding: .5rem;
-}
-
-.content-type--one-web-general-content__last-updated time {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-}
-
 /****************************************
 One-Web Highlight Content Box
 
@@ -3681,6 +3668,33 @@ https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements
   .utils--width-half--1000 {
     width: 50%;
   }
+}
+
+/****************************************
+
+Meta widgets
+
+****************************************/
+
+/*************
+Last Updated
+
+remove from CT once implemented in relevant layout
+eg https://www.uhi.ac.uk/en/foi/section-8/
+*************/
+
+.content-type--one-web-general-content__last-updated,
+.meta--last-updated {
+  background-color: #eee;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 1rem 0;
+  padding: .5rem;
+}
+
+.content-type--one-web-general-content__last-updated time,
+.meta--last-updated time {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
 }
 
 /****************************************
