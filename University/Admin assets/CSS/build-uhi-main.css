@@ -2237,7 +2237,7 @@ styles these link lists, and other stuff for now probably
 }
 
 /* line blocks - skin - heading */
-div.content-type--landing-link-list__heading,
+.content-type--landing-link-list__heading,
 .section.courselist .col.onequarter.news > ul > li:first-child {
   background-color: #572163;
   color: #fff;
@@ -2306,6 +2306,8 @@ div.newsevents ul {
 div.newsevents h3 {
   margin-top: 0;
 }
+
+/* https://www.inverness.uhi.ac.uk/ */
 
 li.newsevents {
   border-radius: 5px;
@@ -3596,7 +3598,7 @@ each colour contains duplicate styles, for preview in TinyMCE
   border-color: #572163;
   border-radius: 3px;
   display: inline-block;
-  margin: 0;
+  margin: 0 0 1rem;
   padding: .5rem;
 }
 

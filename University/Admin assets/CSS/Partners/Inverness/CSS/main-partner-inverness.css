@@ -60,6 +60,7 @@ a:visited {
 }
 
 #coursefilter li.open:nth-child(even),
+.content-type--landing-link-list__heading,
 .content-type--one-web-text-banner,
 .fb-search .badge,
 .fb-search .panel-heading,
@@ -84,8 +85,7 @@ a:visited {
 .section.intro p,
 .tt-menu .tt-suggestion:hover,
 .tt-menu .tt-cursor,
-.UHI--button-link--main,
-div.content-type--landing-link-list__heading {
+.UHI--button-link--main {
   background-color: #762864;
 }
 
