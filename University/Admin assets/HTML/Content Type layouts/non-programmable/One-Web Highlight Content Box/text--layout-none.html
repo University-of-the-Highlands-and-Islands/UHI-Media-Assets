@@ -1,3 +1,13 @@
-<a class='content-type--one-web-highlight-content-box' href='<t4 type="content" name="Internal Link" output="linkurl" modifiers="nav_sections" /><t4 type="content" name="External Link" output="linkurl" modifiers="nav_sections" /><t4 type="content" name="Link to Media file" output="normal" formatter="path/*" /><t4 type="content" name="External Link" output="normal" />'>
+<div class='content-type--one-web-highlight-content-box'>
+
+  <t4 type="content" name="Internal Link" output="selective-output" modifiers="nav_sections" process-format="true" format="<a href='<t4 type=&quot;content&quot; name=&quot;Internal Link&quot; output=&quot;linkurl&quot; modifiers=&quot;nav_sections&quot; />'>" />
+  <t4 type="content" name="External Link" output="selective-output" modifiers="striptags,htmlentities" process-format="true" format="<a href='$value'>" />
+  <t4 type="content" name="Link to Media file" output="selective-output" process-format="true" format="<a href='<t4 type=&quot;content&quot; name=&quot;Link to Media file&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />'>" formatter="path/*" />
+
   <t4 type="content" name="Image" output="normal" formatter="" />
-</a>
+
+  <t4 type="content" name="Internal Link" output="selective-output" modifiers="nav_sections" format="</a>" />
+  <t4 type="content" name="External Link" output="selective-output" modifiers="striptags,htmlentities" format="</a>" />
+  <t4 type="content" name="Link to Media file" output="selective-output" format="</a>" />
+
+</div>

@@ -390,7 +390,6 @@ Unistats widget
 .main input[type="text"],
 .main input[type="password"],
 .main textarea {
-  border: 1px solid #d6d6d6;
   border-radius: .25rem;
   margin-bottom: .5rem;
   padding: .5rem;
@@ -1795,7 +1794,6 @@ HIDDEN COURSE DATA DISPLAY
 
 table.prospectus {
   width: 100%;
-  border: 1px solid #ccc;
   margin-bottom: 20px;
   border-collapse: collapse;
 }
@@ -1813,7 +1811,6 @@ table.prospectus caption {
 
 table.prospectus td,
 table.prospectus th {
-  border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
   vertical-align: top;
@@ -2513,7 +2510,6 @@ TODO move to CSS Grid with Flexbox fallback
 }
 
 .content-type--one-web-highlight-content-box img {
-  border: 1px solid #ccc;
   max-width: 100%;
 }
 
@@ -2543,7 +2539,6 @@ originally known as: One-Web Media Object [TEST KIF]
 }
 
 .content-type--one-web-media-object img {
-  border: 1px solid lightgray;
   max-width: 100%;
 }
 
@@ -2593,10 +2588,6 @@ originally known as: News
   margin-bottom: 1rem;
 }
 
-.content-type--one-web-news__image img {
-  border: 1px solid #ccc;
-}
-
 .content-type--one-web-news__image p {
   font-size: 14px;
   font-style: italic;
@@ -2643,7 +2634,6 @@ originally known as: News Listing
 }
 
 .content-type--one-web-news-listing__article img {
-  border: 1px solid #ccc;
   float: right;
   margin-left: .5rem;
   max-width: 150px;
@@ -2881,6 +2871,24 @@ CONTENT TYPE MODIFIERS
 classes that can apply to existing CTs to adjust their appearance consistently with other CTs
 plus common styles across Content Types
 ****************************************/
+
+/****************************************
+Border
+****************************************/
+
+.content-type--one-web-highlight-content-box img,
+.content-type--one-web-media-object img,
+.content-type--one-web-news-listing__article img,
+.content-type--one-web-news__image img,
+.content-type-modifier--border,
+.main input[type="password"],
+.main input[type="text"],
+.main textarea,
+table.prospectus td,
+table.prospectus th,
+table.prospectus {
+  border: 1px solid #ccc;
+}
 
 /****************************************
 Collapsible
