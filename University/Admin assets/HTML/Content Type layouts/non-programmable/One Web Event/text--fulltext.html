@@ -142,7 +142,6 @@
 
       <t4 type="content" name="Main body" output="normal" modifiers="medialibrary,nav_sections" />
 
-
       <t4 type="content" name="Book online" output="selective-output" process-format="true" format="<!--" />
       <t4 type="content" name="More event information URL" output="selective-output" process-format="true" format="
         <p class=UHI--button-link--main>
@@ -161,6 +160,14 @@
         </p>
       "/>
 
+      <t4 type="content" name="Image" output="selective-output" process-format="true" format="
+      <figure>
+        <t4 type=&quot;content&quot; name=&quot;Image&quot; output=&quot;normal&quot; formatter=&quot;image/*&quot; />
+        <figcaption>
+          <t4 type=&quot;content&quot; name=&quot;Image caption&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format=&quot;$value&quot; />
+        </figcaption>
+      </figure>
+      " />
 
       <t4 type="content" name="URL for event evaluation survey" output="selective-output" modifiers="" process-format="true" format="
         <p class=UHI--button-link--reverse>
@@ -170,18 +177,7 @@
         </p>
       "/>
 
-
       <t4 type="navigation" name="One-Web Event Privacy Statement" id="396" />
-
-
-      <t4 type="content" name="Image" output="selective-output" process-format="true" format="
-      <figure>
-        <t4 type=&quot;content&quot; name=&quot;Image&quot; output=&quot;normal&quot; formatter=&quot;image/*&quot; />
-        <figcaption>
-          <t4 type=&quot;content&quot; name=&quot;Image caption&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format=&quot;$value&quot; />
-        </figcaption>
-      </figure>
-      " />
 
     </div><!-- flex-cols__col -->
 

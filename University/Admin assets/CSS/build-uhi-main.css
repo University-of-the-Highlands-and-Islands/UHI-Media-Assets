@@ -2311,6 +2311,7 @@ div.newsevents h3 {
 
 li.newsevents {
   border-radius: 5px;
+  font-size: initial;
   list-style-type: none;
   margin: .5rem 0;
   padding: .25rem .5rem;
@@ -2322,7 +2323,7 @@ li.newsevents span.labelfield {
 }
 
 li.newsevents span.labelfield a {
-  font-family: inherit;
+  font-family: inherit !important;
 }
 
 li.newsevents span.titlefield {
