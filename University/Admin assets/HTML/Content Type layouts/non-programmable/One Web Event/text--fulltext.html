@@ -140,6 +140,15 @@
 
     <div class="flex-cols__col  flex-cols__col--next  content-type-modifier--typography  content-type--one-web-event__details">
 
+      <t4 type="content" name="Image" output="selective-output" process-format="true" format="
+      <figure>
+        <t4 type=&quot;content&quot; name=&quot;Image&quot; output=&quot;normal&quot; formatter=&quot;image/*&quot; />
+        <figcaption>
+          <t4 type=&quot;content&quot; name=&quot;Image caption&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format=&quot;$value&quot; />
+        </figcaption>
+      </figure>
+      " />
+
       <t4 type="content" name="Main body" output="normal" modifiers="medialibrary,nav_sections" />
 
       <t4 type="content" name="Book online" output="selective-output" process-format="true" format="<!--" />
@@ -159,15 +168,6 @@
           </a>
         </p>
       "/>
-
-      <t4 type="content" name="Image" output="selective-output" process-format="true" format="
-      <figure>
-        <t4 type=&quot;content&quot; name=&quot;Image&quot; output=&quot;normal&quot; formatter=&quot;image/*&quot; />
-        <figcaption>
-          <t4 type=&quot;content&quot; name=&quot;Image caption&quot; output=&quot;selective-output&quot; modifiers=&quot;striptags,htmlentities&quot; format=&quot;$value&quot; />
-        </figcaption>
-      </figure>
-      " />
 
       <t4 type="content" name="URL for event evaluation survey" output="selective-output" modifiers="" process-format="true" format="
         <p class=UHI--button-link--reverse>

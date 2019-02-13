@@ -3392,10 +3392,6 @@ originally known as: Event, Uni Event
   margin: .5rem 0;
 }
 
-.content-type--one-web-event figure {
-  margin-top: 2rem;
-}
-
 .content-type--one-web-event__data {
   background-color: #eee8ef;
   border-radius: 5px;
@@ -3419,6 +3415,10 @@ originally known as: Event, Uni Event
   .content-type--one-web-event__data p {
     margin-left: 41px;
   }
+}
+
+.content-type--one-web-event__details img {
+  border-radius: 5px;
 }
 
 .content-type--one-web-event__help {
