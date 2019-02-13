@@ -2289,11 +2289,23 @@ Landing RSS Feed - PHP - Positionable
 Landing RSS Feed - PHP - Positionable (Limited)
 Landing RSS Feed - Positionable
 
-.newsevents
-from Landing RSS feed text/header
+in transition
 
+e.g.
 https://www.inverness.uhi.ac.uk/
 ****************************************************************/
+
+.content-type--landing-rss-feed,
+#feeds {
+  margin-bottom: 30px;
+}
+
+/* https://www.inverness.uhi.ac.uk/ */
+.content-type--landing-rss-feed ul,
+#rssFeed {
+  padding: 0;
+  margin: 0;
+}
 
 .content-type--landing-rss-feed h3,
 .content-type--landing-rss-feed ul,
@@ -2318,19 +2330,19 @@ li.newsevents {
   padding: .25rem .5rem;
 }
 
-.content-type--landing-rss-feed__line .titlefield,
+.content-type--landing-rss-feed__titlefield,
 li.newsevents span.titlefield {
   display: block;
 }
 
-.content-type--landing-rss-feed__line .datefield,
-.content-type--landing-rss-feed__line .labelfield,
+.content-type--landing-rss-feed__datefield,
+.content-type--landing-rss-feed__labelfield,
 li.newsevents span.datefield,
 li.newsevents span.labelfield {
   font-size: 13px;
 }
 
-.content-type--landing-rss-feed__line .labelfield a,
+.content-type--landing-rss-feed__labelfield a,
 li.newsevents span.labelfield a {
   font-family: inherit !important;
 }
@@ -3759,11 +3771,6 @@ https://www.uhi.ac.uk/en/courses/
   display: none;
 }
 
-/* Landing Page news and event feeds */
-#feeds {
-  margin-bottom: 30px;
-}
-
 #parent-fieldname-description {
   margin-bottom: 15px;
 }
@@ -3771,12 +3778,6 @@ https://www.uhi.ac.uk/en/courses/
 /* QR code for print only */
 #printQR {
   display: none;
-}
-
-/* https://www.inverness.uhi.ac.uk/ */
-#rssFeed {
-  padding: 0;
-  margin: 0;
 }
 
 #smallBG {

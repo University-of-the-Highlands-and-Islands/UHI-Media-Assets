@@ -1,5 +1,5 @@
 <ul><li><t4 type="content" name="RSS feed heading" output="normal" modifiers="striptags,htmlentities" /></li></ul>
-<div id="feeds" class="feeds smalllabel">
+<div id="feeds" class="feeds  content-type--landing-rss-feed">
     <ul id="rssFeed" class="rssFeed">
 <?php
 
@@ -126,7 +126,7 @@ for ($i = 0; $i <= ($maxLength-1); $i++)
     $link = $collectedFeeds[$i][3];
     $linkname = $collectedFeeds[$i][4];
 
-    echo '<li class="newsevents"><a href="'.$url.'">'.$title.'</a><br/><span class="labelfield"><a href="'.$link.'">'.$linkname.'</a></span> <span class="labelfield">'.$formatteddate.'</span></li>';
+    echo '<li class="newsevents  content-type--landing-rss-feed__line"><a href="'.$url.'">'.$title.'</a><br/><span class="labelfield  content-type--landing-rss-feed__labelfield"><a href="'.$link.'">'.$linkname.'</a></span> <span class="labelfield  content-type--landing-rss-feed__labelfield">'.$formatteddate.'</span></li>';
 
 }
 

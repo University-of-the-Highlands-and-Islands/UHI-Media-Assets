@@ -129,6 +129,7 @@ a.t4Edit-page:active {
   color: #f7e7e8;
 }
 
+.content-type--landing-rss-feed__line,
 .content-type--one-web-event__data,
 .content-type-modifier--collapsible__heading,
 .content-type-modifier--shading,
@@ -186,6 +187,7 @@ rules not in other partner-specific stylesheets
   padding-left: 5px
 }
 
+.content-type--links-bar .content-type--landing-rss-feed__line,
 .content-type--links-bar .newsevents {
   background: none;
   list-style-type: none;
