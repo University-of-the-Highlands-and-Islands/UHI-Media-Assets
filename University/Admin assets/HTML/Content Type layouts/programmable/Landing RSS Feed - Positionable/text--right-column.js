@@ -47,8 +47,8 @@ function displayFeed(){
     for (i = 0; i < count; ++i)
     {
         var fDate = feeds[i].pubDate;
-        var folder = ((feeds[i].feedLink == "" || feeds[i].feedName == "") ? "" : "<span class='labelfield'><a href='" + feeds[i].feedLink + "'>" + feeds[i].feedName + "</a> </span>");
-        $('#rssFeed').append($('<li class="newsevents  content-type--landing-rss-feed__line"/>').html('<a href="' + feeds[i].link + '">' + feeds[i].title + '</a><br/>' + folder + '<span class="labelfield">' + fDate.getDate().padLeft() + '/' + (fDate.getMonth()+1).padLeft() +'/' + fDate.getFullYear() +'</span>'));
+        var folder = ((feeds[i].feedLink == "" || feeds[i].feedName == "") ? "" : "<span class='labelfield  content-type--landing-rss-feed__labelfield'><a href='" + feeds[i].feedLink + "'>" + feeds[i].feedName + "</a> </span>");
+        $('#rssFeed').append($('<li class="newsevents  content-type--landing-rss-feed__line"/>').html('<a href="' + feeds[i].link + '">' + feeds[i].title + '</a><br/>' + folder + '<span class="labelfield  content-type--landing-rss-feed__labelfield">' + fDate.getDate().padLeft() + '/' + (fDate.getMonth()+1).padLeft() +'/' + fDate.getFullYear() +'</span>'));
     }
     $('#rssFeed').append(belowFeed);
 }
