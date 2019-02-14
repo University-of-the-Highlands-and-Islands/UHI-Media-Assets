@@ -1,0 +1,221 @@
+<?php
+          // Query handler
+          try {
+              $queryHandler = QueryHandlerFactory::getInstance('QueryHandler', $_SERVER['QUERY_STRING']);
+              $queryHandler->setStopWords($stopWords);
+$queryHandler->setDontTokenize(array('course-code','course-location', 'course-subject-search', 'course-study-mode'));
+$queryHandler->stemQuery(array('keyword'));
+$queryHandler->setDontRemoveStopwords(array('course-subject-search'));
+$queryHandler->handleQuery();
+//var_dump($queryHandler->getQueryArray());
+} catch (RuntimeException $e) {
+ExceptionFormatter::FormatException($e);
+} catch (OutOfBoundsException $e) {
+ExceptionFormatter::FormatException($e);
+}
+//var_dump($queryHandler->getSearchTerms());
+// Search handler and filters
+try {
+
+$search = SearchFactory::getInstance('Search', $documentsSource);
+$substringSearch = FilterFactory::getInstance('FilterBySubstring', $search); //Course name, Keywords
+$wordFilter = FilterFactory::getInstance('FilterByWord', $search); //Level
+$exactMatchFilter = FilterFactory::getInstance('FilterByExactMatch', $search); //Course code
+
+} catch (RuntimeException $e) {
+ExceptionFormatter::FormatException($e);
+} catch (InvalidArgumentException $e) {
+ExceptionFormatter::FormatException($e);
+} catch (LengthException $e) {
+ExceptionFormatter::FormatException($e);
+}
+
+/* Keyword search - search form input */
+/* Run filters on data elements */
+if ($queryHandler->isQuerySet('keyword')) {
+$substringSearch->setMember('element', 'course-keywords');
+$substringSearch->setMember('query', $queryHandler->getQueryValue('keyword'));
+$substringSearch->setMember('combinationOption', true);
+$substringSearch->runFilter();
+
+$substringSearch->setMember('element', 'course-name');
+$substringSearch->setMember('query', $queryHandler->getQueryValue('keyword'));
+$substringSearch->setMember('combinationOption', true);
+$substringSearch->runFilter();
+
+$exactMatchFilter->setMember('element', 'course-code');
+$exactMatchFilter->setMember('query', $queryHandler->getQueryValue('keyword'));
+$exactMatchFilter->setMember('combinationOption', true);
+$exactMatchFilter->runFilter();
+
+$exactMatchFilter->setMember('element', 'course-level-search');
+$exactMatchFilter->runFilter();
+
+$search->combineResults();
+}
+
+/* Filters search - search form filters input */
+if ($queryHandler->isQuerySet('course-level-search')) {
+$exactMatchFilter->setMember('element', 'course-level-search');
+$exactMatchFilter->setMember('query', $queryHandler->getQueryValue('course-level-search'));
+$exactMatchFilter->setMember('combinationOption', true);
+$exactMatchFilter->runFilter();
+$search->combineResults();
+}
+
+if ($queryHandler->isQuerySet('course-subject-search')) {
+$wordFilter->setMember('element', 'course-subject-search');
+$wordFilter->setMember('query', $queryHandler->getQueryValue('course-subject-search'));
+$wordFilter->setMember('combinationOption', true);
+$wordFilter->runFilter();
+$search->combineResults();
+}
+
+if ($queryHandler->isQuerySet('course-study-mode')) {
+$wordFilter->setMember('element', 'course-study-mode');
+$wordFilter->setMember('query', $queryHandler->getQueryValue('course-study-mode'));
+$wordFilter->setMember('combinationOption', true);
+$wordFilter->runFilter();
+$search->combineResults();
+}
+
+if ($queryHandler->isQuerySet('course-location')) {
+$wordFilter->setMember('element', 'course-location');
+$wordFilter->setMember('query', $queryHandler->getQueryValue('course-location'));
+$wordFilter->setMember('combinationOption', true);
+$wordFilter->runFilter();
+$search->combineResults();
+}
+
+
+
+$search->intersectDocumentResults();
+
+// Instantiate the DocumentCollection
+try {
+$documentCollection = DocumentCollectionFactory::getInstance('DocumentCollection', $search->getDocuments(), $search->getDocumentResults(), $queryHandler->doQuerysExist());
+} catch (RuntimeException $e) {
+ExceptionFormatter::FormatException($e);
+} catch (UnderflowException $e) {
+ExceptionFormatter::FormatException($e);
+} catch (InvalidArgumentException $e) {
+ExceptionFormatter::FormatException($e);
+}
+
+// Sort the document results
+try {
+$documentCollection->sort('course-name', SORT_ASC);
+} catch (UnderflowException $e) {
+ExceptionFormatter::FormatException($e);
+}
+
+//Ouputput search results or error message
+
+if ($documentCollection->displayResults('HTMLResult') === false) {
+$noResults = "<p>We're sorry your search hasn't found what you're looking for. Please try checking your spelling or simplifying your search. You could also try the filter options to only display courses of a particular level, subject area or study mode. You can also filter by location.</p>";
+$noResults .= "<p>If that doesn't help then please get in touch via <a href='mailto:info@uhi.ac.uk' class='mail-link'>info@uhi.ac.uk</a> or 01463 279190.</p>";
+$noResults .= "<p><a href='/courses' class='internal-link'>Restart Search</a></p>";
+echo $noResults;
+}
+
+?>
+
+</ul>
+</div>
+<!-- END T4 Live Content -->
+<!-- start of page layout footer -->
+<aside class="col onequarter">
+
+  <?php
+        			// Facets
+              try {
+                  $listFacet = FacetFactory::getInstance('ListFacet', $documentCollection, $queryHandler);
+              } catch (RuntimeException $e) {
+                  ExceptionFormatter::FormatException($e);
+              }
+          ?>
+  <h2><span class="arrow"></span>Filter by</h2>
+  <a class="reset-course-search reset-course-search__top" href="<t4 type="navigation" name="Current section path" id="63" />">Reset search</a>
+
+  <!-- ^^  Current section path id #63 ^^ -->
+
+  <form action="<?php echo $_SERVER['PHP_SELF'] ?>" id="coursesearch-filters" name="coursesearch-filters" method="get">
+    <ul class="accordion" id="coursefilter">
+      <?php
+                  	// Output the current 'keyword' query as hidden input so it's preserved when updating results
+                                $formatQueryAsHiddenInput = QueryFormatterFactory::getInstance('FormatQueryAsHiddenInput', $queryHandler);
+                                $formatQueryAsHiddenInput->setMember('excludedQueries', array('course-level-search', 'course-subject-search', 'course-study-mode', 'course-location'));
+      echo $formatQueryAsHiddenInput->format();
+      ?>
+      <li  class="open" data-key="level"><h3 class="course-filter-title">Course level<span class="arrow">&#9660;</span></h3>
+        <ul class="search-filters">
+          <?php
+                          $listFacet->setMember('labelClass', 'course-search-filter');
+          $listFacet->setMember('element', 'course-level-search');
+          $listFacet->setMember('sortingState', true);
+          $listFacet->setMember('facetSource', 'documents');
+          $listFacet->displayFacet();
+          ?>
+        </ul>
+      </li>
+      <li class="open"  data-key="subject"><h3 class="course-filter-title">Subject area<span class="arrow">&#9660;</span></h3>
+        <ul class="search-filters">
+          <?php
+                          $listFacet->setMember('labelClass', 'course-search-filter');
+          $listFacet->setMember('element', 'course-subject-search');
+          $listFacet->setMember('sortingState', true);
+          $listFacet->setMember('facetSource', 'documents');
+          $listFacet->displayFacet();
+          ?>
+        </ul>
+      </li>
+      <li class="open" data-key="mode"><h3 class="course-filter-title">Study mode<span class="arrow">&#9660;</span></h3>
+        <ul class="search-filters">
+          <?php
+                          $listFacet->setMember('labelClass', 'course-search-filter');
+          $listFacet->setMember('element', 'course-study-mode');
+          $listFacet->setMember('sortingState', true);
+          $listFacet->setMember('multipleValueState', true);
+          $listFacet->setMember('multipleValueSeparator', '|');
+
+          $listFacet->setMember('facetSource', 'documents');
+          $listFacet->displayFacet();
+          ?>
+        </ul>
+      </li>
+    </ul>
+  </form>
+  <a class="reset-course-search reset-course-search__bottom" href="<t4 type="navigation" name="Current section path" id="63" />">Reset search</a>
+
+  <!-- ^^ Course search layout getter id #66 ^^ -->
+  <t4 type="navigation" name="Course search layout getter" id="66" />
+
+  <t4 type="navigation" name="Landing 1-Col right layout getter layout getter" id="52" />
+
+</aside><!-- Search filters aside -->
+
+</div><!-- wrap -->
+</div><!-- courselist -->
+</main>
+<footer class="footer clearfix">
+  <!-- ^^ Site footer links getter #39 ^^ -->
+  <t4 type="navigation" name="Site footer links getter" id="39" />
+  <!-- Translatable One-Web Footer Text -->
+  <t4 type="media" formatter="inline/*" id="7201" />
+  <t4 type="media" formatter="inline/*" id="7200" />
+  <!-- ^^ Footer social media links getter #40 ^^ -->
+  <t4 type="navigation" name="Footer social media links getter" id="40" />
+  <div class="wrap clearfix">
+    <!-- ^^ Site footer copyright getter #41 ^^ -->
+    <t4 type="navigation" name="Site footer copyright getter" id="41" />
+    <!-- ^^ Site footer trademark getter #42 ^^ -->
+    <t4 type="navigation" name="Site footer trademark getter" id="42" />
+  </div>
+</footer>
+
+<!-- UHI Footer code getter nav object -->
+<t4 type="navigation" name="UHI Footer code getter nav object" id="79" />
+<!-- footer analytics -->
+<t4 type="media" formatter="inline/*" id="101" />
+</body>
+</html>
