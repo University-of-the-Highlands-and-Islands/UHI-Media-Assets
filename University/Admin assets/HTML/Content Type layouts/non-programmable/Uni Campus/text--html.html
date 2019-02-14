@@ -29,7 +29,9 @@
     </h2>
 
     <form method="get" id="coursesearch" action='<t4 type="content" name="Course Search URL" output="normal" modifiers="htmlentities" />'>
-      <input id="auto" type="text" name="auto" style="display:none">
+      <label for="auto">autocomplete</label>
+      <input id="auto" type="text" name="auto">
+      <label for="search">enter search term here</label>
       <input type="text" class="keyword coursesAutocomplete ui-autocomplete-input" placeholder='<t4 type="lang-var" default-language="en" en="Enter search term here..." gd="Cuir a-steach teirm-lorg an seo…" />' id="search" name="keyword" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
       <input type="submit" value="]">
     </form>
@@ -109,4 +111,4 @@
     </div>
   </div>
 </div>
-<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="z-index: 1; display: none;"></ul>
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="z-index: 1; display: none;"></ul> 

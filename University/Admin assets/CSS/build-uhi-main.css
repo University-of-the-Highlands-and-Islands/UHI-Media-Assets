@@ -3767,6 +3767,8 @@ https://www.uhi.ac.uk/en/courses/
 }
 
 #coursesearch #auto,
+#coursesearch input[id="auto"],
+#coursesearch label,
 #coursesearch-filters li.open:nth-child(4) ul.search-filters li:nth-child(14) {
   display: none;
 }
