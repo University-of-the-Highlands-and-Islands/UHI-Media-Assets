@@ -1,0 +1,97 @@
+<div class="section clearfix intro">
+    <div class="wrap">
+    <div class="background"></div>
+    <div class="mapsingle"></div>
+    <h1><t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" /> UHI</h1>
+    <t4 type="content" name="Intro" output="normal" />
+    </div>
+    </div><div class="section clearfix specialistsubjects">
+    <div class="wrap">
+    <div class="arrow"></div>
+
+    <t4 type="content" name="Specialist Text" output="normal" />
+    <p><t4 type="content" name="Specialist Subjects" output="normal" modifiers="striptags,htmlentities" /></p>
+    </div>
+    </div>
+
+    <div class="section clearfix coursefinder campus">
+    <div class="wrap">
+    <h2><t4 type="lang-var" default-language="en" en="Discover courses available at" gd="Faigh a-mach de na cùrsaichean a tha rim faotainn aig" /> <t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" /> UHI</h2>
+
+    <form method="get" id="coursesearch" action='<t4 type="content" name="Course Search URL" output="normal" modifiers="htmlentities" />'>
+    <input id="auto" type="text" name="auto" style="display:none">
+    <input type="text" class="keyword coursesAutocomplete ui-autocomplete-input" placeholder='<t4 type="lang-var" default-language="en" en="Enter search term here..." gd="Cuir a-steach teirm-lorg an seo…" />' id="search" name="keyword"  autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+<input type="submit" value="]">
+    </form>
+
+    <t4 type="content" name="Course Suggestions" output="normal" modifiers="nav_sections" />
+
+    <t4 type="content" name="Prospectus URL" output="selective-output" modifiers="" process-format="true" format="<div class=&quot;prospectus&quot;>
+    <p><a href=&quot;<t4 type=&quot;content&quot; name=&quot;Prospectus URL&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; />&quot; style=&quot;background: url(<t4 type=&quot;content&quot; name=&quot;Prospectus Image&quot; output=&quot;normal&quot; formatter=&quot;image/path&quot; />) center top no-repeat;&quot;><span class=&quot;text&quot;>
+<t4 type=&quot;lang-var&quot; default-language=&quot;en&quot; en=&quot;Have a look at our <strong>latest Prospectus</strong>.&quot; gd=&quot;Thoir sùil air an <strong>Leabhran-iùil</strong> againn.&quot; />
+<span title=&quot;Download&quot; class=&quot;download&quot;>à</span></span></a></p>
+</div>" />
+</div>
+</div>
+
+<div class="section ctas">
+    <div class="section clearfix testimonials">
+    <div class="wrap">
+
+    <h2><t4 type="lang-var" default-language="en" en="What our <strong>students</strong>, <strong>graduates</strong> and <strong>staff</strong> say" gd="Dè tha na <strong>h-oileanaich</strong>, <strong>luchd-ceumnachaidh</strong> agus <strong>luchd-obrach</strong> a gràdh" /></h2>
+    <div class="quotes tabs">
+    <t4 type="content" name="Testimonial One Text" output="selective-output" format="<div id='tab1'><blockquote>" />
+    <t4 type="content" name="Testimonial One Text" output="selective-output" format="$value" />
+    <t4 type="content" name="Testimonial One Name" output="selective-output" format="<p><span class='quotee'><span class='name'>$value</span>" />
+    <t4 type="content" name="Testimonial One Subject" output="selective-output" format="/ <span class='subject'>$value</span>" />
+    <t4 type="content" name="Testimonial One Role" output="selective-output" format="/ <span class='role'>$value</span>" />
+    <t4 type="content" name="Testimonial One Name" output="selective-output" format="</span></p>" />
+    <t4 type="content" name="Testimonial One Text" output="selective-output" format="</blockquote></div>" />
+
+    <t4 type="content" name="Testimonial Two Text" output="selective-output" format="<div id='tab2'><blockquote>" />
+    <t4 type="content" name="Testimonial Two Text" output="selective-output" format="$value" />
+    <t4 type="content" name="Testimonial Two Name" output="selective-output" format="<p><span class='quotee'><span class='name'>$value</span>" />
+    <t4 type="content" name="Testimonial Two Subject" output="selective-output" format="/ <span class='subject'>$value</span>" />
+    <t4 type="content" name="Testimonial Two Role" output="selective-output" format="/ <span class='role'>$value</span>" />
+    <t4 type="content" name="Testimonial Two Name" output="selective-output" format="</span></p>" />
+    <t4 type="content" name="Testimonial Two Text" output="selective-output" format="</blockquote></div>" />
+
+    <t4 type="content" name="Testimonial Three Text" output="selective-output" format="<div id='tab3'><blockquote>" />
+    <t4 type="content" name="Testimonial Three Text" output="selective-output" format="$value" />
+    <t4 type="content" name="Testimonial Three Name" output="selective-output" format="<p><span class='quotee'><span class='name'>$value</span>" />
+    <t4 type="content" name="Testimonial Three Subject" output="selective-output" format="/ <span class='subject'>$value</span>" />
+    <t4 type="content" name="Testimonial Three Role" output="selective-output" format="/ <span class='role'>$value</span>" />
+    <t4 type="content" name="Testimonial Three Name" output="selective-output" format="</span></p>" />
+    <t4 type="content" name="Testimonial Three Text" output="selective-output" format="</blockquote></div>" />
+
+    <div>
+    <ul class="thumbs">
+    <t4 type="content" name="Testimonial One Image" output="selective-output" format="<li>
+    <a class=&quot;img&quot; href=&quot;#tab1&quot;>$value</a>
+</li>" formatter="image/*" />
+
+<t4 type="content" name="Testimonial Two Image" output="selective-output" format="<li>
+    <a class=&quot;img&quot; href=&quot;#tab2&quot;>$value</a>
+</li>" formatter="image/*" />
+
+<t4 type="content" name="Testimonial Three Image" output="selective-output" format="<li>
+    <a class=&quot;img&quot; href=&quot;#tab3&quot;>$value</a>
+</li>" formatter="image/*" />
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section clearfix tour">
+    <div class="wrap">
+    <div class="ctas">
+
+    <t4 type="content" name="Actions" output="normal" modifiers="medialibrary,nav_sections" />
+
+    <p><a href='<t4 type="lang-var" default-language="en" en="https://www.uhi.ac.uk/en/campuses" gd="https://www.uhi.ac.uk/gd/arainnean" />'><t4 type="lang-var" default-language="en" en="or visit another campus" gd="no tadhail air àrainn eile" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="z-index: 1; display: none;"></ul>
