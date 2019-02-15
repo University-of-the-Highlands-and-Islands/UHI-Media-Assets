@@ -2305,7 +2305,9 @@ https://www.inverness.uhi.ac.uk/
 }
 
 .content-type--landing-rss-feed__line {
+  background-color: #eee8ef;
   border-radius: 5px;
+  font-size: initial;
   list-style-type: none;
   margin: .5rem 0;
   padding: .25rem .5rem;
@@ -3669,7 +3671,7 @@ https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements
 
 /****************************************
 
-Meta widgets
+Widgets
 
 ****************************************/
 
@@ -3692,6 +3694,16 @@ eg https://www.uhi.ac.uk/en/foi/section-8/
 .content-type--one-web-general-content__last-updated time,
 .meta--last-updated time {
   font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+}
+
+/*************
+Fancybox Gallery
+
+http://www.t4help.uhi.ac.uk/content-types/media-library-content-types/media-library-category-gallery/
+*************/
+
+.fancybox-caption {
+  font-size: 24px !important;
 }
 
 /****************************************
