@@ -124,7 +124,7 @@ for ($i = 0; $i <= ($maxLength-1); $i++)
     $link = $collectedFeeds[$i][3];
     $linkname = $collectedFeeds[$i][4];
 
-    echo '<li class="newsevents  content-type--landing-rss-feed__line"><a href="'.$url.'">'.$title.'</a><br/><span class="labelfield  content-type--landing-rss-feed__labelfield"><a href="'.$link.'">'.$linkname.'</a></span> <span class="labelfield  content-type--landing-rss-feed__labelfield">'.$formatteddate.'</span></li>';
+    echo '<li class="content-type--landing-rss-feed__line"><a href="'.$url.'">'.$title.'</a><br/><span class="content-type--landing-rss-feed__labelfield"><a href="'.$link.'">'.$linkname.'</a></span> <span class="content-type--landing-rss-feed__labelfield">'.$formatteddate.'</span></li>';
 
 }
 

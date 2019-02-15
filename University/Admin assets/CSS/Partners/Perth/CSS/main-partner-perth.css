@@ -133,7 +133,6 @@ a.t4Edit-page:active {
 .content-type--one-web-event__data,
 .content-type-modifier--collapsible__heading,
 .content-type-modifier--shading,
-.newsevents,
 .content-type--one-web-news-listing__article:nth-child(odd),
 .newslisting:nth-child(odd),
 .section.coursedetails .tabnav li h2 a,
@@ -187,12 +186,14 @@ rules not in other partner-specific stylesheets
   padding-left: 5px
 }
 
+/*
 .content-type--links-bar .content-type--landing-rss-feed__line,
 .content-type--links-bar .newsevents {
   background: none;
   list-style-type: none;
   margin-bottom: 1rem;
 }
+*/
 
 .content-type--links-bar__contrasting-text {
   font-size: 1.2rem;
