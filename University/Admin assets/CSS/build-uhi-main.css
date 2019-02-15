@@ -2295,48 +2295,24 @@ e.g.
 https://www.inverness.uhi.ac.uk/
 ****************************************************************/
 
-.content-type--landing-rss-feed,
-#feeds {
+.content-type--landing-rss-feed {
   margin-bottom: 30px;
 }
 
-/* https://www.inverness.uhi.ac.uk/ */
-.content-type--landing-rss-feed ul,
-#rssFeed {
+.content-type--landing-rss-feed ul {
   padding: 0;
   margin: 0;
 }
 
-.content-type--landing-rss-feed h3,
-.content-type--landing-rss-feed ul {
-  margin-left: 0;
-  padding-left: 0;
-  text-align: left;
-}
-
-.content-type--landing-rss-feed h3 {
-  margin-top: 0;
-}
-
 .content-type--landing-rss-feed__line {
   border-radius: 5px;
-  font-size: initial;
   list-style-type: none;
   margin: .5rem 0;
   padding: .25rem .5rem;
 }
 
-.content-type--landing-rss-feed__titlefield {
-  display: block;
-}
-
-.content-type--landing-rss-feed__datefield,
 .content-type--landing-rss-feed__labelfield {
   font-size: 13px;
-}
-
-.content-type--landing-rss-feed__labelfield {
-  font-family: inherit !important;
 }
 
 /****************************************
