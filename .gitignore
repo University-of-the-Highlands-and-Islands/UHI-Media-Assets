@@ -1,7 +1,1 @@
-
-.idea/misc.xml
-.idea/modules.xml
-.idea/UHI-Media-Assets.iml
-.idea/workspace.xml
-.idea/encodings.xml
-.idea/codeStyles/codeStyleConfig.xml
+.idea/*

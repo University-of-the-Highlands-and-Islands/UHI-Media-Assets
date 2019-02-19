@@ -3315,6 +3315,33 @@ originally known as: One-web Gallery
   padding: 3px;
 }
 
+/*
+Fancybox plugin - customisations
+*/
+
+.fancybox-caption {
+  border: none !important;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  padding: 30px !important;
+}
+
+.fancybox-caption-wrap {
+  background: rgba(0,0,0,.5) !important;
+  padding: 0 !important;
+}
+
+@media (min-width: 1025px) {
+  .fancybox-caption {
+    font-size: 24px !important;
+  }
+
+  .fancybox-caption-wrap {
+    bottom: 14% !important;
+  }
+}
+
 /*****************************************************
 Landing Content Boxes
 
@@ -3694,16 +3721,6 @@ eg https://www.uhi.ac.uk/en/foi/section-8/
 .content-type--one-web-general-content__last-updated time,
 .meta--last-updated time {
   font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-}
-
-/*************
-Fancybox Gallery
-
-http://www.t4help.uhi.ac.uk/content-types/media-library-content-types/media-library-category-gallery/
-*************/
-
-.fancybox-caption {
-  font-size: 24px !important;
 }
 
 /****************************************
