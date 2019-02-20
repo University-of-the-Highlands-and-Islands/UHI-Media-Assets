@@ -387,8 +387,9 @@ Unistats widget
   margin: 0;
 }
 
-.main input[type="text"],
+.main input[type="email"],
 .main input[type="password"],
+.main input[type="text"],
 .main textarea {
   border-radius: .25rem;
   margin-bottom: .5rem;
