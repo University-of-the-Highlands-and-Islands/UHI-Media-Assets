@@ -1,6 +1,12 @@
-<ul><li><t4 type="content" name="RSS feed heading" output="normal" modifiers="striptags,htmlentities" /></li></ul>
-<div id="feeds" class="feeds  content-type--landing-rss-feed">
+<ul>
+<li class="content-type--landing-rss-feed__heading">
+    <t4 type="content" name="RSS feed heading" output="normal" modifiers="striptags,htmlentities" />
+    </li>
+    </ul>
+
+    <div id="feeds" class="feeds  content-type--landing-rss-feed">
     <ul id="rssFeed" class="rssFeed">
+
 <?php
 
     function sortByOrder($a, $b) {

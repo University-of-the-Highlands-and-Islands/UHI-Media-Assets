@@ -107,17 +107,10 @@ eg home pages for:
 - HTC
 - WHC
 https://www.uhi.ac.uk/en/studying-at-uhi/nursing/
-*/
 
-.col h2:first-of-type,
-.col p:first-of-type {
-  margin-top: 0;
-}
-
-/* PREVIOUS
-.col.half p:first-child,
-.col.onequarter p:first-child,
-.col.threequarters p:first-child {
+.col > h2:first-of-type,
+.col > h3:first-of-type,
+.col > p:first-of-type {
   margin-top: 0;
 }
 */
@@ -2183,89 +2176,6 @@ Can all of these go AFTER content-type-modifiers?
 *********************************************************************/
 
 /*****************************************************
-Landing Link List
-- Landing Link List Children
-- Landing Link List Custom
-
-originally known as:
-- Landing Children Links [TEST KIF]
-- ?
-
-inheriting from these rules, for some reason:
-  .section.courselist .col.onequarter.news
-styles these link lists, and other stuff for now probably
-******************************************************/
-
-.section.courselist .col.onequarter.news > p {
-  margin-right: 1rem;
-}
-
-/* parent */
-.content-type--landing-link-list,
-.section.courselist .col.onequarter.news > ul {
-  margin: 0 0 1rem;
-}
-
-/* list */
-.content-type--landing-link-list ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* line default text color */
-.section.courselist .col.onequarter.news > ul > li {
-  color: #572163;
-}
-
-/* line blocks - structure */
-.content-type--landing-link-list li,
-.content-type--landing-link-list__heading,
-.section.courselist .col.onequarter.news > ul > li {
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 6px;
-  padding: 2px 5px;
-}
-
-/* line blocks - skin */
-.content-type--landing-link-list li,
-.section.courselist .col.onequarter.news > ul > li {
-  background-color: #f7f7f7;
-}
-
-/* line blocks - skin - heading */
-.content-type--landing-link-list__heading,
-.section.courselist .col.onequarter.news > ul > li:first-child {
-  background-color: #572163;
-  color: #fff;
-}
-
-/* line blocks - hover & active */
-.content-type--landing-link-list li:hover,
-.content-type--landing-link-list li:active,
-.section.courselist .col.onequarter.news > ul > li:hover:not(:first-child) {
-  background-color: #eee;
-  cursor: pointer;
-}
-
-/* link blocks */
-.content-type--landing-link-list a,
-.content-type--landing-link-list a:active,
-.content-type--landing-link-list a:visited,
-.section.courselist .col.onequarter.news > ul > li a {
-  color: #000;
-  display: block;
-  font-family: inherit;
-}
-
-/* link blocks - hover */
-.content-type--landing-link-list a:hover,
-.section.courselist .col.onequarter.news > ul > li a:hover {
-  text-decoration: none;
-}
-
-/*****************************************************
 Landing Page Text
 
 fitvids.js targets this - 3 layouts in CT
@@ -2282,40 +2192,6 @@ fitvids.js targets this - 3 layouts in CT
     padding-left: 2rem;
     width: 50%;
   }
-}
-
-/****************************************************************
-Landing RSS Feed
-Landing RSS Feed - PHP - Positionable
-Landing RSS Feed - PHP - Positionable (Limited)
-Landing RSS Feed - Positionable
-
-name in transition
-
-e.g.
-https://www.inverness.uhi.ac.uk/
-****************************************************************/
-
-.content-type--landing-rss-feed {
-  margin-bottom: 30px;
-}
-
-.content-type--landing-rss-feed ul {
-  padding: 0;
-  margin: 0;
-}
-
-.content-type--landing-rss-feed__line {
-  background-color: #eee8ef;
-  border-radius: 5px;
-  font-size: initial;
-  list-style-type: none;
-  margin: .5rem 0;
-  padding: .25rem .5rem;
-}
-
-.content-type--landing-rss-feed__labelfield {
-  font-size: 13px;
 }
 
 /****************************************
@@ -3047,7 +2923,6 @@ table styles also used in:
   font-size: 1.512rem;
 }
 
-.content-type--landing-content-boxes h2,
 .content-type--one-web-event-listing__title,
 .content-type--one-web-event__data h2,
 .content-type--one-web-event__details h2,
@@ -3262,6 +3137,124 @@ already tested to go AFTER content-type-modifiers
 ****************************************/
 
 /*****************************************************
+Landing Link List
+- Landing Link List Children
+- Landing Link List Custom
+
+originally known as:
+- Landing Children Links [TEST KIF]
+- ?
+
+inheriting from these rules, for some reason:
+  .section.courselist .col.onequarter.news
+styles these link lists, and other stuff for now probably
+******************************************************/
+
+.section.courselist .col.onequarter.news > p {
+  margin-right: 1rem;
+}
+
+/* parent */
+.content-type--landing-link-list,
+.section.courselist .col.onequarter.news > ul {
+  margin: 0 0 1rem;
+}
+
+/* list */
+.content-type--landing-link-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line default text color */
+.section.courselist .col.onequarter.news > ul > li {
+  color: #572163;
+}
+
+/* line blocks - structure */
+.content-type--landing-link-list li,
+.content-type--landing-link-list__heading,
+.section.courselist .col.onequarter.news > ul > li {
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 6px;
+  padding: 2px 5px;
+}
+
+/* line blocks - skin */
+.content-type--landing-link-list li,
+.section.courselist .col.onequarter.news > ul > li {
+  background-color: #f7f7f7;
+}
+
+/* line blocks - skin - heading */
+.content-type--landing-link-list__heading,
+.section.courselist .col.onequarter.news > ul > li:first-child {
+  background-color: #572163;
+  color: #fff;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+}
+
+/* line blocks - hover & active */
+.content-type--landing-link-list li:hover,
+.content-type--landing-link-list li:active,
+.section.courselist .col.onequarter.news > ul > li:hover:not(:first-child) {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+/* link blocks */
+.content-type--landing-link-list a,
+.content-type--landing-link-list a:active,
+.content-type--landing-link-list a:visited,
+.section.courselist .col.onequarter.news > ul > li a {
+  color: #000;
+  display: block;
+  font-family: inherit;
+}
+
+/* link blocks - hover */
+.content-type--landing-link-list a:hover,
+.section.courselist .col.onequarter.news > ul > li a:hover {
+  text-decoration: none;
+}
+
+/****************************************************************
+Landing RSS Feed
+Landing RSS Feed - PHP - Positionable
+Landing RSS Feed - PHP - Positionable (Limited)
+Landing RSS Feed - Positionable
+
+name in transition
+
+e.g.
+https://www.inverness.uhi.ac.uk/
+****************************************************************/
+
+.content-type--landing-rss-feed {
+  margin-bottom: 30px;
+}
+
+.content-type--landing-rss-feed ul {
+  padding: 0;
+  margin: 0;
+}
+
+.content-type--landing-rss-feed__line {
+  background-color: #eee8ef;
+  border-radius: 5px;
+  font-size: initial;
+  list-style-type: none;
+  margin: .5rem 0;
+  padding: .25rem .5rem !important;
+}
+
+.content-type--landing-rss-feed__labelfield {
+  font-size: 13px;
+}
+
+/*****************************************************
 Media Library Category Document List
 
 originally known as: One-Web Media Category Documents
@@ -3396,7 +3389,12 @@ previously used .halflight
   box-shadow: 5px 5px 11px #572163;
 }
 
-/* lists within boxes */
+/* headings and lists within boxes */
+
+.content-type--landing-content-boxes h2 {
+  font-size: 1.26rem;
+  margin-top: 0;
+}
 
 .content-type--landing-content-boxes ol,
 .content-type--landing-content-boxes ul {
@@ -3674,6 +3672,11 @@ https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements
 /* rounded corners */
 .utils--border-radius {
   border-radius: 1rem;
+}
+
+/* landing page elements */
+.utils--no-top-margin {
+  margin-top: 0 !important;
 }
 
 /* e.g. for stacking images */
