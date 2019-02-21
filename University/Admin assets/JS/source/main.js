@@ -209,8 +209,11 @@ function callQR(){
   }
 
 function addClearFix(){ 
-  $(".content-type--one-web-highlight-content-box").wrapAll("<div class='clearfix'/>");
+//  $(".content-type--one-web-highlight-content-box").wrapAll("<div class='clearfix'/>");
   $(".content-type--one-web-media-object").wrapAll("<div class='clearfix'/>");
+  $(".content-type--one-web-highlight-content-box").not(".content-type--one-web-highlight-content-box+.content-type--one-web-highlight-content-box").each(function(){
+    $(this).nextUntil(":not(.content-type--one-web-highlight-content-box)").addBack().wrapAll("<div class='clearfix'/>");
+});
 }
 
 function uhicollapsibleSections(){
@@ -256,22 +259,24 @@ function uhiCollapseSection(open){
 }
 
 function lastModified(slastmodified,location){
+	if(slastmodified != ''){
+	//	var forced = (location.href.includes("uhi.ac.uk/en/foi/"));
+	    var forced = false;
+		if(location.host.includes("t4help") || location.href.includes("uhi.ac.uk/en/foi/") || forced){
+	      var dlastmodified = new Date(slastmodified);
+	      var cutOff = new Date().setDate(new Date().getDate()-60);
+	      var markup = '<div class="meta--last-updated">This page was last updated <time datetime=' + $.datepicker.formatDate("yy-mm-dd+00:00", new Date(dlastmodified)) + '>' + $.datepicker.formatDate("d MM yy", new Date(dlastmodified)) + '</time></div>';   
 
-	var forced = (location.href.includes("uhi.ac.uk/en/foi/"));
-	if(location.host.includes("t4help") || location.host.includes("dev-www.t4.uhi.ac.uk") || forced){
-   var dlastmodified = new Date(slastmodified);
-    var cutOff = new Date().setDate(new Date().getDate()-60);
-    var markup = '<div class="meta--last-updated">This page was last updated <time datetime=' + $.datepicker.formatDate("yy-mm-dd+00:00", new Date(dlastmodified)) + '>' + $.datepicker.formatDate("d MM yy", new Date(dlastmodified)) + '</time></div>';   
-
-    if(dlastmodified >= cutOff || forced)
-    {
-      document.write(markup);
-    }
-  else
-    {
-      document.write("<!--" + markup + "-->");
-    }
-  }
+		  if(dlastmodified >= cutOff || forced)
+		    {
+		      document.write(markup);
+		    }
+		  else
+		    {
+		      document.write("<!--" + markup + "-->");
+		    }
+	  }
+	}
 }
 
 
