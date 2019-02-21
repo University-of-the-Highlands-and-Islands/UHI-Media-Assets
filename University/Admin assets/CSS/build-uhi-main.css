@@ -107,13 +107,13 @@ eg home pages for:
 - HTC
 - WHC
 https://www.uhi.ac.uk/en/studying-at-uhi/nursing/
+*/
 
-.col > h2:first-of-type,
-.col > h3:first-of-type,
-.col > p:first-of-type {
+.col.half > h2:first-of-type,
+.col.half > h3:first-of-type,
+.col.half > p:first-of-type {
   margin-top: 0;
 }
-*/
 
 /*
 content-button
@@ -2852,36 +2852,6 @@ used in
 }
 
 /****************************************
-Shading
-
-light background colour in a padded container
-
-used in:
-- One-Web Right Content
-...
-****************************************/
-
-.content-type-modifier--shading {
-  background-color: #eee8ef;
-  border-color: #ddd;
-  border-radius: .5rem;
-  border-style: solid;
-  border-width: 1px;
-  margin: 0 0 1rem;
-  padding: .5rem;
-}
-
-/* should be in One-Web Right Content instead? */
-.content-type-modifier--shading h2,
-.content-type-modifier--shading h3,
-.content-type-modifier--shading h5,
-.content-type-modifier--shading p,
-.content-type-modifier--shading a {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-/****************************************
 Typography
 
 heading and list styles with vertical rhythm
@@ -3127,6 +3097,36 @@ used in:
   .flex-cols__col--next {
     padding-left: 4%;
   }
+}
+
+/****************************************
+Shading
+
+light background colour in a padded container
+
+used in:
+- One-Web Right Content
+...
+****************************************/
+
+.content-type-modifier--shading {
+  background-color: #eee8ef;
+  border-color: #ddd;
+  border-radius: .5rem;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0 0 1rem;
+  padding: .5rem;
+}
+
+/* should be in One-Web Right Content instead? */
+.content-type-modifier--shading h2,
+.content-type-modifier--shading h3,
+.content-type-modifier--shading h5,
+.content-type-modifier--shading p,
+.content-type-modifier--shading a {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /****************************************
