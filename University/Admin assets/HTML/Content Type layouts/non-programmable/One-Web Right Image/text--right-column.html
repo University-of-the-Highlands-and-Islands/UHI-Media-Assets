@@ -1,0 +1,15 @@
+<div class="content-type--one-web-right-image">
+
+  <t4 type="content" name="Image link (internal)" output="selective-output" modifiers="nav_sections" process-format="true" format="<a href=&quot;<t4 type=&quot;content&quot; name=&quot;Image link (internal)&quot; output=&quot;link-url&quot; modifiers=&quot;nav_sections&quot; />&quot; title=&quot;<t4 type=&quot;content&quot; name=&quot;Image caption&quot; output=&quot;normal&quot; />&quot;>" />
+  <t4 type="content" name="Image link (external)" output="selective-output" modifiers="nav_sections" process-format="true" format="<a href=&quot;<t4 type=&quot;content&quot; name=&quot;Image link (external)&quot; output=&quot;normal&quot; modifiers=&quot;nav_sections&quot; />&quot; title=&quot;<t4 type=&quot;content&quot; name=&quot;Image caption&quot; output=&quot;normal&quot; />&quot;>" />
+  <t4 type="content" name="Image link (media)" output="selective-output" process-format="true" format="<a href=&quot;<t4 type=&quot;content&quot; name=&quot;Image link (media)&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />&quot;>" formatter="path/*" />
+
+  <t4 type="content" name="Select image" output="normal" formatter="image/*" />
+
+  <t4 type="content" name="Image link (internal)" output="selective-output" modifiers="nav_sections" process-format="true" format="</a>" />
+  <t4 type="content" name="Image link (external)" output="selective-output" modifiers="nav_sections" process-format="true" format="</a>" />
+  <t4 type="content" name="Image link (media)" output="selective-output" modifiers="nav_sections" process-format="true" format="</a>" />
+
+  <t4 type="content" name="Image caption" output="selective-output" format="<p>$value</p>" />
+
+</div>

@@ -2357,7 +2357,7 @@ TODO move to CSS Grid with Flexbox fallback
   box-sizing: border-box;
   float: left;
   font-size: 17px;
-  margin: 0 0 20px 0;
+  margin: 1rem 0;
   padding: 20px 20px 0 20px;
   text-align: center;
   width: 100%;
@@ -2400,7 +2400,7 @@ originally known as: One-Web Media Object [TEST KIF]
   .content-type--one-web-media-object {
     align-items: flex-start;
     display: flex;
-    margin-bottom: 1rem;
+    margin: .5rem 0;
     padding: 1rem 1rem 1rem 0;
   }
 }
@@ -3621,7 +3621,7 @@ each colour contains duplicate styles, for preview in TinyMCE
   border-color: #572163;
   border-radius: 3px;
   display: inline-block;
-  margin: 0 0 1rem;
+  margin: .5rem 0;
   padding: .5rem;
 }
 
