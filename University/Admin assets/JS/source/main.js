@@ -208,12 +208,18 @@ function callQR(){
 	  jQuery("#QR").attr("src",fullUrl); 
   }
 
+
+function addClearFixMulti(className){ 
+	// ensures if multiple blocks of the same class on page, clearfix is added after each block
+	  $(className).not(className + "+" + className).each(function(){
+    $(this).nextUntil(":not("+ className + ")").addBack().wrapAll("<div class='clearfix'/>");
+    });
+}
+
+
 function addClearFix(){ 
-//  $(".content-type--one-web-highlight-content-box").wrapAll("<div class='clearfix'/>");
-  $(".content-type--one-web-media-object").wrapAll("<div class='clearfix'/>");
-  $(".content-type--one-web-highlight-content-box").not(".content-type--one-web-highlight-content-box+.content-type--one-web-highlight-content-box").each(function(){
-    $(this).nextUntil(":not(.content-type--one-web-highlight-content-box)").addBack().wrapAll("<div class='clearfix'/>");
-});
+  addClearFixMulti(".content-type--one-web-highlight-content-box");
+  addClearFixMulti(".content-type--one-web-media-object");
 }
 
 function uhicollapsibleSections(){
