@@ -99,19 +99,21 @@ CLASSES
 ********************************************/
 
 /*
-pulls up first paragraph of Landing Page Text
-eg home pages for:
-- Moray
-- Orkney
-- Inverness
-- HTC
-- WHC
-https://www.uhi.ac.uk/en/studying-at-uhi/nursing/
-*/
+pulls up first heading or paragraph on Landing Page columns
+to align with side columns
 
+less comprehensive?
 .col.half > h2:first-of-type,
 .col.half > h3:first-of-type,
 .col.half > p:first-of-type {
+  margin-top: 0;
+}
+
+currently lacking a better selector */
+
+.col > h2:first-child,
+.col > h3:first-child,
+.col > p:first-child {
   margin-top: 0;
 }
 
@@ -2175,25 +2177,6 @@ discrete CTs as held in T4
 Can all of these go AFTER content-type-modifiers?
 *********************************************************************/
 
-/*****************************************************
-Landing Page Text
-
-fitvids.js targets this - 3 layouts in CT
-******************************************************/
-
-.content-type--landing-page-text__video {
-  margin-bottom: 2rem;
-  max-width: 640px;
-}
-
-@media (min-width: 768px) {
-  .col.threequarters .content-type--landing-page-text__video--half {
-    float: right;
-    padding-left: 2rem;
-    width: 50%;
-  }
-}
-
 /****************************************
 Links Bars common styles
 
@@ -2509,73 +2492,6 @@ originally known as: News Listing
 .content-type--one-web-news-listing__article p {
   font-style: italic;
   margin: 0;
-}
-
-/****************************************************************
-One-Web Page Button General & Right
-btn-content, btn-content-right became content-type--page-button
-
-Landing Page Buttons
-originally known as: Landing Image Boxes
-#piclinks became content-type--page-button--landing
-****************************************************************/
-
-.content-type--page-button--landing {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.content-type--page-button,
-.content-type--page-button--landing li {
-  position: relative;
-  z-index: 1;
-}
-
-.content-type--page-button,
-.content-type--page-button--landing li,
-.content-type--page-button a,
-.content-type--page-button--landing a,
-.content-type--page-button img {
-  height: 110px;
-  width: 225px;
-}
-
-.content-type--page-button,
-.content-type--page-button--landing li {
-  border: 5px solid #fff;
-  box-shadow: 5px 5px 11px #ddd;
-  display: inline-block;
-  margin: 0 1rem 1rem 0;
-  opacity: 0.9;
-}
-
-.content-type--page-button:hover,
-.content-type--page-button--landing li:hover {
-  opacity: 1;
-}
-
-.content-type--page-button a,
-.content-type--page-button--landing a {
-  border: none !important;
-  color: #fff !important;
-  display: block;
-  padding: 0 !important;
-}
-
-.content-type--page-button span,
-.content-type--page-button--landing b {
-  font-family: Oswald, Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
-  font-weight: normal;
-  left: 5%;
-  line-height: 1;
-  padding-right: 5%;
-  position: absolute;
-  text-shadow: 0 0 8px #000, 0 0 3px #000;
-  text-transform: lowercase;
-  top: 5%;
-  z-index: 2;
 }
 
 /****************************************
@@ -3220,6 +3136,29 @@ styles these link lists, and other stuff for now probably
   text-decoration: none;
 }
 
+/*****************************************************
+Landing Page Text
+
+fitvids.js targets this - 3 layouts in CT
+******************************************************/
+
+.content-type--landing-page-text__video {
+  margin-bottom: 2rem;
+  max-width: 640px;
+}
+
+@media (min-width: 768px) {
+  .col.threequarters .content-type--landing-page-text__video--half {
+    float: right;
+    padding-left: 2rem;
+    width: 50%;
+  }
+
+  .content-type--landing-page-text__video--half + h2 {
+    margin-top: 0;
+  }
+}
+
 /****************************************************************
 Landing RSS Feed
 Landing RSS Feed - PHP - Positionable
@@ -3453,6 +3392,83 @@ originally known as: Event, Uni Event
   font-family: "Sosa Web", sans-serif;
   font-size: 32px;
   display: inline-block;
+}
+
+
+/****************************************************************
+One-Web Page Button General & Right
+btn-content, btn-content-right became content-type--page-button
+
+Landing Buttons
+originally known as: Landing Image Boxes (and Landing Page Buttons)
+#piclinks became content-type--page-button--landing
+****************************************************************/
+
+.content-type--page-button--landing {
+  margin-bottom: 1rem;
+}
+
+.content-type--page-button--landing h2 {
+  clear: both;
+}
+
+.content-type--page-button--landing ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content-type--page-button,
+.content-type--page-button--landing li {
+  position: relative;
+  z-index: 1;
+}
+
+.content-type--page-button,
+.content-type--page-button--landing li,
+.content-type--page-button a,
+.content-type--page-button--landing a,
+.content-type--page-button img {
+  height: 110px;
+  width: 225px;
+}
+
+.content-type--page-button,
+.content-type--page-button--landing li {
+  border: 5px solid #fff;
+  box-shadow: 5px 5px 11px #ddd;
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
+  opacity: 0.9;
+  padding: 0;
+}
+
+.content-type--page-button:hover,
+.content-type--page-button--landing li:hover {
+  opacity: 1;
+}
+
+.content-type--page-button a,
+.content-type--page-button--landing a {
+  border: none !important;
+  color: #fff !important;
+  display: block;
+  padding: 0 !important;
+}
+
+.content-type--page-button span,
+.content-type--page-button--landing b {
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  left: 5%;
+  line-height: 1;
+  padding-right: 5%;
+  position: absolute;
+  text-shadow: 0 0 8px #000, 0 0 3px #000;
+  text-transform: lowercase;
+  top: 5%;
+  z-index: 2;
 }
 
 /*****************************************************
