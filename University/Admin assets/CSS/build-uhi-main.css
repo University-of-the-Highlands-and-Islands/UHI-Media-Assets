@@ -113,7 +113,8 @@ currently lacking a better selector */
 
 .col > h2:first-child,
 .col > h3:first-child,
-.col > p:first-child {
+.col > p:first-child,
+.col > div > h2:first-child {
   margin-top: 0;
 }
 
@@ -332,7 +333,7 @@ Unistats widget
 .main input[type="submit"] {
   background-color: #0f0f0f;
   border: medium none;
-  border-radius: 0.25em;
+  border-radius: 3px;
   color: white;
   font-family: Oswald, Helvetica, Arial, sans-serif;
   font-size: 1.33em;
@@ -351,7 +352,7 @@ Unistats widget
 
 .main dl.info {
   background-color: #999;
-  border-radius: .25em;
+  border-radius: 3px;
   color: white;
   font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -386,7 +387,7 @@ Unistats widget
 .main input[type="password"],
 .main input[type="text"],
 .main textarea {
-  border-radius: .25rem;
+  border-radius: 3px;
   margin-bottom: .5rem;
   padding: .5rem;
   width: auto;
@@ -848,7 +849,7 @@ section courselist col onequarter
 
 .section.courselist .col.onequarter > form > ul > li {
   background-color: #b74783;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #fff;
   margin-bottom: 6px;
 }
@@ -873,7 +874,7 @@ https://www.shetland.uhi.ac.uk/courses/
 
 .section.courselist .col.onequarter .extra ul li {
   background: #b74783 none repeat scroll 0 0;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #fff;
   display: inline-block; /* 20180411 KIF*/
   font-size: 20px;
@@ -923,7 +924,7 @@ https://www.inverness.uhi.ac.uk/
 
 .section.courselist .col.onequarter > ul > li {
   background-color: #572163;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #fff;
   margin-bottom: 6px;
 }
@@ -1001,12 +1002,10 @@ https://www.inverness.uhi.ac.uk/
 
 /* https://www.uhi.ac.uk/en/research-enterprise/cultural/institute-for-northern-studies/ */
 .section.courselist .col.onequarter .quarterlight {
-  /*width: 80%;*/
   padding: 10px;
   margin: 0 0 2rem 0;
   border: 3px solid #fff;
-  border-radius: 5px;
-  /*float: left;*/
+  border-radius: 3px;
   background-color: #fff;
   box-shadow: 5px 5px 11px #ccc;
   text-align: left;
@@ -1853,7 +1852,7 @@ input[name="query"] {
 
 .fb-search .form-group .btn.btn-primary {
   background-color: #0f0f0f;
-  border-radius: 0.25em;
+  border-radius: 3px;
   border: medium none;
   color: white;
   font-family: Oswald, Helvetica, Arial, sans-serif;
@@ -1924,7 +1923,7 @@ input[name="query"] {
 
 .fb-search #search-best-bets {
   background-color: #eee;
-  border-radius: 5px;
+  border-radius: 3px;
   margin: 8px 0 0 0;
   padding: 8px;
 }
@@ -1974,7 +1973,7 @@ input[name="query"] {
 
 .fb-search .pagination.pagination-lg li.active {
   background-color: #ddd;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* filter (facet) list headings, labels, badges */
@@ -1988,7 +1987,7 @@ input[name="query"] {
 }
 
 .fb-search .panel-heading {
-  border-radius: 5px;
+  border-radius: 3px;
   color: #fff;
   margin-bottom: 15px;
   padding: 1px;
@@ -2001,7 +2000,7 @@ input[name="query"] {
 
 .fb-search .list-group-item {
   background-color: #eee;
-  border-radius: 5px;
+  border-radius: 3px;
   display: block;
   margin-bottom: 6px;
 }
@@ -2279,10 +2278,9 @@ originally known as: Callout
 .content-type--callout {
   background-color: #eee;
   border-left: 10px solid darkgrey;
-  font-size: 14px;
   font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
   font-style: normal;
-  margin: 2rem 5%;
+  margin: 1rem 5% 2rem;
   overflow: hidden; /* when Right Content present 20180426 */;
   padding: 2%;
 }
@@ -2339,7 +2337,6 @@ TODO move to CSS Grid with Flexbox fallback
   background-color: #e7e7e7;
   box-sizing: border-box;
   float: left;
-  font-size: 17px;
   margin: 1rem 0;
   padding: 20px 20px 0 20px;
   text-align: center;
@@ -2471,7 +2468,7 @@ originally known as: News Listing
 
 .content-type--one-web-news-listing__article,
 .content-type--one-web-news-listing__article img {
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .content-type--one-web-news-listing__article:nth-child(odd) {
@@ -2511,7 +2508,7 @@ One-Web Text Banner
 
 .content-type--one-web-text-banner {
   background-color: #572163;
-  border-radius: 5px;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   margin: 0 0 2rem 0;
@@ -2800,6 +2797,7 @@ table styles also used in:
   border-width: 0 0 0 .5rem;
   font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
   font-style: normal;
+  margin: 2rem;
   padding: 0 2rem 0 1rem;
 }
 
@@ -2819,17 +2817,6 @@ table styles also used in:
   font-size: 1.26rem;
 }
 
-.content-type--one-web-event__summary,
-.content-type--one-web-general-content__description,
-.content-type--one-web-news time,
-.content-type--one-web-news__description,
-.content-type--one-web-vacancy__description,
-.content-type-modifier--typography blockquote,
-.content-type-modifier--typography h4,
-.description {
-  font-size: 17px;
-}
-
 @media (min-width: 1000px) {
   .content-type-modifier--typography h2 {
     font-size: 1.728rem;
@@ -2846,6 +2833,20 @@ table styles also used in:
   .content-type-modifier--typography h4 {
     font-size: 1.2rem;
   }
+}
+
+.content-type--callout,
+.content-type--media-library-category-gallery a,
+.content-type--one-web-event__summary,
+.content-type--one-web-general-content__description,
+.content-type--one-web-highlight-content-box,
+.content-type--one-web-news time,
+.content-type--one-web-news__description,
+.content-type--one-web-vacancy__description,
+.content-type-modifier--typography blockquote,
+.content-type-modifier--typography h4,
+.description {
+  font-size: 17px; /* 1.0625rem */
 }
 
 /* spacing between headed sections */
@@ -2883,6 +2884,9 @@ don't use:
 - table-layout:fixed
 - width:100%
 (repercussions for cell widths etc)
+
+accessibility:
+https://www.w3.org/WAI/tutorials/tables/
 */
 
 .content-type-modifier--typography table,
@@ -3028,7 +3032,7 @@ used in:
 .content-type-modifier--shading {
   background-color: #eee8ef;
   border-color: #ddd;
-  border-radius: .5rem;
+  border-radius: 6px;
   border-style: solid;
   border-width: 1px;
   margin: 0 0 1rem;
@@ -3092,7 +3096,7 @@ styles these link lists, and other stuff for now probably
 .content-type--landing-link-list li,
 .content-type--landing-link-list__heading,
 .section.courselist .col.onequarter.news > ul > li {
-  border-radius: 5px;
+  border-radius: 3px;
   display: block;
   margin-bottom: 6px;
   padding: 2px 5px;
@@ -3182,7 +3186,7 @@ https://www.inverness.uhi.ac.uk/
 
 .content-type--landing-rss-feed__line {
   background-color: #eee8ef;
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: initial;
   list-style-type: none;
   margin: .5rem 0;
@@ -3215,7 +3219,6 @@ originally known as: One-web Gallery
   background-size: cover;
   display: flex;
   flex-direction: column;
-  font-size: 17px;
   margin-left: 0;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
@@ -3319,7 +3322,7 @@ previously used .halflight
 .content-type--landing-content-boxes__box {
   background-color: #f7f7f7;
   border: 3px solid #fff;
-  border-radius: .5rem;
+  border-radius: 6px;
   box-shadow: 5px 5px 11px #ccc;
   padding: 1rem;
 }
@@ -3357,7 +3360,7 @@ originally known as: Event, Uni Event
 
 .content-type--one-web-event__data {
   background-color: #eee8ef;
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 1rem;
 }
 
@@ -3381,7 +3384,7 @@ originally known as: Event, Uni Event
 }
 
 .content-type--one-web-event__details img {
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .content-type--one-web-event__help {
@@ -3568,7 +3571,7 @@ each colour contains duplicate styles, for preview in TinyMCE
 .UHI--button-link--black,
 .UHI--button-link--main,
 .UHI--button-link--reverse {
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   display: inline-block;
   font-family: Oswald, Helvetica, Arial, sans-serif !important; /* if no link made */
