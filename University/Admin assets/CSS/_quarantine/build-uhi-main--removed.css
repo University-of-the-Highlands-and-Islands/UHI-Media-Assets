@@ -1,3 +1,9 @@
+/* partner block background colours*/
+.section.courselist .col.onequarter > ul > li ul li.active a,
+.section.courselist .col.onequarter > ul > li:first-child,
+.section.courselist .col.onequarter > ul > li:nth-child(odd) ul li.active a,
+#coursefilter li.open:nth-child(even)
+
 /*
 Landing Content Boxes
 e.g. https://www.uhi.ac.uk/en/staff/

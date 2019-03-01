@@ -392,24 +392,6 @@ Unistats widget
   width: auto;
 }
 
-/* Course search filters reset link */
-.reset-course-search {
-  display: inline-block;
-  font-size: 18px;
-}
-
-.reset-course-search__top {
-  margin: 21px 32px 0 10px;
-}
-
-.reset-course-search__bottom {
-  margin: 10px 32px 21px 10px;
-}
-
-.search-filters {
-  padding: 0 22px 10px;
-}
-
 /* prospectus */
 
 .section.coursefinder .prospectus p {
@@ -843,14 +825,61 @@ https://www.uhi.ac.uk/en/campuses/north-highland-college-uhi/
 }
 
 /*
-section courselist col onequarter
+Course listing filters
+- UHI Courses Landing Page
+- UHI Partner Courses Landing Page
 */
 
-.section.courselist .col.onequarter > form > ul > li {
+/* Course listing right column heading */
+
+.courselist--filter-sets h2 {
+  margin: 0 22px 0 0;
+  font: bold 23px Oswald, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #572163;
+}
+
+@media (min-width: 768px) {
+  .courselist--filter-sets h2 {
+    /*position: relative;*/
+    /*display: inline;*/
+    /*margin-right: 20px;*/
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .courselist--filter-sets h2 {
+    /*margin-right: 40px;*/
+    font-size: 36px;
+  }
+}
+
+/* Course listing filters reset link */
+
+.reset-course-search {
+  display: inline-block;
+  font-size: 18px;
+  margin: 1rem 22px 0 0;
+}
+
+
+/* Course listing filter boxes */
+
+/* .section.courselist .col.onequarter > form > ul > li */
+.courselist--filter-sets .accordion > li {
   background-color: #b74783;
   border-radius: 3px;
   color: #fff;
   margin-bottom: 6px;
+}
+
+.courselist--filter-sets .accordion > li:nth-child(even) {
+  background-color: #572163;
+}
+
+.search-filters {
+  padding: 0 22px 10px;
 }
 
 /* extra course filter modules
@@ -886,35 +915,8 @@ https://www.shetland.uhi.ac.uk/courses/
   color: #fff;
 }
 
-/* TODO isolate Course page right column heading */
-
-.courselist--filter-sets h2,
-.section.courselist .col.onequarter h2 {
-  margin: 0 10px;
-  font: bold 23px Oswald, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  color: #572163;
-}
-
-@media (min-width: 768px) {
-  .courselist--filter-sets h2,
-  .section.courselist .col.onequarter h2 {
-    position: relative;
-    display: inline;
-    margin-right: 20px;
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .courselist--filter-sets h2,
-  .section.courselist .col.onequarter h2 {
-    margin-right: 40px;
-    font-size: 36px;
-  }
-}
-
 /*
+may share rules with above?
 heading for News/Events feed list eg:
 https://www.inverness.uhi.ac.uk/
 ...and other lists
@@ -3782,10 +3784,6 @@ at the end due to high specificity
   .section.intro #bigBG .background {
     background-size: cover;
   }
-}
-
-#coursefilter li.open:nth-child(even) {
-  background-color: #572163;
 }
 
 /*
