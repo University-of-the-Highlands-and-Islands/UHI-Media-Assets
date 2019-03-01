@@ -109,12 +109,11 @@ less comprehensive?
   margin-top: 0;
 }
 
-currently lacking a better selector */
-
+currently lacking a better selector
+*/
 .col > h2:first-child,
 .col > h3:first-child,
-.col > p:first-child,
-.col > div > h2:first-child {
+.col > p:first-child {
   margin-top: 0;
 }
 
@@ -887,6 +886,9 @@ https://www.shetland.uhi.ac.uk/courses/
   color: #fff;
 }
 
+/* TODO isolate Course page right column heading */
+
+.courselist--filter-sets h2,
 .section.courselist .col.onequarter h2 {
   margin: 0 10px;
   font: bold 23px Oswald, Helvetica, Arial, sans-serif;
@@ -895,6 +897,7 @@ https://www.shetland.uhi.ac.uk/courses/
 }
 
 @media (min-width: 768px) {
+  .courselist--filter-sets h2,
   .section.courselist .col.onequarter h2 {
     position: relative;
     display: inline;
@@ -904,6 +907,7 @@ https://www.shetland.uhi.ac.uk/courses/
 }
 
 @media (min-width: 1000px) {
+  .courselist--filter-sets h2,
   .section.courselist .col.onequarter h2 {
     margin-right: 40px;
     font-size: 36px;
@@ -2801,7 +2805,7 @@ table styles also used in:
 
 .content-type-modifier--typography blockquote {
   border-color: #eee8ef;
-  border-radius: 6px;
+  border-radius: 3px;
   border-style: solid;
   border-width: 0 0 0 .5rem;
   font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
@@ -3189,6 +3193,10 @@ https://www.inverness.uhi.ac.uk/
   margin-bottom: 30px;
 }
 
+.content-type--landing-rss-feed__heading {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+}
+
 .content-type--landing-rss-feed ul {
   padding: 0;
   margin: 0;
@@ -3370,7 +3378,7 @@ originally known as: Event, Uni Event
 
 .content-type--one-web-event__data {
   background-color: #eee8ef;
-  border-radius: 6px;
+  border-radius: 3px;
   padding: 1rem;
 }
 
@@ -3394,7 +3402,7 @@ originally known as: Event, Uni Event
 }
 
 .content-type--one-web-event__details img {
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 .content-type--one-web-event__help {
@@ -3581,7 +3589,7 @@ each colour contains duplicate styles, for preview in TinyMCE
 .UHI--button-link--black,
 .UHI--button-link--main,
 .UHI--button-link--reverse {
-  border-radius: 6px;
+  border-radius: 3px;
   cursor: pointer;
   display: inline-block;
   font-family: Oswald, Helvetica, Arial, sans-serif !important; /* if no link made */
