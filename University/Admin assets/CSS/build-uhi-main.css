@@ -82,7 +82,8 @@ main content links
 }
 
 /*
-list resets
+TODO list resets - too general
+https://www.t4.uhi.ac.uk/terminalfour/preview/8/en/44094
 https://www.inverness.uhi.ac.uk/business-and-training/
 https://www.nafc.uhi.ac.uk/courses/aquaculture-courses/
 */
@@ -2515,6 +2516,13 @@ originally known as: Right Content
 .content-type--one-web-right-content a:hover {
   text-decoration: none !important;
 }
+
+.content-type--one-web-right-content ul {
+  list-style-type: initial;
+  margin: initial;
+  padding: initial;
+}
+
 
 /****************************************
 One-Web Text Banner

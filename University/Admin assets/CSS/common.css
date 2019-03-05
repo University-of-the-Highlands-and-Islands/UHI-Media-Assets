@@ -573,7 +573,7 @@ b, dt, h1, h2, h3, h4, h5, h6, strong, th, thead td,
 .footer .nav,
 .header.banner li form .keyword,
 .header.banner .tools li a,
-.navigation--home-message,
+.message,
 .message--cookie > div,
 .section.coursefinder ul.suggestions,
 .section.testimonials blockquote p .quotee .role {
@@ -1047,31 +1047,31 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 
 /* top of page messages in black bar */
 
-.navigation--home-message {
+.message {
   position: relative;
   padding: 5px 10px;
   background-color: #0f0f0f;
   color: #fff;
 }
 
-.navigation--home-message p {
+.message p {
   margin: 0;
 }
 
-.navigation--home-message h2 a,
-.navigation--home-message p a {
+.message h2 a,
+.message p a {
   color: #fff;
   text-decoration: underline;
 }
 
-.navigation--home-message p .close {
+.message p .close {
   color: #fff;
   font-family: 'Sosa Web', sans-serif;
   margin-left: 15px;
   text-decoration: none;
 }
 
-.navigation--home-message p .close:hover {
+.message p .close:hover {
   color: #999;
 }
 
