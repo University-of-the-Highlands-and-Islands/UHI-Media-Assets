@@ -129,7 +129,7 @@ function showCookieMessage() {
   var pathname = window.location.pathname;
   if(pathname.indexOf("/cookies/") == -1)
   {
-            var cAlert = '<div id="uhi-cookie-alert" class="message message--cookie">';
+            var cAlert = '<div id="uhi-cookie-alert" class="navigation--home-message  message--cookie">';
   	 		cAlert +='<p><a class="close" title="Close" href="#" onclick="warningCookieContinue();">~</a></p>';
   	 		cAlert +='<p>We use <a href="' + getPrefsUrl() + '">cookies</a> to provide the best experience when browsing our site. These can be for perfomance or functional reasons.  ';
             cAlert +='Some pages may also contain "third party" cookies from social media sites where we have used embedded content.  ';
@@ -137,7 +137,7 @@ function showCookieMessage() {
             cAlert +='we will assume that you are happy to receive all cookies from our site.</p>';
   			cAlert +='<div id="cookies-continue" onclick="warningCookieContinue();">Continue</div>';
 			cAlert +='</div>';
-      		$(".message").css('display', 'none');
+      		$(".navigation--home-message").css('display', 'none');
       		$("body").prepend(cAlert)
   }
 }
@@ -218,8 +218,8 @@ function warningCookieContinue(){
     setCookie("_uhic","1111",90);   
     var warning = document.getElementById('uhi-cookie-alert');
     warning.parentNode.removeChild(warning);    
-    var message = document.getElementsByClassName("message")[0];
-    if (message) { $(".message").css('display', 'block'); }
+    var message = document.getElementsByClassName("navigation--home-message")[0];
+    if (message) { $(".navigation--home-message").css('display', 'block'); }
   }
   
 function cookieConfigInit(){ 
