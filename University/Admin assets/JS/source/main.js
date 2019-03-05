@@ -20,8 +20,8 @@ if(window.location.href.indexOf('#') > -1) {
 }
 
 function siteMessage() {
-	$('body > .message p .close').click(function() {
-		$('body > .message').slideUp(function() {
+	$('body > .navigation--home-message p .close').click(function() {
+		$('body > .navigation--home-message').slideUp(function() {
 			$(this).remove();
 		});
 	});
