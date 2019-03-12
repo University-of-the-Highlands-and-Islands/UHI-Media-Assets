@@ -1,0 +1,35 @@
+<!-- landing scrolling banner -->
+<script>
+    var firstbgcarousel=new bgCarousel({
+        wrapperid: "bigBG", //ID of blank DIV on page to house carousel
+        imagearray: [
+            ['<t4 type="content" name="Large banner image 1" output="normal" formatter="path/*" />', '<h1><t4 type="content" name="Banner 1 title" output="normal" modifiers="striptags, htmlentities, js-var" /></h1><t4 type="content" name="Banner 1 subtitle" output="normal" modifiers="nav_sections, js-var" />'],
+            ['<t4 type="content" name="Large banner image 2" output="normal" formatter="path/*" />', '<h1><t4 type="content" name="Banner 2 title" output="normal" modifiers="striptags, htmlentities, js-var" /></h1><t4 type="content" name="Banner 2 subtitle" output="normal" modifiers="nav_sections, js-var" />']<t4 type="content" name="Large banner image 3" output="selective-output"  formatter="" process-format="true"  format=", " />
+                <t4 type="content" name="Large banner image 3" output="selective-output"  formatter="" process-format="true"  format="['<t4 type=&quot;content&quot; name=&quot;Large banner image 3&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />', '<h1><t4 type=&quot;content&quot; name=&quot;Banner 3 title&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities,js-var&quot; /></h1><t4 type=&quot;content&quot; name=&quot;Banner 3 subtitle&quot; output=&quot;normal&quot; modifiers=&quot;nav_sections,js-var&quot; />']" /><t4 type="content" name="Large banner image 4" output="selective-output"  formatter="" process-format="true"  format=", " />
+                <t4 type="content" name="Large banner image 4" output="selective-output"  formatter="" process-format="true"  format="['<t4 type=&quot;content&quot; name=&quot;Large banner image 4&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />', '<h1><t4 type=&quot;content&quot; name=&quot;Banner 4 title&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities,js-var&quot; /></h1><t4 type=&quot;content&quot; name=&quot;Banner 4 subtitle&quot; output=&quot;normal&quot; modifiers=&quot;nav_sections,js-var&quot; />']" />
+        ],
+        displaymode: {type:'auto', pause:3500, cycles:5, stoponclick:false, pauseonmouseover:true},
+        navbuttons: ['', '', '', ''], // path to nav images
+        activeslideclass: 'selectedslide', // CSS class that gets added to currently shown DIV slide
+        orientation: 'h', //Valid values: 'h' or 'v'
+        persist: false, //remember last viewed slide and recall within same session?
+        slideduration: 400 //transition duration (milliseconds)
+    })
+
+    var smallbgcarousel=new bgCarousel({
+        wrapperid: 'smallBG', //ID of blank DIV on page to house carousel
+        imagearray: [
+            ['<t4 type="content" name="Small banner image 1" output="normal" formatter="path/*" />', '<h1><t4 type="content" name="Banner 1 title" output="normal" modifiers="striptags, htmlentities, js-var" /></h1><t4 type="content" name="Banner 1 subtitle" output="normal" modifiers="nav_sections, js-var" />'],
+            ['<t4 type="content" name="Small banner image 2" output="normal" formatter="path/*" />', '<h1><t4 type="content" name="Banner 2 title" output="normal" modifiers="striptags, htmlentities, js-var" /></h1><t4 type="content" name="Banner 2 subtitle" output="normal" modifiers="nav_sections, js-var" />']<t4 type="content" name="Large banner image 3" output="selective-output"  formatter="" process-format="true"  format=", " />
+                <t4 type="content" name="Large banner image 3" output="selective-output" formatter="" process-format="true" format="['<t4 type=&quot;content&quot; name=&quot;Small banner image 3&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />', '<h1><t4 type=&quot;content&quot; name=&quot;Banner 3 title&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities,js-var&quot; /></h1><t4 type=&quot;content&quot; name=&quot;Banner 3 subtitle&quot; output=&quot;normal&quot; modifiers=&quot;nav_sections,js-var&quot; />']" /><t4 type="content" name="Large banner image 4" output="selective-output"  formatter="" process-format="true"  format=", " />
+                <t4 type="content" name="Large banner image 4" output="selective-output" formatter="" process-format="true" format="['<t4 type=&quot;content&quot; name=&quot;Small banner image 4&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />', '<h1><t4 type=&quot;content&quot; name=&quot;Banner 4 title&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities,js-var&quot; /></h1><t4 type=&quot;content&quot; name=&quot;Banner 4 subtitle&quot; output=&quot;normal&quot; modifiers=&quot;nav_sections,js-var&quot; />']" />
+        ],
+
+        displaymode: {type:'auto', pause:3500, cycles:5, stoponclick:false, pauseonmouseover:true},
+        navbuttons: ['', '', '', ''], // path to nav images
+        activeslideclass: 'selectedslide', // CSS class that gets added to currently shown DIV slide
+        orientation: 'h', //Valid values: 'h' or 'v'
+        persist: false, //remember last viewed slide and recall within same session?
+        slideduration: 400 //transition duration (milliseconds)
+    })
+</script>

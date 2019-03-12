@@ -436,7 +436,7 @@ Test Date       : 20180613-1200
 
 @media (min-width: 768px) {
   .section.connections {
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-image: url('<t4 type="media" formatter="image/path" id="61" />');
     background-position: center top;
     padding-top: 30px;
@@ -576,14 +576,14 @@ Test Date       : 20180613-1200
   overflow: hidden;
   padding-top: 10px;
   background: #0f0f0f url('<t4 type="media" formatter="image/path" id="64" />') no-repeat;
-  background-position: center top !important;
+  background-position: 50% 50% !important;
   background-size: cover;
 }
 
 @media (min-width: 768px) {
   .section.coursefinder {
     padding-top: 30px;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-image: url('<t4 type="media" formatter="image/path" id="63" />');
     background-position: center top;
   }

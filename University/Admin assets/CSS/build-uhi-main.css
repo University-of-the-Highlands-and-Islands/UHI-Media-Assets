@@ -3681,6 +3681,7 @@ UTILITIES / HELPER CLASSES
 /*
 Visually hidden
 https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements
+https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/
 */
 .utils--hidden {
   border: 0;
@@ -3695,7 +3696,7 @@ https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements
 
 /* float images when sufficient screen width, otherwise block */
 
-.image-left, /* legacy Plone */
+.image-left,  /* legacy Plone */
 .image-right, /* legacy Plone */
 .utils--float-left,
 .utils--float-right {
