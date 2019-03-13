@@ -2357,10 +2357,20 @@ originally known as: Highlight Content Box
   width: 100%;
 }
 
+.content-type--one-web-highlight-content-box img {
+  width: 200px;
+}
+
+.content-type--one-web-highlight-content-box img,
+.content-type--one-web-highlight-content-box__title {
+  margin: 0 0 .5rem 0;
+  padding: 0;
+}
+
 @media (min-width: 500px) {
   .content-type--one-web-highlight-content-box {
-    height: 320px;
-    margin-right: 20px;
+    height: 330px;
+    margin-right: 1rem;
     opacity: .9;
     width: 210px; /* allows 4 in a row on desktop view */
   }
@@ -2368,16 +2378,10 @@ originally known as: Highlight Content Box
   .content-type--one-web-highlight-content-box:hover {
     opacity: 1;
   }
-}
 
-.content-type--one-web-highlight-content-box img {
-  max-width: 100%;
-}
-
-.content-type--one-web-highlight-content-box img,
-.content-type--one-web-highlight-content-box__title {
-  margin: 0 0 20px 0;
-  padding: 0;
+  .content-type--one-web-highlight-content-box img {
+    max-width: 100%;
+  }
 }
 
 /*****************************************************
@@ -2823,7 +2827,8 @@ table styles also used in:
 
 /* headings and font sizes */
 
-.content-type-modifier--typography h2 {
+.content-type-modifier--typography h2,
+.content-type-modifier--typography table caption {
   font-size: 1.512rem;
 }
 
@@ -2832,13 +2837,13 @@ table styles also used in:
 .content-type--one-web-event__details h2,
 .content-type--one-web-media-object__heading,
 .content-type-modifier--collapsible__heading,
-.content-type-modifier--typography h3,
-.content-type-modifier--typography table caption {
+.content-type-modifier--typography h3 {
   font-size: 1.26rem;
 }
 
 @media (min-width: 1000px) {
-  .content-type-modifier--typography h2 {
+  .content-type-modifier--typography h2,
+  .content-type-modifier--typography table caption {
     font-size: 1.728rem;
   }
 
@@ -2875,7 +2880,8 @@ table styles also used in:
 .content-type-modifier--typography h3,
 .content-type-modifier--typography h4,
 .content-type-modifier--typography h5,
-.content-type-modifier--typography h6 {
+.content-type-modifier--typography h6,
+.content-type-modifier--typography table caption {
   margin: 1.728rem 0 1rem;
 }
 
@@ -2988,7 +2994,8 @@ in T4 a cell can be:
 }
 
 .content-type-modifier--typography table caption {
-  padding: 1rem;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  text-align: left;
 }
 
 /* table summary for accessibility */
@@ -3007,9 +3014,14 @@ used in
 - One-Web Media Object
 ****************************************/
 
+.content-type-modifier--flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 480px) {
   .content-type-modifier--flex-container {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
   }
 

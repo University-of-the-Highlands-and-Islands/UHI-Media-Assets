@@ -429,17 +429,21 @@ Test Date       : 20180613-1200
 
 .section.connections {
   background: #0f0f0f url('<t4 type="media" formatter="image/path" id="62" />') no-repeat;
-  background-position: center top !important;
+  background-position: center !important;
   background-size: cover;
   padding-top: 10px;
 }
 
 @media (min-width: 768px) {
   .section.connections {
-    /*background-attachment: fixed;*/
     background-image: url('<t4 type="media" formatter="image/path" id="61" />');
-    background-position: center top;
     padding-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.connections {
+    background-attachment: fixed;
   }
 }
 
@@ -576,16 +580,20 @@ Test Date       : 20180613-1200
   overflow: hidden;
   padding-top: 10px;
   background: #0f0f0f url('<t4 type="media" formatter="image/path" id="64" />') no-repeat;
-  background-position: 50% 50% !important;
+  background-position: center !important;
   background-size: cover;
 }
 
 @media (min-width: 768px) {
   .section.coursefinder {
     padding-top: 30px;
-    /*background-attachment: fixed;*/
     background-image: url('<t4 type="media" formatter="image/path" id="63" />');
-    background-position: center top;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder {
+    background-attachment: fixed;
   }
 }
 
