@@ -10,7 +10,7 @@ $(function() {
 	hashlinks();
 	applyNow();
     warningCookieRead(); 
-    addClearFix();
+    makeFlexContainer();
     var uhiacc = document.getElementsByClassName("content-type-modifier--collapsible__heading")[0];
     if (uhiacc) uhicollapsibleSections();
 });
@@ -209,17 +209,17 @@ function callQR(){
   }
 
 
-function addClearFixMulti(className){ 
+function makeFlexContainerMulti(className){ 
 	// ensures if multiple blocks of the same class on page, clearfix is added after each block
 	  $(className).not(className + "+" + className).each(function(){
-    $(this).nextUntil(":not("+ className + ")").addBack().wrapAll("<div class='clearfix'/>");
+    $(this).nextUntil(":not("+ className + ")").addBack().wrapAll("<div class='content-type-modifier--flex-container'/>");
     });
 }
 
 
-function addClearFix(){ 
-  addClearFixMulti(".content-type--one-web-highlight-content-box");
-  addClearFixMulti(".content-type--one-web-media-object");
+function makeFlexContainer(){ 
+  makeFlexContainerMulti(".content-type--one-web-highlight-content-box");
+  makeFlexContainerMulti(".content-type--one-web-media-object");
 }
 
 function uhicollapsibleSections(){
