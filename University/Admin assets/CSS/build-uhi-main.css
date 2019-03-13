@@ -2345,15 +2345,13 @@ originally known as: General Content
 One-Web Highlight Content Box
 
 originally known as: Highlight Content Box
-
-TODO move to CSS Grid with Flexbox fallback
 ****************************************/
 
 .content-type--one-web-highlight-content-box {
   background-color: #e7e7e7;
   box-sizing: border-box;
   float: left;
-  margin: 1rem 0;
+  margin: .5rem 0;
   padding: 20px 20px 0 20px;
   text-align: center;
   width: 100%;
@@ -2389,27 +2387,11 @@ originally known as: One-Web Media Object [TEST KIF]
 *****************************************************/
 
 .content-type--one-web-media-object {
-  margin: 0 0 2rem 0;
-}
-
-@media (min-width: 640px) {
-  .content-type--one-web-media-object {
-    align-items: flex-start;
-    display: flex;
-    margin: .5rem 0;
-    padding: 1rem 1rem 1rem 0;
-  }
+  padding: .5rem 0;
 }
 
 .content-type--one-web-media-object img {
   max-width: 100%;
-}
-
-@media (min-width: 640px) {
-  .content-type--one-web-media-object img {
-    margin: 0 1rem 0 0;
-    max-width: 200px;
-  }
 }
 
 .content-type--one-web-media-object ul {
@@ -2424,15 +2406,30 @@ originally known as: One-Web Media Object [TEST KIF]
   margin: .5rem 0 0;
 }
 
-@media (min-width: 640px) {
-  .content-type--one-web-media-object__heading {
-    margin: 0 0 1rem 0;
+@media (min-width: 480px) {
+  .content-type--one-web-media-object {
+    padding: 0 2rem 1rem 0;
+  }
+
+  .content-type--one-web-media-object > div {
+    flex: 1;
   }
 }
 
-@media (min-width: 640px) {
-  .content-type--one-web-media-object > div {
-    flex: 1;
+@media (min-width: 1200px) {
+  .content-type--one-web-media-object {
+    align-items: flex-start;
+    display: flex;
+    padding: .5rem 2rem .5rem 0;
+  }
+
+  .content-type--one-web-media-object__heading {
+    margin: 0 0 1rem 0;
+  }
+
+  .content-type--one-web-media-object img {
+    margin: 0 1rem 1rem 0;
+    max-width: 200px;
   }
 }
 
@@ -3001,30 +2998,29 @@ in T4 a cell can be:
 }
 
 /****************************************
-Width
+Flexbox and Width
 
-shrink element to percentage width and float left
-for multiple content items to make double column
+main.js makeFlexContainer() creates container
 
 used in
+- One-Web Highlight Content Box
 - One-Web Media Object
 ****************************************/
 
 @media (min-width: 480px) {
+  .content-type-modifier--flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .content-type-modifier--width--half {
     box-sizing: border-box;
-    float: left;
-    padding-right: 2rem;
     width: 50%;
   }
 }
 
 /****************************************
-Flexbox
-
-two column layout
-
-used in:
+two column layout used in:
 - One-Web General Content
 ****************************************/
 
