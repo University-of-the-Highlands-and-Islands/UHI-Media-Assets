@@ -787,7 +787,6 @@ also campus pages eg http://www.uhi.ac.uk/en/campuses/moray-college-uhi/
 removed background-image: url(<t4 type= "media" formatter= "image/path" id= "63" />);
 */
 .section.coursefinder {
-  background-attachment: fixed; /* campus pages */
   background-color: #eee8ef; /* course pages */
   background-position: center center; /* campus pages */
   background-repeat: no-repeat; /* campus pages */
@@ -799,6 +798,12 @@ removed background-image: url(<t4 type= "media" formatter= "image/path" id= "63"
 @media (min-width: 768px) {
   .campus .section.coursefinder {
     background-position: 50% 248px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder {
+    background-attachment: fixed; /* campus pages, desktop not iOS*/
   }
 }
 
