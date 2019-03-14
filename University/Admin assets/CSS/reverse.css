@@ -375,7 +375,7 @@ Test Date       : 20180613-1200
 @media (min-width: 768px) {
   .map {
     float: right;
-    margin: -3em -20% 0 auto;
+    margin: -3em -20% -20px auto;
   }
   
   .map:after {
@@ -415,8 +415,7 @@ Test Date       : 20180613-1200
   .section.clearfix > .wrap > .col.half {
     float: left;
     width: 46%;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: 20px 2%;
     text-align: left;
   }
   
@@ -431,7 +430,7 @@ Test Date       : 20180613-1200
   background: #0f0f0f url('<t4 type="media" formatter="image/path" id="62" />') no-repeat;
   background-position: center !important;
   background-size: cover;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 @media (min-width: 768px) {
@@ -602,7 +601,7 @@ Test Date       : 20180613-1200
   color: #fff;
   font: 28px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 4px #000;
 }
 
 .section.coursefinder h2 strong {
@@ -756,7 +755,7 @@ Action button on Home page
   }
   
   .section.intro > .wrap > .tablewrap > .col.half:first-child {
-    padding-bottom: 0;
+    /*padding-bottom: 0;*/
     text-align: right;
   }
 }
@@ -865,8 +864,20 @@ Action button on Home page
 
 /* section testimonials */
 
+/*url('<t4 type="media" formatter="image/path" id="80" />') center bottom no-repeat;*/
 .section.testimonials {
-  background: #572163 url('<t4 type="media" formatter="image/path" id="80" />') center bottom no-repeat;
+  background-color: #572163;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .section.testimonials {
+    padding: 0;
+  }
+}
+
+.section.testimonials h2 {
+  padding-bottom: 10px;
 }
 
 .section.testimonials h2 strong {
