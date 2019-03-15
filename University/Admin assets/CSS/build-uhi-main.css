@@ -166,21 +166,15 @@ content-button
 course-filter-title
 */
 
-h3.course-filter-title {
-  font-size: 15px;
+.course-filter-title {
+  font-size: 17px;
   font-weight: normal;
-  padding: 5px 22px;
+  padding: 10px 22px;
   cursor: pointer;
 }
 
-@media (min-width: 1000px) {
-  h3.course-filter-title {
-    font-size: 18px;
-  }
-}
-
 @media (min-width: 1200px) {
-  h3.course-filter-title {
+  .course-filter-title {
     font-size: 20px;
   }
 }
@@ -839,24 +833,24 @@ Course listing filters
 /* Course listing right column heading */
 
 .courselist--filter-sets h2 {
-  margin: 0 22px 0 0;
-  font: bold 23px Oswald, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   color: #572163;
+  font: bold 23px Oswald, Helvetica, Arial, sans-serif;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.courselist--filter-sets .accordion {
+  padding-left: 0;
 }
 
 @media (min-width: 768px) {
   .courselist--filter-sets h2 {
-    /*position: relative;*/
-    /*display: inline;*/
-    /*margin-right: 20px;*/
     font-size: 30px;
   }
 }
 
 @media (min-width: 1000px) {
   .courselist--filter-sets h2 {
-    /*margin-right: 40px;*/
     font-size: 36px;
   }
 }
@@ -864,11 +858,9 @@ Course listing filters
 /* Course listing filters reset link */
 
 .reset-course-search {
-  display: inline-block;
-  font-size: 18px;
-  margin: 1rem 22px 0 0;
+  font-size: 17px;
+  margin: 0 !important;
 }
-
 
 /* Course listing filter boxes */
 
@@ -1037,9 +1029,13 @@ https://www.inverness.uhi.ac.uk/
 
 /*
 section courselist col threequarters
+
+list on:
+https://www.uhi.ac.uk/en/courses/
 */
 
 .section.courselist .col.threequarters > ul {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1162,9 +1158,10 @@ section courses coursefinder
 }
 
 .section.courses.coursefinder form {
+  background-color: #0f0f0f;
+  border-radius: 0 0 3px 3px;
   margin: 0;
   padding: 10px;
-  background-color: #0f0f0f;
 }
 
 @media (min-width: 768px) {
@@ -3812,6 +3809,10 @@ at the end due to high specificity
 main Course listing block
 https://www.uhi.ac.uk/en/courses/
 */
+#courselist {
+  margin-bottom: 2rem;
+}
+
 #courselist a:hover {
   background-color: #eaeaea;
 }

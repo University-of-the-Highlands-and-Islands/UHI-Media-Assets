@@ -1334,14 +1334,14 @@ Action button on Home page and eg partner home pages
   display: inline-block;
   font-size: 14px;
   margin-top: 129px;
-  padding: 0 20px;
+  padding: 0 1rem;
   text-decoration: none;
+  width: 100%
 }
 
 @media (min-width: 1000px) {
   .section.coursefinder .prospectus .text {
     margin-top: 173px;
-    padding: 0 25px;
     font-size: 16px;
   }
 }
@@ -1349,7 +1349,6 @@ Action button on Home page and eg partner home pages
 @media (min-width: 1200px) {
   .section.coursefinder .prospectus .text {
     margin-top: 210px;
-    padding: 0 30px;
     font-size: 18px;
   }
 }

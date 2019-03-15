@@ -1,3 +1,17 @@
+@media (min-width: 1000px) {
+  .courselist--filter-sets h2 {
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .courselist--filter-sets h2 {
+    position: relative;
+    display: inline;
+    margin-right: 20px;
+  }
+}
+
 /* partner block background colours*/
 .section.courselist .col.onequarter > ul > li ul li.active a,
 .section.courselist .col.onequarter > ul > li:first-child,
