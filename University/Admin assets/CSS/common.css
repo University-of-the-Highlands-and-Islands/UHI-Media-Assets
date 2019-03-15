@@ -1336,7 +1336,7 @@ Action button on Home page and eg partner home pages
   margin-top: 129px;
   padding: 0 1rem;
   text-decoration: none;
-  width: 100%
+  width: 87%;
 }
 
 @media (min-width: 1000px) {
@@ -1377,8 +1377,6 @@ Action button on Home page and eg partner home pages
 @media (min-width: 768px) {
   .section.intro p {
     max-width: 48%;
-    /*margin-top: 25px;*/
-    /*font-size: 15px;*/
   }
 }
 
