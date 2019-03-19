@@ -831,10 +831,29 @@ https://www.uhi.ac.uk/en/campuses/north-highland-college-uhi/
 }
 
 /*
-Course listing filters
+Course listing
 - UHI Courses Landing Page
-- UHI Partner Courses Landing Page
+- UHI Partner Courses Landing Page [LEGACY]
 */
+
+/* no results block */
+.courselist--no-results {
+  font-size: initial;
+}
+
+.courselist--no-results h2 {
+  margin-top: 0;
+}
+
+.courselist--no-results .reset-course-search {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .courselist--no-results .reset-course-search {
+    display: inline-block;
+  }
+}
 
 /* Course listing right column heading */
 
@@ -866,6 +885,16 @@ Course listing filters
 .reset-course-search {
   font-size: 17px;
   margin: 0 !important;
+}
+
+.courselist--filter-sets .reset-course-search:first-child {
+  margin-top: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  .courselist--filter-sets .reset-course-search:first-child {
+    margin-top: 0 !important;
+  }
 }
 
 /* Course listing filter boxes */
@@ -3413,6 +3442,7 @@ originally known as: Event, Uni Event
 .content-type--one-web-event__data {
   background-color: #eee8ef;
   border-radius: 3px;
+  margin-bottom: 1rem;
   padding: 1rem;
 }
 
@@ -3433,6 +3463,10 @@ originally known as: Event, Uni Event
   .content-type--one-web-event__data p {
     margin-left: 41px;
   }
+}
+
+.content-type--one-web-event__details figure {
+  margin-bottom: 1rem;
 }
 
 .content-type--one-web-event__details img {
@@ -3823,9 +3857,6 @@ at the end due to high specificity
 main Course listing block
 https://www.uhi.ac.uk/en/courses/
 */
-#courselist {
-  margin-bottom: 2rem;
-}
 
 #courselist a:hover {
   background-color: #eaeaea;
