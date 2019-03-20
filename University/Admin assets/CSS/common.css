@@ -592,7 +592,8 @@ dt {
 }
 
 figcaption {
-  font-style: italic;
+  font-style: normal;
+  margin: .5rem 0;
 }
 
 figure {

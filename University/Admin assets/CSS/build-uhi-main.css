@@ -338,10 +338,11 @@ Unistats widget
 }
 
 .main img {
+  border: 0;
+  border-radius: 3px;
   height: auto;
   max-width: 100%;
   vertical-align: middle;
-  border: 0;
 }
 
 .main dl.info {
@@ -2417,7 +2418,11 @@ originally known as: Highlight Content Box
     height: 330px;
     margin-right: 1rem;
     opacity: .9;
-    width: 210px; /* allows 4 in a row on desktop view */
+    width: 208px;
+    /*
+    allows 3 or 4 in a row e.g.
+    https://www.inverness.uhi.ac.uk/studying-at-ic/information-for-applicants-and-new-students/
+    */
   }
 
   .content-type--one-web-highlight-content-box:hover {
@@ -2499,7 +2504,7 @@ originally known as: News
 
 .content-type--one-web-news__image p {
   font-size: 14px;
-  font-style: italic;
+  font-style: normal;
   margin: 5px 0 0;
 }
 
@@ -2549,7 +2554,6 @@ originally known as: News Listing
 }
 
 .content-type--one-web-news-listing__article p {
-  font-style: italic;
   margin: 0;
 }
 
@@ -2559,16 +2563,24 @@ One-Web Right Content
 originally known as: Right Content
 ****************************************/
 
-.content-type--one-web-right-content a:hover {
-  text-decoration: none !important;
+.content-type--one-web-right-content {
+  margin: 0 0 2rem;
 }
 
-.content-type--one-web-right-content ul {
-  list-style-type: initial;
-  margin: initial;
-  padding: initial;
+.content-type--one-web-right-content img {
+  border-radius: 3px;
 }
 
+.content-type--one-web-right-content > h2:first-child,
+.content-type--one-web-right-content > h3:first-child {
+  margin-top: 0;
+}
+
+#portal-column-two .content-type--one-web-right-content ul {
+  list-style-type: inherit;
+  margin: inherit;
+  padding: 0 2rem;
+}
 
 /****************************************
 One-Web Text Banner
@@ -2725,6 +2737,7 @@ plus common styles across Content Types
 Border
 ****************************************/
 
+/* .content-type--one-web-right-image img,     needs border Element in CT */
 .content-type--one-web-highlight-content-box img,
 .content-type--one-web-media-object img,
 .content-type--one-web-news-listing__article img,
@@ -2881,6 +2894,7 @@ table styles also used in:
 .content-type--one-web-event__data h2,
 .content-type--one-web-event__details h2,
 .content-type--one-web-media-object__heading,
+.content-type--one-web-right-content h2,
 .content-type-modifier--collapsible__heading,
 .content-type-modifier--typography h3 {
   font-size: 1.26rem;
@@ -2892,11 +2906,16 @@ table styles also used in:
     font-size: 1.728rem;
   }
 
+
   .content-type--one-web-event__details h2,
   .content-type--one-web-media-object__heading,
   .content-type-modifier--collapsible__heading,
   .content-type-modifier--typography h3 {
     font-size: 1.44rem;
+  }
+
+  .content-type--one-web-right-content h2 {
+    font-size: 1.26rem;
   }
 
   .content-type--one-web-event__summary,
@@ -2913,6 +2932,7 @@ table styles also used in:
 .content-type--one-web-highlight-content-box,
 .content-type--one-web-news time,
 .content-type--one-web-news__description,
+.content-type--one-web-right-content h3,
 .content-type--one-web-vacancy__description,
 .content-type-modifier--typography blockquote,
 .content-type-modifier--typography h4,
@@ -3112,18 +3132,7 @@ used in:
   border-radius: 6px;
   border-style: solid;
   border-width: 1px;
-  margin: 0 0 1rem;
-  padding: .5rem;
-}
-
-/* should be in One-Web Right Content instead? */
-.content-type-modifier--shading h2,
-.content-type-modifier--shading h3,
-.content-type-modifier--shading h5,
-.content-type-modifier--shading p,
-.content-type-modifier--shading a {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding: 1rem;
 }
 
 /****************************************
@@ -3435,10 +3444,6 @@ One-Web Event
 originally known as: Event, Uni Event
 ******************************************************/
 
-.content-type--one-web-event figcaption {
-  margin: .5rem 0;
-}
-
 .content-type--one-web-event__data {
   background-color: #eee8ef;
   border-radius: 3px;
@@ -3563,10 +3568,14 @@ originally known as: Landing Image Boxes (and Landing Page Buttons)
 /*****************************************************
 One-Web Right Image
 
-originally known as: ?
+originally known as: Right Image (?)
 
 .content-type--one-web-right-image {}
 ******************************************************/
+
+.content-type--one-web-right-image {
+  margin: 0 0 2rem;
+}
 
 /****************************************
 
