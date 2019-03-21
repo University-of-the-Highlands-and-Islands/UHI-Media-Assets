@@ -2395,10 +2395,10 @@ originally known as: Highlight Content Box
 
 .content-type--one-web-highlight-content-box {
   background-color: #e7e7e7;
+  border-radius: 3px;
   box-sizing: border-box;
-  float: left;
   margin: .5rem 0;
-  padding: 20px 20px 0 20px;
+  padding: 1rem;
   text-align: center;
   width: 100%;
 }
@@ -2415,9 +2415,9 @@ originally known as: Highlight Content Box
 
 @media (min-width: 500px) {
   .content-type--one-web-highlight-content-box {
-    height: 330px;
     margin-right: 1rem;
-    opacity: .9;
+    opacity: .85;
+    transition: .5s;
     width: 208px;
     /*
     allows 3 or 4 in a row e.g.
@@ -2429,8 +2429,17 @@ originally known as: Highlight Content Box
     opacity: 1;
   }
 
+  .content-type--one-web-highlight-content-box a:hover {
+    cursor: pointer;
+  }
+
   .content-type--one-web-highlight-content-box img {
     max-width: 100%;
+    transition: .5s;
+  }
+
+  .content-type--one-web-highlight-content-box img:hover {
+    transform: scale(1.05);
   }
 }
 
@@ -3471,7 +3480,7 @@ originally known as: Event, Uni Event
 }
 
 .content-type--one-web-event__details figure {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .content-type--one-web-event__details img {
@@ -3527,19 +3536,24 @@ originally known as: Landing Image Boxes (and Landing Page Buttons)
   width: 225px;
 }
 
+.content-type--page-button img {
+  border-radius: 3px;
+  opacity: 0.85;
+  transition: .5s;
+}
+.content-type--page-button img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
 .content-type--page-button,
 .content-type--page-button--landing li {
   border: 5px solid #fff;
   box-shadow: 5px 5px 11px #ddd;
   display: inline-block;
   margin: 0 1rem 1rem 0;
-  opacity: 0.9;
   padding: 0;
-}
-
-.content-type--page-button:hover,
-.content-type--page-button--landing li:hover {
-  opacity: 1;
+  transition: .5s;
 }
 
 .content-type--page-button a,
