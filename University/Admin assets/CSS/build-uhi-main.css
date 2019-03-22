@@ -2330,7 +2330,7 @@ originally known as: Callout
 .callout, /* legacy Plone */
 .content-type--callout {
   background-color: #eee;
-  border-left: 10px solid darkgrey;
+  border-left: .5rem solid #aaa;
   border-radius: 3px;
   font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -2342,6 +2342,11 @@ originally known as: Callout
   padding: .25rem 2rem;
 }
 
+.content-type--callout blockquote {
+  border-color: #fff !important;
+}
+
+/* TODO search and remove */
 .callout {
   display: block;
   padding: 1rem;
@@ -2573,7 +2578,13 @@ originally known as: Right Content
 ****************************************/
 
 .content-type--one-web-right-content {
+  font-size: initial;
   margin: 0 0 2rem;
+}
+
+.content-type--one-web-right-content blockquote {
+  font-size: 14px;
+  margin: 0;
 }
 
 .content-type--one-web-right-content img {
@@ -2701,7 +2712,9 @@ https://github.com/davatron5000/FitVids.js
 }
 
 .content-type--one-web-video-embed iframe {
-  border: 0;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
 }
 
 /*****************************************************
@@ -2881,8 +2894,8 @@ table styles also used in:
 
 /* blockquote */
 
+.content-type--callout blockquote,
 .content-type-modifier--typography blockquote {
-  border-color: #eee8ef;
   border-radius: 3px;
   border-style: solid;
   border-width: 0 0 0 .5rem;
@@ -2890,6 +2903,10 @@ table styles also used in:
   font-style: normal;
   margin: 2rem;
   padding: 0 2rem 0 1rem;
+}
+
+.content-type-modifier--typography blockquote {
+  border-color: #eee8ef;
 }
 
 /* headings and font sizes */
@@ -3785,8 +3802,14 @@ https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/
 }
 
 @media (min-width: 480px) {
+  /*
+  e.g. to space out small inline images
+  https://www.northhighland.uhi.ac.uk/study-at-nhc/our-campuses/sutherland/
+  TODO search and remove .utils--margin ?
+  */
   .image-left,
-  .utils--float-left {
+  .utils--float-left,
+  .utils--margin {
     float: left;
     margin: .5rem 1rem 1rem 0;
   }
@@ -3798,19 +3821,12 @@ https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/
   }
 }
 
-/*
-e.g. to space out small inline images
-https://www.northhighland.uhi.ac.uk/study-at-nhc/our-campuses/sutherland/
-*/
-.utils--margin {
-  margin: 0 1rem 1rem 0;
-}
-
 /* e.g. set on a container for horizontal scrolling of a wide table */
 .utils--scroll {
   overflow: auto;
 }
 
+/* move rules to CTs? */
 .utils--text-shadow {
   text-shadow: 0 0 8px #000, 0 0 3px #000;
 }

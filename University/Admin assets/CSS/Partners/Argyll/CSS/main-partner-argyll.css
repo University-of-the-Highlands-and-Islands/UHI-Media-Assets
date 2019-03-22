@@ -172,54 +172,6 @@ native 74px x 246px
 rules not in other partner-specific stylesheets
 ***************************************************/
 
-/* subject area headings */
-
-h2.beauty,
-h2.biz,
-h2.cater,
-h2.creative,
-h2.human,
-h2.land,
-h2.locat,
-h2.sport {
-  color: #fff;
-  font-size: 18px;
-  margin: 4rem 0 2rem;
-  padding: .5rem 1rem;
-}
-
-h2.beauty {
-  background-color: #df0068;
-}
-
-h2.biz {
-  background-color: #2d2b79;
-}
-
-h2.cater {
-  background-color: #51276f;
-}
-
-h2.creative {
-  background-color: #9f8f84;
-}
-
-h2.human {
-  background-color: #b0ac88;
-}
-
-h2.land {
-  background-color: #bdbc00;
-}
-
-h2.locat {
-  background-color: #009bc8;
-}
-
-h2.sport {
-  background-color: #fcc20e;
-}
-
 /* map? */
 
 .lcentremap {
