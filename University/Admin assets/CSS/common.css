@@ -548,10 +548,11 @@ h4, h5, h6 {
   font-size: 14px
 }
 
-@media (min-width: 1000px) {
-  /* most body content - raises from 14px to 16px */
-  .main > #portal-column-content {
-    font-size: initial !important;
+@media only screen and (min-width: 1000px) {
+
+  /* central column content in e.g. Left Nav page layouts */
+  #portal-column-content {
+    font-size: 16px;
   }
 
   /* from type scale */
@@ -623,13 +624,14 @@ small {
 
 /* END type scale */
 
-/* single border cells 20180316 */
+/* single border cells */
 table {
   border-collapse: collapse;
 }
 
 td, th {
   padding: 3px;
+  text-align: left; /* IE11 */
 }
 
 /****************************************

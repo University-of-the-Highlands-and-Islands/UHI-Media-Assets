@@ -839,7 +839,7 @@ Course listing
 
 /* no results block */
 .courselist--no-results {
-  font-size: initial;
+  font-size: 16px;
 }
 
 .courselist--no-results h2 {
@@ -1818,7 +1818,7 @@ t4-landing-page
 */
 
 .t4-landing-page {
-  font-size: initial; /* standard 16px */
+  font-size: 16px;
 }
 
 .t4-landing-page .col img {
@@ -2456,6 +2456,7 @@ originally known as: One-Web Media Object [TEST KIF]
 
 .content-type--one-web-media-object {
   padding: .5rem 0;
+  width: 100%; /* IE11 */
 }
 
 .content-type--one-web-media-object img {
@@ -2578,7 +2579,6 @@ originally known as: Right Content
 ****************************************/
 
 .content-type--one-web-right-content {
-  font-size: initial;
   margin: 0 0 2rem;
 }
 
@@ -3091,7 +3091,7 @@ in T4 a cell can be:
 
 /* table summary for accessibility */
 .mce-table-summary {
-  font-size: initial;
+  font-size: 16px;
   line-height: 1;
 }
 
@@ -3303,7 +3303,7 @@ https://www.inverness.uhi.ac.uk/
 .content-type--landing-rss-feed__line {
   background-color: #eee8ef;
   border-radius: 3px;
-  font-size: initial;
+  font-size: 16px;
   list-style-type: none;
   margin: .5rem 0;
   padding: .25rem .5rem !important;
