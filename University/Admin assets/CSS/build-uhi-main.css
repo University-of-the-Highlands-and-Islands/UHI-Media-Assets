@@ -2327,7 +2327,6 @@ One-Web Callout
 originally known as: Callout
 ****************************************/
 
-.callout, /* legacy Plone */
 .content-type--callout {
   background-color: #eee;
   border-left: .5rem solid #aaa;
@@ -2344,12 +2343,6 @@ originally known as: Callout
 
 .content-type--callout blockquote {
   border-color: #fff !important;
-}
-
-/* TODO search and remove */
-.callout {
-  display: block;
-  padding: 1rem;
 }
 
 /*****************************************************
@@ -2889,6 +2882,7 @@ used in:
 .description used in:
 - One-Web General Content
 - One-Web Vacancy
+- One-Web Openday
 
 table styles also used in:
 - Course pages
@@ -2953,7 +2947,6 @@ table styles also used in:
   }
 }
 
-.callout,
 .content-type--callout,
 .content-type--media-library-category-gallery a,
 .content-type--one-web-event__summary,

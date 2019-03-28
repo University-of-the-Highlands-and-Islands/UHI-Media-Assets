@@ -1,4 +1,8 @@
 
+.callout {
+  display: block;
+  padding: 1rem;
+}
 
 @media (min-width: 1000px) {
   .courselist--filter-sets h2 {

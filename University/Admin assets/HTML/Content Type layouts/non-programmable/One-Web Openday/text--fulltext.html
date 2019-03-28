@@ -1,23 +1,18 @@
-<style type="text/css">
-  div#content h1:first-child {display:none;}
-</style>
-
 <h1><t4 type="content" name="Title" output="normal" modifiers="striptags,htmlentities" /> - <time datetime='<t4 type="content" name="Start Date" output="normal" date_format="yyyy-MM-dd" />'><t4 type="content" name="Start Date" output="normal" date_format="EEE d MMM yyyy" /></time></h1>
 
-<h2>Venue : <t4 type="content" name="Location" output="normal" modifiers="striptags,htmlentities" /></h2>
+<p class="description"><strong>Venue:</strong> <t4 type="content" name="Location" output="normal" modifiers="striptags,htmlentities" /></p>
 
-<p>From <t4 type="content" name="Start Date" output="normal" date_format="h:mm a" /> to <t4 type="content" name="End Date" output="normal" date_format="h:mm a" /></p>
+<p class="description"><strong>Time:</strong> from <t4 type="content" name="Start Date" output="normal" date_format="h:mm a" /> to <t4 type="content" name="End Date" output="normal" date_format="h:mm a" /></p>
 
 <t4 type="content" name="Image" output="normal" formatter="image/*" />
 
 <t4 type="content" name="Description" output="normal" modifiers="medialibrary,nav_sections" />
 
-<div class="callout">
-  <p>Contact <t4 type="content" name="Contact eMail" output="selective-output" modifiers="striptags,htmlentities" format="<a href=&quot;mailto:$value&quot;>" /><t4 type="content" name="Contact Name" output="normal" modifiers="striptags,htmlentities" /><t4 type="content" name="Contact eMail" output="selective-output" modifiers="striptags,htmlentities" format="</a>" />
+  <p class="UHI--paragraph-highlight">Contact <t4 type="content" name="Contact eMail" output="selective-output" modifiers="striptags,htmlentities" format="<a href=&quot;mailto:$value&quot;>" /><t4 type="content" name="Contact Name" output="normal" modifiers="striptags,htmlentities" /><t4 type="content" name="Contact eMail" output="selective-output" modifiers="striptags,htmlentities" format="</a>" />
     <t4 type="content" name="Contact Number" output="selective-output" modifiers="striptags,htmlentities" format=" or $value" /></p>
   <t4 type="content" name="Further Info" output="selective-output" modifiers="striptags,htmlentities" format="<p><a href=&quot;$value?utm_source=InHouse&utm_medium=Website&utm_campaign=UHIOpenDayClickout&quot;>Further information on" />
   <t4 type="content" name="Further Info" output="selective-output" modifiers="striptags,htmlentities" process-format="true" format="<t4 type=&quot;content&quot; name=&quot;Title&quot; output=&quot;normal&quot; modifiers=&quot;striptags,htmlentities&quot; />" />
   <t4 type="content" name="Further Info" output="selective-output" modifiers="striptags,htmlentities" format=" openday </a></p>" />
-</div>
 
-<p><a href="/en/studying-at-uhi/open-days/">See full Open Day listing</a>.</p>
+
+<p><a href="/en/studying-at-uhi/open-days/">See the full Open Day listing</a>.</p>
