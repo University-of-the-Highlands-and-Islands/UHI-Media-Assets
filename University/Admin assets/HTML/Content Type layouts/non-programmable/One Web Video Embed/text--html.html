@@ -1,11 +1,11 @@
-<div class="content-type--one-web-video-embed  content-type-modifier--typography">
-
+<div class='content-type--one-web-video-embed  <t4 type="content" name="YouTube video ID" output="selective-output" format="content-type--one-web-video-embed--youtube" />  content-type-modifier--typography'>
+  
   <t4 type="meta" meta="html_anchor" />
-
+  
   <t4 type="content" name="video description" output="selective-output" modifiers="medialibrary,nav_sections" format="$value" />
-
+  
   <t4 type="content" name="YouTube video ID" output="selective-output" process-format="true" format="<iframe src=&quot;https://www.youtube.com/embed/$value?rel=0&quot; controls allowfullscreen title=&quot;<t4 type=&quot;content&quot; name=&quot;video summary&quot; output=&quot;normal&quot;/>&quot;></iframe>" />
-
+  
   <t4 type="content" name="Stream video ID" output="selective-output" process-format="true" format="<iframe src=&quot;https://stream.uhi.ac.uk/player?autostart=n&amp;fullscreen=y&amp;width=0&amp;height=0&amp;videoId=$value&amp;quality=hd&amp;captions=n&amp;chapterId=0&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen title=&quot;<t4 type=&quot;content&quot; name=&quot;video summary&quot; output=&quot;normal&quot;/>&quot;></iframe>" />
 
 </div>

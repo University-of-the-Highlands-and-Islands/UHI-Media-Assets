@@ -2392,6 +2392,10 @@ originally known as: General Content
   clear: both;
 }
 
+.content-type--one-web-general-content img {
+  margin-bottom: 1rem;
+}
+
 /****************************************
 One-Web Highlight Content Box
 
@@ -2711,10 +2715,9 @@ https://github.com/davatron5000/FitVids.js
   max-width: 640px;
 }
 
-.content-type--one-web-video-embed iframe {
+.content-type--one-web-video-embed--youtube iframe {
   border: 1px solid #000;
   border-radius: 3px;
-}
 }
 
 /*****************************************************
@@ -3402,7 +3405,7 @@ originally known as: ?
 previously used .halflight
 ******************************************************/
 
-/* Flexbox for container in IE11 */
+/* flexbox for container in IE11 */
 .content-type--landing-content-boxes {
   display: flex;
   flex-wrap: wrap;
