@@ -2230,13 +2230,13 @@ Can all of these go AFTER content-type-modifiers?
 Links Bars common styles
 
 Landing Image Links Bar
-originally known as: Home Page Image Links bar
+Content type usage report: Home Page Image Links bar
 
 Landing Mixed Links Bar
-originally known as: Landing Page Mixed Content bar
+Content type usage report: Landing Page Mixed Content bar
 
 Landing Coloured Links Bar
-originally known as: Home Page Coloured Links bar
+Content type usage report: Home Page Coloured Links bar
 ****************************************/
 
 .content-type--links-bar {
@@ -2272,7 +2272,7 @@ originally known as: Home Page Coloured Links bar
 
 @media (min-width: 960px) {
   .content-type--links-bar__element {
-    flex: 1 1 2%;
+    flex: 1 1 0;
   }
 }
 
@@ -2324,7 +2324,7 @@ originally known as: Home Page Coloured Links bar
 /****************************************
 One-Web Callout
 
-originally known as: Callout
+Content type usage report: Callout
 ****************************************/
 
 .content-type--callout {
@@ -2348,7 +2348,7 @@ originally known as: Callout
 /*****************************************************
 One-Web Children Link List
 
-originally known as: One-Web Children Link List
+Content type usage report: One-Web Children Link List
 ******************************************************/
 
 .content-type--one-web-children-link-list {
@@ -2366,7 +2366,7 @@ originally known as: One-Web Children Link List
 /*****************************************************
 One-Web Expert
 
-originally known as:
+Content type usage report: 
 - Expert
 
 .content-type--expert {}
@@ -2375,7 +2375,7 @@ originally known as:
 /****************************************
 One-Web General Content
 
-originally known as: General Content
+Content type usage report: General Content
 ****************************************/
 
 /* https://css-tricks.com/snippets/css/clear-fix/ */
@@ -2392,7 +2392,7 @@ originally known as: General Content
 /****************************************
 One-Web Highlight Content Box
 
-originally known as: Highlight Content Box
+Content type usage report: Highlight Content Box
 ****************************************/
 
 .content-type--one-web-highlight-content-box {
@@ -2448,7 +2448,7 @@ originally known as: Highlight Content Box
 /*****************************************************
 One-Web Media Object
 
-originally known as: One-Web Media Object [TEST KIF]
+Content type usage report: One-Web Media Object [TEST KIF]
 *****************************************************/
 
 .content-type--one-web-media-object {
@@ -2502,7 +2502,7 @@ originally known as: One-Web Media Object [TEST KIF]
 /****************************************
 One-Web News
 
-originally known as: News
+Content type usage report: News
 ****************************************/
 
 .content-type--one-web-news time {
@@ -2532,7 +2532,7 @@ originally known as: News
 /****************************************
 One-Web News Listing
 
-originally known as: News Listing
+Content type usage report: News Listing
 
 .content-type--one-web-news-listing
 ****************************************/
@@ -2572,7 +2572,7 @@ originally known as: News Listing
 /****************************************
 One-Web Right Content
 
-originally known as: Right Content
+Content type usage report: Right Content
 ****************************************/
 
 .content-type--one-web-right-content {
@@ -2697,7 +2697,7 @@ One-Web Staff Profile
 /****************************************
 One-Web Video Embed (YouTube or Stream)
 
-originally known as: YouTube Video Embed
+Content type usage report: YouTube Video Embed
 
 responsive video wrapper handled with FitVids now
 https://github.com/davatron5000/FitVids.js
@@ -2716,7 +2716,7 @@ https://github.com/davatron5000/FitVids.js
 /*****************************************************
 One Web Vacancy
 
-originally known as: Vacancy
+Content type usage report: Vacancy
 
 .content-type--one-web-vacancy
 ******************************************************/
@@ -2729,7 +2729,7 @@ originally known as: Vacancy
 /*****************************************************
 One Web Vacancy Listing
 
-originally known as: Uni Vacancy Listing
+Content type usage report: Uni Vacancy Listing
 
 .content-type--one-web-vacancy-listing
 ******************************************************/
@@ -3169,7 +3169,7 @@ Landing Link List
 - Landing Link List Children
 - Landing Link List Custom
 
-originally known as:
+Content type usage report: 
 - Landing Children Links [TEST KIF]
 - ?
 
@@ -3312,13 +3312,13 @@ https://www.inverness.uhi.ac.uk/
 /*****************************************************
 Media Library Category Document List
 
-originally known as: One-Web Media Category Documents
+Content type usage report: One-Web Media Category Documents
 ******************************************************/
 
 /*****************************************************
 Media Library Category Gallery
 
-originally known as: One-web Gallery
+Content type usage report: One-web Gallery
 ******************************************************/
 
 .content-type--media-library-category-gallery {
@@ -3393,7 +3393,7 @@ Fancybox plugin - customisations
 /*****************************************************
 Landing Content Boxes
 
-originally known as: ?
+Content type usage report: ?
 
 previously used .halflight
 ******************************************************/
@@ -3463,7 +3463,7 @@ previously used .halflight
 /*****************************************************
 One-Web Event
 
-originally known as: Event, Uni Event
+Content type usage report: Event, Uni Event
 ******************************************************/
 
 .content-type--one-web-event__data {
@@ -3516,7 +3516,7 @@ One-Web Page Button General & Right
 btn-content, btn-content-right became content-type--page-button
 
 Landing Buttons
-originally known as: Landing Image Boxes (and Landing Page Buttons)
+Content type usage report: Landing Image Boxes (and Landing Page Buttons)
 #piclinks became content-type--page-button--landing
 ****************************************************************/
 
@@ -3595,7 +3595,7 @@ originally known as: Landing Image Boxes (and Landing Page Buttons)
 /*****************************************************
 One-Web Right Image
 
-originally known as: Right Image (?)
+Content type usage report: Right Image (?)
 
 .content-type--one-web-right-image {}
 ******************************************************/
