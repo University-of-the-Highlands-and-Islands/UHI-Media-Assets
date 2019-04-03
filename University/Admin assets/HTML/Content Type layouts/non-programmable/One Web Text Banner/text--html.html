@@ -1,0 +1,47 @@
+<div class="content-type--one-web-text-banner">
+  <div class="content-type--one-web-text-banner__col">
+    <h2>
+      <t4 type="content" name="Heading" output="normal" modifiers="striptags,htmlentities"/>
+    </h2>
+    
+    <t4 type="content" name="Text content" output="normal" modifiers="medialibrary,nav_sections"/>
+  </div>
+  
+  <aside class="content-type--one-web-text-banner__col">
+    <t4 type="content" name="Telephone international format" output="selective-output" process-format="true" format="
+      <!-- telephone link -->
+      <div class=content-type--one-web-text-banner__refer>
+        <span class=content-type--one-web-text-banner__icon>4</span>
+        <a href=tel:$value>
+          <t4 type=&quot;content&quot; name=&quot;Telephone UK format&quot; output=&quot;normal&quot; modifiers=&quot;htmlentities&quot;/>
+        </a>
+      </div>
+    " />
+    
+    <t4 type="content" name="Email" output="selective-output" process-format="true" format="
+      <!-- email link -->
+      <div class=content-type--one-web-text-banner__refer>
+        <span class=content-type--one-web-text-banner__icon>É</span>
+        <a href=mailto:$value>$value</a>
+      </div>
+    " />
+    
+    <t4 type="content" name="Internal link" output="selective-output" process-format="true" format="
+      <!-- internal link -->
+      <div class=content-type--one-web-text-banner__refer>
+        <span class=content-type--one-web-text-banner__icon>p</span>
+        $value
+      </div>
+    " />
+    
+    <t4 type="content" name="External link (requires external link text)" output="selective-output" process-format="true" format="
+      <!-- external link -->
+      <div class=content-type--one-web-text-banner__refer>
+        <span class=content-type--one-web-text-banner__icon>p</span>
+        <a href=$value target=_blank>
+          <t4 type=&quot;content&quot; name=&quot;External link text (required if external link)&quot; output=&quot;normal&quot; modifiers=&quot;htmlentities&quot; />
+        </a>
+      </div>
+    " />
+  </aside>
+</div>
