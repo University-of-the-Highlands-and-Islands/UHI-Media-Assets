@@ -2627,10 +2627,6 @@ One-Web Text Banner
   }
 }
 
-aside.content-type--one-web-text-banner__col {
-  min-width: 20%;
-}
-
 .content-type--one-web-text-banner,
 .content-type--one-web-text-banner a {
   color: white;
@@ -3742,8 +3738,9 @@ each colour contains duplicate styles, for preview in TinyMCE
   opacity: .5;
 }
 
-/* image border */
+/* image border - on img or p */
 
+.UHI--image--outline,
 .UHI--image--outline img {
   outline: 2px solid #eee;
 }
