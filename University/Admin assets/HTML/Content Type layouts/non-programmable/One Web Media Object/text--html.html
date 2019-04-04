@@ -1,0 +1,31 @@
+<div class='content-type--one-web-media-object <t4 type="content" name="Half width" output="selective-output" format="content-type-modifier--width--half" />'>
+  <t4 type="meta" meta="html_anchor"/>
+  
+  <!-- link on image -->
+  <t4 type="content" name="Internal Link" output="selective-output" modifiers="nav_sections" process-format="true" format="<a href='<t4 type=&quot;content&quot; name=&quot;Internal Link&quot; output=&quot;linkurl&quot; modifiers=&quot;nav_sections&quot; />'>" />
+  <t4 type="content" name="Media Library Link" output="selective-output" process-format="true" format="
+<a href=<t4 type=&quot;content&quot; name=&quot;Media Library Link&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />>" formatter="path/*" />
+  <t4 type="content" name="External Link" output="selective-output" modifiers="nav_sections" format="<a href='$value'>" />
+  
+  <t4 type="content" name="Media Library Image" output="normal" formatter="" />
+  
+  <t4 type="content" name="Internal Link" output="selective-output" modifiers="nav_sections" format="</a>" />
+  <t4 type="content" name="Media Library Link" output="selective-output" modifiers="nav_sections" format="</a>" />
+  <t4 type="content" name="External Link" output="selective-output" modifiers="nav_sections" format="</a>" />
+  
+  <div>
+    <!-- link on heading, and content -->
+    <t4 type="content" name="Internal Link" output="selective-output" modifiers="nav_sections" process-format="true" format="<a href='<t4 type=&quot;content&quot; name=&quot;Internal Link&quot; output=&quot;linkurl&quot; modifiers=&quot;nav_sections&quot; />'>" />
+    <t4 type="content" name="Media Library Link" output="selective-output" process-format="true" format="
+<a href=<t4 type=&quot;content&quot; name=&quot;Media Library Link&quot; output=&quot;normal&quot; formatter=&quot;path/*&quot; />>" formatter="path/*" />
+    <t4 type="content" name="External Link" output="selective-output" modifiers="nav_sections" format="<a href='$value'>" />
+    
+    <h2 class="content-type--one-web-media-object__heading"><t4 type="content" name="Heading" output="normal" modifiers="striptags,htmlentities" /></h2>
+    
+    <t4 type="content" name="Internal Link" output="selective-output" modifiers="nav_sections" format="</a>" />
+    <t4 type="content" name="Media Library Link" output="selective-output" modifiers="nav_sections" format="</a>" />
+    <t4 type="content" name="External Link" output="selective-output" modifiers="nav_sections" format="</a>" />
+    
+    <t4 type="content" name="Main Text" output="normal" modifiers="medialibrary,nav_sections" />
+  </div>
+</div>

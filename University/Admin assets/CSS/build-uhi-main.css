@@ -2258,28 +2258,30 @@ Content type usage report: Home Page Coloured Links bar
   padding: 0;
 }
 
-@media (min-width: 450px) {
-  .content-type--links-bar__element {
-    flex: 1 1 49%;
-    margin: 0 1% 1% 0;
-    opacity: .9;
-  }
-
-  .content-type--links-bar__contrasting-text {
-    min-height: 40px;
-  }
-}
-
-@media (min-width: 960px) {
-  .content-type--links-bar__element {
-    flex: 1 1 0; /* TODO need exact alternative for IE11 - currently 2-in-a-row */
-  }
+.content-type--links-bar__element {
+  transition: .3s;
 }
 
 .content-type--links-bar__element:hover,
 .content-type--links-bar__element:active {
   opacity: 1;
+  transform: scale(1.02);
   text-decoration: none !important;
+}
+
+@media (min-width: 450px) {
+  .content-type--links-bar__element {
+    border-radius: 3px;
+    flex: 1 1 49%;
+    margin: 0 1% 1% 0;
+    opacity: .9;
+  }
+}
+
+@media (min-width: 960px) {
+  .content-type--links-bar__element {
+    flex: 1 1 24%;
+  }
 }
 
 .content-type--links-bar__element img {
@@ -2300,6 +2302,12 @@ Content type usage report: Home Page Coloured Links bar
 .content-type--links-bar__contrasting-text a:active,
 .content-type--links-bar__contrasting-text a:visited {
   color: #fff !important;
+}
+
+@media (min-width: 450px) {
+  .content-type--links-bar__contrasting-text {
+    min-height: 40px;
+  }
 }
 
 .content-type--links-bar__background-image {
@@ -2486,7 +2494,7 @@ Content type usage report: One Web Media Object [TEST KIF]
   .content-type--one-web-media-object {
     align-items: flex-start;
     display: flex;
-    padding: .5rem 2rem .5rem 0;
+    padding: 1rem 3rem 1rem 0;
   }
 
   .content-type--one-web-media-object__heading {
@@ -2754,13 +2762,14 @@ Border
 ****************************************/
 
 /*
+.content-type--one-web-highlight-content-box img
+.content-type--one-web-media-object img
+.content-type--one-web-news-listing__article img
+.content-type--one-web-news__image img
 .content-type--one-web-right-image img
-.content-type--one-web-media-object img,
-TODO need switchable border Element in CT - and others?
+TODO make switchable border Element in CT?
 */
-.content-type--one-web-highlight-content-box img,
-.content-type--one-web-news-listing__article img,
-.content-type--one-web-news__image img,
+
 .content-type-modifier--border,
 .main input[type="password"],
 .main input[type="text"],
