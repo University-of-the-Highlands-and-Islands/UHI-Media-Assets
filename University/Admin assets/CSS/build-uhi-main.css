@@ -2449,7 +2449,7 @@ Content type usage report: Highlight Content Box
   }
 
   .content-type--one-web-highlight-content-box img:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }
 
@@ -3566,7 +3566,7 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
 }
 .content-type--page-button img:hover {
   opacity: 1;
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .content-type--page-button,
