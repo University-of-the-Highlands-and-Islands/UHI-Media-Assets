@@ -2113,6 +2113,7 @@ Navigation Assets in T4
 /*
 left hand side contextual navigation menu column
 20190405 module common to Landing Link Lists and LHS Nav
+additional styles in Content Items for testing
 */
 
 /*
@@ -2159,18 +2160,12 @@ TODO update partner stylesheets before final commit
   font-size: 18px;
 }
 
-.navigation--contextual li {
-  color: #572163; /* primary/block - darker than standard links */
-  font-size: 17px;
-}
-
 /* elements */
 
 .navigation--contextual h2,
 .navigation--contextual li {
   border-radius: 3px;
   display: block;
-  font-weight: normal;
   line-height: 1.2;
   margin: 0 0 .25rem 0;
   padding: 6px 8px;
@@ -2186,23 +2181,21 @@ TODO update partner stylesheets before final commit
   color: #eee;
 }
 
-.navigation--contextual h2,
-.navigation--contextual li a,
-.navigation--contextual span[class^="currentbranch"] {
-  /*font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;*/
-  font-family: Oswald, Helvetica, Arial, sans-serif;
-}
-
-.navigation--contextual li,
-.navigation--contextual ul ul li {
+.navigation--contextual li {
   background-color: #f7f7f7;
 }
 
-.navigation--contextual li:hover {
+.navigation--contextual li:hover,
+.navigation--contextual li:hover li {
   background-color: #eee;
 }
 
-.navigation--contextual li:active {
+.navigation--contextual li:hover li a:hover {
+  text-decoration: underline;
+}
+
+.navigation--contextual li:active,
+.navigation--contextual li:active li {
   background-color: #ddd;
 }
 
@@ -2216,10 +2209,11 @@ TODO update partner stylesheets before final commit
 
 /* current branch highlight */
 .navigation--contextual span[class^="currentbranch"] {
-  color: #000;
   cursor: initial;
   display: block;
 }
+
+
 
 
 
