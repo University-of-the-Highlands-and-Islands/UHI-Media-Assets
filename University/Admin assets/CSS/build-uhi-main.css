@@ -1241,6 +1241,11 @@ section courses coursefinder
   text-align: left
 }
 
+.section.testimonials a {
+  color: #fff;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+}
+
 .section.ctas .section.testimonials h2 {
   text-align: center;
 }
@@ -3751,9 +3756,8 @@ each colour contains duplicate styles, for preview in TinyMCE
   opacity: .5;
 }
 
-/* image border - on img or p */
+/* border on image */
 
-.UHI--image--outline,
 .UHI--image--outline img {
   outline: 2px solid #eee;
 }
