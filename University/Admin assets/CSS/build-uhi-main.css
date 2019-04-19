@@ -2741,18 +2741,36 @@ https://github.com/davatron5000/FitVids.js
 
 .videowrapper used on Course page content eg:
 https://www.uhi.ac.uk/en/courses/ba-hons-applied-music/
+
+.content-type--landing-page-text__video also shared
+3 Landing Page Text layouts in CT
 ****************************************/
 
+.content-type--landing-page-text__video,
 .content-type--one-web-video-embed,
 .videowrapper {
   margin: 1rem 0 3rem;
   max-width: 640px;
 }
 
+.content-type--landing-page-text__video iframe,
 .content-type--one-web-video-embed--youtube iframe,
 .videowrapper iframe {
   border: 1px solid #000;
   border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .col.threequarters .content-type--landing-page-text__video--half {
+    float: right;
+    padding-left: 2rem;
+    width: 50%;
+  }
+
+  .content-type--landing-page-text__video--half,
+  .content-type--landing-page-text__video--half + h2 {
+    margin-top: 0 !important;
+  }
 }
 
 /*****************************************************
@@ -2763,24 +2781,15 @@ Content type usage report: Vacancy
 .content-type--one-web-vacancy
 ******************************************************/
 
-/*
-.content-type--one-web-vacancy table,
-.content-type--one-web-vacancy td {
-  border-color: white !important;
-}
-*/
-
 /*****************************************************
 One Web Vacancy Listing
 
 Content type usage report: Uni Vacancy Listing
 
 .content-type--one-web-vacancy-listing
+https://www.uhi.ac.uk/en/staff/vacancies/
 ******************************************************/
 
-/*
-https://www.uhi.ac.uk/en/staff/vacancies/
-*/
 .vac + .vaclink {
   margin-top: 15px;
   padding-top: 15px;
@@ -3296,29 +3305,6 @@ styles these link lists, and other stuff for now probably
   text-decoration: none;
 }
 
-/*****************************************************
-Landing Page Text
-
-fitvids.js targets this - 3 layouts in CT
-******************************************************/
-
-.content-type--landing-page-text__video {
-  margin-bottom: 2rem;
-  max-width: 640px;
-}
-
-@media (min-width: 768px) {
-  .col.threequarters .content-type--landing-page-text__video--half {
-    float: right;
-    padding-left: 2rem;
-    width: 50%;
-  }
-
-  .content-type--landing-page-text__video--half + h2 {
-    margin-top: 0;
-  }
-}
-
 /****************************************************************
 Landing RSS Feed
 Landing RSS Feed - PHP - Positionable
@@ -3446,18 +3432,23 @@ Content type usage report: ?
 previously used .halflight
 ******************************************************/
 
-/* flexbox for container in IE11 */
+/* flexbox for container in IE11 and iOS Safari */
 .content-type--landing-content-boxes {
   display: flex;
   flex-wrap: wrap;
 }
 
 .content-type--landing-content-boxes__box {
-  margin: 0 16px 16px 0;
+  box-sizing: content-box;
+  margin: 0 1rem 1rem 0;
   width: 39%;
 }
 
-/* end IE11 */
+@media (max-width: 639px), (min-width: 768px) and (max-width: 1023px) {
+  .content-type--landing-content-boxes__box {
+    width: 100%;
+  }
+}
 
 /* less uncool browsers */
 @supports (display: grid) {
