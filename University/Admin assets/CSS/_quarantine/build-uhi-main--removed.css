@@ -1,3 +1,49 @@
+/* https://www.perth.uhi.ac.uk/ */
+
+.content-type--links-bar__contrasting-text {
+  font-size: 1.2rem;
+}
+
+#imagelinkrow .col.onequarter {
+  padding-left: 0 !important;
+  padding-right: 2% !important;
+}
+
+/*
+.content-type--links-bar .content-type--landing-rss-feed__line,
+.content-type--links-bar .newsevents {
+  background: none;
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+*/
+
+/*
+Subject Areas Staff Lists - unsupported as a Content Type - 20171206 KIF
+eg: subject areas > art and creative technologies > staff
+improved flexbox rules to use
+*/
+
+.staff-listing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.staff-listing__member {
+  margin: 0 1rem 1rem 0;
+}
+
+.staff-listing__member img {
+  max-height: 160px;
+}
+
+/* Perth home page */
+
+.content-type--links-bar h3 {
+  padding-left: 5px
+}
+
+/**/
 
 .callout {
   display: block;

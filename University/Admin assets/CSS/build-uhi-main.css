@@ -1529,13 +1529,14 @@ section intro
 */
 
 .section.intro h1 {
-  position: relative;
+  background-color: #0f0f0f;
+  border-radius: 0 3px 3px 0;
   float: left;
+  font: 23px Oswald, Helvetica, Arial, sans-serif;
   margin: 15px 10px 0 0;
   padding: 10px;
-  font: 23px Oswald, Helvetica, Arial, sans-serif;
+  position: relative;
   text-transform: uppercase;
-  background-color: #0f0f0f;
 }
 
 @media (min-width: 768px) {
@@ -2275,7 +2276,7 @@ Content type usage report: Home Page Coloured Links bar
 
 @media (min-width: 450px) {
   .content-type--links-bar__element {
-    border-radius: 3px;
+    border-radius: 3px; /* doesn't affect colour blocks */
     flex: 1 1 49%;
     margin: 0 1% 1% 0;
     opacity: .9;
@@ -3448,7 +3449,7 @@ previously used .halflight
 .content-type--landing-content-boxes__box {
   background-color: #f7f7f7;
   border: 3px solid #fff;
-  border-radius: 6px;
+  border-radius: 3px;
   box-shadow: 5px 5px 11px #ccc;
   padding: 1rem;
 }

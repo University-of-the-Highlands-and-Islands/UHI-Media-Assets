@@ -1368,14 +1368,15 @@ Action button on Home page and eg partner home pages
 }
 
 .section.intro p {
-  position: relative;
-  z-index: 1;
-  float: left;
+  background-color: #0f0f0f;
+  border-radius: 0 3px 3px 0;
   clear: left;
+  float: left;
+  font-size: 13px;
   margin: 15px 10px 0 0;
   padding: 10px;
-  font-size: 13px;
-  background-color: #0f0f0f;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
