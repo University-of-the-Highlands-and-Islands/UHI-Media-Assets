@@ -2738,14 +2738,19 @@ Content type usage report: YouTube Video Embed
 
 responsive video wrapper handled with FitVids now
 https://github.com/davatron5000/FitVids.js
+
+.videowrapper used on Course page content eg:
+https://www.uhi.ac.uk/en/courses/ba-hons-applied-music/
 ****************************************/
 
-.content-type--one-web-video-embed {
+.content-type--one-web-video-embed,
+.videowrapper {
   margin: 1rem 0 3rem;
   max-width: 640px;
 }
 
-.content-type--one-web-video-embed--youtube iframe {
+.content-type--one-web-video-embed--youtube iframe,
+.videowrapper iframe {
   border: 1px solid #000;
   border-radius: 3px;
 }
