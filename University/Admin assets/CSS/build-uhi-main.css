@@ -1819,6 +1819,34 @@ section testimonials
 }
 
 /*
+Header slogan of eg:
+https://www.htc.uhi.ac.uk/
+Site slogan getter nav object #37
+*/
+
+.slogan {
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .slogan {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slogan {
+    clear: right;
+    float: right;
+  }
+}
+
+.slogan p {
+  margin: 0 20px 10px;
+}
+
+/*
 t4-landing-page
 */
 
