@@ -2125,6 +2125,12 @@ TODO transfer these styles to .navigation--contextual:
 TODO update partner stylesheets before final commit
 */
 
+/* current branch highlight */
+.navigation--contextual span[class^="currentbranch"] {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
 /* Left Nav and Landing Page */
 .navigation--contextual {
   margin: 0 0 2rem;
@@ -2172,17 +2178,23 @@ TODO update partner stylesheets before final commit
   transition: .3s;
 }
 
+.navigation--contextual h2,
+.navigation--contextual li a {
+  font-family: inherit;
+}
+
 .navigation--contextual h2 a,
 .navigation--contextual li {
   cursor: pointer;
 }
 
 .navigation--contextual h2 a:hover {
-  color: #eee;
+  color: #ddd;
 }
 
 .navigation--contextual li {
   background-color: #f7f7f7;
+  font-size: 15px;
 }
 
 .navigation--contextual li:hover,
@@ -2199,7 +2211,12 @@ TODO update partner stylesheets before final commit
   background-color: #ddd;
 }
 
+.navigation--contextual li a {
+  color: #333;
+}
+
 .navigation--contextual li a:hover {
+  color: #722B82;
   text-decoration: none;
 }
 
