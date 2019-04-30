@@ -2089,47 +2089,10 @@ NAVIGATION
 Navigation Assets in T4
 ****************************************/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 left hand side contextual navigation menu column
-20190405 module common to Landing Link Lists and LHS Nav
-additional styles in Content Items for testing
+module common to Landing Link Lists and LHS Nav
 */
-
-/*
-TODO transfer these styles to .navigation--contextual:
-.mainMenu
-.navTreeTopNode
-.content-type--landing-link-list
-.content-type--landing-link-list__heading
-TODO update partner stylesheets before final commit
-*/
-
-/* current branch highlight */
-.navigation--contextual span[class^="currentbranch"] {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-}
 
 /* Left Nav and Landing Page */
 .navigation--contextual {
@@ -2161,9 +2124,14 @@ TODO update partner stylesheets before final commit
 
 .navigation--contextual h2,
 .navigation--contextual h2 a {
-  background-color: #572163; /* primary/block */
+  background-color: #572163; /* block colour TODO update partner stylesheets */
   color: #fff;
   font-size: 18px;
+  transition: .3s;
+}
+
+.navigation--contextual h2 a:hover {
+  color: #ddd;
 }
 
 /* elements */
@@ -2186,10 +2154,6 @@ TODO update partner stylesheets before final commit
 .navigation--contextual h2 a,
 .navigation--contextual li {
   cursor: pointer;
-}
-
-.navigation--contextual h2 a:hover {
-  color: #ddd;
 }
 
 .navigation--contextual li {
@@ -2216,7 +2180,7 @@ TODO update partner stylesheets before final commit
 }
 
 .navigation--contextual li a:hover {
-  color: #722B82;
+  color: #722B82; /* lighter block, like standard links */
   text-decoration: none;
 }
 
@@ -2228,24 +2192,9 @@ TODO update partner stylesheets before final commit
 .navigation--contextual span[class^="currentbranch"] {
   cursor: initial;
   display: block;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 breadcrumb nav
