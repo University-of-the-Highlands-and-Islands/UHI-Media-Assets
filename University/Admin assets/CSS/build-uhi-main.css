@@ -2091,15 +2091,44 @@ Navigation Assets in T4
 
 /*
 left hand side contextual navigation menu column
-module common to Landing Link Lists and LHS Nav
+common to Landing Page Link Lists and Left Nav
 */
 
-/* Left Nav and Landing Page */
+/* Left Nav full width on mobile */
 .navigation--contextual {
-  margin: 0 0 2rem;
+  margin: 0 -.5rem 2rem;
 }
 
-/* Left Nav expands to fill column width on wider desktop */
+@media (min-width: 1024px) {
+  .navigation--contextual {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navigation--contextual h2,
+  .navigation--contextual li {
+    border-radius: 3px;
+  }
+}
+
+/* Landing Page full width on mobile */
+.col .navigation--contextual {
+  margin: 0 -1% 2rem;
+}
+
+@media (min-width: 768px) {
+  .col .navigation--contextual {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col .navigation--contextual h2,
+  .col .navigation--contextual li {
+    border-radius: 3px;
+  }
+}
+
+/* Left Nav full column width on wider desktop */
 @media (min-width: 1360px) {
   #portal-column-one .navigation--contextual {
     margin-left: -1rem;
@@ -2138,7 +2167,6 @@ module common to Landing Link Lists and LHS Nav
 
 .navigation--contextual h2,
 .navigation--contextual li {
-  border-radius: 3px;
   display: block;
   line-height: 1.2;
   margin: 0 0 .25rem 0;
@@ -2161,6 +2189,7 @@ module common to Landing Link Lists and LHS Nav
   font-size: 15px;
 }
 
+.navigation--contextual li:active,
 .navigation--contextual li:hover,
 .navigation--contextual li:hover li {
   background-color: #eee;
@@ -2168,11 +2197,6 @@ module common to Landing Link Lists and LHS Nav
 
 .navigation--contextual li:hover li a:hover {
   text-decoration: underline;
-}
-
-.navigation--contextual li:active,
-.navigation--contextual li:active li {
-  background-color: #ddd;
 }
 
 .navigation--contextual li a {
