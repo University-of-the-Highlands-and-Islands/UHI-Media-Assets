@@ -487,7 +487,6 @@ http://stage-www.inverness.uhi.ac.uk/studying-at-ic/international/
 
   .section.clearfix > .wrap > .col.onequarter {
     float: left;
-    text-align: right;
     width: 23%;
   }
 
@@ -2124,76 +2123,134 @@ Navigation Assets in T4
 ****************************************/
 
 /*
-left hand side context navigation menu column
+left hand side contextual navigation menu column
+common to Landing Page Link Lists and Left Nav
 */
 
-/* make main navigation (top level ul) full width */
-.mainMenu {
-  list-style-type: none;
-  margin: 0 -.5rem 1rem;
-  padding: 0;
+/* Left Nav full width on mobile */
+.navigation--contextual {
+  margin: 0 -.5rem 2rem;
 }
 
-/* stretch left */
 @media (min-width: 1024px) {
-  .mainMenu {
-    margin: 0 0 1rem -1rem;
+  .navigation--contextual {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navigation--contextual h2,
+  .navigation--contextual li {
+    border-radius: 3px;
   }
 }
 
-/* nested lists */
-.mainMenu ul {
-  padding-left: 9px;
+/* Landing Page full width on mobile */
+.col .navigation--contextual {
+  margin: 0 -1% 2rem;
 }
 
-/* nav lines and links */
-.mainMenu li,
-.mainMenu li a,
-.mainMenu span {
+@media (min-width: 768px) {
+  .col .navigation--contextual {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col .navigation--contextual h2,
+  .col .navigation--contextual li {
+    border-radius: 3px;
+  }
+}
+
+/* Left Nav full column width on wider desktop */
+@media (min-width: 1360px) {
+  #portal-column-one .navigation--contextual {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+.navigation--contextual a {
   display: block;
 }
 
-/* make main links bold */
-.mainMenu li div,
-.mainMenu li span {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+.navigation--contextual ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* black links except top one */
-.mainMenu li > a,
-.mainMenu li > span > a {
-  color: #0f0f0f;
+/* multilevel-linkul-x */
+.navigation--contextual ul ul {
+  margin-top: 8px;
 }
 
-/* top borders */
-.mainMenu li > a,
-.mainMenu span {
-  border-top: 1px solid #ddd;
-}
-
-/* background and padding */
-.mainMenu li > a,
-.mainMenu span,
-.navTreeTopNode div {
-  background-color: #eee;
-  cursor: pointer;
-  padding: 9px;
+.navigation--contextual h2,
+.navigation--contextual h2 a {
+  background-color: #572163; /* block colour TODO update partner stylesheets */
+  color: #fff;
+  font-size: 18px;
   transition: .3s;
 }
 
-/* hover state */
-.mainMenu li > a:hover,
-.mainMenu span:hover,
-.navTreeTopNode div:hover {
-  background-color: #ddd;
+.navigation--contextual h2 a:hover {
+  color: #ddd;
 }
 
-/* active state */
-.mainMenu li > a:active,
-.mainMenu span:active,
-.navTreeTopNode div:active {
-  background-color: #ccc;
+/* elements */
+
+.navigation--contextual h2,
+.navigation--contextual li {
+  display: block;
+  line-height: 1.2;
+  margin: 0 0 .25rem 0;
+  padding: 6px 8px;
+  transition: .3s;
+}
+
+.navigation--contextual h2,
+.navigation--contextual li a {
+  font-family: inherit;
+}
+
+.navigation--contextual h2 a,
+.navigation--contextual li {
+  cursor: pointer;
+}
+
+.navigation--contextual li {
+  background-color: #f7f7f7;
+  font-size: 15px;
+}
+
+.navigation--contextual li:active,
+.navigation--contextual li:hover,
+.navigation--contextual li:hover li {
+  background-color: #eee;
+}
+
+.navigation--contextual li:hover li a:hover {
+  text-decoration: underline;
+}
+
+.navigation--contextual li a {
+  color: #333;
+}
+
+.navigation--contextual li a:hover {
+  color: #722B82; /* lighter block, like standard links */
+  text-decoration: none;
+}
+
+.navigation--contextual ul ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* current branch highlight */
+.navigation--contextual span[class^="currentbranch"] {
+  cursor: initial;
+  display: block;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 
 /*
@@ -3233,6 +3290,8 @@ Content type usage report:
 inheriting from these rules, for some reason:
   .section.courselist .col.onequarter.news
 styles these link lists, and other stuff for now probably
+
+TODO these rules may be redundant with introduction of new .navigation--contextual
 ******************************************************/
 
 .section.courselist .col.onequarter.news > p {
@@ -3240,16 +3299,8 @@ styles these link lists, and other stuff for now probably
 }
 
 /* parent */
-.content-type--landing-link-list,
 .section.courselist .col.onequarter.news > ul {
   margin: 0 0 1rem;
-}
-
-/* list */
-.content-type--landing-link-list ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 /* line default text color */
@@ -3258,8 +3309,6 @@ styles these link lists, and other stuff for now probably
 }
 
 /* line blocks - structure */
-.content-type--landing-link-list li,
-.content-type--landing-link-list__heading,
 .section.courselist .col.onequarter.news > ul > li {
   border-radius: 3px;
   display: block;
@@ -3268,13 +3317,11 @@ styles these link lists, and other stuff for now probably
 }
 
 /* line blocks - skin */
-.content-type--landing-link-list li,
 .section.courselist .col.onequarter.news > ul > li {
   background-color: #f7f7f7;
 }
 
 /* line blocks - skin - heading */
-.content-type--landing-link-list__heading,
 .section.courselist .col.onequarter.news > ul > li:first-child {
   background-color: #572163;
   color: #fff;
@@ -3282,17 +3329,12 @@ styles these link lists, and other stuff for now probably
 }
 
 /* line blocks - hover & active */
-.content-type--landing-link-list li:hover,
-.content-type--landing-link-list li:active,
 .section.courselist .col.onequarter.news > ul > li:hover:not(:first-child) {
   background-color: #eee;
   cursor: pointer;
 }
 
 /* link blocks */
-.content-type--landing-link-list a,
-.content-type--landing-link-list a:active,
-.content-type--landing-link-list a:visited,
 .section.courselist .col.onequarter.news > ul > li a {
   color: #000;
   display: block;
@@ -3300,7 +3342,6 @@ styles these link lists, and other stuff for now probably
 }
 
 /* link blocks - hover */
-.content-type--landing-link-list a:hover,
 .section.courselist .col.onequarter.news > ul > li a:hover {
   text-decoration: none;
 }
