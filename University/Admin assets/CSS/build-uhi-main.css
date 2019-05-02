@@ -2115,195 +2115,6 @@ input[name="query"] {
   text-align: center;
 }
 
-/****************************************
-
-NAVIGATION
-
-Navigation Assets in T4
-****************************************/
-
-/*
-left hand side contextual navigation menu column
-common to Landing Page Link Lists and Left Nav
-*/
-
-/* Left Nav full width on mobile */
-.navigation--contextual {
-  margin: 0 -.5rem 2rem;
-}
-
-@media (min-width: 1024px) {
-  .navigation--contextual {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .navigation--contextual h2,
-  .navigation--contextual li {
-    border-radius: 3px;
-  }
-}
-
-/* Landing Page full width on mobile */
-.col .navigation--contextual {
-  margin: 0 -1% 2rem;
-}
-
-@media (min-width: 768px) {
-  .col .navigation--contextual {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .col .navigation--contextual h2,
-  .col .navigation--contextual li {
-    border-radius: 3px;
-  }
-}
-
-/* Left Nav full column width on wider desktop */
-@media (min-width: 1360px) {
-  #portal-column-one .navigation--contextual {
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
-}
-
-.navigation--contextual a {
-  display: block;
-}
-
-.navigation--contextual ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* multilevel-linkul-x */
-.navigation--contextual ul ul {
-  margin-top: 8px;
-}
-
-.navigation--contextual h2,
-.navigation--contextual h2 a {
-  background-color: #572163; /* block colour TODO update partner stylesheets */
-  color: #fff;
-  font-size: 18px;
-  transition: .3s;
-}
-
-.navigation--contextual h2 a:hover {
-  color: #ddd;
-}
-
-/* elements */
-
-.navigation--contextual h2,
-.navigation--contextual li {
-  display: block;
-  line-height: 1.2;
-  margin: 0 0 .25rem 0;
-  padding: 6px 8px;
-  transition: .3s;
-}
-
-.navigation--contextual h2,
-.navigation--contextual li a {
-  font-family: inherit;
-}
-
-.navigation--contextual h2 a,
-.navigation--contextual li {
-  cursor: pointer;
-}
-
-.navigation--contextual li {
-  background-color: #f7f7f7;
-  font-size: 15px;
-}
-
-.navigation--contextual li:active,
-.navigation--contextual li:hover,
-.navigation--contextual li:hover li {
-  background-color: #eee;
-}
-
-.navigation--contextual li:hover li a:hover {
-  text-decoration: underline;
-}
-
-.navigation--contextual li a {
-  color: #333;
-}
-
-.navigation--contextual li a:hover {
-  color: #722B82; /* lighter block, like standard links */
-  text-decoration: none;
-}
-
-.navigation--contextual ul ul li:last-child {
-  margin-bottom: 0;
-}
-
-/* current branch highlight */
-.navigation--contextual span[class^="currentbranch"] {
-  cursor: initial;
-  display: block;
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-}
-
-/*
-breadcrumb nav
-last crumb is sometimes a link, sometimes not
-*/
-
-.navigation--breadcrumb {
-  text-transform: lowercase;
-}
-
-.navigation--breadcrumb ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation--breadcrumb li {
-  display: inline-block;
-}
-
-.navigation--breadcrumb li:not(:last-child)::after {
-  content: "›";
-  margin: 0 .5rem;
-}
-
-/*
-Previous and Next links for News and Event fulltext layouts
-*/
-
-.navigation--previous-next {
-  border-top: 1px solid #ccc;
-  font-size: 1.2rem; /* matches Summary size */
-  margin-top: 2rem;
-  overflow: hidden;
-  padding-top: 2rem;
-}
-
-.navigation--previous-next__pagination {
-  margin: 0 0 1rem 0;
-}
-
-@media (min-width: 640px) {
-  .navigation--previous-next__pagination {
-    float: right;
-    margin: 0 0 0 2rem;
-  }
-}
-
-.navigation--previous-next__pagination a:hover {
-  text-decoration: none !important;
-}
-
 /*********************************************************************
 
 CONTENT TYPES
@@ -3682,6 +3493,195 @@ Content type usage report: Right Image (?)
 
 .content-type--one-web-right-image {
   margin: 0 0 2rem;
+}
+
+/****************************************
+
+NAVIGATION
+
+Navigation Assets in T4
+****************************************/
+
+/*
+left hand side contextual navigation menu column
+common to Landing Page Link Lists and Left Nav
+*/
+
+/* Left Nav full width on mobile */
+.navigation--contextual {
+  margin: 0 -.5rem 2rem;
+}
+
+@media (min-width: 1024px) {
+  .navigation--contextual {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navigation--contextual h2,
+  .navigation--contextual li {
+    border-radius: 3px;
+  }
+}
+
+/* Landing Page full width on mobile */
+.col .navigation--contextual {
+  margin: 0 -1% 2rem;
+}
+
+@media (min-width: 768px) {
+  .col .navigation--contextual {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col .navigation--contextual h2,
+  .col .navigation--contextual li {
+    border-radius: 3px;
+  }
+}
+
+/* Left Nav full column width on wider desktop */
+@media (min-width: 1360px) {
+  #portal-column-one .navigation--contextual {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+.navigation--contextual a {
+  display: block;
+}
+
+.navigation--contextual ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* multilevel-linkul-x */
+.navigation--contextual ul ul {
+  margin-top: 8px;
+}
+
+.navigation--contextual h2,
+.navigation--contextual h2 a {
+  background-color: #572163; /* block colour TODO update partner stylesheets */
+  color: #fff;
+  font-size: 18px;
+  transition: .3s;
+}
+
+.navigation--contextual h2 a:hover {
+  color: #ddd;
+}
+
+/* elements */
+
+.navigation--contextual h2,
+.navigation--contextual li {
+  display: block;
+  line-height: 1.2;
+  margin: 0 0 .25rem 0;
+  padding: 6px 8px;
+  transition: .3s;
+}
+
+.navigation--contextual h2,
+.navigation--contextual li a {
+  font-family: inherit;
+}
+
+.navigation--contextual h2 a,
+.navigation--contextual li {
+  cursor: pointer;
+}
+
+.navigation--contextual li {
+  background-color: #f7f7f7;
+  font-size: 15px;
+}
+
+.navigation--contextual li:active,
+.navigation--contextual li:hover,
+.navigation--contextual li:hover li {
+  background-color: #eee;
+}
+
+.navigation--contextual li:hover li a:hover {
+  text-decoration: underline;
+}
+
+.navigation--contextual li a {
+  color: #333;
+}
+
+.navigation--contextual li a:hover {
+  color: #722B82; /* lighter block, like standard links */
+  text-decoration: none;
+}
+
+.navigation--contextual ul ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* current branch highlight */
+.navigation--contextual span[class^="currentbranch"] {
+  cursor: initial;
+  display: block;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+/*
+breadcrumb nav
+last crumb is sometimes a link, sometimes not
+*/
+
+.navigation--breadcrumb {
+  text-transform: lowercase;
+}
+
+.navigation--breadcrumb ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation--breadcrumb li {
+  display: inline-block;
+}
+
+.navigation--breadcrumb li:not(:last-child)::after {
+  content: "›";
+  margin: 0 .5rem;
+}
+
+/*
+Previous and Next links for News and Event fulltext layouts
+*/
+
+.navigation--previous-next {
+  border-top: 1px solid #ccc;
+  font-size: 1.2rem; /* matches Summary size */
+  margin-top: 2rem;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.navigation--previous-next__pagination {
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 640px) {
+  .navigation--previous-next__pagination {
+    float: right;
+    margin: 0 0 0 2rem;
+  }
+}
+
+.navigation--previous-next__pagination a:hover {
+  text-decoration: none !important;
 }
 
 /****************************************
