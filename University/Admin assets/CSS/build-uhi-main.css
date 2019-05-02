@@ -82,7 +82,6 @@ main content links
 }
 
 /*
-TODO list resets - too general
 https://www.t4.uhi.ac.uk/terminalfour/preview/8/en/44094
 https://www.inverness.uhi.ac.uk/business-and-training/
 https://www.nafc.uhi.ac.uk/courses/aquaculture-courses/
@@ -1241,6 +1240,11 @@ section courses coursefinder
   text-align: left
 }
 
+.section.testimonials a {
+  color: #fff;
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+}
+
 .section.ctas .section.testimonials h2 {
   text-align: center;
 }
@@ -1524,13 +1528,14 @@ section intro
 */
 
 .section.intro h1 {
-  position: relative;
+  background-color: #0f0f0f;
+  border-radius: 0 3px 3px 0;
   float: left;
+  font: 23px Oswald, Helvetica, Arial, sans-serif;
   margin: 15px 10px 0 0;
   padding: 10px;
-  font: 23px Oswald, Helvetica, Arial, sans-serif;
+  position: relative;
   text-transform: uppercase;
-  background-color: #0f0f0f;
 }
 
 @media (min-width: 768px) {
@@ -1810,6 +1815,34 @@ section testimonials
   color: #e9b6d2;
   font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
   font-weight: normal;
+}
+
+/*
+Header slogan of eg:
+https://www.htc.uhi.ac.uk/
+Site slogan getter nav object #37
+*/
+
+.slogan {
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .slogan {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slogan {
+    clear: right;
+    float: right;
+  }
+}
+
+.slogan p {
+  margin: 0 20px 10px;
 }
 
 /*
@@ -2328,7 +2361,7 @@ Content type usage report: Home Page Coloured Links bar
 
 @media (min-width: 450px) {
   .content-type--links-bar__element {
-    border-radius: 3px;
+    border-radius: 3px; /* doesn't affect colour blocks */
     flex: 1 1 49%;
     margin: 0 1% 1% 0;
     opacity: .9;
@@ -2762,16 +2795,39 @@ Content type usage report: YouTube Video Embed
 
 responsive video wrapper handled with FitVids now
 https://github.com/davatron5000/FitVids.js
+
+.videowrapper used on Course page content eg:
+https://www.uhi.ac.uk/en/courses/ba-hons-applied-music/
+
+.content-type--landing-page-text__video also shared
+3 Landing Page Text layouts in CT
 ****************************************/
 
-.content-type--one-web-video-embed {
+.content-type--landing-page-text__video,
+.content-type--one-web-video-embed,
+.videowrapper {
   margin: 1rem 0 3rem;
   max-width: 640px;
 }
 
-.content-type--one-web-video-embed--youtube iframe {
+.content-type--landing-page-text__video iframe,
+.content-type--one-web-video-embed--youtube iframe,
+.videowrapper iframe {
   border: 1px solid #000;
   border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .col.threequarters .content-type--landing-page-text__video--half {
+    float: right;
+    padding-left: 2rem;
+    width: 50%;
+  }
+
+  .content-type--landing-page-text__video--half,
+  .content-type--landing-page-text__video--half + h2 {
+    margin-top: 0 !important;
+  }
 }
 
 /*****************************************************
@@ -2782,24 +2838,15 @@ Content type usage report: Vacancy
 .content-type--one-web-vacancy
 ******************************************************/
 
-/*
-.content-type--one-web-vacancy table,
-.content-type--one-web-vacancy td {
-  border-color: white !important;
-}
-*/
-
 /*****************************************************
 One Web Vacancy Listing
 
 Content type usage report: Uni Vacancy Listing
 
 .content-type--one-web-vacancy-listing
+https://www.uhi.ac.uk/en/staff/vacancies/
 ******************************************************/
 
-/*
-https://www.uhi.ac.uk/en/staff/vacancies/
-*/
 .vac + .vaclink {
   margin-top: 15px;
   padding-top: 15px;
@@ -3299,29 +3346,6 @@ TODO these rules may be redundant with introduction of new .navigation--contextu
   text-decoration: none;
 }
 
-/*****************************************************
-Landing Page Text
-
-fitvids.js targets this - 3 layouts in CT
-******************************************************/
-
-.content-type--landing-page-text__video {
-  margin-bottom: 2rem;
-  max-width: 640px;
-}
-
-@media (min-width: 768px) {
-  .col.threequarters .content-type--landing-page-text__video--half {
-    float: right;
-    padding-left: 2rem;
-    width: 50%;
-  }
-
-  .content-type--landing-page-text__video--half + h2 {
-    margin-top: 0;
-  }
-}
-
 /****************************************************************
 Landing RSS Feed
 Landing RSS Feed - PHP - Positionable
@@ -3449,18 +3473,23 @@ Content type usage report: ?
 previously used .halflight
 ******************************************************/
 
-/* flexbox for container in IE11 */
+/* flexbox for container in IE11 and iOS Safari */
 .content-type--landing-content-boxes {
   display: flex;
   flex-wrap: wrap;
 }
 
 .content-type--landing-content-boxes__box {
-  margin: 0 16px 16px 0;
+  box-sizing: content-box;
+  margin: 0 1rem 1rem 0;
   width: 39%;
 }
 
-/* end IE11 */
+@media (max-width: 639px), (min-width: 768px) and (max-width: 1023px) {
+  .content-type--landing-content-boxes__box {
+    width: 100%;
+  }
+}
 
 /* less uncool browsers */
 @supports (display: grid) {
@@ -3485,7 +3514,7 @@ previously used .halflight
 .content-type--landing-content-boxes__box {
   background-color: #f7f7f7;
   border: 3px solid #fff;
-  border-radius: 6px;
+  border-radius: 3px;
   box-shadow: 5px 5px 11px #ccc;
   padding: 1rem;
 }
@@ -3793,9 +3822,8 @@ each colour contains duplicate styles, for preview in TinyMCE
   opacity: .5;
 }
 
-/* image border - on img or p */
+/* border on image */
 
-.UHI--image--outline,
 .UHI--image--outline img {
   outline: 2px solid #eee;
 }

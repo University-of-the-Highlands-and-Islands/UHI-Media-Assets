@@ -191,13 +191,3 @@ native 68px x 500px
     width: 500px;
   }
 }
-
-/***************************************************
-rules not in other partner-specific stylesheets
-***************************************************/
-
-/* home page boxes height */
-
-.content-type--links-bar span {
-  min-height: 42px;
-}
