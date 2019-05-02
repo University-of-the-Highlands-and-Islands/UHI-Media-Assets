@@ -1,3 +1,14 @@
+/* classes transferred to .navigation--contextual */
+.mainMenu
+.navTreeTopNode
+.content-type--landing-link-list
+.content-type--landing-link-list__heading
+
+.callout {
+  display: block;
+  padding: 1rem;
+}
+
 /*
 Course button links
 https://www.htc.uhi.ac.uk/courses/
