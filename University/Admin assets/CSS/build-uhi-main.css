@@ -1588,6 +1588,29 @@ section intro wrap background
 all course, landing and campus pages
 */
 
+@media (max-width: 767px) {
+  #bigBG {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* fits scrolling banner images into container without unnecessary zoom */
+  .section.intro #bigBG .background {
+    background-size: cover;
+  }
+}
+
+#smallBG {
+  min-height: 340px;
+}
+
+@media (min-width: 768px) {
+  #smallBG {
+    display: none;
+  }
+}
+
 .section.intro > .wrap {
   background-image: url(<t4 type= "navigation" name= "One-Web Default Course Banner Small Getter" id= "254" />);
   background-position: 50% 0;
@@ -3948,19 +3971,6 @@ more IDs
 at the end due to high specificity
 ****************************************/
 
-@media (max-width: 767px) {
-  #bigBG {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  /* fits scrolling banner images into container without unnecessary zoom */
-  .section.intro #bigBG .background {
-    background-size: cover;
-  }
-}
-
 /*
 main Course listing block
 https://www.uhi.ac.uk/en/courses/
@@ -3994,15 +4004,7 @@ https://www.uhi.ac.uk/en/courses/
   display: none;
 }
 
-#smallBG {
-  min-height: 340px;
-}
 
-@media (min-width: 768px) {
-  #smallBG {
-    display: none;
-  }
-}
 
 /****************************************
 
