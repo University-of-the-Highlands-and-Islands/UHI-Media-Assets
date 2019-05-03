@@ -1523,70 +1523,15 @@ section courses coursefinder
   }
 }
 
-/*
-section intro
-*/
+/*************************************
+TODO
 
-.section.intro h1 {
-  background-color: #0f0f0f;
-  border-radius: 0 3px 3px 0;
-  float: left;
-  font: 23px Oswald, Helvetica, Arial, sans-serif;
-  margin: 15px 10px 0 0;
-  padding: 10px;
-  position: relative;
-  text-transform: uppercase;
-}
+- Course Banner Image
+- Landing Scrolling Banner
+- Landing Static Banner
 
-@media (min-width: 768px) {
-  .section.intro h1 {
-    margin-top: 25px;
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .section.intro h1 {
-    font-size: 36px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section.intro h1 {
-    font-size: 42px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .section.intro p {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section.intro p {
-    font-size: 18px;
-  }
-}
-
-/* don't show wee course subheader box if no content */
-.section.intro p:empty {
-  display: none;
-}
-
-.section.intro p a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.section.intro p sup a {
-  text-decoration: none;
-}
-
-/*
-section intro wrap background
-all course, landing and campus pages
-*/
+.section.intro
+*************************************/
 
 @media (max-width: 767px) {
   #bigBG {
@@ -1628,9 +1573,7 @@ all course, landing and campus pages
   }
 }
 
-/*
-sets height of container and contained .background
-*/
+/* sets height of container and contained .background */
 @media (min-width: 768px) {
   .section.intro > .wrap,
   .section.intro > .wrap > .background {
@@ -1690,6 +1633,64 @@ sets height of container and contained .background
   .section.intro > .wrap > .background {
     height: 415px;
   }
+}
+
+/* banner image heading and subheading */
+
+.section.intro h1 {
+  background-color: #0f0f0f;
+  border-radius: 0 3px 3px 0;
+  float: left;
+  font: 23px Oswald, Helvetica, Arial, sans-serif;
+  margin: 15px 10px 0 0;
+  padding: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .section.intro h1 {
+    margin-top: 25px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro h1 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro h1 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro p {
+    font-size: 18px;
+  }
+}
+
+/* don't show wee course subheader box if no content */
+.section.intro p:empty {
+  display: none;
+}
+
+.section.intro p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.section.intro p sup a {
+  text-decoration: none;
 }
 
 /*
