@@ -2035,9 +2035,8 @@ Can all of these go AFTER content-type-modifiers?
 
 /*
 Landing Scrolling Banner
+hide unused images
 */
-
-/* hide unused banner images */
 
 @media (max-width: 767px) {
   #bigBG {
