@@ -1,3 +1,45 @@
+@media (min-width: 800px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 245px;
+  }
+}
+
+@media (min-width: 900px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 270px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 330px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 370px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 415px;
+  }
+}
+
 
 #smallBG {
   min-height: 340px;
