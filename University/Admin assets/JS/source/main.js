@@ -53,7 +53,7 @@ function scrollingParallax() {
 	$('.home .section.coursefinder').parallax("50%", 1600, .5, true);
 	$('.home .section.connections').parallax("50%", 3040, .5, true);
 
-	// $('.section.intro .background').parallax("50%", 230, .1, true);			// course pages
+	// $('.section.intro .background').parallax("50%", 230, .1, true);			// course pages - NO LONGER WANTED - KIF
 	$('.campus .section.coursefinder').parallax("50%", 1000, .5, true);		// campus pages
 }
 
