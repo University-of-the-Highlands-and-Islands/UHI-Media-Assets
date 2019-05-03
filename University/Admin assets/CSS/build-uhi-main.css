@@ -1523,235 +1523,6 @@ section courses coursefinder
   }
 }
 
-/*************************************
-TODO
-
-- Course Banner Image
-- Landing Scrolling Banner
-- Landing Static Banner
-
-.section.intro
-*************************************/
-
-@media (max-width: 767px) {
-  #bigBG {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  /* fits scrolling banner images into container without unnecessary zoom */
-  .section.intro #bigBG .background {
-    background-size: cover;
-  }
-}
-
-#smallBG {
-  min-height: 340px;
-}
-
-@media (min-width: 768px) {
-  #smallBG {
-    display: none;
-  }
-}
-
-.section.intro > .wrap {
-  background-image: url(<t4 type= "navigation" name= "One-Web Default Course Banner Small Getter" id= "254" />);
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 360px; /* height of native banner image minus 5px */
-  overflow: hidden;
-  position: relative;
-  visibility: visible;
-}
-
-@media (min-width: 768px) {
-  .section.intro > .wrap {
-    background-image: none !important; /* image moves to contained .background div */
-  }
-}
-
-/* sets height of container and contained .background */
-@media (min-width: 768px) {
-  .section.intro > .wrap,
-  .section.intro > .wrap > .background {
-    height: 230px;
-  }
-}
-
-@media (min-width: 768px) {
-  .section.intro > .wrap > .background {
-    background-image: url(<t4 type= "navigation" name= "One-Web Default Course Banner Large Getter" id= "253" />);
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 1340px;
-    position: absolute;
-    width: 100%;
-  }
-}
-
-@media (min-width: 800px) {
-  .section.intro > .wrap,
-  .section.intro > .wrap > .background {
-    height: 245px;
-  }
-}
-
-@media (min-width: 900px) {
-  .section.intro > .wrap,
-  .section.intro > .wrap > .background {
-    height: 270px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .section.intro > .wrap,
-  .section.intro > .wrap > .background {
-    height: 300px;
-  }
-}
-
-@media (min-width: 1100px) {
-  .section.intro > .wrap,
-  .section.intro > .wrap > .background {
-    height: 330px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section.intro > .wrap,
-  .section.intro > .wrap > .background {
-    height: 370px;
-  }
-}
-
-@media (min-width: 1340px) {
-  .section.intro > .wrap,
-  .section.intro > .wrap > .background {
-    height: 415px;
-  }
-}
-
-/* banner image heading and subheading */
-
-.section.intro h1 {
-  background-color: #0f0f0f;
-  border-radius: 0 3px 3px 0;
-  float: left;
-  font: 23px Oswald, Helvetica, Arial, sans-serif;
-  margin: 15px 10px 0 0;
-  padding: 10px;
-  position: relative;
-  text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-  .section.intro h1 {
-    margin-top: 25px;
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .section.intro h1 {
-    font-size: 36px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section.intro h1 {
-    font-size: 42px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .section.intro p {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section.intro p {
-    font-size: 18px;
-  }
-}
-
-/* don't show wee course subheader box if no content */
-.section.intro p:empty {
-  display: none;
-}
-
-.section.intro p a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.section.intro p sup a {
-  text-decoration: none;
-}
-
-/*
-partner map overlaying campus page banner
-margin and transform depends on banner height (above rules)
-*/
-
-@media (min-width: 768px) {
-  .section.intro .mapsingle {
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    float: right;
-    height: 365px;
-    margin-right: 2%;
-    margin-top: -60px;
-    /*position: relative;*/
-    transform: scale(0.6);
-    width: 257px;
-  }
-}
-
-@media (min-width: 800px) {
-  .section.intro .mapsingle {
-    margin-top: -65px;
-    transform: scale(0.7);
-  }
-}
-
-@media (min-width: 900px) {
-  .section.intro .mapsingle {
-    margin-top: -40px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .section.intro .mapsingle {
-    margin-top: -25px;
-    transform: scale(0.8);
-  }
-}
-
-@media (min-width: 1100px) {
-  .section.intro .mapsingle {
-    margin-top: -15px;
-    transform: scale(0.9);
-  }
-}
-
-@media (min-width: 1200px) {
-  .section.intro .mapsingle {
-    margin-top: 5px;
-    transform: scale(1);
-  }
-}
-
-@media (min-width: 1340px) {
-  .section.intro .mapsingle {
-    margin-top: 50px;
-  }
-}
-
 /*
 section specialistsubjects
 */
@@ -2150,6 +1921,242 @@ discrete CTs as held in T4
 
 Can all of these go AFTER content-type-modifiers?
 *********************************************************************/
+
+/*************************************
+TODO
+
+- Course Banner Image
+- Landing Scrolling Banner
+- Landing Static Banner
+
+.section.intro is common to all
+*************************************/
+
+.section.intro > .wrap {
+  background-image: url(<t4 type= "navigation" name= "One-Web Default Course Banner Small Getter" id= "254" />);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 360px; /* height of native banner image minus 5px */
+  overflow: hidden;
+  position: relative;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .section.intro > .wrap {
+    background-image: none !important; /* image moves to contained .background div */
+  }
+}
+
+/* sets height of container and contained .background */
+@media (min-width: 768px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 230px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.intro > .wrap > .background {
+    background-image: url(<t4 type= "navigation" name= "One-Web Default Course Banner Large Getter" id= "253" />);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1340px;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 245px;
+  }
+}
+
+@media (min-width: 900px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 270px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 330px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 370px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    height: 415px;
+  }
+}
+
+/* banner image heading and subheading */
+
+.section.intro h1 {
+  background-color: #0f0f0f;
+  border-radius: 0 3px 3px 0;
+  float: left;
+  font: 23px Oswald, Helvetica, Arial, sans-serif;
+  margin: 15px 10px 0 0;
+  padding: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .section.intro h1 {
+    margin-top: 25px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro h1 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro h1 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro p {
+    font-size: 18px;
+  }
+}
+
+/* don't show wee course subheader box if no content */
+.section.intro p:empty {
+  display: none;
+}
+
+.section.intro p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.section.intro p sup a {
+  text-decoration: none;
+}
+
+/*
+Landing Scrolling Banner
+*/
+
+/* hide unused banner images */
+
+@media (max-width: 767px) {
+  #bigBG {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #smallBG {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* fits scrolling banner images into container without unnecessary zoom */
+  .section.intro #bigBG .background {
+    background-size: cover;
+  }
+}
+
+#smallBG {
+  min-height: 340px;
+}
+
+
+/*
+partner map overlaying campus page banner
+margin and transform depends on banner height (above rules)
+*/
+
+@media (min-width: 768px) {
+  .section.intro .mapsingle {
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    float: right;
+    height: 365px;
+    margin-right: 2%;
+    margin-top: -60px;
+    /*position: relative;*/
+    transform: scale(0.6);
+    width: 257px;
+  }
+}
+
+@media (min-width: 800px) {
+  .section.intro .mapsingle {
+    margin-top: -65px;
+    transform: scale(0.7);
+  }
+}
+
+@media (min-width: 900px) {
+  .section.intro .mapsingle {
+    margin-top: -40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.intro .mapsingle {
+    margin-top: -25px;
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 1100px) {
+  .section.intro .mapsingle {
+    margin-top: -15px;
+    transform: scale(0.9);
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.intro .mapsingle {
+    margin-top: 5px;
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 1340px) {
+  .section.intro .mapsingle {
+    margin-top: 50px;
+  }
+}
 
 /****************************************
 Links Bars common styles
