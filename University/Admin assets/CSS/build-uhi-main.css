@@ -1957,7 +1957,6 @@ Can all of these go AFTER content-type-modifiers?
   max-width: 1340px;
 }
 
-/* tablet portrait and up */
 @media (min-width: 768px) {
   /* image moves to contained .background div */
   .section.intro > .wrap {
@@ -1970,12 +1969,19 @@ Can all of these go AFTER content-type-modifiers?
 
   /*
   banner height should be proportional to viewport width vw
-  1630/588 is 36%, minus arbitrary 3% for scroll effect
+  1630/588 is 36%
   */
   .section.intro > .wrap,
   .section.intro > .wrap > .background {
-    height: 33vw;
-    max-height: 410px;
+    height: 36vw;
+  }
+}
+
+/* so banner doesn't get too big after max container width */
+@media (min-width: 1200px) {
+  .section.intro > .wrap,
+  .section.intro > .wrap > .background {
+    max-height: 390px;
   }
 }
 
