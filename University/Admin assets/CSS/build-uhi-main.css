@@ -1916,7 +1916,7 @@ CONTENT TYPES
 
 discrete CTs as held in T4
 - act as a pointer from front-end source to back-end location
-- so these classes SHOULDN't be used outside of their CT
+- so these classes shouldn't be used outside of their CT
 - "originally known as" is needed for T4 Content Type Usage report
 
 Can all of these go AFTER content-type-modifiers?
@@ -1981,7 +1981,7 @@ Can all of these go AFTER content-type-modifiers?
 @media (min-width: 1200px) {
   .section.intro > .wrap,
   .section.intro > .wrap > .background {
-    max-height: 390px;
+    max-height: 470px;
   }
 }
 
