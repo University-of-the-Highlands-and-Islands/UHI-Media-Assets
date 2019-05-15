@@ -3554,7 +3554,7 @@ common to Landing Page Link Lists and Left Nav
 
 .navigation--contextual h2,
 .navigation--contextual h2 a {
-  background-color: #572163; /* block colour TODO update partner stylesheets */
+  background-color: #572163;
   color: #fff;
   font-size: 18px;
   transition: .3s;

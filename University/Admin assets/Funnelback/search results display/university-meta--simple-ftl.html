@@ -1,0 +1,386 @@
+<#ftl encoding="utf-8" />
+<#import "/web/templates/modernui/funnelback_classic.ftl" as s/>
+<#import "/web/templates/modernui/funnelback.ftl" as fb/>
+<#escape x as x?html>
+<#--
+Sets HTML encoding as the default for this file only - use <#noescape>...</#noescape> around anything which should not be escaped.
+Note that if you include macros from another file, they are not affected by this and must hand escaping themselves
+Either by using a similar escape block, or ?html escapes inline.
+-->
+
+<#-- This file should be duplicated across all UHI partner collections too - e.g. argyll-meta Design Results Page simple.ftl etc. [KIF 20190515] -->
+
+<!-- Start Funnelback Search -->
+<@fb.ViewModeBanner />
+
+<div class="container fb-search">
+  
+  <@s.AfterSearchOnly>
+  
+  
+  <div class="row clearboth" data-ng-show="isDisplayed('results')">
+    
+    <#-- Display tabbed faceted navigation -->
+    <#if response.facets??>
+    <#list response.facets as facet>
+    <#if facet.allValues?size gt 0 && facet.guessedDisplayType == "TAB">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs">
+        <#list facet.allValues as value>
+        <li role="presentation" class="${(value.count?? && value.count lt 1)?then('disabled', '')} ${value.selected?then('active', '')}">
+          <a href="${value.toggleUrl}" title="Show only '${value.label}'">${value.label}<#if value.count??> (${value.count})</#if></a>
+        </li>
+      </#list>
+      </ul>
+      <br>
+    </div>
+  </#if>
+</#list>
+</#if>
+
+<div class="col-md-${response.facetExtras.hasNonTabFacets?then('9 col-md-push-3', '12')} seventyfiveper">
+  
+  <#if question.collection.configuration.valueAsBoolean("ui.modern.session") && session.searchHistory?? && session.searchHistory?size gt 0>
+  <#-- Build list of previous queries -->
+  
+  <#assign qsSignature = computeQueryStringSignature(QueryString) />
+  <#if session.searchHistory?? && (session.searchHistory?size gt 1 || session.searchHistory[0].searchParamsSignature != qsSignature)>
+  <div class="breadcrumb" data-ng-controller="SearchHistoryCtrl" data-ng-show="!searchHistoryEmpty">
+    <button class="btn btn-link pull-right" data-ng-click="toggleHistory()"><small class="text-muted"><span class="glyphicon glyphicon-plus"></span> More&hellip;</small></button>
+    <ol class="list-inline" >
+      <li class="text-muted">Recent:</li>
+      <#list session.searchHistory as h>
+      <#if h.searchParamsSignature != qsSignature>
+      <#assign facetDescription><#compress>
+      <#list h.searchParams?matches("f\\.([^=]+)=([^&]+)") as f>
+      ${urlDecode(f?groups[1])?split("|")[0]} = ${urlDecode(f?groups[2])}<#if f_has_next><br></#if>
+  </#list>
+</#compress></#assign>
+<li>
+  <a <#if facetDescription != ""> data-toggle="tooltip" data-placement="bottom" title="${facetDescription}"</#if> title="${prettyTime(h.searchDate)}" href="${question.collection.configuration.value("ui.modern.search_link")}?${h.searchParams}">${h.originalQuery!} <small>(${h.totalMatching})</small></a>
+<#if facetDescription != ""><i class="glyphicon glyphicon-filter"></i></a></#if>
+</li>
+</#if>
+</#list>
+</ol>
+</div>
+</#if>
+</#if>
+
+<#if question.inputParameterMap["scope"]!?length != 0>
+<div class="breadcrumb">
+  <span class="text-muted"><span class="glyphicon glyphicon-resize-small"></span> Scope:</span> <@s.Truncate length=80>${question.inputParameterMap["scope"]!}</@s.Truncate>
+<a class="button btn-xs" title="Remove scope: ${question.inputParameterMap["scope"]!}" href="?collection=${question.inputParameterMap["collection"]!}<#if question.inputParameterMap["form"]??>&amp;form=${question.inputParameterMap["form"]!}</#if>&amp;query=<@s.URLEncode><@s.QueryClean /></@s.URLEncode>"><span class="glyphicon glyphicon-remove text-muted"></span></a>
+</div>
+</#if>
+
+<div id="search-result-count" class="text-muted">
+  <#if response.resultPacket.resultsSummary.totalMatching == 0>
+  <span id="search-total-matching">0</span> search results for <strong><@s.QueryClean /></strong>
+</#if>
+<#if response.resultPacket.resultsSummary.totalMatching != 0>
+<span id="search-page-start">${response.resultPacket.resultsSummary.currStart}</span> -
+<span id="search-page-end">${response.resultPacket.resultsSummary.currEnd}</span> of
+<span id="search-total-matching">${response.resultPacket.resultsSummary.totalMatching?string.number}</span>
+<#if question.inputParameterMap["s"]?? && question.inputParameterMap["s"]?contains("?:")><em>collapsed</em> </#if>search results for <strong><@s.QueryClean></@s.QueryClean></strong>
+</#if>
+
+<#if (response.resultPacket.resultsSummary.partiallyMatching!0) != 0>
+where <span id="search-fully-matching">${response.resultPacket.resultsSummary.fullyMatching?string.number}</span>
+match all words and <span id="search-partially-matching">${response.resultPacket.resultsSummary.partiallyMatching?string.number}</span>
+match some words.
+</#if>
+<#if (response.resultPacket.resultsSummary.collapsed!0) != 0>
+<span id="search-collapsed">${response.resultPacket.resultsSummary.collapsed}</span>
+very similar results included.
+</#if>
+</div>
+
+<!-- bb moved to here -->
+<#assign curatorAdvertPresent = false />
+<#list response.curator.exhibits as exhibit>
+<#if exhibit.titleHtml?? && exhibit.linkUrl??>
+<#assign curatorAdvertPresent = true />
+<#break>
+</#if>
+</#list>
+
+<#if (response.resultPacket.bestBets)!?size gt 0 || curatorAdvertPresent >
+<ol id="search-best-bets" class="list-unstyled">
+  <#-- Curator exhibits -->
+  <#list response.curator.exhibits as exhibit>
+  <#if exhibit.titleHtml?? && exhibit.linkUrl??>
+  <li class="alert alert-warning">
+    <h4><a href="${exhibit.linkUrl}"><@s.boldicize><#noescape>${exhibit.titleHtml}</#noescape></@s.boldicize></a></h4>
+    <#if exhibit.displayUrl??><cite class="text-success">${exhibit.displayUrl}</cite></#if>
+  <#if exhibit.descriptionHtml??><p><@s.boldicize><#noescape>${exhibit.descriptionHtml}</#noescape></@s.boldicize></p></#if>
+</li>
+</#if>
+</#list>
+<#-- Old-style best bets -->
+<@s.BestBets>
+<li class="alert alert-warning">
+  <#if s.bb.title??><h4><a href="${s.bb.clickTrackingUrl}"><@s.boldicize>${s.bb.title}</@s.boldicize></a></h4></#if>
+<#if s.bb.title??><cite class="text-success">${s.bb.link}</cite></#if>
+<#if s.bb.description??><p><@s.boldicize><#noescape>${s.bb.description}</#noescape></@s.boldicize></p></#if>
+<#if ! s.bb.title??><strong>${s.bb.trigger}:</strong> <a href="${s.bb.link}">${s.bb.link}</a></#if>
+</li>
+</@s.BestBets>
+</ol>
+</#if>
+
+<#-- Display applied faceted navigation -->
+<#if response.facetExtras.hasSelectedNonTabFacets>
+<div id="search-facets-breadcrumb"><span class="facets-breadcrumb-label">Refined by:</span>
+  <#list response.facets as facet>
+  <#if facet.selected && facet.guessedDisplayType != "TAB">
+  <ul class="facets-applied list-inline">
+    <li><a class="btn btn-xs btn-link" href="${facet.unselectAllUrl}" title="Remove all '${facet.name}' refinements">
+      <small class="glyphicon glyphicon-remove"></small>
+      <small class="hidden">&#10060;</small><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+      ${facet.name}
+    </a></li>
+    
+    <#list facet.selectedValues as value>
+    <li><a class="btn btn-xs btn-info" href="${value.toggleUrl}" title="Remove '${facet.name}: ${value.label}'">
+      <#if facet.guessedDisplayType == "SINGLE_DRILL_DOWN" && value?counter != 1><span>&#8627;</span></#if>
+      <small class="glyphicon glyphicon-remove"></small>
+      <small class="hidden">&#10060;</small><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+      ${value.label}
+      </a></li>
+  </#list>
+  </ul>
+</#if>
+</#list>
+
+<#if response.facetExtras.unselectAllFacetsUrl??>
+<a class="btn btn-xs btn-default" href="${response.facetExtras.unselectAllFacetsUrl}" title="Remove all refinements">
+  <small class="glyphicon glyphicon-remove"></small>
+  <small class="hidden">&#10060;</small><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+  Clear all filters
+</a>
+</#if>
+</div>
+</#if>
+
+<#if (response.resultPacket.QSups)!?size gt 0>
+<div class="alert alert-info">
+  <@fb.CheckBlending linkText="Search for <em>"+question.originalQuery+"</em> instead." tag="strong" />
+</div>
+</#if>
+
+<#if (response.curator.exhibits)!?size gt 0>
+<#list response.curator.exhibits as exhibit>
+<#if exhibit.messageHtml??>
+<blockquote class="search-curator-message">
+  <#noescape>${exhibit.messageHtml}</#noescape>
+</blockquote>
+</#if>
+</#list>
+</#if>
+
+<@s.CheckSpelling prefix="<h3 id=\"search-spelling\"><span class=\"glyphicon glyphicon-question-sign text-muted\"></span> Did you mean <em>" suffix="</em>?</h3>" />
+
+<!-- <h2 class="visible-print">Results</h2> -->
+
+<#if response.resultPacket.resultsSummary.totalMatching == 0>
+<script>
+  ga('send', 'event', 'FailedSearch', document.location.pathname + document.location.search, document.referrer, {'nonInteraction': 1});
+</script>
+
+<p><strong>We have been unable to match your search to any results.</strong></p>
+<p>Please check your spelling or consider making your search less specific. We have also made some further suggestions below :</p>
+<h2>Students</h2>
+<p>Have you tried the <a href="https://uhi.mydaycloud.com/">Student portal</a>? You can also discuss queries with the your Student Support Team or make use of the <a href="https://www.uhi.ac.uk/redbutton">Red Button</a>.</p>
+<h2>Staff</h2>
+<p>You can use the <a href="http://intranet.uhi.ac.uk/">university intranet</a> for policies, forms, contact information, news, etc. Your <a href="/staff/">staff homepage</a> has links to our various services including your local intranet if you have one.</p>
+<h2>Looking for local information on short courses?</h2>
+<p>If you're looking for information on short courses or activity local to you around the Highlands and Islands then please visit our partner websites linked from the bottom of this page. If you're not sure which one is nearest you, then take a look at <a href="https://www.uhi.ac.uk/en/campuses/">our map</a>.</p>
+</#if>
+
+<!-- bb removed from here -->
+
+<ul id="search-results" class="list-unstyled" start="${response.resultPacket.resultsSummary.currStart}">
+  <@s.Results>
+  <#if s.result.class.simpleName == "TierBar">
+  <#-- A tier bar -->
+  <#if s.result.matched != s.result.outOf>
+  <li class="search-tier"><h3 class="text-muted">Results that match ${s.result.matched} of ${s.result.outOf} words</h3></li>
+  <#else>
+  <!-- <li class="search-tier"><h3 class="hidden">Fully-matching results</h3></li> -->
+</#if>
+<#-- Print event tier bars if they exist -->
+<#if s.result.eventDate??>
+<h2 class="fb-title">Events on ${s.result.eventDate?date}</h2>
+</#if>
+<#else>
+<li data-fb-result="${s.result.indexUrl}" class="result<#if !s.result.documentVisibleToUser>-undisclosed</#if>">
+  
+  <h4 <#if !s.result.documentVisibleToUser>style="margin-bottom:4px"</#if>>
+<#if question.collection.configuration.valueAsBoolean("ui.modern.session")><a href="#" data-ng-click="toggle()" data-cart-link data-css="pushpin|remove" title="{{label}}"><small class="glyphicon glyphicon-{{css}}"></small></a></#if>
+<#if !s.result.documentVisibleToUser>
+<span class="text-muted">Undisclosed search result</span>
+<#else>
+<a href="${s.result.clickTrackingUrl}" title="${s.result.liveUrl}">
+  <@s.boldicize><@s.Truncate length=70>${s.result.title}</@s.Truncate></@s.boldicize>
+</a>
+</#if>
+
+<#if s.result.fileType!?matches("(doc|docx|ppt|pptx|rtf|xls|xlsx|xlsm|pdf)", "r")>
+<small class="text-muted">${s.result.fileType?upper_case} (${filesize(s.result.fileSize!0)})</small>
+</#if>
+<#if question.collection.configuration.valueAsBoolean("ui.modern.session") && session?? && session.getClickHistory(s.result.indexUrl)??><small class="text-warning"><span class="glyphicon glyphicon-time"></span> <a title="Click history" href="#" class="text-warning" data-ng-click="toggleHistory()">Last visited ${prettyTime(session.getClickHistory(s.result.indexUrl).clickDate)}</a></small></#if>
+</h4>
+
+<#if s.result.summary??>
+<p>
+  <!-- <#if s.result.date??><small class="text-muted">${s.result.date?date?string("d MMM yyyy")}:</small></#if> -->
+  <span class="search-summary"><@s.boldicize><#noescape>${s.result.summary}</#noescape></@s.boldicize></span>
+</p>
+</#if>
+<#if !s.result.documentVisibleToUser>
+<p>
+  <span class="search-summary text-muted"><em>Information for this search result cannot be shown for sensitivity reasons.</em></span>
+</p>
+</#if>
+
+<#if !s.result.documentVisibleToUser>
+<cite data-url="null" class="text-muted <#if !s.result.documentVisibleToUser> hide</#if>">undisclosed</cite>
+<#else>
+<cite data-url="${s.result.displayUrl}" class="text-success"><@s.cut cut="http://"><@s.boldicize>${s.result.displayUrl}</@s.boldicize></@s.cut></cite>
+</#if>
+
+<#if s.result.documentVisibleToUser>
+<!-- <div class="btn-group">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="More actions&hellip;"><small class="glyphicon glyphicon-chevron-down text-success"></small></a>
+  <ul class="dropdown-menu">
+    <li><#if s.result.cacheUrl??><a href="${s.result.cacheUrl}&amp;hl=${response.resultPacket.queryHighlightRegex!?url}" title="Cached version of ${s.result.title} (${s.result.rank})">Cached</a></#if></li>
+    <li><@s.Explore /></li>
+    <@fb.AdminUIOnly><li><@fb.Optimise /></li></@fb.AdminUIOnly>
+  </ul>
+</div> -->
+</#if>
+
+<@s.Quicklinks>
+<ul class="list-inline">
+  <@s.QuickRepeat><li><a href="${s.ql.url}" title="${s.ql.text}">${s.ql.text}</a></li></@s.QuickRepeat>
+</ul>
+<#if question.collection.quickLinksConfiguration["quicklinks.domain_searchbox"]?? && question.collection.quickLinksConfiguration["quicklinks.domain_searchbox"] == "true">
+<#if s.result.quickLinks.domain?matches("^[^/]*/?[^/]*$", "r")>
+<form class="quicklinks" action="${question.collection.configuration.value("ui.modern.search_link")}" method="GET">
+<input type="hidden" name="collection" value="${question.inputParameterMap["collection"]!}">
+<input type="hidden" name="meta_u_sand" value="${s.result.quickLinks.domain}">
+<@s.IfDefCGI name="enc"><input type="hidden" name="enc" value="${question.inputParameterMap["enc"]!}"></@s.IfDefCGI>
+<@s.IfDefCGI name="form"><input type="hidden" name="form" value="${question.inputParameterMap["form"]!}"></@s.IfDefCGI>
+<@s.IfDefCGI name="scope"><input type="hidden" name="scope" value="${question.inputParameterMap["scope"]!}"></@s.IfDefCGI>
+<@s.IfDefCGI name="profile"><input type="hidden" name="profile" value="${question.inputParameterMap["profile"]!}"></@s.IfDefCGI>
+<div class="row">
+  <div class="col-md-4">
+    <div class="input-group input-sm">
+      <input required title="Search query" name="query" type="text" class="form-control" placeholder="Search ${s.result.quickLinks.domain}&hellip;">
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+</#if>
+</#if>
+</@s.Quicklinks>
+
+<#if s.result.metaData["c"]??><p><@s.boldicize>${s.result.metaData["c"]!}</@s.boldicize></p></#if>
+
+<#if s.result.collapsed??>
+<div class="search-collapsed"><small><span class="glyphicon glyphicon-expand text-muted"></span>&nbsp; <@fb.Collapsed /></small></div>
+</#if>
+
+<#if s.result.metaData["a"]?? || s.result.metaData["s"]?? || s.result.metaData["p"]??>
+<dl class="dl-horizontal text-muted">
+  <#if s.result.metaData["a"]??><dt>by</dt><dd>${s.result.metaData["a"]!?replace("|", ", ")}</dd></#if>
+<#if s.result.metaData["s"]??><dt>Keywords:</dt><dd>${s.result.metaData["s"]!?replace("|", ", ")}</dd></#if>
+<#if s.result.metaData["p"]??><dt>Publisher:</dt><dd>${s.result.metaData["p"]!?replace("|", ", ")}</dd></#if>
+</dl>
+</#if>
+</li>
+</#if>
+</@s.Results>
+</ul>
+
+<div class="text-center hidden-print">
+  <!-- <h2 class="sr-only">Pagination</h2> -->
+  <ul class="pagination pagination-lg">
+    <@fb.Prev><li><a href="${fb.prevUrl}" rel="prev"><small><i class="glyphicon glyphicon-chevron-left"></i></small> Prev</a></li></@fb.Prev>
+  <@fb.Page numPages=5><li <#if fb.pageCurrent> class="active"</#if>><a href="${fb.pageUrl}">${fb.pageNumber}</a></li></@fb.Page>
+<@fb.Next><li><a href="${fb.nextUrl}" rel="next">Next <small><i class="glyphicon glyphicon-chevron-right"></i></small></a></li></@fb.Next>
+</ul>
+</div>
+
+</div>
+
+<#-- Display faceted navigation -->
+<#if response.facets?? && response.facets?size gt 0>
+<div class="col-md-3 col-md-pull-9 hidden-print twentyfiveper">
+  <!-- <h2 class="sr-only">Refine</h2> -->
+  
+  <div class="panel-group flb-panel" id="search-facets" role="tablist">
+    <#list response.facets as facet>
+    <#if facet.allValues?size gt 0 && facet.guessedDisplayType != "TAB">
+    <div class="panel panel-default">
+      <div class="panel-heading <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>"><!--<div class="panel-heading uhi">-->
+    <p class="panel-toggle" data-target="#facet-${facet?counter}" data-toggle="collapse" aria-expanded="true" aria-controls="facet-${facet?counter}">
+      ${facet.name}
+    </p>
+    
+    <#if facet.selected>
+    <!-- <a href="${facet.unselectAllUrl}" class="btn btn-link btn-sm" title="Remove all '${facet.name}' refinements">
+      <small class="glyphicon glyphicon-remove"></small><small class="hidden">&#10060;</small> Clear all
+    </a> -->
+  </#if>
+</div>
+
+<div class="list-group panel-collapse collapse in" id="facet-${facet?counter}">
+  <#list facet.allValues as value>
+  <#if value?counter == 9><div id="facet-list-${facet?counter}" class="collapse"></#if>
+  <#assign isDisabled = value.count?? && value.count lt 1 && !value.selected />
+  <!-- remove onclick="reloadFilter(event);" ? -->
+  <a onclick="reloadFilter(event);" class="list-group-item ${(value.selected)?then('selected-' + facet.guessedDisplayType?lower_case, '')} ${isDisabled?then('disabled', '')}" href="${isDisabled?then('#', value.toggleUrl)}" title="${(value.selected)?then('Remove', 'Refine by')} '${facet.name}: ${value.label}'">
+    <#-- Show the category value e.g. 🔘 Bob, ☑ Bob, ❌ Bob  -->
+    <span class="item-label">
+                    <#if facet.guessedDisplayType == 'RADIO_BUTTON'>
+                      <span class="${value.selected?then('glyphicon glyphicon-record', 'radio-unchecked')}"></span>
+                      <span class="hidden"><#noescape>${value.selected?then('&#128280;', '&#9711;')}</#noescape></span><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+    <#elseif facet.guessedDisplayType == 'CHECKBOX'>
+    <span class="glyphicon glyphicon-${value.selected?then('check', 'unchecked')}"></span>
+    <span class="hidden"><#noescape>${value.selected?then('&#9745;', '&#9744;')}</#noescape></span><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+    <#elseif value.selected>
+    <#if facet.guessedDisplayType == "SINGLE_DRILL_DOWN" && value?counter != 1><span style="margin-left: ${(value?counter - 1) * 10}px">&#8627;</span></#if>
+  <small class="glyphicon glyphicon-remove"></small>
+  <small class="hidde">&#10060;</small><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+</#if>
+${value.label}
+</span>
+<#if value.count?? && !value.selected><span class="badge <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>">${value.count}</span></#if><!-- <span class="badge uhi"> -->
+</a>
+
+<#-- Limit the number of category values shown to the user initially -->
+<#if !value_has_next && facet.allValues?size gt 8>
+</div>
+<a class="list-group-item collapse-trigger collapsed" data-target="#facet-list-${facet?counter}" data-toggle="collapse"></a>
+</#if>
+</#list>
+</div>
+</div>
+</#if>
+</#list>
+</div>
+</div>
+</#if>
+</div>
+
+</@s.AfterSearchOnly>
+
+</div>
+<!-- End Funnelback Search -->
+</#escape>
+<#-- vim: set expandtab ts=2 sw=2 sts=2 :-->
