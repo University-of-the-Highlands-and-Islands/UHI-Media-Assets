@@ -1,22 +1,15 @@
 <div class="container fb-search">
-  <nav class="navbar navbar-default">
-    <div class="collapse navbar-collapse">
-      <form class="navbar-form navbar-left form-inline" action="?" method="GET">
-        <input type="hidden" name="collection" value="htc-meta">
-        <!-- <input type="hidden" name="gscope1" value="uhi"> -->
-        <div class="form-group clearboth">
-          <div class="seventyfiveper">
-            <input required name="query" id="query" title="Search query" type="text" accesskey="q" placeholder="Search &hellip;" class="form-control query">
-          </div>
-          <div class="twentyfiveper">
-            <button type="submit" class="UHI--button-link--black" id="uhibutton">Search</button>
-          </div>
-          <div class="checkbox-inline">
-          </div>
-        </div>
-      </form>
+  <form action="?" class="navbar-form navbar-left form-inline" method="GET">
+    <input name="collection" type="hidden" value="htc-meta">
+    <div class="form-group clearboth">
+      <div class="twentyfiveper">
+        <button class="UHI--button-link--black" id="uhibutton" type="submit">Search</button>
+      </div>
+      <div class="seventyfiveper">
+        <input accesskey="q" class="form-control query" id="query" name="query" placeholder="Search &hellip;" required title="Search query" type="text">
+      </div>
     </div>
-  </nav>
+  </form>
 </div>
 
 <div id="fback"></div>
