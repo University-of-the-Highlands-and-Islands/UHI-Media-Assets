@@ -1,16 +1,28 @@
-<div class="container fb-search">
-  <form action="?" class="navbar-form navbar-left form-inline" method="GET">
-    <input name="collection" type="hidden" value="htc-meta">
-    <div class="form-group clearboth">
-      <div class="twentyfiveper">
-        <button class="UHI--button-link--black" id="uhibutton" type="submit">Search</button>
-      </div>
-      <div class="seventyfiveper">
-        <input accesskey="q" class="form-control query" id="query" name="query" placeholder="Search &hellip;" required title="Search query" type="text">
-      </div>
-    </div>
-  </form>
-</div>
+<style>
+  .fb-search-input {
+    display: flex;
+  }
+  
+  .fb-search-input #query {
+    padding: .5rem;
+  }
+
+  @media (min-width: 768px) {
+    .fb-search-input button {
+      flex: 0 1 25%;
+    }
+    
+    .fb-search-input #query {
+      padding: 1rem;
+    }
+  }
+</style>
+
+<form action="?" class="fb-search-input" method="GET">
+  <input name="collection" type="hidden" value="htc-meta">
+  <button class="UHI--button-link--black" id="uhibutton" type="submit">Search</button>
+  <input accesskey="q" class="form-control query" id="query" name="query" required title="Search query" type="text">
+</form>
 
 <div id="fback"></div>
 
