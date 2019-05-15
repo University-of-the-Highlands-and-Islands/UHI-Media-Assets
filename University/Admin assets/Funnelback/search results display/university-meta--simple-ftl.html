@@ -38,6 +38,67 @@ Either by using a similar escape block, or ?html escapes inline.
 </#list>
 </#if>
 
+
+<!-- facet col -->
+<#-- Display faceted navigation -->
+<#if response.facets?? && response.facets?size gt 0>
+<div class="col-md-3 col-md-pull-9 hidden-print twentyfiveper">
+  <!-- <h2 class="sr-only">Refine</h2> -->
+  
+  <div class="panel-group flb-panel" id="search-facets" role="tablist">
+    <#list response.facets as facet>
+    <#if facet.allValues?size gt 0 && facet.guessedDisplayType != "TAB">
+    <div class="panel panel-default">
+      <div class="panel-heading <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>"><!--<div class="panel-heading uhi">-->
+    <p class="panel-toggle" data-target="#facet-${facet?counter}" data-toggle="collapse" aria-expanded="true" aria-controls="facet-${facet?counter}">
+      ${facet.name}
+    </p>
+    
+    <#if facet.selected>
+    <!-- <a href="${facet.unselectAllUrl}" class="btn btn-link btn-sm" title="Remove all '${facet.name}' refinements">
+      <small class="glyphicon glyphicon-remove"></small><small class="hidden">&#10060;</small> Clear all
+    </a> -->
+  </#if>
+</div>
+
+<div class="list-group panel-collapse collapse in" id="facet-${facet?counter}">
+  <#list facet.allValues as value>
+  <#if value?counter == 9><div id="facet-list-${facet?counter}" class="collapse"></#if>
+  <#assign isDisabled = value.count?? && value.count lt 1 && !value.selected />
+  <!-- remove onclick="reloadFilter(event);" ? -->
+  <a onclick="reloadFilter(event);" class="list-group-item ${(value.selected)?then('selected-' + facet.guessedDisplayType?lower_case, '')} ${isDisabled?then('disabled', '')}" href="${isDisabled?then('#', value.toggleUrl)}" title="${(value.selected)?then('Remove', 'Refine by')} '${facet.name}: ${value.label}'">
+    <#-- Show the category value e.g. 🔘 Bob, ☑ Bob, ❌ Bob  -->
+    <span class="item-label">
+                    <#if facet.guessedDisplayType == 'RADIO_BUTTON'>
+                      <span class="${value.selected?then('glyphicon glyphicon-record', 'radio-unchecked')}"></span>
+                      <span class="hidden"><#noescape>${value.selected?then('&#128280;', '&#9711;')}</#noescape></span><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+    <#elseif facet.guessedDisplayType == 'CHECKBOX'>
+    <span class="glyphicon glyphicon-${value.selected?then('check', 'unchecked')}"></span>
+    <span class="hidden"><#noescape>${value.selected?then('&#9745;', '&#9744;')}</#noescape></span><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+    <#elseif value.selected>
+    <#if facet.guessedDisplayType == "SINGLE_DRILL_DOWN" && value?counter != 1><span style="margin-left: ${(value?counter - 1) * 10}px">&#8627;</span></#if>
+  <small class="glyphicon glyphicon-remove"></small>
+  <small class="hidde">&#10060;</small><#-- Fall back to Unicode chars if bootstrap is unavailable -->
+</#if>
+${value.label}
+</span>
+<#if value.count?? && !value.selected><span class="badge <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>">${value.count}</span></#if><!-- <span class="badge uhi"> -->
+</a>
+
+<#-- Limit the number of category values shown to the user initially -->
+<#if !value_has_next && facet.allValues?size gt 8>
+</div>
+<a class="list-group-item collapse-trigger collapsed" data-target="#facet-list-${facet?counter}" data-toggle="collapse"></a>
+</#if>
+</#list>
+</div>
+</div>
+</#if>
+</#list>
+</div>
+</div><!-- END facet col -->
+
+<!-- search result col -->
 <div class="col-md-${response.facetExtras.hasNonTabFacets?then('9 col-md-push-3', '12')} seventyfiveper">
   
   <#if question.collection.configuration.valueAsBoolean("ui.modern.session") && session.searchHistory?? && session.searchHistory?size gt 0>
@@ -96,7 +157,7 @@ very similar results included.
 </#if>
 </div>
 
-<!-- bb moved to here -->
+<#-- bb moved to here -->
 <#assign curatorAdvertPresent = false />
 <#list response.curator.exhibits as exhibit>
 <#if exhibit.titleHtml?? && exhibit.linkUrl??>
@@ -317,70 +378,18 @@ very similar results included.
 </div>
 
 </div>
+<!-- END search result col -->
 
-<#-- Display faceted navigation -->
-<#if response.facets?? && response.facets?size gt 0>
-<div class="col-md-3 col-md-pull-9 hidden-print twentyfiveper">
-  <!-- <h2 class="sr-only">Refine</h2> -->
-  
-  <div class="panel-group flb-panel" id="search-facets" role="tablist">
-    <#list response.facets as facet>
-    <#if facet.allValues?size gt 0 && facet.guessedDisplayType != "TAB">
-    <div class="panel panel-default">
-      <div class="panel-heading <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>"><!--<div class="panel-heading uhi">-->
-    <p class="panel-toggle" data-target="#facet-${facet?counter}" data-toggle="collapse" aria-expanded="true" aria-controls="facet-${facet?counter}">
-      ${facet.name}
-    </p>
-    
-    <#if facet.selected>
-    <!-- <a href="${facet.unselectAllUrl}" class="btn btn-link btn-sm" title="Remove all '${facet.name}' refinements">
-      <small class="glyphicon glyphicon-remove"></small><small class="hidden">&#10060;</small> Clear all
-    </a> -->
-  </#if>
-</div>
 
-<div class="list-group panel-collapse collapse in" id="facet-${facet?counter}">
-  <#list facet.allValues as value>
-  <#if value?counter == 9><div id="facet-list-${facet?counter}" class="collapse"></#if>
-  <#assign isDisabled = value.count?? && value.count lt 1 && !value.selected />
-  <!-- remove onclick="reloadFilter(event);" ? -->
-  <a onclick="reloadFilter(event);" class="list-group-item ${(value.selected)?then('selected-' + facet.guessedDisplayType?lower_case, '')} ${isDisabled?then('disabled', '')}" href="${isDisabled?then('#', value.toggleUrl)}" title="${(value.selected)?then('Remove', 'Refine by')} '${facet.name}: ${value.label}'">
-    <#-- Show the category value e.g. 🔘 Bob, ☑ Bob, ❌ Bob  -->
-    <span class="item-label">
-                    <#if facet.guessedDisplayType == 'RADIO_BUTTON'>
-                      <span class="${value.selected?then('glyphicon glyphicon-record', 'radio-unchecked')}"></span>
-                      <span class="hidden"><#noescape>${value.selected?then('&#128280;', '&#9711;')}</#noescape></span><#-- Fall back to Unicode chars if bootstrap is unavailable -->
-    <#elseif facet.guessedDisplayType == 'CHECKBOX'>
-    <span class="glyphicon glyphicon-${value.selected?then('check', 'unchecked')}"></span>
-    <span class="hidden"><#noescape>${value.selected?then('&#9745;', '&#9744;')}</#noescape></span><#-- Fall back to Unicode chars if bootstrap is unavailable -->
-    <#elseif value.selected>
-    <#if facet.guessedDisplayType == "SINGLE_DRILL_DOWN" && value?counter != 1><span style="margin-left: ${(value?counter - 1) * 10}px">&#8627;</span></#if>
-  <small class="glyphicon glyphicon-remove"></small>
-  <small class="hidde">&#10060;</small><#-- Fall back to Unicode chars if bootstrap is unavailable -->
-</#if>
-${value.label}
-</span>
-<#if value.count?? && !value.selected><span class="badge <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>">${value.count}</span></#if><!-- <span class="badge uhi"> -->
-</a>
 
-<#-- Limit the number of category values shown to the user initially -->
-<#if !value_has_next && facet.allValues?size gt 8>
-</div>
-<a class="list-group-item collapse-trigger collapsed" data-target="#facet-list-${facet?counter}" data-toggle="collapse"></a>
-</#if>
-</#list>
-</div>
-</div>
-</#if>
-</#list>
-</div>
-</div>
+
 </#if>
 </div>
 
 </@s.AfterSearchOnly>
 
 </div>
-<!-- End Funnelback Search -->
+
+<!-- END Funnelback Search -->
 </#escape>
 <#-- vim: set expandtab ts=2 sw=2 sts=2 :-->
