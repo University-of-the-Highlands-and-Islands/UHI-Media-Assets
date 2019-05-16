@@ -13,23 +13,23 @@ Either by using a similar escape block, or ?html escapes inline.
 <!-- Start Funnelback Search -->
 <@fb.ViewModeBanner />
 <@s.AfterSearchOnly>
-  
-<div class="fb-search" data-ng-show="isDisplayed('results')">
 
-<#-- Display tabbed faceted navigation -->
-<#if response.facets??>
-<#list response.facets as facet>
-<#if facet.allValues?size gt 0 && facet.guessedDisplayType == "TAB">
-<div class="col-md-12">
-<ul class="nav nav-tabs">
-  <#list facet.allValues as value>
-  <li role="presentation" class="${(value.count?? && value.count lt 1)?then('disabled', '')} ${value.selected?then('active', '')}">
-    <a href="${value.toggleUrl}" title="Show only '${value.label}'">${value.label}<#if value.count??> (${value.count})</#if></a>
-  </li>
-</#list>
-</ul>
-<br>
-</div>
+<div class="fb-search" data-ng-show="isDisplayed('results')">
+  
+  <#-- Display tabbed faceted navigation -->
+  <#if response.facets??>
+  <#list response.facets as facet>
+  <#if facet.allValues?size gt 0 && facet.guessedDisplayType == "TAB">
+  <div class="col-md-12">
+    <ul class="nav nav-tabs">
+      <#list facet.allValues as value>
+      <li role="presentation" class="${(value.count?? && value.count lt 1)?then('disabled', '')} ${value.selected?then('active', '')}">
+        <a href="${value.toggleUrl}" title="Show only '${value.label}'">${value.label}<#if value.count??> (${value.count})</#if></a>
+      </li>
+    </#list>
+    </ul>
+    <br>
+  </div>
 </#if>
 </#list>
 </#if>
@@ -44,7 +44,7 @@ Either by using a similar escape block, or ?html escapes inline.
     <#list response.facets as facet>
     <#if facet.allValues?size gt 0 && facet.guessedDisplayType != "TAB">
     <div class="panel panel-default">
-      <div class="panel-heading <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>"><!--<div class="panel-heading uhi">-->
+      <div class="panel-heading <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>">
     <p class="panel-toggle" data-target="#facet-${facet?counter}" data-toggle="collapse" aria-expanded="true" aria-controls="facet-${facet?counter}">
       ${facet.name}
     </p>
@@ -77,7 +77,7 @@ Either by using a similar escape block, or ?html escapes inline.
 </#if>
 ${value.label}
 </span>
-<#if value.count?? && !value.selected><span class="badge <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>">${value.count}</span></#if><!-- <span class="badge uhi"> -->
+<#if value.count?? && !value.selected><span class="badge <#if question.inputParameterMap["gscope1"]?exists> ${question.inputParameterMap["gscope1"]} </#if>">${value.count}</span></#if>
 </a>
 
 <#-- Limit the number of category values shown to the user initially -->
@@ -95,23 +95,23 @@ ${value.label}
 
 <!-- search result col -->
 <#-- <div class="col-md-${response.facetExtras.hasNonTabFacets?then('9 col-md-push-3', '12')} seventyfiveper"> -->
-<div class="fb-search__results">  
-  <#if question.collection.configuration.valueAsBoolean("ui.modern.session") && session.searchHistory?? && session.searchHistory?size gt 0>
-  <#-- Build list of previous queries -->
-  
-  <#assign qsSignature = computeQueryStringSignature(QueryString) />
-  <#if session.searchHistory?? && (session.searchHistory?size gt 1 || session.searchHistory[0].searchParamsSignature != qsSignature)>
-  <div class="breadcrumb" data-ng-controller="SearchHistoryCtrl" data-ng-show="!searchHistoryEmpty">
-    <button class="btn btn-link pull-right" data-ng-click="toggleHistory()"><small class="text-muted"><span class="glyphicon glyphicon-plus"></span> More&hellip;</small></button>
-    <ol class="list-inline" >
-      <li class="text-muted">Recent:</li>
-      <#list session.searchHistory as h>
-      <#if h.searchParamsSignature != qsSignature>
-      <#assign facetDescription><#compress>
-      <#list h.searchParams?matches("f\\.([^=]+)=([^&]+)") as f>
-      ${urlDecode(f?groups[1])?split("|")[0]} = ${urlDecode(f?groups[2])}<#if f_has_next><br></#if>
-  </#list>
-</#compress></#assign>
+  <div class="fb-search__results">
+    <#if question.collection.configuration.valueAsBoolean("ui.modern.session") && session.searchHistory?? && session.searchHistory?size gt 0>
+    <#-- Build list of previous queries -->
+    
+    <#assign qsSignature = computeQueryStringSignature(QueryString) />
+    <#if session.searchHistory?? && (session.searchHistory?size gt 1 || session.searchHistory[0].searchParamsSignature != qsSignature)>
+    <div class="breadcrumb" data-ng-controller="SearchHistoryCtrl" data-ng-show="!searchHistoryEmpty">
+      <button class="btn btn-link pull-right" data-ng-click="toggleHistory()"><small class="text-muted"><span class="glyphicon glyphicon-plus"></span> More&hellip;</small></button>
+      <ol class="list-inline" >
+        <li class="text-muted">Recent:</li>
+        <#list session.searchHistory as h>
+        <#if h.searchParamsSignature != qsSignature>
+        <#assign facetDescription><#compress>
+        <#list h.searchParams?matches("f\\.([^=]+)=([^&]+)") as f>
+        ${urlDecode(f?groups[1])?split("|")[0]} = ${urlDecode(f?groups[2])}<#if f_has_next><br></#if>
+    </#list>
+  </#compress></#assign>
 <li>
   <a <#if facetDescription != ""> data-toggle="tooltip" data-placement="bottom" title="${facetDescription}"</#if> title="${prettyTime(h.searchDate)}" href="${question.collection.configuration.value("ui.modern.search_link")}?${h.searchParams}">${h.originalQuery!} <small>(${h.totalMatching})</small></a>
 <#if facetDescription != ""><i class="glyphicon glyphicon-filter"></i></a></#if>
