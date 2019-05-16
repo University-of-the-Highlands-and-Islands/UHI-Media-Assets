@@ -1,0 +1,77 @@
+importPackage(com.terminalfour.content);
+importPackage(com.terminalfour.template);
+importPackage(com.terminalfour.sitemanager);
+importClass(com.terminalfour.publish.utils.BrokerUtils);
+
+try {
+
+var sid = section.getID();
+var oCH = new ContentHierarchy();
+var oCM = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
+var contentInSection = oCH.getContent(dbStatement,sid,'en'); //gets object of all content in section
+var i = 0;
+var bannerCt = 92;
+var banner = false;
+document.write('<!-- Course content -->');
+document.write(' <style>');
+
+for (var i = 0; i < contentInSection.length; i++) {
+//document.write(oCM.get(contentInSection[i],'en').getContentTypeID());
+if ( oCM.get(contentInSection[i],'en').getContentTypeID() == bannerCt ) {
+//document.write(oCM.get(contentInSection[i],'en').getContentTypeID());
+  
+  banner = true;
+  break;
+}
+}
+
+if (banner == false) {
+  var bgImageSm = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="navigation" name="One-Web Default Course Banner Small Getter" id="254" />');
+  var bgImageLg = BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="navigation" name="One-Web Default Course Banner Large Getter" id="253" />');
+  document.write('.section.intro > .wrap {')
+  document.write('  background-image: url('+bgImageSm+');');
+  document.write('}');
+  document.write('@media only screen and (min-width: 768px) {');
+  document.write('    .section.intro > .wrap > .background {');
+  document.write('        background-image: url('+bgImageLg+');');
+  document.write('     }');
+  document.write('}');
+}
+
+document.write('.section.ctas {');
+document.write('      background-color: #aeb5bf;');
+document.write('      background-image: url('+BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="5600" />')+');');
+document.write('  }');
+document.write('  .section.ctas .section.testimonials h2 strong {');
+document.write('      color: #d5dfff;');
+document.write('  }');
+document.write('  .section.ctas .section.testimonials blockquote p .quotee {');
+document.write('      color: #14355f;');
+document.write('  }');
+document.write('  p.applyconditions {background: #0f0f0f; color: #fff; font-size: 10px; padding:10px; text-transform:none; font-weight:normal; margin-right:35px; margin-left:35px; font-family:"Glypha Web"; line-height:15px;}');
+document.write('  #mode1ft li, #mode1pt li, #mode2ft li, #mode2pt li, #mode3ft li, #mode3pt li, #mode4ft li, #mode4pt li {list-style-type:none; display:inline;}');
+document.write('  .hostingtext {font-size:35%; display: block; margin-top:-5px; }');
+document.write('  .section.ctas .section.apply p.applyconditions a {background: none; border-radius: 0px; color: #fff; text-decoration: underline; text-shadow: none; font-size: 10px; padding:0px;}');
+document.write('  .coursedetails a {color:white;}');
+document.write('  .section.testimonials blockquote p {margin:0;}');
+document.write('  .section.testimonials blockquote p:last-child{color: #14355F;}');
+document.write('  @media only screen and (min-width: 768px) {');
+document.write('      .section.ctas {');
+document.write('          background-image: url('+BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" formatter="path/*" id="5599" />')+');');
+document.write('      }');
+document.write('      p.applyconditions {font-size: 12px; line-height:16px;}');
+document.write('      #year a, #mode1 a, #mode2 a, #mode3 a, #mode4 a, #mode1ft a, #mode1pt a, #mode2ft a, #mode2pt a, #mode3ft a, #mode3pt a, #mode4ft a, #mode4pt a {font-size:22px; height:32px; }');
+document.write('      .section.ctas .section.apply p.applyconditions a {font-size: 12px; line-height:16px;}');
+document.write('  }');
+document.write('  @media only screen and (min-width: 1000px) {');
+document.write('      p.applyconditions {font-size:14px; line-height:20px;}');
+document.write('      #year a, #mode1 a, #mode2 a, #mode3 a, #mode4 a, #mode1ft a, #mode1pt a, #mode2ft a, #mode2pt a, #mode3ft a, #mode3pt a, #mode4ft a, #mode4pt a  {font-size:27px;height:40px;}');
+document.write('      .section.ctas .section.apply p.applyconditions a {font-size: 14px; line-height:20px;}');
+document.write('  }');
+document.write('  @media only screen and (min-width: 1200px) {');
+document.write('    #year a, #mode1 a, #mode2 a, #mode3 a, #mode4 a, #mode1ft a, #mode1pt a, #mode2ft a, #mode2pt a, #mode3ft a, #mode3pt a, #mode4ft a, #mode4pt a {font-size:30px;height:45px;}');
+document.write('  }');
+document.write('</style>');
+} catch (err) {
+document.write(err);
+}

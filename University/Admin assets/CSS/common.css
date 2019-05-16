@@ -1624,12 +1624,15 @@ Twitter Typeahead autocomplete suggestions
   box-sizing: border-box;
 }
 
-/* ghostly main autosuggestion */
+/*
+ghostly main autosuggestion
+these rules don't work for all contexts
 
 .tt-hint {
   bottom: 0 !important;
   top: auto !important;
 }
+*/
 
 @media (min-width: 768px) {
   .fb-search .tt-hint {
@@ -1729,3 +1732,4 @@ Site_Config
 .content-type--site-config--search label {
   display: none;
 }
+

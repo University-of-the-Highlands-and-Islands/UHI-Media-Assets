@@ -1,0 +1,45 @@
+importPackage(com.terminalfour.content);
+importPackage(com.terminalfour.template);
+importPackage(com.terminalfour.sitemanager);
+importClass(com.terminalfour.publish.utils.BrokerUtils);
+importClass(com.terminalfour.publish.PathBuilder);
+
+try {
+
+
+function processTags(t4Tag, contentID, sectionID) {
+var oContent 		= content || null;
+var CachedSection = section;
+if (typeof contentID !== 'undefined') {
+if (typeof sectionID === 'undefined') {
+document.write('Error: sectionID is undefined');
+return '';
+}
+oContent 		= getContentFromId(contentID);
+CachedSection = this.section.getCachedSectionFromId(sectionID);
+if (CachedSection == '' || !oContent) {
+document.write('Error getting the custom content and section');
+return '';
+}
+}
+return com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, CachedSection, oContent, language, isPreview, t4Tag);
+}
+
+
+var keywordMeta = processTags('<t4 type="content" name="Keywords" output="normal" modifiers="striptags" />');
+var courseCodeExtra = processTags('<t4 type="content" name="Course code extra" output="normal" modifiers="striptags" />');
+var channel = publishCache.getChannel();
+var isPartner = true;
+var isHE = false;
+var tmpPath = PathBuilder.getDirectory(section, publishCache, language);
+var sectionUrl = tmpPath.replaceFirst(".*/([^/?]+).*", "$1");  // There has to be a better OOB way of doing this
+if (channel.ID == 1) isPartner = false;
+if(courseCodeExtra.toUpperCase().substring(0, 1) == 'U') isHE = true;
+if(keywordMeta) document.writeln("<meta name='keywords' content='" + keywordMeta + "'>");
+if(isPartner && isHE) document.writeln("<link rel='canonical' href='https://www.uhi.ac.uk/en/courses/" + sectionUrl + "' />");
+
+  
+  
+} catch (err) {
+document.write(err);
+}

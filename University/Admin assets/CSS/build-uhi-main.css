@@ -1705,11 +1705,23 @@ FUNNELBACK SEARCH RESULTS
 partner colours are in their theme stylesheets
 ****************************************/
 
-/* should be more specific - needs namespaced with container class */
+/*
+main search input box in outer template
+AND
+on search results page
+does it do anything?
+should be more specific?
+needs namespaced with container class?
+*/
 input[name="query"] {
   box-sizing: border-box;
   vertical-align: baseline !important;
 }
+
+/*
+search input on search results pages
+TODO could be refactored out later?
+*/
 
 .fb-search .form-group {
   margin: 10px 0;
@@ -1744,6 +1756,8 @@ input[name="query"] {
     margin: 0;
   }
 }
+
+/* END search input on search results pages */
 
 .fb-search .seventyfiveper {
   box-sizing: border-box;
@@ -3554,7 +3568,7 @@ common to Landing Page Link Lists and Left Nav
 
 .navigation--contextual h2,
 .navigation--contextual h2 a {
-  background-color: #572163; /* block colour TODO update partner stylesheets */
+  background-color: #572163;
   color: #fff;
   font-size: 18px;
   transition: .3s;
