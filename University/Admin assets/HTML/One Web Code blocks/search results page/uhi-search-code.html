@@ -1,20 +1,13 @@
-<div class="fb-search">
-  <form action="?" method="GET">
-    <input name="collection" type="hidden" value="university-meta">
-    
-    <div class="form-group clearboth">
-      <div class="seventyfiveper">
-        <input accesskey="q" class="form-control query" id="query" name="query" placeholder="Search &hellip;" required title="Search query" type="text">
-      </div>
-      
-      <div class="twentyfiveper">
-        <button class="UHI--button-link--black" id="uhibutton" type="submit">Search</button>
-      </div>
-      
-      <div class="checkbox-inline"></div>
-    </div>
-  </form>
-</div>
+<!-- 
+This file should be duplicated across all UHI partner items too.
+Swap out 'university-meta' with e.g. argyll-meta in two places.
+-->
+
+<form action="?" class="fb-search-input" method="GET">
+  <input name="collection" type="hidden" value="university-meta">
+  <input accesskey="q" class="form-control query" id="query" name="query" required title="Search query" type="text">
+  <button class="UHI--button-link--black" id="uhibutton" type="submit">Search</button>
+</form>
 
 <div id="fback"></div>
 
