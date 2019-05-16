@@ -12,37 +12,32 @@ Either by using a similar escape block, or ?html escapes inline.
 
 <!-- Start Funnelback Search -->
 <@fb.ViewModeBanner />
+<@s.AfterSearchOnly>
+  
+<div class="fb-search" data-ng-show="isDisplayed('results')">
 
-<div class="container fb-search">
-  
-  <@s.AfterSearchOnly>
-  
-  
-  <div class="row clearboth" data-ng-show="isDisplayed('results')">
-    
-    <#-- Display tabbed faceted navigation -->
-    <#if response.facets??>
-    <#list response.facets as facet>
-    <#if facet.allValues?size gt 0 && facet.guessedDisplayType == "TAB">
-    <div class="col-md-12">
-      <ul class="nav nav-tabs">
-        <#list facet.allValues as value>
-        <li role="presentation" class="${(value.count?? && value.count lt 1)?then('disabled', '')} ${value.selected?then('active', '')}">
-          <a href="${value.toggleUrl}" title="Show only '${value.label}'">${value.label}<#if value.count??> (${value.count})</#if></a>
-        </li>
-      </#list>
-      </ul>
-      <br>
-    </div>
-  </#if>
+<#-- Display tabbed faceted navigation -->
+<#if response.facets??>
+<#list response.facets as facet>
+<#if facet.allValues?size gt 0 && facet.guessedDisplayType == "TAB">
+<div class="col-md-12">
+<ul class="nav nav-tabs">
+  <#list facet.allValues as value>
+  <li role="presentation" class="${(value.count?? && value.count lt 1)?then('disabled', '')} ${value.selected?then('active', '')}">
+    <a href="${value.toggleUrl}" title="Show only '${value.label}'">${value.label}<#if value.count??> (${value.count})</#if></a>
+  </li>
+</#list>
+</ul>
+<br>
+</div>
+</#if>
 </#list>
 </#if>
-
 
 <!-- facet col -->
 <#-- Display faceted navigation -->
 <#if response.facets?? && response.facets?size gt 0>
-<div class="col-md-3 col-md-pull-9 hidden-print twentyfiveper">
+<div class="fb-search__facets">
   <!-- <h2 class="sr-only">Refine</h2> -->
   
   <div class="panel-group flb-panel" id="search-facets" role="tablist">
@@ -99,8 +94,8 @@ ${value.label}
 </div><!-- END facet col -->
 
 <!-- search result col -->
-<div class="col-md-${response.facetExtras.hasNonTabFacets?then('9 col-md-push-3', '12')} seventyfiveper">
-  
+<#-- <div class="col-md-${response.facetExtras.hasNonTabFacets?then('9 col-md-push-3', '12')} seventyfiveper"> -->
+<div class="fb-search__results">  
   <#if question.collection.configuration.valueAsBoolean("ui.modern.session") && session.searchHistory?? && session.searchHistory?size gt 0>
   <#-- Build list of previous queries -->
   
@@ -371,7 +366,7 @@ very similar results included.
 <div class="text-center hidden-print">
   <!-- <h2 class="sr-only">Pagination</h2> -->
   <ul class="pagination pagination-lg">
-    <@fb.Prev><li><a href="${fb.prevUrl}" rel="prev"><small><i class="glyphicon glyphicon-chevron-left"></i></small> Prev</a></li></@fb.Prev>
+    <@fb.Prev><li><a href="${fb.prevUrl}" rel="prev"><small><i class="glyphicon glyphicon-chevron-left"></i></small> Previous</a></li></@fb.Prev>
   <@fb.Page numPages=5><li <#if fb.pageCurrent> class="active"</#if>><a href="${fb.pageUrl}">${fb.pageNumber}</a></li></@fb.Page>
 <@fb.Next><li><a href="${fb.nextUrl}" rel="next">Next <small><i class="glyphicon glyphicon-chevron-right"></i></small></a></li></@fb.Next>
 </ul>
