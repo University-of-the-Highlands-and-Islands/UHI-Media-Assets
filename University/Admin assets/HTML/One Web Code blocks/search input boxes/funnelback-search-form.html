@@ -1,0 +1,25 @@
+<!--
+This code is for the 404 page on UHI and each partner.
+It should be duplicated across partners, swapping out 'university-meta' with e.g. argyll-meta in two places.
+-->
+
+<div class="container fb-search">
+  <nav class="navbar navbar-default">
+    <div class="collapse navbar-collapse">
+      <form class="navbar-form navbar-left form-inline" action="//www.uhi.ac.uk/en/search/" method="GET">
+        <input type="hidden" name="collection" value="university-meta">
+        <div class="form-group clearboth">
+          <div class="seventyfiveper">
+            <input required name="query" id="query" title="Search query" type="text" accesskey="q" placeholder="Search UHI&hellip;" class="form-control query" data-ng-disabled="isDisplayed('cart') || isDisplayed('history')">
+          </div>
+          <div class="twentyfiveper">
+            <button type="submit" class="UHI--button-link--black" id="uhibutton" data-ng-disabled="isDisplayed('cart') || isDisplayed('history')"><span class="glyphicon glyphicon-search"></span> Search</button>
+          </div>
+          <div class="checkbox-inline">
+          </div>
+      </form>
+    </div>
+  </nav>
+</div>
+
+<div id="fback"></div>
