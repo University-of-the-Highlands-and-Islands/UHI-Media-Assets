@@ -1,3 +1,74 @@
+
+
+input[name="query"] {
+  box-sizing: border-box;
+  vertical-align: baseline !important;
+}
+
+.fb-search .form-group {
+  margin: 10px 0;
+}
+
+.fb-search .form-group #query {
+  padding: .5rem;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .fb-search .form-group #query {
+    padding: 1rem;
+    width: 95%;
+  }
+}
+
+.fb-search .form-group .btn.btn-primary {
+  background-color: #0f0f0f;
+  border-radius: 3px;
+  border: medium none;
+  color: white;
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 8px;
+  padding: 6px 16px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .fb-search .form-group .btn.btn-primary {
+    margin: 0;
+  }
+}
+
+.fb-search .seventyfiveper {
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0 15px 0 0;
+  width: 75%;
+}
+
+.fb-search .twentyfiveper {
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  padding: 0 15px;
+  width: 25%;
+}
+
+@media (max-width: 767px) {
+  .fb-search .seventyfiveper,
+  .fb-search .twentyfiveper {
+    float: none;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+filter (facet) list headings, labels, badges
+.fb-search #search-facets .panel.panel-default {
+  margin-top: 44px;
+}
+
 @media (min-width: 800px) {
   .section.intro > .wrap,
   .section.intro > .wrap > .background {
