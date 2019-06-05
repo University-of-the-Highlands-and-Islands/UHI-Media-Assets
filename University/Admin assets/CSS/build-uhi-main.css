@@ -2981,6 +2981,7 @@ in T4 a cell can be:
 .coursedetails th {
   text-align: center;
   vertical-align: middle;
+  min-width: 70px;
 }
 
 .coursedetails td p,
