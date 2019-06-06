@@ -2303,14 +2303,23 @@ Content type usage report: Highlight Content Box
   width: 100%;
 }
 
+.content-type--one-web-highlight-content-box .content-type--one-web-video-embed,
+.content-type--one-web-highlight-content-box img,
+.content-type--one-web-highlight-content-box h2 {
+  margin: 0 0 .5rem 0;
+  padding: 0;
+}
+
 .content-type--one-web-highlight-content-box img {
   width: 200px;
 }
 
-.content-type--one-web-highlight-content-box img,
-.content-type--one-web-highlight-content-box__title {
-  margin: 0 0 .5rem 0;
-  padding: 0;
+.content-type--one-web-highlight-content-box h2 {
+  font-size: 18px;
+}
+
+.content-type--one-web-highlight-content-box__body {
+  text-align: left;
 }
 
 @media (min-width: 500px) {
@@ -2323,6 +2332,11 @@ Content type usage report: Highlight Content Box
     allows 3 or 4 in a row e.g.
     https://www.inverness.uhi.ac.uk/studying-at-ic/information-for-applicants-and-new-students/
     */
+  }
+
+  /* double width (eg video) column */
+  .content-type--one-web-highlight-content-box--x2 {
+    width: 432px;
   }
 
   .content-type--one-web-highlight-content-box:hover {
@@ -2341,6 +2355,11 @@ Content type usage report: Highlight Content Box
   .content-type--one-web-highlight-content-box img:hover {
     transform: scale(1.02);
   }
+}
+
+.content-type--one-web-highlight-content-box.list--background-colours a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 /*****************************************************
@@ -2865,7 +2884,6 @@ table styles also used in:
 .content-type--media-library-category-gallery a,
 .content-type--one-web-event__summary,
 .content-type--one-web-general-content__description,
-.content-type--one-web-highlight-content-box,
 .content-type--one-web-news time,
 .content-type--one-web-news__description,
 .content-type--one-web-right-content h3,
@@ -3488,9 +3506,34 @@ Content type usage report: Right Image (?)
 
 /****************************************
 
-NAVIGATION
+T4 LISTS
 
-Navigation Assets in T4
+****************************************/
+
+/*
+One Web Background Colour Palette
+Accessible foreground and background colours for content containers.
+http://colormind.io/
+https://paletton.com/#uid=74Q1q0klViScuskhPmUqGdUwd8S
+https://webaim.org/resources/contrastchecker/
+https://contrast-ratio.com/
+*/
+
+.list--background-colours--1--dark  {color:white;background-color:#572163}
+.list--background-colours--2--dark  {color:white;background-color:#632121}
+.list--background-colours--3--dark  {color:white;background-color:#213B63}
+.list--background-colours--4--dark  {color:white;background-color:#21633D}
+.list--background-colours--5--dark  {color:white;background-color:#52581D}
+.list--background-colours--1--light {color:black;background-color:#E5BDEA}
+.list--background-colours--2--light {color:black;background-color:#FFB3B3}
+.list--background-colours--3--light {color:black;background-color:#BDC2FF}
+.list--background-colours--4--light {color:black;background-color:#F5D96B}
+.list--background-colours--5--light {color:black;background-color:#ADD2AD}
+
+/****************************************
+
+T4 NAVIGATION
+
 ****************************************/
 
 /*
