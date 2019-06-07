@@ -2220,7 +2220,7 @@ Content type usage report: Home Page Coloured Links bar
 }
 
 /****************************************
-One Web Callout
+One-Web Callout
 
 Content type usage report: Callout
 ****************************************/
@@ -2244,9 +2244,9 @@ Content type usage report: Callout
 }
 
 /*****************************************************
-One Web Children Link List
+One-Web Children Link List
 
-Content type usage report: One Web Children Link List
+Content type usage report: One-Web Children Link List
 ******************************************************/
 
 .content-type--one-web-children-link-list {
@@ -2262,7 +2262,7 @@ Content type usage report: One Web Children Link List
 }
 
 /*****************************************************
-One Web Expert
+One-Web Expert
 
 Content type usage report:
 - Expert
@@ -2271,7 +2271,7 @@ Content type usage report:
 ******************************************************/
 
 /****************************************
-One Web General Content
+One-Web General Content
 
 Content type usage report: General Content
 ****************************************/
@@ -2288,7 +2288,7 @@ Content type usage report: General Content
 }
 
 /****************************************
-One Web Highlight Content Box
+One-Web Highlight Content Box
 
 Content type usage report: Highlight Content Box
 ****************************************/
@@ -2363,9 +2363,9 @@ Content type usage report: Highlight Content Box
 }
 
 /*****************************************************
-One Web Media Object
+One-Web Media Object
 
-Content type usage report: One Web Media Object [TEST KIF]
+Content type usage report: One-Web Media Object [TEST KIF]
 *****************************************************/
 
 .content-type--one-web-media-object {
@@ -2417,7 +2417,7 @@ Content type usage report: One Web Media Object [TEST KIF]
 }
 
 /****************************************
-One Web News
+One-Web News
 
 Content type usage report: News
 ****************************************/
@@ -2447,7 +2447,7 @@ Content type usage report: News
 }
 
 /****************************************
-One Web News Listing
+One-Web News Listing
 
 Content type usage report: News Listing
 
@@ -2487,7 +2487,7 @@ Content type usage report: News Listing
 }
 
 /****************************************
-One Web Right Content
+One-Web Right Content
 
 Content type usage report: Right Content
 ****************************************/
@@ -2517,7 +2517,7 @@ Content type usage report: Right Content
 }
 
 /****************************************
-One Web Text Banner
+One-Web Text Banner
 
 ****************************************/
 
@@ -2586,7 +2586,7 @@ One Web Text Banner
 }
 
 /*****************************************************
-One Web Event Listing with Calendar
+One-Web Event Listing with Calendar
 
 related to earlier CT: Uni Event Listing
 ******************************************************/
@@ -2602,13 +2602,13 @@ related to earlier CT: Uni Event Listing
 }
 
 /*****************************************************
-One Web Staff Profile
+One-Web Staff Profile
 
 .content-type--one-web-staff-profile
 ******************************************************/
 
 /****************************************
-One Web Video Embed (YouTube or Stream)
+One-Web Video Embed (YouTube or Stream)
 
 Content type usage report: YouTube Video Embed
 
@@ -2618,7 +2618,10 @@ https://github.com/davatron5000/FitVids.js
 .videowrapper used on Course page content eg:
 https://www.uhi.ac.uk/en/courses/ba-hons-applied-music/
 
-.content-type--landing-page-text__video also shared
+.content-type--one-web-video-embed also shared on
+One-Web Highlight Content Box
+
+.content-type--landing-page-text__video also shared on
 3 Landing Page Text layouts in CT
 ****************************************/
 
@@ -2650,7 +2653,7 @@ https://www.uhi.ac.uk/en/courses/ba-hons-applied-music/
 }
 
 /*****************************************************
-One Web Vacancy
+One-Web Vacancy
 
 Content type usage report: Vacancy
 
@@ -2658,7 +2661,7 @@ Content type usage report: Vacancy
 ******************************************************/
 
 /*****************************************************
-One Web Vacancy Listing
+One-Web Vacancy Listing
 
 Content type usage report: Uni Vacancy Listing
 
@@ -2709,7 +2712,7 @@ Collapsible
 expand and collapse content ('accordion')
 
 used in
-- One Web General Content
+- One-Web General Content
 ****************************************/
 
 .content-type-modifier--collapsible {
@@ -2804,18 +2807,18 @@ heading and list styles with vertical rhythm
 from type scale - for mobile multiply by 14/16
 
 used in:
-- One Web Event
-- One Web Expert
-- One Web General Content
-- One Web News
-- One Web Staff Profile
-- One Web Vacancy
-- One Web Vacancy Listing
+- One-Web Event
+- One-Web Expert
+- One-Web General Content
+- One-Web News
+- One-Web Staff Profile
+- One-Web Vacancy
+- One-Web Vacancy Listing
 
 .description used in:
-- One Web General Content
-- One Web Vacancy
-- One Web Openday
+- One-Web General Content
+- One-Web Vacancy
+- One-Web Openday
 
 table styles also used in:
 - Course pages
@@ -3030,8 +3033,8 @@ Flexbox and Width
 main.js makeFlexContainer() creates container
 
 used in
-- One Web Highlight Content Box
-- One Web Media Object
+- One-Web Highlight Content Box
+- One-Web Media Object
 ****************************************/
 
 .content-type-modifier--flex-container {
@@ -3053,7 +3056,7 @@ used in
 
 /****************************************
 two column layout used in:
-- One Web General Content
+- One-Web General Content
 ****************************************/
 
 @media (min-width: 640px) {
@@ -3077,7 +3080,7 @@ Shading
 light background colour in a padded container
 
 used in:
-- One Web Right Content
+- One-Web Right Content
 ...
 ****************************************/
 
@@ -3206,13 +3209,13 @@ https://www.inverness.uhi.ac.uk/
 /*****************************************************
 Media Library Category Document List
 
-Content type usage report: One Web Media Category Documents
+Content type usage report: One-Web Media Category Documents
 ******************************************************/
 
 /*****************************************************
 Media Library Category Gallery
 
-Content type usage report: One Web Gallery
+Content type usage report: One-Web Gallery
 ******************************************************/
 
 .content-type--media-library-category-gallery {
@@ -3360,7 +3363,7 @@ previously used .halflight
 }
 
 /*****************************************************
-One Web Event
+One-Web Event
 
 Content type usage report: Event, Uni Event
 ******************************************************/
@@ -3411,7 +3414,7 @@ Content type usage report: Event, Uni Event
 
 
 /****************************************************************
-One Web Page Button General & Right
+One-Web Page Button General & Right
 btn-content, btn-content-right became content-type--page-button
 
 Landing Buttons
@@ -3493,7 +3496,7 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
 }
 
 /*****************************************************
-One Web Right Image
+One-Web Right Image
 
 Content type usage report: Right Image (?)
 
@@ -3511,7 +3514,7 @@ T4 LISTS
 ****************************************/
 
 /*
-One Web Background Colour Palette
+One-Web Background Colour Palette
 Accessible foreground and background colours for content containers.
 http://colormind.io/
 https://paletton.com/#uid=74Q1q0klViScuskhPmUqGdUwd8S
