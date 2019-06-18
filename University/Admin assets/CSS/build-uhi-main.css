@@ -499,6 +499,9 @@ http://stage-www.inverness.uhi.ac.uk/studying-at-ic/international/
     float: left;
     width: 73%;
   }
+  .section.clearfix > .wrap > .col.threequarters.switchcols {
+    float: right;
+  }
 }
 
 /*
