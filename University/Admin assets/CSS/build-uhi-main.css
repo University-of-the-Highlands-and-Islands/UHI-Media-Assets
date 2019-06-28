@@ -499,6 +499,10 @@ http://stage-www.inverness.uhi.ac.uk/studying-at-ic/international/
     float: left;
     width: 73%;
   }
+
+  .section.clearfix > .wrap > .col.threequarters.switchcols {
+    float: right;
+  }
 }
 
 /*
@@ -2834,8 +2838,15 @@ table styles also used in:
   border-width: 0 0 0 .5rem;
   font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
   font-style: normal;
-  margin: 2rem;
+  margin: 2rem 0;
   padding: 0 2rem 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .content-type--callout blockquote,
+  .content-type-modifier--typography blockquote {
+    margin: 2rem;
+  }
 }
 
 .content-type-modifier--typography blockquote {
@@ -2953,16 +2964,10 @@ https://www.w3.org/WAI/tutorials/tables/
   border-width: 1px;
 }
 
-/* on light background */
+
 .content-type-modifier--typography table,
 .content-type-modifier--typography td {
-  border-color: #ddd;
-}
-
-/* on dark background */
-.coursedetails td,
-.coursedetails th {
-  border-color: #999;
+  border-color: #ddd; /* on light background */
 }
 
 /* consistent with <thead><th> */
@@ -2984,7 +2989,7 @@ in T4 a cell can be:
 .content-type-modifier--typography th,
 .coursedetails td,
 .coursedetails th {
-  padding: 3px 6px;
+  /*padding: 3px 6px;*/
   word-wrap: break-word;
 }
 
@@ -2994,15 +2999,20 @@ in T4 a cell can be:
   vertical-align: top;
 }
 
-/* line up currency format */
+.coursedetails td,
+.coursedetails th {
+  border-color: #999; /* on dark background */
+  font-size: 13px;
+}
+
 .coursedetails td {
-  text-align: right;
+  text-align: right; /* line up currency format */
 }
 
 .coursedetails th {
   text-align: center;
   vertical-align: middle;
-  min-width: 70px;
+  /*min-width: 70px;*/
 }
 
 .coursedetails td p,
