@@ -240,6 +240,23 @@ function uhicollapsibleSections(){
             panel.style.display = "block";
         }
     });
+
+    // add again for accessibility - using tab to browse
+    acc[i].addEventListener("keydown", function() {
+        /* Toggle between adding and removing the "content-type-modifier--collapsible--open" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("content-type-modifier--collapsible--open");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+
+
   }
   
   if(acc.length > 1) {
