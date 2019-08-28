@@ -242,17 +242,19 @@ function uhicollapsibleSections(){
     });
 
     // add again for accessibility - using tab to browse
-    acc[i].addEventListener("keydown", function() {
-        /* Toggle between adding and removing the "content-type-modifier--collapsible--open" class,
-        to highlight the button that controls the panel */
-        this.classList.toggle("content-type-modifier--collapsible--open");
+    acc[i].addEventListener("keyup", function() {
+    	if(event.keyCode === 13){
+	        /* Toggle between adding and removing the "content-type-modifier--collapsible--open" class,
+	        to highlight the button that controls the panel */
+	        this.classList.toggle("content-type-modifier--collapsible--open");
 
-        /* Toggle between hiding and showing the active panel */
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
+	        /* Toggle between hiding and showing the active panel */
+	        var panel = this.nextElementSibling;
+	        if (panel.style.display === "block") {
+	            panel.style.display = "none";
+	        } else {
+	            panel.style.display = "block";
+        	}
         }
     });
 
@@ -260,7 +262,7 @@ function uhicollapsibleSections(){
   }
   
   if(acc.length > 1) {
-    var collapseAll = '<div class="content-type-modifier--collapsible__menu"><a onclick="uhiCollapseSection(true)" class="content-type-modifier--collapsible__label"><span class="content-type-modifier--collapsible__control">ì</span> </a><a onclick="uhiCollapseSection(false)" class="content-type-modifier--collapsible__label"><span class="content-type-modifier--collapsible__control">í</span> </a></div>';
+    var collapseAll = '<div class="content-type-modifier--collapsible__menu"><a tabindex="0" onclick="uhiCollapseSection(true)" onkeyup="uhiCollapseSectionKey(true)" class="content-type-modifier--collapsible__label"><span class="content-type-modifier--collapsible__control">ì</span> </a><a tabindex="0" onclick="uhiCollapseSection(false)" onkeyup="uhiCollapseSectionKey(false)" class="content-type-modifier--collapsible__label"><span class="content-type-modifier--collapsible__control">í</span> </a></div>';
     $(collapseAll).insertBefore($(acc[0]).parent());       
   } 
 }
@@ -279,6 +281,12 @@ function uhiCollapseSection(open){
            panel.style.display = "none";       
       }
   }
+}
+
+function uhiCollapseSectionKey(open){
+	if(event.keyCode === 13){
+		uhiCollapseSection(open);
+	}
 }
 
 function lastModified(slastmodified,location){
