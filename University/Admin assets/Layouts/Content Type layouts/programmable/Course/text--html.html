@@ -325,40 +325,25 @@ document.write('<div class="section ctas">');
   document.write('</div>');
 
 /***********************************
-- Search and KIS Widget -
+- KIS Widget -
 ************************************/
-/* Course search and KIS widget */
-document.write('<div class="section clearfix course coursefinder"><div class="wrap">');
-  var searchHeading = isGD ? 'Rannsaich a-rithist' : 'Search again' ;
+/* KIS widget */
+var showKIS = processTags('<t4 type="content" name="Display KIS?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim(); 
+
+var isFullTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
+
+      var isPartTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();  
   
-  document.write('<h2>'+ searchHeading+'</h2>');
-  var searchPath = processTags('<t4 type="navigation" name="Course search page path getter" id="90" />');
-  /* Search form */
-  document.write('<form method="get" action="'+ searchPath + '" class="ui front" style="margin-bottom:3em">');
-    document.write('<input type="text" name="keyword" title="Course Search" class="keyword" placeholder="Start typing for course suggestions" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>');
-    document.write('<input type="submit" value="]">');
-    document.write('</form>');
-  
-  var showKIS = processTags('<t4 type="content" name="Display KIS?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
-  
-  var isFullTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
-  
-  var isPartTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
-  
-  if (showKIS == 'yes' && (isFullTime == 'yes' || isPartTime == 'yes'  )) {
-  //   		var delivery = (isFullTime == 'yes') ? 'FT' : 'PT';
-  var delivery = (isFullTime == 'yes') ? 'FullTime' : 'PartTime';
-  //			document.write('<div class="kiswidget"><iframe title="Unistats KIS Widget" src="https://widget.unistats.ac.uk/Widget/10007114'+delivery +'/'+courseCodeExtra+'/horizontal/small/en-GB"></iframe></div>');
-  
-  document.write('<div class="kis-widget" data-institution="10007114" data-course="' + courseCodeExtra + '" data-kismode="' + delivery + '" data-orientation="horizontal" data-language="en-GB"></div>');
-  /* delivery may have changed to needing 'FullTime' or 'PartTime' */
-  
-  document.write("<script>(function (d) {var widgetScript = d.createElement('script');widgetScript.id = 'unistats-widget-script';widgetScript.src = '//widget.unistats.ac.uk/js/unistats.widget.js'; var scriptTags = d.getElementsByTagName('script')[0]; if (d.getElementById('unistats-widget-script')) { return; }scriptTags.parentNode.insertBefore(widgetScript, scriptTags);} (document));</script>");
-  
-  }
-  
-  /* Close course search and KIS widget */
-  document.write('</div></div><!-- .coursefinder -->');
+if (showKIS == 'yes' && (isFullTime == 'yes' || isPartTime == 'yes'  )) { 
+    document.write('<div class="section clearfix course coursefinder"><div class="wrap kis-container">'); 
+    var delivery = (isFullTime == 'yes') ? 'FullTime' : 'PartTime';       
+    document.write('<div class="kis-widget" data-institution="10007114" data-course="' + courseCodeExtra + '" data-kismode="' + delivery + '" data-orientation="horizontal" data-language="en-GB"></div>');
+/* delivery may have changed to needing 'FullTime' or 'PartTime' */
+    document.write("<script>(function (d) {var widgetScript = d.createElement('script');widgetScript.id = 'unistats-widget-script';widgetScript.src = '//widget.unistats.ac.uk/js/unistats.widget.js'; var scriptTags = d.getElementsByTagName('script')[0]; if (d.getElementById('unistats-widget-script')) { return; }scriptTags.parentNode.insertBefore(widgetScript, scriptTags);} (document));</script>");     
+      }
+
+   /* Close course search and KIS widget */
+   document.write('</div></div><!-- .coursefinder -->');  
   
 } catch (err) {
 document.write(err);

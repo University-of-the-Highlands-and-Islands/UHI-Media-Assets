@@ -478,6 +478,10 @@ http://stage-www.inverness.uhi.ac.uk/studying-at-ic/international/
   text-align: left;
 }
 
+.section.clearfix > .wrap.kis-container {
+    padding:10px;
+}
+
 /* multi column for desktop */
 @media (min-width: 768px) {
   .section.clearfix > .wrap > .col.half {
@@ -2549,7 +2553,8 @@ One-Web Text Banner
 }
 
 .content-type--one-web-text-banner,
-.content-type--one-web-text-banner a {
+.content-type--one-web-text-banner a,
+.content-type--one-web-text-banner a:visited { {
   color: white;
 }
 
