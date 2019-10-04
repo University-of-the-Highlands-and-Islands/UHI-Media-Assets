@@ -7,7 +7,7 @@ $(function() {
     var waypoint = document.getElementsByClassName("pin")[0];  
     if (waypoint) { waypointsInit(); }  
 	courseFilter();
-	hashlinks();
+//	hashlinks();
 	applyNow();
     warningCookieRead(); 
     makeFlexContainer();

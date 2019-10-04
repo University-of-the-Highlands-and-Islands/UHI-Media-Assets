@@ -3496,7 +3496,7 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
 }
 
 .content-type--page-button span,
-.content-type--page-button--landing b {
+.content-type--page-button--landing strong {
   font-family: Oswald, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   font-weight: normal;
