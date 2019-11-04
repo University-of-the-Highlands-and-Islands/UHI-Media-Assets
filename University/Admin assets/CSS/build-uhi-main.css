@@ -2227,6 +2227,16 @@ Content type usage report: Home Page Coloured Links bar
   }
 }
 
+/* force the max width for Landing Image Links Bar to maintain aspect ratio irrespective of number of image links PAW 20191025 */
+@media (min-width: 960px) {
+.content-type--landing-image-links-bar a {
+  max-width: 24%;
+}
+}
+
+
+
+
 /****************************************
 One-Web Callout
 
@@ -3536,6 +3546,11 @@ https://paletton.com/#uid=74Q1q0klViScuskhPmUqGdUwd8S
 https://webaim.org/resources/contrastchecker/
 https://contrast-ratio.com/
 */
+
+.list--background-colours {
+  color: #222;  /* PAW 20191022 default text colour for contrast  */
+  background-color:#e7e7e7;
+}
 
 .list--background-colours--1--dark  {color:white;background-color:#572163}
 .list--background-colours--2--dark  {color:white;background-color:#941900}
