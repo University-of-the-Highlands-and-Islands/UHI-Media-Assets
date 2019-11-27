@@ -261,23 +261,26 @@ function cookieConfigChange(cInput){
 // Change cookie duration
 
 function campaignCookieRead(){
-  var pageURL = $(location).attr("href");
-  if (pageURL.indexOf("/en/") >= 0 || pageURL.indexOf("/gd/") >= 0) {
-    var ccookie = getCookie("_uhi_campaign");
+  var cAlert = '<t4 type="navigation" name="Site Wide Campaign Banner getter" id="443" />';
+  if (cAlert) 
+   {
+   	var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="445" />';
+    var ccookie = getCookie("_" + scope + "_campaign");
     if (ccookie=="") {
-        showCampaignMessage();   	
+        showCampaignMessage(cAlert);   	
     }
   }
 }
 
-function showCampaignMessage() {
+
+function showCampaignMessage(cAlert) {
     var pageURL = $(location).attr("href");
-    var cAlert = '<t4 type="navigation" name="Site Wide Campaign Banner getter" id="443" />';
     if (pageURL.indexOf("/gd/") >= 0) cAlert = cAlert.replace(new RegExp('en.gif', 'g'), 'gd.gif');
 	$("body").prepend(cAlert);
 }
 
 function campaignMessageClose() {
-	setCookie("_uhi_campaign","1",1);  /// change last 1 back to 7
+   	var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="445" />';	
+	setCookie("_" + scope + "_campaign","1",1);  /// change last 1 back to 7
 	$(".campaign-banner").remove();
 }
