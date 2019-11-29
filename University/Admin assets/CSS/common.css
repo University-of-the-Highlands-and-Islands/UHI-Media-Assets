@@ -1101,6 +1101,55 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   text-decoration: underline dotted;
 }
 
+/*  bottom of page campaign banner */
+
+.message--campaign-banner {
+  position:fixed; 
+  bottom:0; 
+  left:0; 
+  width:100%; 
+  background:#fdfdfd url("<t4 type= "media" formatter= "image/path" id= "343425" />") repeat-x left top; 
+  z-index:999; 
+  border:1px solid #572163;
+}
+
+.message--campaign-banner img.big {
+  width:100%; 
+  max-width:1300px; 
+  display:none; 
+  margin:auto;
+}
+.message--campaign-banner img.small {
+  width:100%; 
+  max-width:360px;
+}
+.message--campaign-banner .close {
+  position:absolute; 
+  top:0; 
+  right:0;
+  font-size:12px; 
+  font-weight:bold; 
+  padding:2px; 
+  margin:2px; 
+  border:1px solid #572163; 
+  width:15px; 
+  z-index:50;
+}
+
+@media only screen and (min-width: 768px) {
+  .message--campaign-banner img.big {
+    display:inline-block;
+  }
+  .message--campaign-banner img.small {
+    display:none;
+  }
+  .message--campaign-banner .close {
+    font-size:20px; 
+    font-weight:bold; 
+    width:25px;
+  }
+}
+
 /* section clearfix */
 
 .section.clearfix > .wrap {
@@ -1732,4 +1781,3 @@ Site_Config
 .content-type--site-config--search label {
   display: none;
 }
-
