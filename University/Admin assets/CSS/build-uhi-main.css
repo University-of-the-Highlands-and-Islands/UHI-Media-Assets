@@ -1852,11 +1852,14 @@ partner colours are in their theme stylesheets
   text-align: left;
 }
 
-.fb-search #search-best-bets {
+.fb-search #search-best-bets:hover {
   background-color: #eee;
   border-radius: 3px;
+}
+
+.fb-search #search-best-bets {
   margin: 8px 0 0 0;
-  padding: 8px;
+  padding: 5px;
 }
 
 .fb-search #search-best-bets p {
@@ -1875,7 +1878,7 @@ partner colours are in their theme stylesheets
 
 .fb-search .list-unstyled {
   list-style: none;
-  padding: 0;
+  padding: 5px;
 }
 
 .fb-search .result {
