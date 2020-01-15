@@ -3982,9 +3982,10 @@ https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/
   }
 }
 
-/* removes link text from social media share buttons */
+/* removes link text from social media share buttons and fixes firefox display problem */
 .hide-link-text a {
   text-indent: -9999px;
+  display: inline-table;
 }
 
 /****************************************
