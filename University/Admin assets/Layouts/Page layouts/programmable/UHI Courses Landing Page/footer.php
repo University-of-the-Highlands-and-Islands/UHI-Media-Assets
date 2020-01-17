@@ -15,7 +15,7 @@ try {
 
   function getContentFromId(contentID) {
     if(contentID > 0) {
-      var contentManager = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
+      var contentManager = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager.class);
       return contentManager.get(contentID,language);
     }
   }
@@ -69,7 +69,8 @@ try {
     return com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, CachedSection, oContent, language, isPreview, t4Tag);
   }
 
-  document.write('<main role="main">');  /* moved main tag 20191114 */
+
+    document.write('<main>');  /* moved main tag 20191114 */
 
   /*************************************
   	- Truths about this course -
@@ -79,6 +80,8 @@ try {
     var courseCodeExtra = processTags('<t4 type="content" name="Course code extra" output="normal" modifiers="striptags" />');
     var courseCode = processTags('<t4 type="content" name="Course code" output="normal" modifiers="striptags" />');
     var identifier = processTags('<t4 type="content" name="Identifier" output="normal" modifiers="striptags" />');
+    var contactForm = processTags('<t4 type="content" name="Show contact form" output="normal" display_field="value" />');
+    var showContactForm = (contactForm == "Yes") ? true : false;
 
   	/* Is this Gaelic? */
 //    var isGD = ((courseCodeExtra.substring(courseCodeExtra.length()-1) == 'G') && (courseCode != '304G' && courseCode != '0CFG' && courseCode != '75NG' && courseCode != '154G' && courseCode != '054G')) ? true : false ;
@@ -192,7 +195,9 @@ try {
   		/* Close Right col */
   		document.write('</div>');
 
-    /* Additional Costs */
+
+
+   /* Equipment */
   var additionalCosts = processTags('<t4 type="content" name="Additional course costs" output="normal" modifiers="nl2br" />');
   if (additionalCosts.length() != 0) {
               document.write('<div class="col half">');
@@ -200,6 +205,7 @@ try {
   				document.write(processTags('<t4 type="content" name="Additional course costs" output="normal" modifiers="nl2br" />') );
               document.write('</div>');
   }
+
 
         /* Close funding tab  */
   		document.write('</div>');
@@ -267,7 +273,9 @@ try {
                               	document.write('<li>');
                                 document.write('	<a class="img" href="#tab1">');
           								var quoteOneImage = '';
-                                        quoteOneImage = processTags('<t4 type="navigation" name="Course Quote Image 1 getter - current section" id="83" />');
+                               /*         quoteOneImage = processTags('<t4 type="navigation" name="Course Quote Image 1 getter - current section" id="83" />');   */
+                                          quoteOneImage = processTags('<t4 type="navigation" name="Course Quote Image 1 getter - central" id="442" />');
+
           								if (quoteOneImage.length()  == 0) {
                                           	quoteOneImage = processTags('<t4 type="navigation" name="Course Quote Image getter - default image" id="86" />');
 
@@ -313,6 +321,11 @@ try {
         }//end if Quote 1
 
   		/* Apply block */
+
+
+  if (!showContactForm) {
+
+  		/* Apply block */
   		/* Open Apply block */
   		document.write('<div class="section clearfix apply" id="applynow">');
   		document.write('	<div class="wrap">');
@@ -337,29 +350,106 @@ try {
   	/* Close Testimonials and Apply Now */
   	document.write('</div>');
 
-/***********************************
-- KIS Widget -
-************************************/
-/* KIS widget */
+
+
+
+  }
+  else
+  {
+
+      	/* Close Testimonials and Apply Now */
+  	document.write('</div>');
+
+
+    messageImage = processTags('<t4 type= "media" formatter= "image/path" id= "341906" />');
+
+document.write('<div class="zoom"><a href="#messageus" class="smallmargin"><span class="smlscrmsg">Got a question? Send us a message</span></a><p id="messageText"><a href="#messageus">Got a question? Send us a message</a><button class="minimise" onclick="minimiseElements()" id="minimise">&horbar;</button></p><a href="#messageus"><img src="' + messageImage +'" alt="Send us a message" title="Send us a message" id="messageImage" /></a></div><div class="bottommessage" id="bottommessage"><a href="#messageus">Got a question? Send us a message</a></div>');
+
+
+
+
+
+  var courseName = processTags('<t4 type="content" name="Course name" output="normal" modifiers="striptags" />');
+  var courseLevel = processTags('<t4 type="content" name="Level" output="normal" modifiers="striptags" />');
+
+  document.write('<div class="section clearfix courseapply">');
+  document.write('<div class="wrap">');
+    document.write('<div class="" id="applynow"><h3>Apply</h3>');
+
+  	   document.write('<p>Thank you for your interest in studying ' + courseName + ' ' + courseLevel + ' with us.</p>');
+  	   document.write('<p>If you are ready to apply, please start your application below by selecting when you would like to start your course. This will take you to the UCAS website or our online application system.</p>');
+  	   document.write('<p>If you&#39;re not quite ready, please <a href="#messageus">message us</a> or call <a href="tel:+441463279190">01463 279190</a> if there is anything we can do to help you with your decision. We will handle your query in line with our <a href="#">Privacy Notice</a>.</p>');
+
+    document.write('</div>');
+
+  document.write('</div>');
+    document.write('</div>');
+
+  document.write('<div class="section clearfix courseapply ucas">');
+    document.write('<div class="wrap">');
+
+    document.write('<div class="col half bottomapply"><h3>Start your application</h3>');
+        		/* Open Apply block */
+  		document.write('<div class="section clearfix apply">');
+  		document.write('	<div class="wrap">');
+		document.write('		<div id="Apply">');
+	//	document.write('			<div class="wrap">');
+  				/* Write apply content */
+  				document.write(processTags('<t4 type="content" name="Apply" output="normal" modifiers="nl2br" />'));
+
+  				/* Disclaimer en/gd */
+  				var disclaimer = processTags('<t4 type="navigation" name="EN Course disclaimer getter" id="87" />');
+
+  				if (isGD) {
+                	disclaimer = processTags('<t4 type="navigation" name="GD Course disclaimer getter" id="88" />');
+                }
+                document.write(disclaimer);
+  		/* Close Apply block */
+  		document.write('			</div>');
+		document.write('		</div>');
+		document.write('	</div>');
+    document.write('</div>');
+
+   document.write('<div class="col half messageapply"><h3 id="messageus">Message us</h3>');
+
+  	   formatter       ='text/contact';
+       document.write(getLayout(formatter));
+
+    document.write('</div>');
+
+    document.write('</div>');
+    document.write('</div>');
+
+
+
+  }
+
+//   document.write('<div class="section clearfix kis-container">');
+ // 		document.write('	<div class="wrap">');
+
+
+    /* KIS widget */
 var showKIS = processTags('<t4 type="content" name="Display KIS?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
 
-var isFullTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
 
-      var isPartTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
+        var isFullTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
 
-if (showKIS == 'yes' && (isFullTime == 'yes' || isPartTime == 'yes'  )) {
-    document.write('<div class="section clearfix course coursefinder"><div class="wrap kis-container">');
-    var delivery = (isFullTime == 'yes') ? 'FullTime' : 'PartTime';
-    document.write('<div class="kis-widget" data-institution="10007114" data-course="' + courseCodeExtra + '" data-kismode="' + delivery + '" data-orientation="horizontal" data-language="en-GB"></div>');
-/* delivery may have changed to needing 'FullTime' or 'PartTime' */
-    document.write("<script>(function (d) {var widgetScript = d.createElement('script');widgetScript.id = 'unistats-widget-script';widgetScript.src = '//widget.unistats.ac.uk/js/unistats.widget.js'; var scriptTags = d.getElementsByTagName('script')[0]; if (d.getElementById('unistats-widget-script')) { return; }scriptTags.parentNode.insertBefore(widgetScript, scriptTags);} (document));</script>");
-      }
+                var isPartTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
 
-   /* Close course search and KIS widget */
-   document.write('</div></div><!-- .coursefinder -->');
+        if (showKIS == 'yes' && (isFullTime == 'yes' || isPartTime == 'yes'  )) {
+            document.write('<div class="section clearfix course coursefinder"><div class="wrap kis-container">');
+            var delivery = (isFullTime == 'yes') ? 'FullTime' : 'PartTime';
+            document.write('<div class="kis-widget" id="kistmp" data-institution="10007114" data-course="' + courseCodeExtra + '" data-kismode="' + delivery + '" data-orientation="horizontal" data-language="en-GB"></div>');
+        /* delivery may have changed to needing 'FullTime' or 'PartTime' */
+            document.write("<script>(function (d) {var widgetScript = d.createElement('script');widgetScript.id = 'unistats-widget-script';widgetScript.src = '//discoveruni.org.uk/widget/embed-script'; var scriptTags = d.getElementsByTagName('script')[0]; if (d.getElementById('unistats-widget-script')) { return; }scriptTags.parentNode.insertBefore(widgetScript, scriptTags);} (document));</script>");
+                }
 
-   document.write('</main>');   /*  new end main tag 20191114  */
+           /* Close course search and KIS widget */
+           document.write('</div></div><!-- .coursefinder -->');
 
+    document.write('</div>');
+  document.write('</div>');
+    document.write('</main>');   /*  new end main tag 20191114  */
 } catch (err) {
-	document.write(err);
+document.write(err);
 }
