@@ -1620,6 +1620,69 @@ section testimonials
   font-weight: normal;
 }
 
+/* Course page message us and apply */
+
+.bottomapply {
+    background-color: #572163;
+    padding: 15px;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+input[type=text] {
+    width: 90%;
+}
+
+input[type=submit] {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    border: none;
+    padding: 7px;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+textarea {
+    width: 90%;
+}
+
+.messageapply {
+    background-color: #4a4c4e;
+    padding: 15px;
+    color: white;
+    border-radius: 20px;
+}
+
+.zoom {position:fixed; bottom:0; right:0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
+.zoom a {color:#fff; font-weight: bold;}
+      .smallmargin {margin-left: 20px;}
+.zoom img {display:none;}
+.minimise {display: none;}
+      .bottommessage {display: none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
+      .bottommessage a {color:#fff; margin-left:20px; font-weight: bold;}
+
+@media (min-width: 768px) {
+.zoom {bottom:75px; right:10px; height: 70px; background: none; padding:0; width: auto; display: block;}
+.zoom img {width:90px; float: right; display: inline-grid;}
+.smlscrmsg {display:none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
+.smlscrmsg a {color:#fff; margin-left:20px; font-weight: bold;}
+    .zoom p {background-color: #b74783; color: #fff; padding: 10px; border-radius: 4px; margin: 0 auto 10px; position: relative; font-weight: bold; border: none;}
+    .zoom p::after {
+        border-left: 20px solid transparent;
+        border-top: 20px solid #b74783;
+        bottom: -12px;
+        content: "";
+        position: absolute;
+        right: 10px;
+    }
+    .minimise {background-color: #b74783; color: #fff; font-weight: bold; padding: 0 5px; border-radius: 4px; cursor: pointer; border: 3px solid #963b6b; display: inline; margin-left: 5px;}
+    .minimise:hover {background-color: #963b6b;}
+}
+
 /*
 Header slogan of eg:
 https://www.htc.uhi.ac.uk/
