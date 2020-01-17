@@ -1,377 +1,365 @@
-<?php
-// Query handler
-
-//    echo "<p><h2>Please note: We are experiencing issues with our course page listings, we hope to have this fixed shortly.</h2></p>";
-
-function subArraysToString($ar, $sep = '') {
-	$str = '';
-	foreach ($ar as $val) {
-		$str .= implode($sep, $val);
-		$str .= $sep; // add separator between sub-arrays
-	}
-	$str = rtrim($str, $sep); // remove last separator
-	return $str;
-}
+/* Import packages */
+importPackage(com.terminalfour.template);
+importPackage(com.terminalfour.sitemanager);
+importClass(com.terminalfour.publish.utils.BrokerUtils);
 
 try {
-	$queryHandler = QueryHandlerFactory::getInstance('QueryHandler', $_SERVER['QUERY_STRING']);
-	$queryHandler->setStopWords($stopWords);
-	$queryHandler->setDontTokenize(array('course-code', 'course-location', $coursesubjectsearch, 'course-study-mode', 'international'));
-	$queryHandler->stemQuery(array('keyword'));
-	$queryHandler->setDontRemoveStopwords(array($coursesubjectsearch, 'international'));
-	$queryHandler->handleQuery();
-//var_dump($queryHandler->getQueryArray());
-} catch (RuntimeException $e) {
-	ExceptionFormatter::FormatException($e);
-} catch (OutOfBoundsException $e) {
-	ExceptionFormatter::FormatException($e);
-}
-//var_dump($queryHandler->getSearchTerms());
-// Search handler and filters
-try {
 
-	$search = SearchFactory::getInstance('Search', $documentsSource);
-	$substringSearch = FilterFactory::getInstance('FilterBySubstring', $search); //Course name, Keywords
-	$wordFilter = FilterFactory::getInstance('FilterByWord', $search); //Level
-	$exactMatchFilter = FilterFactory::getInstance('FilterByExactMatch', $search); //Course code
+  function getCachedSectionFromId(sectionID) {
+    if(sectionID > 0) {
+      return com.terminalfour.publish.utils.TreeTraversalUtils.findSection(publishCache.getChannel(), section, sectionID, language);
+    } else {
+      return '';
+    }
+  }
 
-} catch (RuntimeException $e) {
-	ExceptionFormatter::FormatException($e);
-} catch (InvalidArgumentException $e) {
-	ExceptionFormatter::FormatException($e);
-} catch (LengthException $e) {
-	ExceptionFormatter::FormatException($e);
-}
+  function getContentFromId(contentID) {
+    if(contentID > 0) {
+      var contentManager = com.terminalfour.spring.ApplicationContextProvider.getBean(com.terminalfour.content.IContentManager);
+      return contentManager.get(contentID,language);
+    }
+  }
 
-$tmparray = $queryHandler->getDontRemoveStopWords();
-if ($queryHandler->isQuerySet('keyword')) {
-	if (in_array('keyword', $queryHandler->getDontRemoveStopWords()) === true) {
-		$exactMatchFilter->setMember('element', 'course-name');
-		$exactMatchFilter->setMember('query', array(implode(' ', $queryHandler->getNonStemmedQueryValue('keyword')))); // send keyword query as single string value
-		$exactMatchFilter->setMember('combinationOption', true);
-		$exactMatchFilter->runFilter();
-	}
-}
+  function  getLayout(contentLayout, contentID, sectionID, displayError) {
+    if (typeof contentLayout === 'undefined') {
+      document.write('Error: contentLayout is required for getLayout ('+contentLayout+' of '+contentID+').');
+      return '';
+    }
+    var oContent 	= content || null;
+    if (typeof contentID !== 'undefined') {
+      oContent = getContentFromId(contentID);
+      if (!oContent) {
+        document.write('Error getting the custom content: '+contentID);
+        return '';
+      }
+    }
+    //document.write('oContent'+oContent.getID());
+    try {
+        var tid 	    = oContent.getContentTypeID();
+        formatter     = contentLayout;
+        format        = publishCache.getTemplateFormatting(dbStatement, tid, formatter);
+        formatString  = format.getFormatting();
+        return processTags(formatString,contentID,sectionID);
+    } catch (e) {
+        if (typeof displayError === 'undefined') {
+          displayError = true;
+        }
+        if (displayError == true) {
+          document.write('Error: Content Layout not found: '+ contentLayout +' of '+contentID+'.');
+        }
+        return '';
+    }
+  }
 
-if (strlen(subArraysToString($search->getCombinedDocumentResults())) == 0) {
+  function processTags(t4Tag, contentID, sectionID) {
+    var oContent 		= content || null;
+    var CachedSection = section;
+    if (typeof contentID !== 'undefined') {
+      if (typeof sectionID === 'undefined') {
+        document.write('Error: sectionID is undefined');
+        return '';
+      }
+      oContent 		= getContentFromId(contentID);
+      CachedSection = this.section.getCachedSectionFromId(sectionID);
+      if (CachedSection == '' || !oContent) {
+        document.write('Error getting the custom content and section');
+        return '';
+      }
+    }
+    return com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, CachedSection, oContent, language, isPreview, t4Tag);
+  }
 
-/* Keyword search - search form input */
-/* Run filters on data elements */
-	if ($queryHandler->isQuerySet('keyword')) {
-		$substringSearch->setMember('element', 'course-keywords');
-		$substringSearch->setMember('query', $queryHandler->getQueryValue('keyword'));
-		$substringSearch->setMember('combinationOption', true);
-		$substringSearch->runFilter();
+  document.write('<main role="main">');  /* moved main tag 20191114 */
 
-		$substringSearch->setMember('element', 'course-name');
-		$substringSearch->setMember('query', $queryHandler->getQueryValue('keyword'));
-		$substringSearch->setMember('combinationOption', true);
-		$substringSearch->runFilter();
+  /*************************************
+  	- Truths about this course -
+  **************************************/
+	/* Template ID and Template manger */
 
-		$exactMatchFilter->setMember('element', 'course-code');
-		$exactMatchFilter->setMember('query', $queryHandler->getQueryValue('keyword'));
-		$exactMatchFilter->setMember('combinationOption', true);
-		$exactMatchFilter->runFilter();
+    var courseCodeExtra = processTags('<t4 type="content" name="Course code extra" output="normal" modifiers="striptags" />');
+    var courseCode = processTags('<t4 type="content" name="Course code" output="normal" modifiers="striptags" />');
+    var identifier = processTags('<t4 type="content" name="Identifier" output="normal" modifiers="striptags" />');
 
-		$wordFilter->setMember('element', 'course-level');
-		$wordFilter->setMember('query', $queryHandler->getQueryValue('keyword'));
-		$wordFilter->setMember('combinationOption', true);
-		$wordFilter->runFilter();
+  	/* Is this Gaelic? */
+//    var isGD = ((courseCodeExtra.substring(courseCodeExtra.length()-1) == 'G') && (courseCode != '304G' && courseCode != '0CFG' && courseCode != '75NG' && courseCode != '154G' && courseCode != '054G')) ? true : false ;
 
-// if user added course code without first "u"
-		$regexCC = "/^([a-zA-Z]{1}\d{3})/";
-		$test = implode(' ', $queryHandler->getNonStemmedQueryValue('keyword'));
-//         echo "<p>Test: ".$test."</p>";
-		if (preg_match($regexCC, $test)) {
+  var isGD = (identifier == '0998') ? true : false ;
 
-//          echo "<p>this is a course code</p>";
+  	/************************************
+    	  - Course content banner -
+    *************************************/
+	/* Write the course banner with title, UCAS code etc */
+	var formatter       ='text/course-banner';
+  document.write(getLayout(formatter));
 
-			$exactMatchFilter->setMember('element', 'course-code');
-			$exactMatchFilter->setMember('query', array("u" . $test));
-			$exactMatchFilter->setMember('combinationOption', true);
-			$exactMatchFilter->runFilter();
+	/***********************************
+    	  - Course content tabs -
+    ************************************/
+	/* Open Course body tabs outer wrappers */
+/*    document.write('<main class="section clearfix coursedetails">');  20191114   */
+  document.write('<div class="section clearfix coursedetails">');
+	document.write('<div class="wrap tabs">');
 
-		}
+  		/* Tab headings - EN or GD */
+  		formatter 			=  isGD ? 'text/tab-headings-gd' : 'text/tab-headings-en' ;
+  		document.write(getLayout(formatter));
 
-		$exactMatchFilter->setMember('element', 'course-level-search');
-		$exactMatchFilter->runFilter();
+  		/* Summary tab */
+ if(isGD) {
+      formatter = 'text/tab-summary-gd' ;
+  		document.write(getLayout(formatter));
+  } else {
+      formatter = 'text/tab-summary-top-en' ;
+  		document.write(getLayout(formatter));
 
-		$search->combineResults();
-	}
-} else {
-	$search->combineResults();
-}
+      	/* Is this full time, HN or Degree and not online only - if so need acc link, if available */
+    var fulltime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags" />');
+    var level = processTags('<t4 type="content" name="Level" output="normal" modifiers="striptags" />');
 
-/* Filters search - search form filters input */
-if ($queryHandler->isQuerySet('course-level-search')) {
-	$exactMatchFilter->setMember('element', 'course-level-search');
-	$exactMatchFilter->setMember('query', $queryHandler->getQueryValue('course-level-search'));
-	$exactMatchFilter->setMember('combinationOption', true);
-	$exactMatchFilter->runFilter();
-	$search->combineResults();
-}
+      /* accomodation link */
 
-if ($queryHandler->isQuerySet($coursesubjectsearch)) {
-	$wordFilter->setMember('element', $coursesubjectsearch);
-	$wordFilter->setMember('query', $queryHandler->getQueryValue($coursesubjectsearch));
-	$wordFilter->setMember('combinationOption', true);
-	$wordFilter->runFilter();
-	$search->combineResults();
-}
+     var online = processTags('<t4 type="content" name="Online" output="normal" modifiers="striptags" />');
 
-if ($queryHandler->isQuerySet('course-study-mode')) {
-	$wordFilter->setMember('element', 'course-study-mode');
-	$wordFilter->setMember('query', $queryHandler->getQueryValue('course-study-mode'));
-	$wordFilter->setMember('combinationOption', true);
-	$wordFilter->runFilter();
-	$search->combineResults();
-}
 
-if ($queryHandler->isQuerySet('international')) {
-	$wordFilter->setMember('element', 'international');
-	$wordFilter->setMember('query', $queryHandler->getQueryValue('international'));
-	$wordFilter->setMember('combinationOption', true);
-	$wordFilter->runFilter();
-	$search->combineResults();
-}
+    var accLink = ((level == "BA (Hons)" || level == "BSc (Hons)" || level == "CertHE" || level == "BSc" || level == "HNC" || level == "HND") && (fulltime.toLowerCase().contains("yes")) && (!online.toLowerCase().contains("y"))) ? true : false ;
+    var accContent = '';
+   if(accLink){
+     accContent = processTags('<t4 type="navigation" name="Course Accommodation Link getter - Course Codes" id="348" />');
+     if(accContent.length() == 0) {
+       accContent = processTags('<t4 type="navigation" name="Course Accommodation Link getter - Partner" id="349" />');
+     }
 
-if ($queryHandler->isQuerySet('course-location')) {
-	$wordFilter->setMember('element', 'course-location');
-	$wordFilter->setMember('query', $queryHandler->getQueryValue('course-location'));
-	$wordFilter->setMember('combinationOption', true);
-	$wordFilter->runFilter();
-	$search->combineResults();
-}
+   document.write("<h3>Accommodation</h3>");
 
-$search->intersectDocumentResults();
-
-// Instantiate the DocumentCollection
-try {
-	$documentCollection = DocumentCollectionFactory::getInstance('DocumentCollection', $search->getDocuments(), $search->getDocumentResults(), $queryHandler->doQuerysExist());
-} catch (RuntimeException $e) {
-	ExceptionFormatter::FormatException($e);
-} catch (UnderflowException $e) {
-	ExceptionFormatter::FormatException($e);
-} catch (InvalidArgumentException $e) {
-	ExceptionFormatter::FormatException($e);
+   if(accContent == '') {
+     document.write("<p>We offer modern&nbsp;<a href='https://www.uhi.ac.uk/en/studying-at-uhi/first-steps/accommodation/'>student accommodation</a> at a number of our locations.</p>");
+   }
+   else {
+     document.write(accContent);
+   }
 }
 
-if (false) {
-	// get rid of proximity and frequency stuff
+        formatter = 'text/tab-summary-bottom-en' ;
+  		 document.write(getLayout(formatter));
+  }
 
-// Process query with no boosts
-	try {
-		$frequencySearch = ProcessorFactory::getInstance('FrequencySearch', $documentCollection);
-		$proximitySearch = ProcessorFactory::getInstance('ProximitySearch', $documentCollection);
-	} catch (RuntimeException $e) {
-		ExceptionFormatter::FormatException($e);
-	} catch (InvalidArgumentException $e) {
-		ExceptionFormatter::FormatException($e);
-	}
 
-	if ($queryHandler->isQuerySet('keyword')) {
-		$frequencySearch->setMember('query', $queryHandler->getQueryValue('keyword'));
-		$frequencySearch->setMember('element', 'course-name');
+  		/* Content tab - not lang dependent */
+  		formatter 			=  'text/tab-content';
+  		document.write(getLayout(formatter));
 
-		$frequencySearch->runProcessor();
-		$frequencySearch->setMember('element', 'course-keywords');
-		$frequencySearch->runProcessor();
-		$frequencySearch->setMember('element', 'course-level');
-		$frequencySearch->runProcessor();
-		$frequencySearch->setMember('element', 'course-code');
-		$frequencySearch->runProcessor();
+  		/* Study Mode tab */
+  		formatter 			=  isGD ? 'text/tab-study-mode-gd' : 'text/tab-study-mode-en' ;
+  		document.write(getLayout(formatter));
 
-		$frequencySearch->setMember('element', $coursesubjectsearch);
-		$frequencySearch->runProcessor();
+  		/* Funding tab  */
+  		/* Do this one here as we cannot add PLs code to layouts that are called by a PLs layout */
+        document.write('<div id="tab-funding" class="tab">');
+  		/* Left col */
+        document.write('<div class="col half"><h3>Fees</h3>');
 
-		$proximitySearch->setMember('element', 'course-name');
-		$proximitySearch->setMember('boost', 1.2);
-		$proximitySearch->setMember('query', $queryHandler->getQueryValue('keyword'));
-		$proximitySearch->runProcessor();
-		$documentCollection->combineRankedResults();
-	}
+  			var feesContent = '';
+		 	feesContent = processTags('<t4 type="navigation" name="Uni - Course Codes" id="81" /><t4 type="navigation" name="Argyll - Course Codes" id="255" /><t4 type="navigation" name="HTC - Course Codes" id="262" /><t4 type="navigation" name="Inverness - Course Codes" id="258" /><t4 type="navigation" name="Lews - Course Codes" id="270" /><t4 type="navigation" name="Moray - Course Codes" id="273" /><t4 type="navigation" name="NorthHighland - Course Codes" id="276" /><t4 type="navigation" name="Orkney - Course Codes" id="260" /><t4 type="navigation" name="Perth - Course Codes" id="267" /><t4 type="navigation" name="Shetland - Course Codes" id="265" /><t4 type="navigation" name="WHC - Course Codes" id="279" />');
+            if (feesContent.length() > 0) {
+                document.write(feesContent);
+            } else {
+                feesContent = processTags('<t4 type="navigation" name="Uni - Course Level" id="82" /><t4 type="navigation" name="Argyll - Course Level" id="256" /><t4 type="navigation" name="Inverness - Course Level" id="259" /><t4 type="navigation" name="HTC - Course Level" id="263" /><t4 type="navigation" name="Lews - Course Level" id="271" /><t4 type="navigation" name="Moray - Course Level" id="274" /><t4 type="navigation" name="NorthHighland - Course Level" id="277" /><t4 type="navigation" name="Orkney - Course Level" id="261" /><t4 type="navigation" name="Perth - Course Level" id="268" /><t4 type="navigation" name="Shetland - Course Level" id="266" /><t4 type="navigation" name="WHC - Course Level" id="280" />');
+                if (feesContent.length() > 0) {
+                    document.write(feesContent);
+                } else {
+                  feesContent = processTags('<t4 type="navigation" name="Default fees message" id="257" />');
+                      document.write(feesContent);
+                }
+            }
 
-	if ($queryHandler->isQuerySet('course-level-search')) {
-		$frequencySearch->setMember('query', $queryHandler->getQueryValue('course-level-search'));
-		$frequencySearch->setMember('element', 'course-level-search');
-		$frequencySearch->runProcessor();
-		$documentCollection->combineRankedResults();
-	}
-	if ($queryHandler->isQuerySet($coursesubjectsearch)) {
-		$frequencySearch->setMember('query', $queryHandler->getQueryValue($coursesubjectsearch));
-		$frequencySearch->setMember('element', $coursesubjectsearch);
-		$frequencySearch->runProcessor();
-		$documentCollection->combineRankedResults();
-	}
-	if ($queryHandler->isQuerySet('course-study-mode')) {
-		$frequencySearch->setMember('query', $queryHandler->getQueryValue('course-study-mode'));
-		$frequencySearch->setMember('element', 'course-study-mode');
-		$frequencySearch->runProcessor();
-		$documentCollection->combineRankedResults();
-	}
-	if ($queryHandler->isQuerySet('international')) {
-		$frequencySearch->setMember('query', $queryHandler->getQueryValue('international'));
-		$frequencySearch->setMember('element', 'international');
-		$frequencySearch->runProcessor();
-		$documentCollection->combineRankedResults();
-	}
-	if ($queryHandler->isQuerySet('course-location')) {
-		$frequencySearch->setMember('query', $queryHandler->getQueryValue('course-location'));
-		$frequencySearch->setMember('element', 'course-location');
-		$frequencySearch->runProcessor();
-		$documentCollection->combineRankedResults();
-	}
+  		/* Close Left col */
+  		document.write('</div>');
+  		/* Right col */
+  		document.write('<div class="col half">');
 
-} // end get rid of proximity and frequency stuff
 
-// Sort the document results
-try {
-	$documentCollection->sort('course-name', SORT_ASC);
-} catch (UnderflowException $e) {
-	ExceptionFormatter::FormatException($e);
+
+
+  				var fundingHeading = isGD ? 'Maoineachadh' : 'Funding' ;
+  				//Maoineachadh
+
+         var funding = processTags('<t4 type="content" name="Funding" output="normal" modifiers="nl2br" />');
+  if (funding.length() != 0) {
+  				document.write('<h3>'+ fundingHeading +'</h3>');
+  				document.write(processTags('<t4 type="content" name="Funding" output="normal" modifiers="nl2br" />') );
+  }
+
+  		/* Close Right col */
+  		document.write('</div>');
+
+    /* Additional Costs */
+  var additionalCosts = processTags('<t4 type="content" name="Additional course costs" output="normal" modifiers="nl2br" />');
+  if (additionalCosts.length() != 0) {
+              document.write('<div class="col half">');
+  				document.write('<h3>Additional Costs</h3>');
+  				document.write(processTags('<t4 type="content" name="Additional course costs" output="normal" modifiers="nl2br" />') );
+              document.write('</div>');
+  }
+
+        /* Close funding tab  */
+  		document.write('</div>');
+
+  		/* Career tab */
+  		formatter 			=  isGD ? 'text/tab-career-gd' : 'text/tab-career-en' ;
+  		document.write(getLayout(formatter));
+
+  	/* Close tabs  */
+	document.write('</div><!-- end .wrap.tabs -->');
+    document.write('</div><!-- end .section.clearfix.coursedetails -->'); /* was "main" */
+
+  	/***********************************
+       - Testimonials and Apply Now -
+    ************************************/
+  	document.write('<div class="section ctas">');
+  		var quoteOne = '';
+
+  		quoteOne = processTags('<t4 type="content" name="Quote 1" output="normal" modifiers="nl2br" />');
+
+  		if (quoteOne.length() > 0) {
+          	/* Write quotes wrapper */
+        	document.write('<div class="section clearfix testimonials">');
+                  document.write('	<div class="wrap">');
+                      var quotesHeading = isGD ? 'Na tha na h-oileanaich againn ag ràdh' : 'What our <strong>students</strong>, <strong>graduates</strong> and <strong>staff</strong> say' ;
+                      document.write('<h2>'+quotesHeading+'</h2>');
+                      /* Open Quotes tabs */
+                      document.write('<div class="quotes tabs">');
+
+							/* Write Quote one */
+          					/* Open tab1 */
+          					document.write('<div id="tab1"><blockquote>');
+								/* Write quote */
+          						document.write(quoteOne);
+          					/* Close tab1 */
+          					document.write('</blockquote></div>');
+
+          					/** Quote two **/
+          					var quoteTwo = '';
+                            quoteTwo = processTags('<t4 type="content" name="Quote 2" output="normal" modifiers="nl2br" />');
+          					if (quoteTwo.length() > 0) {
+                            	/* Open tab2 */
+          						document.write('<div id="tab2"><blockquote>');
+                                  /*Write quote */
+                                  document.write(quoteTwo);
+                                /* Close tab3 */
+                                document.write('</blockquote></div>');
+                            }
+
+          					/** Quote three **/
+          					var quoteThree = '';
+                            quoteThree = processTags('<t4 type="content" name="Quote 3" output="normal" modifiers="nl2br" />');
+          					if (quoteThree.length() > 0) {
+                            	/* Open tab3 */
+          						document.write('<div id="tab3"><blockquote>');
+                                  /*Write quote */
+                                  document.write(quoteThree);
+                                /* Close tab3 */
+                                document.write('</blockquote></div>');
+                            }
+
+          					/* Quotes thumbnails */
+          					document.write('<ul class="thumbs">');
+          						/* Thumbnail one */
+                              	document.write('<li>');
+                                document.write('	<a class="img" href="#tab1">');
+          								var quoteOneImage = '';
+                                        quoteOneImage = processTags('<t4 type="navigation" name="Course Quote Image 1 getter - current section" id="83" />');
+          								if (quoteOneImage.length()  == 0) {
+                                          	quoteOneImage = processTags('<t4 type="navigation" name="Course Quote Image getter - default image" id="86" />');
+
+                                        }
+          								document.write(quoteOneImage) ;
+
+                                document.write('	</a>');
+                                document.write('</li>');
+                                if (quoteTwo.length() > 0) {
+                              		document.write('<li>');
+                                  	document.write(' 	<a class="img" href="#tab2">');
+                                  		var quoteTwoImage = '';
+                                        quoteTwoImage = processTags('<t4 type="navigation" name="Course Quote Image 2 getter - current section" id="84" />');
+          								if (quoteTwoImage.length()  == 0) {
+                                          	quoteTwoImage = processTags('<t4 type="navigation" name="Course Quote Image getter - default image" id="86" />');
+
+                                        }
+                                  		document.write(quoteTwoImage) ;
+									document.write('	</a>');
+                                	document.write('</li>');
+                                }
+          						if (quoteThree.length() > 0) {
+                              		document.write('<li>');
+                                  	document.write(' <a class="img" href="#tab3">');
+                                  		var quoteThreeImage = '';
+                                        quoteThreeImage = processTags('<t4 type="navigation" name="Course Quote Image 3 getter - current section" id="85" />');
+          								if (quoteThreeImage.length()  == 0) {
+                                          	quoteThreeImage = processTags('<t4 type="navigation" name="Course Quote Image getter - default image" id="86" />');
+                                        }
+                                  		document.write(quoteThreeImage) ;
+									document.write('	</a>');
+                                	document.write('</li>');
+                                }
+                            /* Close Quotes thumbnails */
+                            document.write('</ul>');
+
+          			  /* Close Quotes tabs */
+                      document.write('</div>');
+          		  /* Close quotes wrapper */
+          		  document.write('	</div>');
+          	document.write('</div>');
+
+        }//end if Quote 1
+
+  		/* Apply block */
+  		/* Open Apply block */
+  		document.write('<div class="section clearfix apply" id="applynow">');
+  		document.write('	<div class="wrap">');
+		document.write('		<div id="Apply">');
+		document.write('			<div class="wrap">');
+  				/* Write apply content */
+  				document.write(processTags('<t4 type="content" name="Apply" output="normal" modifiers="nl2br" />'));
+
+  				/* Disclaimer en/gd */
+  				var disclaimer = processTags('<t4 type="navigation" name="EN Course disclaimer getter" id="87" />');
+
+  				if (isGD) {
+                	disclaimer = processTags('<t4 type="navigation" name="GD Course disclaimer getter" id="88" />');
+                }
+                document.write(disclaimer);
+  		/* Close Apply block */
+  		document.write('			</div>');
+		document.write('		</div>');
+		document.write('	</div>');
+  		document.write('</div>');
+
+  	/* Close Testimonials and Apply Now */
+  	document.write('</div>');
+
+/***********************************
+- KIS Widget -
+************************************/
+/* KIS widget */
+var showKIS = processTags('<t4 type="content" name="Display KIS?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
+
+var isFullTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
+
+      var isPartTime = processTags('<t4 type="content" name="Full time?" output="normal" modifiers="striptags,htmlentities" />').toString().toLowerCase().trim();
+
+if (showKIS == 'yes' && (isFullTime == 'yes' || isPartTime == 'yes'  )) {
+    document.write('<div class="section clearfix course coursefinder"><div class="wrap kis-container">');
+    var delivery = (isFullTime == 'yes') ? 'FullTime' : 'PartTime';
+    document.write('<div class="kis-widget" data-institution="10007114" data-course="' + courseCodeExtra + '" data-kismode="' + delivery + '" data-orientation="horizontal" data-language="en-GB"></div>');
+/* delivery may have changed to needing 'FullTime' or 'PartTime' */
+    document.write("<script>(function (d) {var widgetScript = d.createElement('script');widgetScript.id = 'unistats-widget-script';widgetScript.src = '//widget.unistats.ac.uk/js/unistats.widget.js'; var scriptTags = d.getElementsByTagName('script')[0]; if (d.getElementById('unistats-widget-script')) { return; }scriptTags.parentNode.insertBefore(widgetScript, scriptTags);} (document));</script>");
+      }
+
+   /* Close course search and KIS widget */
+   document.write('</div></div><!-- .coursefinder -->');
+
+   document.write('</main>');   /*  new end main tag 20191114  */
+
+} catch (err) {
+	document.write(err);
 }
-
-//Ouputput search results or error message
-
-$pageResetLink = '<t4 type="navigation" name="Current section path" id="63" />';
-
-if ($documentCollection->displayResults('HTMLResult') === false) {
-	$noResults = "<p>We're sorry your search hasn't found what you're looking for. Please try checking your spelling or simplifying your search. You could also try the filter options to only display courses of a particular level, subject area or study mode. You can also filter by location.</p>";
-	$noResults .= "<p>If that doesn't help then please get in touch via <a href='mailto:info@uhi.ac.uk' class='mail-link'>info@uhi.ac.uk</a> or 01463 279190.</p>";
-	$noResults .= "<p>Finally, if you're looking for information on short courses or activity local to you around the Highlands and Islands then please visit our partner websites linked from the bottom of this page. If you're not sure which one is nearest you, then take a look at our map.</p>";
-	$noResults .= "<p><a href='" . $pageResetLink . "' class='internal-link'>Restart Search</a></p>";
-	echo $noResults;
-}
-
-?>
-
-</ul>
-</div>
-<!-- END T4 Live Content -->
-<!-- start of page layout footer -->
-<aside class="col onequarter  courselist--filter-sets">
-
-  <?php
-// Facets
-try {
-	$listFacet = FacetFactory::getInstance('ListFacet', $documentCollection, $queryHandler);
-} catch (RuntimeException $e) {
-	ExceptionFormatter::FormatException($e);
-}
-?>
-
-  <a class="reset-course-search  UHI--paragraph-highlight" href="<t4 type="navigation" name="Current section path" id="63" />">Reset search</a>
-  <h2>Filter by</h2>
-
-  <!-- ^^  Current section path id #63 ^^ -->
-
-  <form action="<?php echo $_SERVER['PHP_SELF'] ?>" id="coursesearch-filters" name="coursesearch-filters" method="get">
-    <ul class="accordion" id="coursefilter">
-      <?php
-// Output the current 'keyword' query as hidden input so it's preserved when updating results
-$formatQueryAsHiddenInput = QueryFormatterFactory::getInstance('FormatQueryAsHiddenInput', $queryHandler);
-$formatQueryAsHiddenInput->setMember('excludedQueries', array('course-level-search', $coursesubjectsearch, 'course-study-mode', 'course-location', 'international'));
-echo $formatQueryAsHiddenInput->format();
-?>
-      <li  class="open" data-key="int"><h3 class="course-filter-title">International<span class="arrow">&#9660;</span></h3>
-        <ul class="search-filters">
-          <?php
-$listFacet->setMember('labelClass', 'course-search-filter');
-$listFacet->setMember('element', 'international');
-$listFacet->setMember('sortingState', true);
-$listFacet->setMember('multipleValueState', true);
-$listFacet->setMember('multipleValueSeparator', '|');
-$listFacet->setMember('facetSource', 'documents');
-$listFacet->displayFacet();
-?>
-        </ul>
-      </li>
-      <li  class="open" data-key="level"><h3 class="course-filter-title">Course level<span class="arrow">&#9660;</span></h3>
-        <ul class="search-filters">
-          <?php
-$listFacet->setMember('labelClass', 'course-search-filter');
-$listFacet->setMember('element', 'course-level-search');
-$listFacet->setMember('sortingState', true);
-$listFacet->setMember('facetSource', 'documents');
-$listFacet->displayFacet();
-?>
-        </ul>
-      </li>
-      <li class="open"  data-key="subject"><h3 class="course-filter-title">Subject area<span class="arrow">&#9660;</span></h3>
-        <ul class="search-filters">
-          <?php
-$listFacet->setMember('labelClass', 'course-search-filter');
-$listFacet->setMember('element', $coursesubjectsearch);
-$listFacet->setMember('sortingState', true);
-$listFacet->setMember('facetSource', 'documents');
-$listFacet->displayFacet();
-?>
-        </ul>
-      </li>
-      <li class="open" data-key="mode"><h3 class="course-filter-title">Study mode<span class="arrow">&#9660;</span></h3>
-        <ul class="search-filters">
-          <?php
-$listFacet->setMember('labelClass', 'course-search-filter');
-$listFacet->setMember('element', 'course-study-mode');
-$listFacet->setMember('sortingState', true);
-$listFacet->setMember('multipleValueState', true);
-$listFacet->setMember('multipleValueSeparator', '|');
-
-$listFacet->setMember('facetSource', 'documents');
-$listFacet->displayFacet();
-?>
-        </ul>
-      </li>
-      <?php
-if (!$partner) {
-	echo '<li class="open" data-key="location"><h3 class="course-filter-title">Location<span class="arrow">&#9660;</span></h3>';
-	echo '<ul class="search-filters">';
-
-	$listFacet->setMember('labelClass', 'course-search-filter');
-	$listFacet->setMember('element', 'course-location');
-	$listFacet->setMember('sortingState', true);
-	$listFacet->setMember('multipleValueState', true);
-	$listFacet->setMember('multipleValueSeparator', '|');
-
-	$listFacet->setMember('facetSource', 'documents');
-	$listFacet->displayFacet();
-
-	echo '</ul>';
-	echo '</li>';
-}
-?>
-    </ul>
-  </form>
-
-  <a class="reset-course-search  UHI--paragraph-highlight" href="<t4 type="navigation" name="Current section path" id="63" />">Reset search</a>
-
-  <!-- ^^ Course search layout getter id #66 ^^ -->
-  <t4 type="navigation" name="Course search layout getter" id="66" />
-
-</aside><!-- Search filters aside -->
-
-</div><!-- wrap -->
-</div><!-- courselist -->
-</main>
-<footer class="footer clearfix">
-  <!-- ^^ Site footer links getter #39 ^^ -->
-  <t4 type="navigation" name="Site footer links getter" id="39" />
-  <!-- Translatable One-Web Footer Text -->
-  <t4 type="media" formatter="inline/*" id="7201" />
-  <t4 type="media" formatter="inline/*" id="7200" />
-  <!-- ^^ Footer social media links getter #40 ^^ -->
-  <t4 type="navigation" name="Footer social media links getter" id="40" />
-  <div class="wrap clearfix">
-    <!-- ^^ Site footer copyright getter #41 ^^ -->
-    <t4 type="navigation" name="Site footer copyright getter" id="41" />
-    <!-- ^^ Site footer trademark getter #42 ^^ -->
-    <t4 type="navigation" name="Site footer trademark getter" id="42" />
-  </div>
-</footer>
-
-<!-- UHI Footer code getter nav object -->
-<t4 type="navigation" name="UHI Footer code getter nav object" id="79" />
-<!-- footer analytics -->
-<t4 type="media" formatter="inline/*" id="101" />
-</body>
-</html>
