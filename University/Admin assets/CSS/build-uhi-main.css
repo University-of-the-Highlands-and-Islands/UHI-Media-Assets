@@ -3729,6 +3729,7 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
   text-transform: lowercase;
   top: 5%;
   z-index: 2;
+  color: #fff;
 }
 
 /*****************************************************
