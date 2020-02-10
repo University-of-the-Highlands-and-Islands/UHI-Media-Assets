@@ -339,9 +339,7 @@ Unistats widget
 .main img {
   border: 0;
   border-radius: 3px;
-  height: auto;
   max-width: 100%;
-  vertical-align: middle;
 }
 
 .main dl.info {
@@ -2654,10 +2652,17 @@ Content type usage report: News
 .content-type--one-web-news time {
   font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
+  float: right;
+  color: grey;
 }
 
 .content-type--one-web-news__image {
-  margin-bottom: 1rem;
+  margin: auto;
+  width: auto;
+  display: table;
+  background: #eee8ef;
+  padding: 1%;
+  border-radius: 3px;
 }
 
 .content-type--one-web-news__image p {
@@ -2666,13 +2671,31 @@ Content type usage report: News
   margin: 5px 0 0;
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   .content-type--one-web-news__image {
     float: right;
     margin-bottom: 2rem;
     margin-left: 2rem;
     max-width: 350px;
   }
+} */
+
+.news-image-align {
+  display: block;
+  text-align: center;
+}
+
+.content-type--one-web-news__image img {
+  max-height: 475px;
+}
+
+.content-type--one-web-news__image figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  background: #eee8ef;
+  padding: 0% 1% 1% 1%;
+  border-radius: 0px 1px 1px 1px;
+  margin-top: -3px;
 }
 
 /****************************************
