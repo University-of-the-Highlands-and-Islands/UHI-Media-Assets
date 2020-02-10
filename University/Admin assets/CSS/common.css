@@ -595,7 +595,7 @@ dt {
 figcaption {
   font-size: 14px;
   font-style: normal;
-  margin: .5rem 0;
+  text-align: left;
 }
 
 figure {
