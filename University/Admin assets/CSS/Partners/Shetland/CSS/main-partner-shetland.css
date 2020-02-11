@@ -169,3 +169,13 @@ native 74px x 307px
     width: 307px;
   }
 }
+
+/* News item image colour changes */
+
+.content-type--one-web-news__image {
+  background: #eceef2;
+}
+
+.content-type--one-web-news__image figcaption {
+  background: #eceef2;
+}
