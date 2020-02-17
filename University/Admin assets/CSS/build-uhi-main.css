@@ -64,6 +64,23 @@ MAIN #PORTAL-COLUMN LAYOUT
   }
 }
 
+.right-content-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media (max-width: 1024px) {
+  .right-content-flex {
+    background-color: #eee8ef;
+    border-color: #ddd;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+}
+
 /*
 main content links
 */
@@ -2745,7 +2762,19 @@ Content type usage report: Right Content
 ****************************************/
 
 .content-type--one-web-right-content {
-  margin: 0 0 2rem;
+  margin: 0 1rem 1rem 0;
+  order: 0;
+}
+
+@media (max-width: 1024px) {
+  .content-type--one-web-right-content {
+    margin: 1rem 1rem 0 0;
+    order: 2;
+    padding: 1rem;
+    flex-basis: 100%;
+    border: 2px solid #bababa;
+    border-radius: 6px;
+  }
 }
 
 .content-type--one-web-right-content blockquote {
@@ -3344,12 +3373,45 @@ used in:
 ****************************************/
 
 .content-type-modifier--shading {
-  background-color: #eee8ef;
-  border-color: #ddd;
-  border-radius: 6px;
-  border-style: solid;
-  border-width: 1px;
   padding: 1rem;
+}
+
+.content-type-modifier--shading-image {
+  padding: 1rem;
+  display: table;
+}
+
+.content-type-modifier--shading-image figcaption {
+  font-style: italic;
+  display: table-caption;
+  caption-side: bottom;
+  padding: 0 1rem 1rem 1rem;
+  margin-top: -6px;
+}
+
+@media (min-width: 1024px) {
+  .content-type-modifier--shading {
+    background-color: #eee8ef;
+    border-color: #ddd;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .content-type-modifier--shading-image {
+    background-color: #eee8ef;
+    border-color: #ddd;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .content-type-modifier--shading-image figcaption {
+    background: #eee8ef;
+    border-color: #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0px 0px 6px 6px;
+  }
 }
 
 /****************************************
@@ -3729,6 +3791,7 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
   margin: 0 1rem 1rem 0;
   padding: 0;
   transition: .5s;
+  border-radius: 6px;
 }
 
 .content-type--page-button a,
@@ -3764,7 +3827,15 @@ Content type usage report: Right Image (?)
 ******************************************************/
 
 .content-type--one-web-right-image {
-  margin: 0 0 2rem;
+  order: 3;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .content-type--one-web-right-image {
+    margin: 0 1rem 1rem 0;
+    order: 0;
+  }
 }
 
 /****************************************
