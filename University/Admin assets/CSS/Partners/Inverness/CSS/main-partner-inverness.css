@@ -179,3 +179,25 @@ native 83px x 294px
 .content-type--one-web-news__image figcaption {
   background: #f1e9ef;
 }
+
+/* Right content colour changes */
+
+@media (min-width: 1024px) {
+  .content-type-modifier--shading {
+    background-color: #f1e9ef;
+  }
+  
+  .content-type-modifier--shading-image {
+    background-color: #f1e9ef;
+  }
+  
+  .content-type-modifier--shading-image figcaption {
+    background: #f1e9ef;
+  }
+}
+
+@media (max-width: 1024px) {
+  .right-content-flex {
+    background-color: #f1e9ef;
+  }
+}
