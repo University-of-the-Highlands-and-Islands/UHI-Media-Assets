@@ -3625,7 +3625,7 @@ previously used .halflight
 .content-type--landing-content-boxes__box {
   box-sizing: content-box;
   margin: 0 1rem 1rem 0;
-  width: 39%;
+  width: 100%;
 }
 
 @media (max-width: 639px), (min-width: 768px) and (max-width: 1023px) {
