@@ -239,6 +239,7 @@ function uhicollapsibleSections(){
         } else {
             panel.style.display = "block";
             $("iframe[src^='https://stream.uhi.ac.uk']").parent().css("padding-top", "56.25%");
+            $("iframe[src^='https://www.youtube.com']").parent().css("padding-top", "56.25%");
         }
     });
 
@@ -256,6 +257,7 @@ function uhicollapsibleSections(){
 	        } else {
 	            panel.style.display = "block";
 	            $("iframe[src^='https://stream.uhi.ac.uk']").parent().css("padding-top", "56.25%");
+	            $("iframe[src^='https://www.youtube.com']").parent().css("padding-top", "56.25%");
         	}
         }
     });
@@ -278,6 +280,7 @@ function uhiCollapseSection(open){
           var panel = acc[i].nextElementSibling;
            panel.style.display = "block";  
            $("iframe[src^='https://stream.uhi.ac.uk']").parent().css("padding-top", "56.25%"); 
+           $("iframe[src^='https://www.youtube.com']").parent().css("padding-top", "56.25%");
       } else {
           if($(acc[i]).hasClass("content-type-modifier--collapsible--open")) acc[i].classList.toggle("content-type-modifier--collapsible--open");
           var panel = acc[i].nextElementSibling;
