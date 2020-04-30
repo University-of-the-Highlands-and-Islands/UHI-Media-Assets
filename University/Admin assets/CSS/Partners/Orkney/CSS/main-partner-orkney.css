@@ -169,3 +169,35 @@ native 74px x 312px
     width: 312px;
   }
 }
+
+/* News item image colour changes */
+
+.content-type--one-web-news__image {
+  background: #e5eeef;
+}
+
+.content-type--one-web-news__image figcaption {
+  background: #e5eeef;
+}
+
+/* Right content colour changes */
+
+@media (min-width: 1024px) {
+  .content-type-modifier--shading {
+    background-color: #e5eeef;
+  }
+  
+  .content-type-modifier--shading-image {
+    background-color: #e5eeef;
+  }
+  
+  .content-type-modifier--shading-image figcaption {
+    background: #e5eeef;
+  }
+}
+
+@media (max-width: 1024px) {
+  .right-content-flex {
+    background-color: #e5eeef;
+  }
+}

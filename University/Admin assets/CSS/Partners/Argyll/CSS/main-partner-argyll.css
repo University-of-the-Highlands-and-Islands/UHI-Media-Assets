@@ -182,3 +182,35 @@ rules not in other partner-specific stylesheets
   border: 1px solid #5a2b82;
   border-radius: 10px;
 }
+
+/* News item image colour changes */
+
+.content-type--one-web-news__image {
+  background: #eee9f2;
+}
+
+.content-type--one-web-news__image figcaption {
+  background: #eee9f2;
+}
+
+/* Right content colour changes */
+
+@media (min-width: 1024px) {
+  .content-type-modifier--shading {
+    background-color: #eee9f2;
+  }
+  
+  .content-type-modifier--shading-image {
+    background-color: #eee9f2;
+  }
+  
+  .content-type-modifier--shading-image figcaption {
+    background: #eee9f2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .right-content-flex {
+    background-color: #eee9f2;
+  }
+}

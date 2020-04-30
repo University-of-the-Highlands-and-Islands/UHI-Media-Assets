@@ -64,6 +64,23 @@ MAIN #PORTAL-COLUMN LAYOUT
   }
 }
 
+.right-content-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media (max-width: 1024px) {
+  .right-content-flex {
+    background-color: #eee8ef;
+    border-color: #ddd;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+}
+
 /*
 main content links
 */
@@ -339,9 +356,7 @@ Unistats widget
 .main img {
   border: 0;
   border-radius: 3px;
-  height: auto;
   max-width: 100%;
-  vertical-align: middle;
 }
 
 .main dl.info {
@@ -1620,6 +1635,213 @@ section testimonials
   font-weight: normal;
 }
 
+/* Course page message us and apply */
+
+.bottomapply {
+    background-color: #572163;
+    padding: 15px;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+input[type=text] {
+    width: 90%;
+}
+
+input[type=submit] {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    border: none;
+    padding: 7px;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+textarea {
+    width: 90%;
+}
+
+.messageapply {
+    background-color: #4a4c4e;
+    padding: 15px;
+    color: white;
+    border-radius: 20px;
+}
+
+.zoom {position:fixed; bottom:0; right:0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
+.zoom a {color:#fff; font-weight: bold;}
+      .smallmargin {margin-left: 20px;}
+.zoom img {display:none;}
+.minimise {display: none;}
+      .bottommessage {display: none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
+      .bottommessage a {color:#fff; margin-left:20px; font-weight: bold;}
+
+@media (min-width: 768px) {
+.zoom {bottom:75px; right:10px; height: 70px; background: none; padding:0; width: auto; display: block;}
+.zoom img {width:90px; float: right; display: inline-grid;}
+.smlscrmsg {display:none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
+.smlscrmsg a {color:#fff; margin-left:20px; font-weight: bold;}
+    .zoom p {background-color: #b74783; color: #fff; padding: 10px; border-radius: 4px; margin: 0 auto 10px; position: relative; font-weight: bold; border: none;}
+    .zoom p::after {
+        border-left: 20px solid transparent;
+        border-top: 20px solid #b74783;
+        bottom: -12px;
+        content: "";
+        position: absolute;
+        right: 10px;
+    }
+    .minimise {background-color: #b74783; color: #fff; font-weight: bold; padding: 0 5px; border-radius: 4px; cursor: pointer; border: 3px solid #963b6b; display: inline; margin-left: 5px;}
+    .minimise:hover {background-color: #963b6b;}
+}
+
+.section.ctas {
+    min-height: 0px;
+    padding: 0px;
+}
+
+.section.testimonials h2 {
+    padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .section.clearfix.courseapply .col.half {
+    float: left;
+    width: 44%;
+    margin-right: 4%;
+  }
+
+  .section.courseapply .col.half:first-child {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+ .section.courseapply p.applyconditions {
+    font-size: 14px;
+    line-height: 20px;
+}
+}
+@media (min-width: 768px) {
+.section.courseapply p.applyconditions {
+    font-size: 12px;
+    line-height: 16px;
+}
+}
+
+.section.courseapply p.applyconditions {
+    color: #fff;
+    font-family: "Glypha Web", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 17px;
+    padding: 10px;
+    text-transform: none;
+    background-color: #4a4c4e /* #b74783 */;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.section.kis-container{
+    padding-top: 15px;
+    font: bold 13px Oswald, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #000;
+    //background: url(<t4 type= "media" formatter= "image/path" id= "5577" />) top center no-repeat;
+}
+
+.section.clearfix.apply a {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    color: #fff;
+    display: inline-table;
+    margin: 0 2px 4px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-shadow: none;
+    vertical-align: middle;
+}
+
+.section.courseapply  {
+    overflow: hidden;
+    margin: 30px;
+}
+
+.section.courseapply {
+  position: relative;
+  background-color: #fff; /* url(<t4 type= "media" formatter= "image/path" id= "5576" />) center bottom no-repeat; */
+  color: #000;
+  font-size: 13px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .section.courseapply {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.courseapply {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.courseapply {
+    font-size: 16px;
+  }
+}
+
+.section.courseapply a {
+  text-decoration: underline;
+    font-weight: bold;
+}
+      
+.section.courseapply h3 {
+  margin: 0;
+}
+      
+@media (max-width: 767px) {
+  .section.courseapply h3 {
+    margin-bottom: 4px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.courseapply h3 {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.courseapply h3 {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.courseapply h3 {
+    font-size: 30px;
+  }
+}
+
+.section.courseapply p,
+.section.courseapply ul {
+  margin-top: 5px;
+}
+
+.section.courseapply ul li {
+  list-style: square;
+}
+
 /*
 Header slogan of eg:
 https://www.htc.uhi.ac.uk/
@@ -1852,11 +2074,14 @@ partner colours are in their theme stylesheets
   text-align: left;
 }
 
-.fb-search #search-best-bets {
+.fb-search #search-best-bets:hover {
   background-color: #eee;
   border-radius: 3px;
+}
+
+.fb-search #search-best-bets {
   margin: 8px 0 0 0;
-  padding: 8px;
+  padding: 5px;
 }
 
 .fb-search #search-best-bets p {
@@ -1875,7 +2100,7 @@ partner colours are in their theme stylesheets
 
 .fb-search .list-unstyled {
   list-style: none;
-  padding: 0;
+  padding: 5px;
 }
 
 .fb-search .result {
@@ -2251,6 +2476,7 @@ Content type usage report: Callout
   font-style: normal;
   margin: 1rem 2rem 2rem;
   overflow: hidden; /* when Right Content present 20180426 */;
+  color: #000;
 }
 
 .content-type--callout {
@@ -2443,10 +2669,17 @@ Content type usage report: News
 .content-type--one-web-news time {
   font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
+  float: right;
+  color: grey;
 }
 
 .content-type--one-web-news__image {
-  margin-bottom: 1rem;
+  margin: auto;
+  width: auto;
+  display: table;
+  background: #eee8ef;
+  padding: 1%;
+  border-radius: 3px;
 }
 
 .content-type--one-web-news__image p {
@@ -2455,13 +2688,31 @@ Content type usage report: News
   margin: 5px 0 0;
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   .content-type--one-web-news__image {
     float: right;
     margin-bottom: 2rem;
     margin-left: 2rem;
     max-width: 350px;
   }
+} */
+
+.news-image-align {
+  display: block;
+  text-align: center;
+}
+
+.content-type--one-web-news__image img {
+  max-height: 475px;
+}
+
+.content-type--one-web-news__image figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  background: #eee8ef;
+  padding: 0% 1% 1% 1%;
+  border-radius: 0px 1px 1px 1px;
+  margin-top: -3px;
 }
 
 /****************************************
@@ -2511,7 +2762,19 @@ Content type usage report: Right Content
 ****************************************/
 
 .content-type--one-web-right-content {
-  margin: 0 0 2rem;
+  margin: 0 1rem 1rem 0;
+  order: 0;
+}
+
+@media (max-width: 1024px) {
+  .content-type--one-web-right-content {
+    margin: 1rem 1rem 0 0;
+    order: 2;
+    padding: 1rem;
+    flex-basis: 100%;
+    border: 2px solid #bababa;
+    border-radius: 6px;
+  }
 }
 
 .content-type--one-web-right-content blockquote {
@@ -3110,12 +3373,45 @@ used in:
 ****************************************/
 
 .content-type-modifier--shading {
-  background-color: #eee8ef;
-  border-color: #ddd;
-  border-radius: 6px;
-  border-style: solid;
-  border-width: 1px;
   padding: 1rem;
+}
+
+.content-type-modifier--shading-image {
+  padding: 1rem;
+  display: table;
+}
+
+.content-type-modifier--shading-image figcaption {
+  font-style: italic;
+  display: table-caption;
+  caption-side: bottom;
+  padding: 0 1rem 1rem 1rem;
+  margin-top: -6px;
+}
+
+@media (min-width: 1024px) {
+  .content-type-modifier--shading {
+    background-color: #eee8ef;
+    border-color: #ddd;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .content-type-modifier--shading-image {
+    background-color: #eee8ef;
+    border-color: #ddd;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .content-type-modifier--shading-image figcaption {
+    background: #eee8ef;
+    border-color: #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0px 0px 6px 6px;
+  }
 }
 
 /****************************************
@@ -3329,7 +3625,7 @@ previously used .halflight
 .content-type--landing-content-boxes__box {
   box-sizing: content-box;
   margin: 0 1rem 1rem 0;
-  width: 39%;
+  width: 100%;
 }
 
 @media (max-width: 639px), (min-width: 768px) and (max-width: 1023px) {
@@ -3495,6 +3791,7 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
   margin: 0 1rem 1rem 0;
   padding: 0;
   transition: .5s;
+  border-radius: 6px;
 }
 
 .content-type--page-button a,
@@ -3518,6 +3815,7 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
   text-transform: lowercase;
   top: 5%;
   z-index: 2;
+  color: #fff;
 }
 
 /*****************************************************
@@ -3529,7 +3827,15 @@ Content type usage report: Right Image (?)
 ******************************************************/
 
 .content-type--one-web-right-image {
-  margin: 0 0 2rem;
+  order: 3;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .content-type--one-web-right-image {
+    margin: 0 1rem 1rem 0;
+    order: 0;
+  }
 }
 
 /****************************************
@@ -3979,6 +4285,13 @@ https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/
   }
 }
 
+/* removes link text from social media share buttons and fixes firefox, IE and Edge display problem */
+.hide-link-text a {
+  text-indent: -9999px;
+  display: inline-table;
+  font-size: 1px;
+}
+
 /****************************************
 
 Widgets
@@ -4079,8 +4392,7 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4ft a,
   #mode4pt a,
   #year a {
-    font-size: 22px;
-    height: 32px;
+    font-size: 20px;
   }
 }
 
@@ -4098,8 +4410,7 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4ft a,
   #mode4pt a,
   #year a {
-    font-size: 27px;
-    height: 40px;
+    font-size: 20px;
   }
 }
 
@@ -4117,8 +4428,7 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4ft a,
   #mode4pt a,
   #year a {
-    font-size: 30px;
-    height: 45px;
+    font-size: 20px;
   }
 }
 
