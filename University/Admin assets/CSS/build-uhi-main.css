@@ -1177,7 +1177,7 @@ https://www.uhi.ac.uk/en/courses/
   display: inline-block;
   margin-left: 3px;
   padding: 0 5px;
-  background-color: #e0e0e0;
+  background-color: #888888;
   color: #fff;
   border-radius: 3px;
   font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
@@ -1190,12 +1190,12 @@ https://www.uhi.ac.uk/en/courses/
 }
 
 .section.courselist .col.threequarters > ul li a .modes .mode.active {
-  background-color: #f1765f; /* for green try #3F6511 - complementary to main purple */
+  background-color: #b74783; /* for green try #3F6511 - complementary to main purple */
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .section.courselist .col.threequarters > ul li a .modes .mode.active:first-child {
-  background-color: #d15861; /* for green try #528316 - lighter shade but still accessible contrast */
+  background-color: #cd4750; /* for green try #528316 - lighter shade but still accessible contrast */
 }
 
 /*
@@ -2670,7 +2670,7 @@ Content type usage report: News
   font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
   float: right;
-  color: grey;
+  color: #666666;
 }
 
 .content-type--one-web-news__image {

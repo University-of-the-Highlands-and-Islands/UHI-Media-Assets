@@ -19,8 +19,8 @@ function getPrefsUrl(){
 }
 
 function getNoMediaText() {
-  return "<p style='background-color:#808080;color:#ffffff;height:100%;display:inline-block;'>" +
-      "We have removed this content.<br/> Please <a href='" + getPrefsUrl() + "'>change your cookie preferences</a> " +
+  return "<p style='background-color:#666666;color:#ffffff;height:100%;display:inline-block;'>" +
+      "We have removed this content.<br/> Please <a href='" + getPrefsUrl() + "' style='color:white;text-decoration: underline;'>change your cookie preferences</a> " +
       "to see our social media.</p>"; 
 }
 
