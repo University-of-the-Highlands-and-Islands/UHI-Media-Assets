@@ -261,10 +261,10 @@ function cookieConfigChange(cInput){
 // Change cookie duration
 
 function campaignCookieRead(){
-  var cAlert = '<t4 type="navigation" name="Site Wide Campaign Banner getter" id="443" />';
+  var cAlert = '<t4 type="navigation" name="Site Wide Campaign Banner getter" id="449" />';
   if (cAlert) 
    {
-   	var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="445" />';
+   	var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="448" />';
     var ccookie = getCookie("_" + scope + "_campaign");
     if (ccookie=="") {
         showCampaignMessage(cAlert);   	
@@ -280,7 +280,7 @@ function showCampaignMessage(cAlert) {
 }
 
 function campaignMessageClose() {
-   	var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="445" />';	
+   	var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="448" />';	
 	setCookie("_" + scope + "_campaign","1",1);  /// change last 1 back to 7
 	$(".campaign-banner").remove();
 }
