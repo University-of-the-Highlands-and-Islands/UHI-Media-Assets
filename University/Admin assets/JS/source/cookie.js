@@ -154,7 +154,7 @@ function removeIframes()   // mostly Youtube
 {
    var fb = document.getElementsByTagName('iframe');
    for (var i = fb.length-1; i >= 0; i--) {
-         fb[i].outerHTML = getNoMediaText();
+       if(!fb[i].src.includes("recaptcha")) fb[i].outerHTML = getNoMediaText();
    }     
 }
 
