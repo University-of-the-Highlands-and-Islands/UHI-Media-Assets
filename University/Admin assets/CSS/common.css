@@ -1085,6 +1085,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   position: sticky;
   top: 0;
   z-index: 99;
+  background-color: white;
 }
 
 .message--cookie p:first-child {
