@@ -1177,7 +1177,7 @@ https://www.uhi.ac.uk/en/courses/
   display: inline-block;
   margin-left: 3px;
   padding: 0 5px;
-  background-color: #888888;
+  background-color: #595959;
   color: #fff;
   border-radius: 3px;
   font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
@@ -3052,6 +3052,7 @@ used in
 }
 
 .content-type-modifier--collapsible .content-type--one-web-general-content,
+.content-type-modifier--collapsible .content-type--one-web-video-embed,
 .content-type-modifier--collapsible .content-type--one-web-general-content__heading {
   display: none;
 }
@@ -4431,5 +4432,3 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
     font-size: 20px;
   }
 }
-
-
