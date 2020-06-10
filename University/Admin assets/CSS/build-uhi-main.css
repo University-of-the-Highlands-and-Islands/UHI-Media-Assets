@@ -22,6 +22,7 @@ MAIN #PORTAL-COLUMN LAYOUT
   max-width: 1340px; /* max container width */
   text-align: left; /* all left-aligned text within container by default */
   width: 100%; /* full container width when < max container width */
+  overflow-x: hidden; /* prevents horizontal scrolling */
 }
 
 /* all flex items have spacing by default */
