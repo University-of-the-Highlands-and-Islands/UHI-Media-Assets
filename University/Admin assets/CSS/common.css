@@ -1224,6 +1224,10 @@ ul.ui-autocomplete {
   text-align: left;
 }
 
+ul.ui-autocomplete li {
+  cursor: default;
+}
+
 @media (min-width: 768px) {
   .section.coursefinder form .keyword {
     font-size: 17px;
