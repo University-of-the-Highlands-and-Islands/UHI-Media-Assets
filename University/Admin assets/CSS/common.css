@@ -1102,39 +1102,30 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   text-decoration: underline dotted;
 }
 
-/* NEW COOKIE CSS bottom left version */
+/* NEW COOKIE CSS */
 
-.cookie-notice-2 {
+.cookie-notice {
     font-family: "Glypha Web", Helvetica, Arial, sans-serif;
     font-size: 14px;
-    position: fixed;
-    bottom: 0;
+    position: sticky;
+    top: 0;
     z-index: 99;
     background-color: #4A4C4E;
     color: white;
-    display: block;
-}
-        
-@media (min-width: 768px) {
-    .cookie-notice-2 {
-        bottom: 10px;
-        left: 10px;
-        height: auto;
-        width: 500px;
-        border-radius: 5px;
-    }
+    display: flex;
+    align-items: center;
 }
 
 .cookie-message {
     text-align: left;
-    padding: 0px 10px;
+    padding: 10px;
     flex-basis: 70%;
     flex-grow: 2;
 }
-        
+
 .cookie-message a {
-    color: #8DC2FC;
-    text-decoration: underline;
+  color: #8DC2FC;
+  text-decoration: underline;
 }
 
 .cookie-buttons {
@@ -1147,25 +1138,61 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
     font-size: 14px;
     text-decoration: underline dotted;
     background-color: #036FE2;
-    padding: 4px 5px;
+    padding: 5px 7px;
     border-radius: 3px;
     white-space: nowrap;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
 }
 
 .cookie-settings {
-    background-color: white;
-    border-style: solid;
-    border-color: #036FE2;
-    color: #036FE2;
-    padding: 3px 4px;
-    font-size: 12px;
+    background-color: #1f1f1f;
+    color: white;
+    padding: 5px 7px;
+    font-size: 14px;
     text-decoration: underline dotted;
     cursor: pointer;
+    border-radius: 3px;
+    white-space: nowrap;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
 }
-        
+
+/* NEW COOKIE CSS BOTTOM LEFT VERSION */
+
+.cookie-notice-2 {
+    font-family: "Glypha Web", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background-color: #4A4C4E;
+    color: white;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .cookie-notice-2 {
+        bottom: 10px;
+        left: 10px;
+        height: auto;
+        width: 500px;
+        border-radius: 5px;
+    }
+}
+
 .flex-container {
     display: flex;
     align-items: center;
+}
+
+/* COOKIE NOTICE MODAL */
+
+#modalAlert {
+  background: #4a4c4e;
+  color: white;
 }
 
 /*  bottom of page campaign banner */
