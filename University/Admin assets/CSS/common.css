@@ -1102,6 +1102,72 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   text-decoration: underline dotted;
 }
 
+/* NEW COOKIE CSS bottom left version */
+
+.cookie-notice-2 {
+    font-family: "Glypha Web", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background-color: #4A4C4E;
+    color: white;
+    display: block;
+}
+        
+@media (min-width: 768px) {
+    .cookie-notice-2 {
+        bottom: 10px;
+        left: 10px;
+        height: auto;
+        width: 500px;
+        border-radius: 5px;
+    }
+}
+
+.cookie-message {
+    text-align: left;
+    padding: 0px 10px;
+    flex-basis: 70%;
+    flex-grow: 2;
+}
+        
+.cookie-message a {
+    color: #8DC2FC;
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    padding-right: 10px;
+}
+
+.cookie-accept {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline dotted;
+    background-color: #036FE2;
+    padding: 4px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.cookie-settings {
+    background-color: white;
+    border-style: solid;
+    border-color: #036FE2;
+    color: #036FE2;
+    padding: 3px 4px;
+    font-size: 12px;
+    text-decoration: underline dotted;
+    cursor: pointer;
+}
+        
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
 /*  bottom of page campaign banner */
 
 .message--campaign-banner {
