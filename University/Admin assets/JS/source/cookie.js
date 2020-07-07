@@ -52,8 +52,8 @@ function getPrefsUrl(){
   var url=document.URL; 
   if(url.indexOf("/en/") !== -1)
   {
- //   return "https://www.uhi.ac.uk/en/cookies";     // live
-    return "http://dev-www.uhi.ac.uk/en/cookies";       // dev
+    return "https://www.uhi.ac.uk/en/cookies";     // live
+  // return "http://dev-www.uhi.ac.uk/en/cookies";       // dev
   }
   else
   { 
@@ -99,7 +99,7 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+ d.toUTCString();
     if(window.location.href.indexOf("uhisf") > -1)
     {
-      document.cookie = cname + "=" + cvalue + "; Domain=.uhisf.com; secure=true; samesite=strict;" + expires + ";path=/";
+      document.cookie = cname + "=" + cvalue + "; Domain=.uhisf.com; secure=true; samesite=strict; " + expires + ";path=/";
     }
     else
     {
@@ -173,35 +173,23 @@ function runGA(){
   ga('create', 'UA-24468473-1', 'uhi.ac.uk');
   ga('send', 'pageview');
            function recordOutboundLink(link, category, action) {
-	ga('send', 'event', category, action);
+  ga('send', 'event', category, action);
     setTimeout('document.location = "' + link.href + '"', 100);  
  }
 }
 
 function showCookieMessage() {
 
-// 
-
   var pathname = window.location.pathname;
   if(pathname.indexOf("/cookies/") == -1)
   {
-   //   var cAlert = '<div id="uhi-cookie-alert" class="message message--cookie">';
-  	//  		cAlert +='<p><a class="close" title="Close" href="#" onclick="warningCookieContinue();">~</a></p>';
-  	//  		cAlert +='<p>We use <a href="' + getPrefsUrl() + '">cookies</a> to provide the best experience when browsing our site. These can be for perfomance or functional reasons.  ';
-   //          cAlert +='Some pages may also contain "third party" cookies from social media sites where we have used embedded content.  ';
-   //          cAlert +='You can <a href="' + getPrefsUrl() + '">change your cookie settings for our site</a>, or if you choose you can continue and  ';
-   //          cAlert +='we will assume that you are happy to receive all cookies from our site.</p>';
-  	// 		cAlert +='<div id="cookies-continue" onclick="warningCookieContinue();">Continue</div>';
-			// cAlert +='</div>';
+    var messagelocation = "2";      
 
-
-    var demoVersion = $.urlParam('demo');      
-
-    if(demoVersion == null || demoVersion == "1") {
+    if(messagelocation == "1") {
 
         var cAlert = '<div id="uhi-cookie-alert" class="cookie-notice">';
             cAlert +='<div class="cookie-message">';
-            cAlert +='<p>We use cookies to help us run this website and to promote the university using social media and other online tools. If you’re happy with this, click Accept all. If you would like to know more, then click on Settings. You are free to amend your settings at any time from our cookies page.</p>';
+            cAlert +='<p>We use cookies you accept along with necessary cookies to help us run this website and to promote the university using social media and other online tools. If you’re happy with this, click Accept all. If you would like to know more, click on Settings. You are free to amend your settings at any time from our cookies page.</p>';
             cAlert +='</div>';
             cAlert +=' <div class="cookie-buttons">';
             cAlert +='<p><a class="cookie-accept" onclick="warningCookieContinue();">Accept all</a></p>';
@@ -211,11 +199,11 @@ function showCookieMessage() {
         $(".message").css('display', 'none');
         $("body").prepend(cAlert);
     }
-    if(demoVersion == "2") {
+    if(messagelocation == "2") {
       var cAlert = '<div id="uhi-cookie-alert" class="cookie-notice-2">';
           cAlert +='<div class="flex-container">';
           cAlert +='<div class="cookie-message">';
-          cAlert +='<p>We use cookies to help us run this website and to promote the university using social media and other online tools. If you’re happy with this, click Accept all. If you would like to know more, then click on Settings. You are free to amend your settings at any time from our cookies page.</p>';
+          cAlert +='<p>We use cookies you accept along with necessary cookies to help us run this website and to promote the university using social media and other online tools. If you’re happy with this, click Accept all. If you would like to know more, click on Settings. You are free to amend your settings at any time from our cookies page.</p>';
           cAlert +='</div>';
           cAlert +='<div class="cookie-buttons">';
           cAlert +='<p><a class="cookie-accept" onclick="warningCookieContinue();">Accept all</a></p>';
@@ -227,14 +215,14 @@ function showCookieMessage() {
       $("body").prepend(cAlert);
     }
 
-    if(demoVersion == "3") {
+    if(messagelocation == "3") {
       
       $('head').append('<link rel="stylesheet" href="<t4 type="media" formatter="path/*" id="354392" />" type="text/css" />');
 
       var cAlert = '<div id="modalAlert" class="modal">';
 
           cAlert +='<div class="cookie-message">';
-          cAlert +='<p>We use cookies to help us run this website and to promote the university using social media and other online tools. If you’re happy with this, click Accept all. If you would like to know more, then click on Settings. You are free to amend your settings at any time from our cookies page.</p>';
+          cAlert +='<p>We use cookies you accept along with necessary cookies to help us run this website and to promote the university using social media and other online tools. If you’re happy with this, click Accept all. If you would like to know more, then click on Settings. You are free to amend your settings at any time from our cookies page.</p>';
           cAlert +='</div>';
           cAlert +='<div class="cookie-buttons">';
           cAlert +='<p><a class="cookie-accept" href="" onclick="warningCookieContinue();" rel="modal:close">Accept all</a></p>';
@@ -253,10 +241,7 @@ function showCookieMessage() {
           showClose: false
        });
 
- 
-
        noTab();
-
 
     }
 
@@ -338,7 +323,7 @@ function removeEmbeddedFeeds()
 function warningCookieContinue(){
     var cookie = getCookie("_uhic");
   //   if (cookie == "9111") {
-		// runGA();
+    // runGA();
   //   } 
     setCookie("_uhic","11111",90);   
     var warning = document.getElementById('uhi-cookie-alert');
@@ -351,52 +336,68 @@ function cookieConfigInit(){
     var cookie = getCookie("_uhic");
   if (cookie == "" || cookie == "0000"|| cookie == "0111" || cookie == "1111" || cookie == "91111" ) { 
     setCookie("_uhic","11111",90);
-    $("#cFunct").prop("checked", true);
-    $("#cPerf").prop("checked", true);
-    $("#cThird").prop("checked", true);
-    $("#cTarget").prop("checked", true);
+ //   $("#cFunct").prop("checked", true);
+ //   $("#cPerf").prop("checked", true);
+ //   $("#cThird").prop("checked", true);
+ //   $("#cTarget").prop("checked", true);
+ //   $("#cAll").prop("checked", true);
+ 
   }
   else
   {
-    if (cookie.charAt(1) == "1") $("#cFunct").prop("checked", true);
-    if (cookie.charAt(2) == "1") $("#cPerf").prop("checked", true);
-    if (cookie.charAt(3) == "1") $("#cThird").prop("checked", true);   
-    if (cookie.charAt(4) == "1") $("#cTarget").prop("checked", true);   
+    if (cookie.charAt(1) == "0") $("#cFunct").prop("checked", false);
+    if (cookie.charAt(2) == "0") $("#cPerf").prop("checked", false);
+    if (cookie.charAt(3) == "0") $("#cThird").prop("checked", false);   
+    if (cookie.charAt(4) == "0") $("#cTarget").prop("checked", false);   
+    (cookie == "11111") ? $("#cAll").prop("checked", true) : $("#cAll").prop("checked", false);  
   }
 }
 
 function cookieConfigChange(cInput){ 
   cVal = (cInput.checked) ? "1" : "0";
-  var cookie = getCookie("_uhic");
-  var tmp = setCharAt(cookie, cInput.value, cVal);
-  setCookie("_uhic",tmp,90);
-  
-  if(cInput.value == 2 && !cInput.checked)
-  {
-    document.cookie = '_ga' +'=; Path=/; Domain=.uhi.ac.uk; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    document.cookie = '_gat' +'=; Path=/; Domain=.uhi.ac.uk; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    document.cookie = '_gid' +'=; Path=/; Domain=.uhi.ac.uk; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  if(cInput.value == 0) {
+    $("#cFunct").prop("checked", cInput.checked);
+    $("#cPerf").prop("checked", cInput.checked);
+    $("#cThird").prop("checked", cInput.checked);
+    $("#cTarget").prop("checked", cInput.checked);
+    cVal = (cInput.checked) ? setCookie("_uhic","11111",90) : setCookie("_uhic","10000",90);
   }
-    if(cInput.value == 1 && !cInput.checked)
-  {
-    document.cookie = 'slider-bigBG' +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    document.cookie = 'slider-smallBG' +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-  }  
+  else {
+    if(cVal == 0) $("#cAll").prop("checked", false);   
+    var cookie = getCookie("_uhic");
+    var tmp = setCharAt(cookie, cInput.value, cVal);
+    console.log(cInput.value + ": " + cInput.checked + ": " + tmp);
+    setCookie("_uhic",tmp,90);
+    (tmp == "11111") ? $("#cAll").prop("checked", true) : $("#cAll").prop("checked", false);  
+ 
+    
+    if(cInput.value == 2 && !cInput.checked)
+    {
+      document.cookie = '_ga' +'=; Path=/; Domain=.uhi.ac.uk; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      document.cookie = '_gat' +'=; Path=/; Domain=.uhi.ac.uk; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      document.cookie = '_gid' +'=; Path=/; Domain=.uhi.ac.uk; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+      if(cInput.value == 1 && !cInput.checked)
+    {
+      document.cookie = 'slider-bigBG' +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      document.cookie = 'slider-smallBG' +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }  
+  }
 }
 
 // Campaign cookie
 // Change cookie duration
 
 function campaignCookieRead(){
-//  var cAlert = '<t4 type="navigation" name="Site Wide Campaign Banner getter" id="449" />';  // live
-  var cAlert = '<t4 type="navigation" name="Site Wide Campaign Banner getter" id="443" />';  // dev
+  var cAlert = '<t4 type="navigation" name="Site Wide Campaign Banner getter" id="449" />';  // live
+//  var cAlert = '<t4 type="navigation" name="Site Wide Campaign Banner getter" id="443" />';  // dev
   if (cAlert) 
    {
- //   var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="448" />';  // live
-    var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="445" />';  // dev
+   var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="448" />';  // live
+ //   var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="445" />';  // dev
     var ccookie = getCookie("_" + scope + "_campaign");
     if (ccookie=="") {
-        showCampaignMessage(cAlert);   	
+        showCampaignMessage(cAlert);    
     }
   }
 }
@@ -405,12 +406,12 @@ function campaignCookieRead(){
 function showCampaignMessage(cAlert) {
     var pageURL = $(location).attr("href");
     if (pageURL.indexOf("/gd/") >= 0) cAlert = cAlert.replace(new RegExp('en.gif', 'g'), 'gd.gif');
-	$("body").prepend(cAlert);
+  $("body").prepend(cAlert);
 }
 
 function campaignMessageClose() {
- //   var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="448" />';  // live
-   	var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="445" />';	// dev
-	setCookie("_" + scope + "_campaign","1",1);  /// change last 1 back to 7
-	$(".campaign-banner").remove();
+    var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="448" />';  // live
+  //  var scope = '<t4 type="navigation" name="Config Funnelback Scope getter" id="445" />';  // dev
+  setCookie("_" + scope + "_campaign","1",1);  /// change last 1 back to 7
+  $(".campaign-banner").remove();
 }
