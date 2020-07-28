@@ -2581,7 +2581,7 @@ Content type usage report: Highlight Content Box
 
   /* double width (eg video) column */
   .content-type--one-web-highlight-content-box--x2 {
-    width: 432px;
+    width: 420px;
   }
 
   .content-type--one-web-highlight-content-box:hover {
