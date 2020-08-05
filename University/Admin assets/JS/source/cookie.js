@@ -71,7 +71,6 @@ function getNoMediaText() {
 function allowPerfCookies() {
     var cookie = getCookie("_uhic");
     if (cookie == "") return false;
-//    if (cookie == "" || cookie == "9111") return false;
     else return (cookie.charAt(2) == "1") ? true : false;
 }
 
@@ -89,7 +88,7 @@ function allowThirdCookies() {
 
 function allowTargetingCookies() {
     var cookie = getCookie("_uhic");
-    if (cookie == "") return true;
+    if (cookie == "") return false;
     else return (cookie.charAt(4) == "1") ? true : false;
 }
 
@@ -130,10 +129,10 @@ function warningCookieRead(){                             // This is the main/co
     case "":                                   // very first visit (or cookie expired)
         removeSocialMedia();
     //    firstView();                       // Allow GA code after scrolling
-        setCookie("_uhic","91111",90);
+        setCookie("_uhic","91000",90);
         showCookieMessage();
         break;
-    case "91111":                               // second visit (or page view) cookie message has been displayed  (GA is live if enabled above)
+    case "91000":                               // second visit (or page view) cookie message has been displayed  (GA is live if enabled above)
         removeSocialMedia();
   //      setCookie("_uhic","0111",90);
         showCookieMessage();
@@ -334,7 +333,7 @@ function warningCookieContinue(){
   
 function cookieConfigInit(){ 
     var cookie = getCookie("_uhic");
-  if (cookie == "" || cookie == "0000"|| cookie == "0111" || cookie == "1111" || cookie == "91111" ) { 
+  if (cookie == "" || cookie == "0000"|| cookie == "0111" || cookie == "1111" || cookie == "91111" || cookie == "91000") { 
     setCookie("_uhic","11111",90);
  //   $("#cFunct").prop("checked", true);
  //   $("#cPerf").prop("checked", true);
