@@ -1084,7 +1084,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-.students a, .staff a, .alumni a, .lang-button {
+.students a, .staff a, .alumni a, .lang-button, .old-lang-switcher a {
     border: 1px solid #fff;
 }
 
