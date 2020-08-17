@@ -275,14 +275,25 @@ Test Date       : 20180613-1200
   }
 }
 
-.home .header.banner .tools li a {
+.home .header.banner .tools li a, .lang-button {
   background: #767676 none repeat scroll 0 0;
+}
+
+.students a, .staff a, .alumni a, .lang-button {
   box-shadow: 0 0 0 1px #767676;
 }
 
-.home .header.banner .tools li a:hover {
-  background-color: #656565;
+.students a:hover, .staff a:hover, .alumni a:hover {
   box-shadow: 0 0 0 1px #656565;
+}
+
+.home .header.banner .tools li a:hover, .lang-button:hover {
+  background-color: #656565;
+}
+
+.language-options {
+  box-shadow: 0 0 0 1px #767676;
+  background: #767676;
 }
 
 /* campus map with pins */
