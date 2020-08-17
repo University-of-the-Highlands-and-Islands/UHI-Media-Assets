@@ -216,3 +216,36 @@ rules not in other partner-specific stylesheets
     background-color: #eee9f2;
   }
 }
+
+/* Message us colour changes */
+
+@media (min-width: 768px) {
+  .zoom p {
+    background-color: #9357C7;
+  }
+  
+  .zoom p::after {
+    border-top: 20px solid #9357C7;
+  }
+  
+  .minimise {
+    background-color: #9357C7;
+    border: 3px solid #5a2b82;
+  }
+  
+  .minimise:hover {
+    background-color: #5a2b82;
+  }
+  
+  .smlscrmsg {
+    background-color: #9357C7;
+  }
+  
+  .zoom {
+    background: none !important;
+  }
+}
+
+.bottommessage, .zoom {
+  background: #9357C7;
+}
