@@ -279,7 +279,7 @@ Test Date       : 20180613-1200
   background: #767676 none repeat scroll 0 0;
 }
 
-.students a, .staff a, .alumni a, .lang-button {
+.students a, .staff a, .alumni a, .lang-button, .old-lang-switcher a {
   box-shadow: 0 0 0 1px #767676;
 }
 
