@@ -291,6 +291,11 @@ header and buttons
   box-shadow: 0 0 0 1px #dd3113; /* #f1765f; */
 }
 
+.language-options, .lang-button {
+  background-color: #dd3113; /* #f1765f; */
+  box-shadow: 0 0 0 1px #dd3113; /* #f1765f; */
+}
+
 @media (min-width: 768px) {
   .header.banner li form input[type="submit"] {
     padding: 1px 7px;
