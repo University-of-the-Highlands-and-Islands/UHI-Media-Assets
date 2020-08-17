@@ -203,3 +203,36 @@ native 74px x 312px
     background-color: #e5eeef;
   }
 }
+
+/* Message us colour changes */
+
+@media (min-width: 768px) {
+  .zoom p {
+    background-color: #007E8F;
+  }
+  
+  .zoom p::after {
+    border-top: 20px solid #007E8F;
+  }
+  
+  .minimise {
+    background-color: #007E8F;
+    border: 3px solid #005a65;
+  }
+  
+  .minimise:hover {
+    background-color: #005a65;
+  }
+  
+  .smlscrmsg {
+    background-color: #007E8F;
+  }
+  
+  .zoom {
+    background: none !important;
+  }
+}
+
+.bottommessage, .zoom {
+  background: #007E8F;
+}
