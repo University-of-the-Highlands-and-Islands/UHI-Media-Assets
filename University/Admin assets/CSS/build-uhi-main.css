@@ -1679,7 +1679,7 @@ textarea {
 }
 
 .zoom {position:fixed; bottom:0; right:0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
-.zoom a {color:#fff; font-weight: bold;}
+.zoom a, .zoom a:visited {color:#fff; font-weight: bold;}
       .smallmargin {margin-left: 20px;}
 .zoom img {display:none;}
 .minimise {display: none;}
