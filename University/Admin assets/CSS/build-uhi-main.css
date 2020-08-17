@@ -1684,7 +1684,7 @@ textarea {
 .zoom img {display:none;}
 .minimise {display: none;}
       .bottommessage {display: none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
-      .bottommessage a {color:#fff; margin-left:20px; font-weight: bold;}
+      .bottommessage a, .bottommessage a:visted {color:#fff; margin-left:20px; font-weight: bold;}
 
 @media (min-width: 768px) {
 .zoom {bottom:75px; right:10px; height: 70px; background: none; padding:0; width: auto; display: block;}
