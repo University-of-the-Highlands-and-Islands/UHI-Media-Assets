@@ -574,6 +574,7 @@ b, dt, h1, h2, h3, h4, h5, h6, strong, th, thead td,
 .footer .nav,
 .header.banner li form .keyword,
 .header.banner .tools li a,
+.lang-button,
 .navigation--home-message,
 .message--cookie > div,
 .section.coursefinder ul.suggestions,
@@ -876,6 +877,61 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 
 /* header links */
 
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  text-align: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+
+/* Targets Microsoft Edge v13 & v14 */
+@supports (-ms-ime-align: auto) {
+  .language-options {
+    width: 98%;
+  }
+}
+
+/* Targets Microsoft IE 10 & 11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .language-options {
+    width: 98%;
+  }
+}
+
+.language-options a {
+    box-shadow: none;
+    border: none;
+}
+
+.language:hover .language-options {
+  display:block;
+}
+
+.lang-button {
+  vertical-align: bottom;
+}
+
+.lang-button-up {
+  display: none;
+}
+
+.language:hover .lang-button-up {
+  display: inline-block;
+}
+
+.language:hover .lang-button-down {
+  display: none;
+}
+
 /* needs to be visible for Funnelback Twitter Typeahead
 .header.banner {
   overflow: hidden;
@@ -1018,32 +1074,38 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   }
 }
 
-.header.banner .tools li a {
+.header.banner .tools li a, .lang-button {
   display: inline-block;
   margin-bottom: 2px;
   padding: 3px 6px;
-  vertical-align: top;
   color: #fff;
-  border: 1px solid #fff;
   border-radius: 0 0 3px 3px;
   text-decoration: none;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
+.students a, .staff a, .alumni a, .lang-button {
+    border: 1px solid #fff;
+}
+
+.header.banner .tools li a {
+  vertical-align: top;
+}
+
 @media (min-width: 768px) {
-  .header.banner .tools li a {
+  .header.banner .tools li a, .lang-button {
     padding: 5px 13px;
   }
 }
 
-.header.banner .tools li a:hover {
+.header.banner .tools li a:hover, .lang-button:hover {
   margin-bottom: 0;
   padding-top: 5px;
   transition: all 0.1s;
 }
 
 @media (min-width: 768px) {
-  .header.banner .tools li a:hover {
+  .header.banner .tools li a:hover, .lang-button:hover {
     margin-bottom: 0;
     padding-top: 7px;
   }
