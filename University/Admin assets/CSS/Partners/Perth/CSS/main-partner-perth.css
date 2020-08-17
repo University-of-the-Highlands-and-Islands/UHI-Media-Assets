@@ -71,6 +71,7 @@ a:visited {
 .header.banner .tools li.language a,
 .header.banner .tools li.staff a,
 .header.banner .tools li.students a,
+.lang-button,
 .navigation--contextual h2,
 .navigation--contextual h2 a,
 .section.connections .ctas ul li a:hover,
@@ -115,7 +116,8 @@ a:visited {
 .header.banner .tools li.students a,
 .header.banner .tools li.staff a,
 .header.banner .tools li.alumni a,
-.header.banner .tools li.language a {
+.header.banner .tools li.language a,
+.lang-button {
   box-shadow: 0 0 0 1px #b0121e;
 }
 
