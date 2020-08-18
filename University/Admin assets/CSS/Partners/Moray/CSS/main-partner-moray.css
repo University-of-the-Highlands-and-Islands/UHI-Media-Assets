@@ -206,6 +206,10 @@ native 62px x 400px
 
 /* Message us colour changes */
 
+.bottommessage, .zoom {
+  background: #6E6E96;
+}
+
 @media (min-width: 768px) {
   .zoom p {
     background-color: #6E6E96;
@@ -229,10 +233,6 @@ native 62px x 400px
   }
   
   .zoom {
-    background: none !important;
+    background: none;
   }
-}
-
-.bottommessage, .zoom {
-  background: #6E6E96;
 }
