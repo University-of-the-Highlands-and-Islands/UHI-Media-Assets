@@ -219,6 +219,10 @@ rules not in other partner-specific stylesheets
 
 /* Message us colour changes */
 
+.bottommessage, .zoom {
+  background: #9357C7;
+}
+
 @media (min-width: 768px) {
   .zoom p {
     background-color: #9357C7;
@@ -242,10 +246,6 @@ rules not in other partner-specific stylesheets
   }
   
   .zoom {
-    background: none !important;
+    background: none;
   }
-}
-
-.bottommessage, .zoom {
-  background: #9357C7;
 }
