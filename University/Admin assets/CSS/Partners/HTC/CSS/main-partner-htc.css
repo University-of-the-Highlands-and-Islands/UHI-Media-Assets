@@ -242,4 +242,8 @@ native 79px x 400px
   .zoom {
     background: none;
   }
+  
+  .zoom img {
+    background: #761640;
+  }
 }
