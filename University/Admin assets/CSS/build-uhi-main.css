@@ -1688,7 +1688,7 @@ textarea {
 
 @media (min-width: 768px) {
 .zoom {bottom:75px; right:10px; height: 70px; background: none; padding:0; width: auto; display: block;}
-.zoom img {width:90px; float: right; display: inline-grid; background: #572163; padding: 4px 3px; border-radius: 9px;}
+.zoom img {width:90px; float: right; display: inline-grid; background: #572163; padding: 4px 3px; border-radius: 9px; display:-ms-inline-grid;}
 .smlscrmsg {display:none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
 .smlscrmsg a {color:#fff; margin-left:20px; font-weight: bold;}
     .zoom p {background-color: #b74783; color: #fff; padding: 10px; border-radius: 4px; margin: 0 auto 10px; position: relative; font-weight: bold; border: none;}
