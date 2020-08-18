@@ -248,4 +248,8 @@ rules not in other partner-specific stylesheets
   .zoom {
     background: none;
   }
+  
+  .zoom img {
+    background: #5a2b82;
+  }
 }
