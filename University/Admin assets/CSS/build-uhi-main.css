@@ -288,6 +288,9 @@ header and buttons
 
 .header.banner .tools li.language a {
   background-color: #dd3113; /* #f1765f; */
+}
+
+li.old-lang-switcher a {
   box-shadow: 0 0 0 1px #dd3113; /* #f1765f; */
 }
 
