@@ -905,6 +905,10 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   .language-options {
     width: 98%;
   }
+  
+  .language:hover .language-options {
+    display: block;
+  }
 }
 
 .language-options a {
@@ -913,7 +917,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 }
 
 .language:hover .language-options {
-  display:block;
+  display: grid;
 }
 
 .lang-button {
