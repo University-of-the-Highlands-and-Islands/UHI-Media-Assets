@@ -3848,6 +3848,53 @@ Content type usage report: Right Image (?)
   }
 }
 
+/*****************************************************
+
+One-Web Soundcloud Embed
+
+*****************************************************/
+
+.content-type--one-web-soundcloud-embed {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.content-type--one-web-soundcloud-embed:nth-child(even) {
+  background: #eee8ef;
+}
+
+.content-type--one-web-soundcloud-embed h2 {
+  margin-top: 0;
+}
+
+.content-type--one-web-soundcloud-embed p img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px
+}
+
+.content-type--one-web-soundcloud-embed p.headshot {
+  clear: both;
+  height: 55px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .content-type--one-web-soundcloud-embed p.headshot {
+    text-align: right;
+    height:auto;
+  }
+  
+  .content-type--one-web-soundcloud-embed p img {
+    margin-left: 10px;
+    float: none;
+    margin-right: 0;
+  }
+}
+
 /****************************************
 
 T4 LISTS
