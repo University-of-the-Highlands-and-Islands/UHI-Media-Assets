@@ -3876,20 +3876,10 @@ One-Web Soundcloud Embed
   margin-right: 10px
 }
 
-.content-type--one-web-soundcloud-embed .headshot {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 @media only screen and (min-width: 640px) {
   .content-type--one-web-soundcloud-embed .headshot p {
     text-align: right;
     height:auto;
-  }
-  
-  .content-type--one-web-soundcloud-embed .headshot {
-    display: block;
   }
   
   .content-type--one-web-soundcloud-embed .headshot p img {
