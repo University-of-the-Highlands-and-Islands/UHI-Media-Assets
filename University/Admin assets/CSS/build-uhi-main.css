@@ -4425,7 +4425,8 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
 #mode4ft li,
 #mode4pt li {
   list-style-type: none;
-  display: inline;
+  display: inline-block;
+  margin: 2px
 }
 
 @media (min-width: 768px) {
