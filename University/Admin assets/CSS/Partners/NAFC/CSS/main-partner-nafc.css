@@ -247,3 +247,15 @@ native 92px x 300px
     background: #00496a;
   }
 }
+
+/* Course page sticky nav colour changer */
+
+.section.coursedetails .tabnav {
+  background: #00496a;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .tabnav {
+    background: none;
+  }
+}
