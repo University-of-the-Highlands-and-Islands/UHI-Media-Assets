@@ -253,3 +253,15 @@ rules not in other partner-specific stylesheets
     background: #5a2b82;
   }
 }
+
+/* Course page sticky nav colour changer */
+
+.section.coursedetails .tabnav {
+  background: #5a2b82;
+}
+
+@media (min-width: 768px) {
+  .section.coursedetails .tabnav {
+    background: none;
+  }
+}
