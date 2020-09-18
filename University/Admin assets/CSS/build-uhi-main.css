@@ -2107,6 +2107,14 @@ partner colours are in their theme stylesheets
   color: #666;
 }
 
+.fb-search #search-best-bets li {
+    margin-top:20px;
+}
+
+.fb-search #search-best-bets li:first-child {
+    margin-top:0px;
+}
+
 .fb-search cite {
   display: block;
   font-size: 13px;
