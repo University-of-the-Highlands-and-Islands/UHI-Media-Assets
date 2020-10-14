@@ -913,7 +913,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
     border: none;
 }
 
-.language:hover .language-options, .lang-button:focus + .language-options {
+.language:hover .language-options, .lang-switcher:focus > .language-options, .lang-switcher:focus-within > .language-options {
   left: 0;
   opacity: 1;
 }
