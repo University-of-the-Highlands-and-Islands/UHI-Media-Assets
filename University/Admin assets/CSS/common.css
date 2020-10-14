@@ -906,6 +906,11 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   .language-options {
     width: 98%;
   }
+   
+   .language:hover .language-options, .lang-switcher:focus > .language-options {
+    left: 0;
+    opacity: 1;
+  }
 }
 
 .language-options a {
