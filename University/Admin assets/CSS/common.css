@@ -883,7 +883,8 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 }
 
 .language-options {
-  display: none;
+  left: -9999px;
+  opacity: 0;
   position: absolute;
   z-index: 1;
   border: 1px solid #fff;
@@ -905,10 +906,6 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   .language-options {
     width: 98%;
   }
-  
-  .language:hover .language-options {
-    display: block;
-  }
 }
 
 .language-options a {
@@ -917,7 +914,8 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 }
 
 .language:hover .language-options, .lang-button:focus + .language-options {
-  display: grid;
+  left: 0;
+  opacity: 1;
 }
 
 .lang-button {
