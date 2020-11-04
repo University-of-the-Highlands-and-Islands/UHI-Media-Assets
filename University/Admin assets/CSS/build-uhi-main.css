@@ -72,12 +72,6 @@ MAIN #PORTAL-COLUMN LAYOUT
 
 @media (max-width: 1024px) {
   .right-content-flex {
-    background-color: #eee8ef;
-    border-color: #ddd;
-    border-radius: 6px;
-    border-style: solid;
-    border-width: 1px;
-    padding: 1rem;
     justify-content: space-around;
   }
 }
@@ -2787,6 +2781,7 @@ Content type usage report: Right Content
 .content-type--one-web-right-content {
   margin: 0 1rem 1rem 0;
   order: 0;
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -3398,11 +3393,21 @@ used in:
 
 .content-type-modifier--shading {
   padding: 1rem;
+  background-color: #eee8ef;
+  border-color: #ddd;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .content-type-modifier--shading-image {
   padding: 1rem;
   display: table;
+  background-color: #eee8ef;
+  border-color: #ddd;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .content-type-modifier--shading-image figcaption {
@@ -3411,31 +3416,12 @@ used in:
   caption-side: bottom;
   padding: 0 1rem 1rem 1rem;
   margin-top: -6px;
-}
-
-@media (min-width: 1024px) {
-  .content-type-modifier--shading {
-    background-color: #eee8ef;
-    border-color: #ddd;
-    border-radius: 6px;
-    border-style: solid;
-    border-width: 1px;
-  }
-  .content-type-modifier--shading-image {
-    background-color: #eee8ef;
-    border-color: #ddd;
-    border-radius: 6px;
-    border-style: solid;
-    border-width: 1px;
-  }
-  .content-type-modifier--shading-image figcaption {
-    background: #eee8ef;
-    border-color: #ddd;
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-radius: 0px 0px 6px 6px;
-  }
+  background: #eee8ef;
+  border-color: #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 0px 0px 6px 6px;
 }
 
 /****************************************
