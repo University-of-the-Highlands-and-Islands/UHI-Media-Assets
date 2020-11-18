@@ -178,7 +178,7 @@ course-filter-title
 */
 
 .course-filter-title {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: normal;
   padding: 10px 22px;
   cursor: pointer;
@@ -186,7 +186,7 @@ course-filter-title
 
 @media (min-width: 1200px) {
   .course-filter-title {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -199,7 +199,7 @@ course-search-filter
 }
 
 .course-search-filter > input {
-  font-size: 13px;
+  font-size: 15px;
   margin: 3px 0 3px 11px;
 }
 
@@ -209,13 +209,13 @@ course-search-filter
 
 @media (min-width: 1000px) {
   .course-search-filter {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1200px) {
   .course-search-filter {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
@@ -535,25 +535,25 @@ section coursedetails
   position: relative;
   background-color: #572163; /* url(<t4 type= "media" formatter= "image/path" id= "125" />) center bottom no-repeat; */
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   text-align: left;
 }
 
 @media (min-width: 768px) {
   .section.coursedetails {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.coursedetails {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.coursedetails {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -579,7 +579,7 @@ section coursedetails
   padding: 3px 6px;
   background-color: #fff;
   color: #0f0f0f;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   border-radius: 3px;
 }
@@ -590,7 +590,7 @@ section coursedetails
     z-index: 2;
     margin-top: 3px;
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 3px 3px 0 0;
     vertical-align: bottom;
   }
@@ -599,13 +599,13 @@ section coursedetails
 @media (min-width: 1000px) {
   .section.coursedetails .apply a {
     padding: 10px 15px;
-    font-size: 21px;
+    font-size: 23px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.coursedetails .apply a {
-    font-size: 23px;
+    font-size: 25px;
   }
 }
 
@@ -695,7 +695,7 @@ section coursedetails
   padding: 3px 6px;
   background-color: #b74783;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   border-radius: 3px;
 }
@@ -704,7 +704,7 @@ section coursedetails
   .section.coursedetails .tabnav li h2 a {
     margin-top: 3px;
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 3px 3px 0 0;
     vertical-align: bottom;
   }
@@ -713,13 +713,13 @@ section coursedetails
 @media (min-width: 1000px) {
   .section.coursedetails .tabnav li h2 a {
     padding: 10px 15px;
-    font-size: 21px;
+    font-size: 23px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.coursedetails .tabnav li h2 a {
-    font-size: 23px;
+    font-size: 25px;
   }
 }
 
@@ -767,20 +767,20 @@ section coursedetails
 @media (min-width: 768px) {
   .section.coursedetails h3 {
     margin-bottom: 4px;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1;
   }
 }
 
 @media (min-width: 1000px) {
   .section.coursedetails h3 {
-    font-size: 27px;
+    font-size: 29px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.coursedetails h3 {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
@@ -838,7 +838,7 @@ https://www.uhi.ac.uk/en/campuses/north-highland-college-uhi/
 */
 .section.coursefinder h2 {
   margin: 30px 10px;
-  font: 28px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
+  font: 30px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
   text-shadow: 1px 1px 3px white, -1px -1px 3px white;
 }
 
@@ -869,7 +869,7 @@ Course listing
 
 /* no results block */
 .courselist--no-results {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .courselist--no-results h2 {
@@ -890,7 +890,7 @@ Course listing
 
 .courselist--filter-sets h2 {
   color: #572163;
-  font: bold 23px Oswald, Helvetica, Arial, sans-serif;
+  font: bold 25px Oswald, Helvetica, Arial, sans-serif;
   margin: 1rem 0;
   text-transform: uppercase;
 }
@@ -901,20 +901,20 @@ Course listing
 
 @media (min-width: 768px) {
   .courselist--filter-sets h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
 @media (min-width: 1000px) {
   .courselist--filter-sets h2 {
-    font-size: 36px;
+    font-size: 38px;
   }
 }
 
 /* Course listing filters reset link */
 
 .reset-course-search {
-  font-size: 17px;
+  font-size: 19px;
   margin: 0 !important;
 }
 
@@ -969,7 +969,7 @@ https://www.shetland.uhi.ac.uk/courses/
   border-radius: 3px;
   color: #fff;
   display: inline-block; /* 20180411 KIF*/
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 6px;
   padding: 5px 15px; /* 20180411 KIF*/
   max-width: 250px;
@@ -1007,27 +1007,27 @@ https://www.inverness.uhi.ac.uk/
   cursor: pointer;
   margin: 0;
   padding: 5px 10px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
 }
 
 @media (min-width: 1000px) {
   .section.courselist .col.onequarter > ul > li h3 {
     padding: 5px 30px;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.courselist .col.onequarter > ul > li h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
 .section.courselist .col.onequarter > ul > li h3 .arrow {
   float: right;
   margin-left: 4px;
-  font-size: 12px;
+  font-size: 14px;
   vertical-align: middle;
 }
 
@@ -1054,19 +1054,19 @@ https://www.inverness.uhi.ac.uk/
   margin: 3px 11px 3px 0;
   padding: 0 5px;
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   text-decoration: none;
 }
 
 @media (min-width: 1000px) {
   .section.courselist .col.onequarter > ul > li ul li a {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.courselist .col.onequarter > ul > li ul li a {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
@@ -1124,7 +1124,7 @@ https://www.uhi.ac.uk/en/courses/
   cursor: pointer;
   display: block;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 17px;
   overflow: hidden;
   padding: 4px 10px;
   text-decoration: none;
@@ -1138,13 +1138,13 @@ https://www.uhi.ac.uk/en/courses/
 
 @media (min-width: 1000px) {
   .section.courselist .col.threequarters > ul li a {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.courselist .col.threequarters > ul li a {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -1353,7 +1353,7 @@ section courses coursefinder
 
 .section.ctas .section.apply {
   padding-top: 15px;
-  font: bold 13px Oswald, Helvetica, Arial, sans-serif;
+  font: bold 15px Oswald, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
@@ -1363,26 +1363,26 @@ section courses coursefinder
 @media (min-width: 768px) {
   .section.ctas .section.apply {
     padding-top: 30px;
-    font-size: 16px;
+    font-size: 18px;
     background-image: url(<t4 type= "media" formatter= "image/path" id= "5591" />);
   }
 }
 
 @media (min-width: 1000px) {
   .section.ctas .section.apply {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.ctas .section.apply {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 .section.ctas .section.apply h2 {
   margin: 0 10px;
-  font: 28px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
+  font: 30px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
   /* color: #572163; 20180502 */
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 }
@@ -1395,13 +1395,13 @@ section courses coursefinder
 
 @media (min-width: 1000px) {
   .section.ctas .section.apply h2 {
-    font-size: 36px;
+    font-size: 38px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.ctas .section.apply h2 {
-    font-size: 42px;
+    font-size: 44px;
   }
 }
 
@@ -1410,7 +1410,7 @@ section courses coursefinder
   border-radius: 3px;
   color: #fff;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 2px 4px;
   padding: 5px 10px;
   text-decoration: none;
@@ -1421,19 +1421,19 @@ section courses coursefinder
 @media (min-width: 768px) {
   .section.ctas .section.apply a {
     padding: 10px 15px;
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.ctas .section.apply a {
-    font-size: 27px;
+    font-size: 29px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.ctas .section.apply a {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
@@ -1447,7 +1447,7 @@ section courses coursefinder
   background-color: #0f0f0f;
   color: #fff;
   font-family: "Glypha Web", Helvetica, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   line-height: 15px;
   margin-left: 35px;
@@ -1458,14 +1458,14 @@ section courses coursefinder
 
 @media (min-width: 768px) {
   .section.ctas .section.apply p.applyconditions {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.ctas .section.apply p.applyconditions {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 }
@@ -1474,7 +1474,7 @@ section courses coursefinder
   background: transparent none repeat scroll 0 0;
   border-radius: 0;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 15px;
   padding: 0;
   text-decoration: underline;
@@ -1483,21 +1483,21 @@ section courses coursefinder
 
 @media (min-width: 768px) {
   .section.ctas .section.apply p.applyconditions a {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.ctas .section.apply p.applyconditions a {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 }
 
 .section.ctas .section.tour p {
   margin: 0 10px 10px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -1505,19 +1505,19 @@ section courses coursefinder
 
 @media (min-width: 768px) {
   .section.ctas .section.tour p {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.ctas .section.tour p {
-    font-size: 21px;
+    font-size: 23px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.ctas .section.tour p {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 
@@ -1533,19 +1533,19 @@ section courses coursefinder
 @media (min-width: 768px) {
   .section.ctas .section.tour .ctas ul {
     margin: 15px 0;
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.ctas .section.tour .ctas ul {
-    font-size: 27px;
+    font-size: 29px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.ctas .section.tour .ctas ul {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
@@ -1574,7 +1574,7 @@ section specialistsubjects
 
 .section.specialistsubjects h2 {
   margin: 0 10px;
-  font-size: 28px;
+  font-size: 30px;
   line-height: 1;
   font-family: inherit;
   color: #fff;
@@ -1588,32 +1588,32 @@ section specialistsubjects
 
 @media (min-width: 1200px) {
   .section.specialistsubjects h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
 .section.specialistsubjects p {
   margin: 0 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
   .section.specialistsubjects p {
     max-width: 770px;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.specialistsubjects p {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.specialistsubjects p {
-    font-size: 23px;
+    font-size: 25px;
   }
 }
 
@@ -1730,13 +1730,13 @@ textarea {
 
 @media (min-width: 1000px) {
  .section.courseapply p.applyconditions {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
 }
 }
 @media (min-width: 768px) {
 .section.courseapply p.applyconditions {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
 }
 }
@@ -1744,7 +1744,7 @@ textarea {
 .section.courseapply p.applyconditions {
     color: #fff;
     font-family: "Glypha Web", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 17px;
     padding: 10px;
@@ -1756,7 +1756,7 @@ textarea {
 
 .section.kis-container{
     padding-top: 15px;
-    font: bold 13px Oswald, Helvetica, Arial, sans-serif;
+    font: bold 15px Oswald, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: #000;
     //background: url(<t4 type= "media" formatter= "image/path" id= "5577" />) top center no-repeat;
@@ -1783,25 +1783,25 @@ textarea {
   position: relative;
   background-color: #fff; /* url(<t4 type= "media" formatter= "image/path" id= "5576" />) center bottom no-repeat; */
   color: #000;
-  font-size: 13px;
+  font-size: 15px;
   text-align: left;
 }
 
 @media (min-width: 768px) {
   .section.courseapply {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.courseapply {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.courseapply {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -1817,7 +1817,7 @@ textarea {
 @media (max-width: 767px) {
   .section.courseapply h3 {
     margin-bottom: 4px;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1;
   }
 }
@@ -1825,20 +1825,20 @@ textarea {
 @media (min-width: 768px) {
   .section.courseapply h3 {
     margin-bottom: 4px;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1;
   }
 }
 
 @media (min-width: 1000px) {
   .section.courseapply h3 {
-    font-size: 27px;
+    font-size: 29px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.courseapply h3 {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
@@ -1858,13 +1858,13 @@ Site slogan getter nav object #37
 */
 
 .slogan {
-  font-size: 14px;
+  font-size: 16px;
   font-style: italic;
 }
 
 @media (min-width: 768px) {
   .slogan {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 
@@ -1884,7 +1884,7 @@ t4-landing-page
 */
 
 .t4-landing-page {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .t4-landing-page .col img {
@@ -2023,7 +2023,7 @@ partner colours are in their theme stylesheets
 .fb-search .panel-heading {
   border-radius: 3px;
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 4px;
   padding: 1px;
 }
@@ -2054,7 +2054,7 @@ partner colours are in their theme stylesheets
 .fb-search .item-label {
   color: black;
   float: left;
-  font-size: 15px;
+  font-size: 17px;
   margin: 5px 5px 5px 15px;
 }
 
@@ -2062,7 +2062,7 @@ partner colours are in their theme stylesheets
   border-radius: 17px;
   color: white;
   float: right;
-  font-size: 13px;
+  font-size: 15px;
   margin: 5px;
   min-width: 30px;
   padding: 2px;
@@ -2078,7 +2078,7 @@ partner colours are in their theme stylesheets
 
 .fb-search #search-result-count {
   color: #676767;
-  font-size: 13px;
+  font-size: 15px;
   margin: 10px 0 10px 0;
   text-align: left;
 }
@@ -2111,7 +2111,7 @@ partner colours are in their theme stylesheets
 
 .fb-search cite {
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   font-style: normal;
 }
 
@@ -2131,12 +2131,12 @@ partner colours are in their theme stylesheets
 
 /* TODO make this h2? */
 .fb-search .list-unstyled h4 {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
 }
 
 .fb-search .list-unstyled p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.3;
   margin: 2px 0;
 }
@@ -2242,7 +2242,7 @@ Can all of these go AFTER content-type-modifiers?
   background-color: #0f0f0f;
   border-radius: 0 3px 3px 0;
   float: left;
-  font: 23px Oswald, Helvetica, Arial, sans-serif;
+  font: 25px Oswald, Helvetica, Arial, sans-serif;
   margin: 15px 10px 0 0;
   padding: 10px;
   position: relative;
@@ -2252,27 +2252,27 @@ Can all of these go AFTER content-type-modifiers?
 @media (min-width: 768px) {
   .section.intro h1 {
     margin-top: 25px;
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
 @media (min-width: 1000px) {
   .section.intro h1 {
-    font-size: 36px;
+    font-size: 38px;
   }
 
   .section.intro p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.intro h1 {
-    font-size: 42px;
+    font-size: 44px;
   }
 
   .section.intro p {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -2576,7 +2576,7 @@ Content type usage report: Highlight Content Box
 }
 
 .content-type--one-web-highlight-content-box h2 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .content-type--one-web-highlight-content-box__body {
@@ -2700,7 +2700,7 @@ Content type usage report: News
 }
 
 .content-type--one-web-news__image p {
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   margin: 5px 0 0;
 }
@@ -2796,7 +2796,7 @@ Content type usage report: Right Content
 }
 
 .content-type--one-web-right-content blockquote {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -2859,14 +2859,14 @@ One-Web Text Banner
 }
 
 .content-type--one-web-text-banner__refer {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.1;
   margin: 0 0 .5rem 0;
 }
 
 @media (min-width: 1200px) {
   .content-type--one-web-text-banner__refer {
-    font-size: 20px;
+    font-size: 22px;
     margin: 0 0 1rem 0;
   }
 }
@@ -2882,7 +2882,7 @@ One-Web Text Banner
 
 .content-type--one-web-text-banner__icon {
   font-family: "Sosa Web", sans-serif !important;
-  font-size: 29px;
+  font-size: 31px;
 }
 
 /*****************************************************
@@ -3077,7 +3077,7 @@ used in
 
 .content-type-modifier--collapsible__control {
   font-family: "Sosa Web", sans-serif;
-  font-size: 21px;
+  font-size: 23px;
 }
 
 .content-type-modifier--collapsible__heading .content-type-modifier--collapsible__control {
@@ -3202,7 +3202,7 @@ table styles also used in:
 .content-type-modifier--typography blockquote,
 .content-type-modifier--typography h4,
 .description {
-  font-size: 17px; /* 1.0625rem */
+  font-size: 19px; /* 1.0625rem */
 }
 
 /* spacing between headed sections */
@@ -3299,7 +3299,7 @@ in T4 a cell can be:
 .coursedetails td,
 .coursedetails th {
   border-color: #999; /* on dark background */
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .coursedetails td {
@@ -3330,7 +3330,7 @@ in T4 a cell can be:
 
 /* table summary for accessibility */
 .mce-table-summary {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
 }
 
@@ -3527,14 +3527,14 @@ https://www.inverness.uhi.ac.uk/
 .content-type--landing-rss-feed__line {
   background-color: #eee8ef;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 18px;
   list-style-type: none;
   margin: .5rem 0;
   padding: .25rem .5rem !important;
 }
 
 .content-type--landing-rss-feed__labelfield {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /*****************************************************
@@ -3598,7 +3598,7 @@ Fancybox plugin - customisations
 .fancybox-caption {
   border: none !important;
   font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   line-height: 1.2 !important;
   padding: 30px !important;
 }
@@ -3610,7 +3610,7 @@ Fancybox plugin - customisations
 
 @media (min-width: 1025px) {
   .fancybox-caption {
-    font-size: 24px !important;
+    font-size: 26px !important;
   }
 
   .fancybox-caption-wrap {
@@ -3734,12 +3734,12 @@ Content type usage report: Event, Uni Event
 }
 
 .content-type--one-web-event__help {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .content-type--one-web-event__icon {
   font-family: "Sosa Web", sans-serif;
-  font-size: 32px;
+  font-size: 34px;
   display: inline-block;
 }
 
@@ -4123,7 +4123,7 @@ https://www.uhi.ac.uk/en/payments/
 }
 
 .form--responsive legend {
-  font-size: 24px;
+  font-size: 26px;
   padding: 2rem 0 1rem 0;
 }
 
@@ -4198,7 +4198,7 @@ each colour contains duplicate styles, for preview in TinyMCE
   cursor: pointer;
   display: inline-block;
   font-family: Oswald, Helvetica, Arial, sans-serif !important; /* if no link made */
-  font-size: 26px;
+  font-size: 28px;
   line-height: 1.1;
   margin: 0 1rem 1rem 0;
   transition: .3s;
@@ -4253,7 +4253,7 @@ each colour contains duplicate styles, for preview in TinyMCE
 
 .UHI--monospace {
   font-family: monospace;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* highlighted paragraph */
@@ -4442,7 +4442,7 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4ft a,
   #mode4pt a,
   #year a {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -4460,7 +4460,7 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4ft a,
   #mode4pt a,
   #year a {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -4478,6 +4478,6 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4ft a,
   #mode4pt a,
   #year a {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
