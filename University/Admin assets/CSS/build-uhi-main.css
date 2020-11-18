@@ -1681,7 +1681,7 @@ textarea {
     border-radius: 20px;
 }
 
-.zoom {position:fixed; bottom:0; right:0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
+.zoom {position:fixed; bottom:0; right:0; height: 20px; z-index:100; background:#b74783; padding:5px 5px 8px 5px; width:100%; text-align:left;}
 .zoom a, .zoom a:visited {color:#fff; font-weight: bold;}
       .smallmargin {margin-left: 20px;}
 .zoom img {display:none;}
@@ -1690,7 +1690,7 @@ textarea {
       .bottommessage a, .bottommessage a:visted {color:#fff; margin-left:20px; font-weight: bold;}
 
 @media (min-width: 768px) {
-.zoom {bottom:75px; right:10px; height: 70px; background: none; padding:0; width: auto; display: block;}
+.zoom {bottom:75px; right:10px; height: 80px; background: none; padding:0; width: auto; display: block;}
 .zoom img {width:90px; float: right; display: inline-grid; background: #572163; padding: 4px 3px; border-radius: 9px; display:-ms-inline-grid;}
 .smlscrmsg {display:none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
 .smlscrmsg a {color:#fff; margin-left:20px; font-weight: bold;}
