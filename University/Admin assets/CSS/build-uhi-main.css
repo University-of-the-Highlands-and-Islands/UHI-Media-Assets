@@ -660,20 +660,20 @@ section coursedetails
   .section.coursedetails .tabnav {
     position: relative;
     z-index: 1;
-    margin: -44px 0 0 20px; /* 20180515 */
+    margin: -47px 0 0 20px; /* 20180515 */
     background: none;
   }
 }
 
 @media (min-width: 1000px) {
   .section.coursedetails .tabnav {
-    margin-top: -58px;
+    margin-top: -61px;
   }
 }
 
 @media (min-width: 1200px) {
   .section.coursedetails .tabnav {
-    margin-top: -61px;
+    margin-top: -64px;
   }
 }
 
