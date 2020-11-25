@@ -914,11 +914,6 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   }
 }
 
-.language-options a {
-    box-shadow: none;
-    border: none;
-}
-
 .language:hover .language-options, .lang-switcher:focus > .language-options, .lang-switcher:focus-within > .language-options {
   left: 0;
   opacity: 1;
@@ -1090,6 +1085,12 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   border-radius: 0 0 3px 3px;
   text-decoration: none;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header.banner .tools .language-options a {
+    box-shadow: none;
+    border: none;
+    display: block;
 }
 
 .students a, .staff a, .alumni a, .lang-button, .old-lang-switcher a {
