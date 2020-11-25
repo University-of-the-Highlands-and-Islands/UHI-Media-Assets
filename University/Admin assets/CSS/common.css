@@ -1131,6 +1131,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   padding: 5px 10px;
   background-color: #0f0f0f;
   color: #fff;
+  z-index: 1;
 }
 
 .navigation--home-message p {
