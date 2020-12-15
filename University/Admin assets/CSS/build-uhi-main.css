@@ -2367,6 +2367,65 @@ margin and transform depends on banner height (above rules)
 }
 
 /****************************************
+Landing 4 Hero Image
+.content-type--landing-4-hero
+*****************************************/
+
+.content-type--landing-4-hero {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 720px;
+  position: relative;
+}
+
+.content-type--landing-4-hero .lower {
+  position:absolute;
+  bottom:50px;
+  left:60px;
+  width:80%;
+}
+
+.content-type--landing-4-hero .lower h1 {
+  font-size:2.4em;
+  color:#fff;
+  text-align:left;
+  font-family:Oswald, Helvetica, Arial, sans-serif;
+  text-shadow: 2px 2px #222;
+  margin-bottom:10px;
+}
+
+.content-type--landing-4-hero .lower h2 {
+  font-size:1.9em;
+  color:#fff;
+  text-align:left;
+  font-family:Oswald, Helvetica, Arial, sans-serif;
+  text-shadow: 2px 2px #222;
+  margin-top:0;
+}
+
+.content-type--landing-4-hero .lower p {
+  margin-top:40px;
+  padding:0;
+  text-align:center;
+}
+
+.content-type--landing-4-hero .lower p a {
+  color:#00665c;
+  text-decoration:none;
+  font-family:Oswald, Helvetica, Arial, sans-serif;
+  background:#fff;
+  font-size:1em;
+  padding:20px 8px 20px 8px;
+  width:160px; display:block;
+}
+
+.content-type--landing-4-hero .lower p a:hover {
+  opacity: 0.8;
+  transition-duration: .5s;
+}
+
+/****************************************
 Links Bars common styles
 
 Landing Image Links Bar
