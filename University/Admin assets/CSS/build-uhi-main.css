@@ -2369,6 +2369,9 @@ margin and transform depends on banner height (above rules)
 /****************************************
 Landing 4 Hero Image
 .content-type--landing-4-hero
+
+Landing 4 Post Image Text
+.content-type--landing-4-post-image-text
 *****************************************/
 
 .content-type--landing-4-hero {
@@ -2423,6 +2426,41 @@ Landing 4 Hero Image
 .content-type--landing-4-hero .lower p a:hover {
   opacity: 0.8;
   transition-duration: .5s;
+}
+
+.content-type--landing-4-post-image-text {
+  background:#e5efee;
+  text-align:left;
+  display: flex;
+  flex-wrap: wrap;
+  font-family:Oswald, Helvetica, Arial, sans-serif;
+  margin-bottom:50px;
+}
+
+.leftbigger {
+  flex-basis:100%;
+  padding:5%;
+  font-size:2.074rem;
+}
+
+.rightsmaller {
+  flex-basis:100%;
+  padding:5%;
+  font-size:1.44rem;
+  line-height:1.8;
+}
+
+.rightsmaller p, .leftbigger p {
+  margin-top:0;
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .leftbigger, .rightsmaller {
+    flex-basis:0;
+    flex-grow:1;
+  }
+  
 }
 
 /****************************************
