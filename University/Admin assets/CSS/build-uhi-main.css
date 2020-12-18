@@ -2477,11 +2477,9 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-textoverimage-right .textover-bg-right {
-  background-repeat: no-repeat;
   width: 80%;
   height: 50%;
   display: block;
-  background-size:cover;
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay {
@@ -2526,14 +2524,11 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-textoverimage-left .textover-bg-left {
-  background-repeat: no-repeat;
   position: absolute;
-  background-position:right top;
   width: 80%;
   height: 50%;
   display: block;
   right: 0;
-  background-size: cover;
 }
 
 .content-type--landing-4-textoverimage-left .textoverlay {
