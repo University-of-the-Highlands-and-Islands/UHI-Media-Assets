@@ -2372,6 +2372,10 @@ Landing 4 Hero Image
 
 Landing 4 Post Image Text
 .content-type--landing-4-post-image-text
+
+Landing 4 Image Text Overlay
+.content-type--landing-4-textoverimage-right
+.content-type--landing-4-textoverimage-left
 *****************************************/
 
 .content-type--landing-4-hero {
@@ -2454,11 +2458,131 @@ Landing 4 Post Image Text
   margin-top:0;
 }
 
+.content-type--landing-4-textoverimage-right, .content-type--landing-4-textoverimage-left {
+  width:100%;
+  margin-bottom:25px;
+  text-align:center;
+}
+
+.content-type--landing-4-textoverimage-right h2, .content-type--landing-4-textoverimage-left h2 {
+  font-size:2.074rem;
+  color:#000;
+  margin-bottom:50px;
+  font-family:Oswald, Helvetica, Arial, sans-serif;
+}
+
+.content-type--landing-4-textoverimage-right .textovercontainer, .content-type--landing-4-textoverimage-left .textovercontainer {
+  height:475px;
+  position:relative;
+}
+
+.content-type--landing-4-textoverimage-right .textover-bg-right {
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 50%;
+  display: block;
+  background-size:cover;
+}
+
+.content-type--landing-4-textoverimage-right .textoverlay {
+  background:#e5efee;
+  width:80%;
+  text-align:left;
+  padding: 2% 3% 2% 3%;
+  position: absolute;
+  bottom:0px;
+  right:20px;
+  display: inline-table;
+}
+
+.content-type--landing-4-textoverimage-right .textoverlay .textoversubheading, .content-type--landing-4-textoverimage-left .textoverlay .textoversubheading {
+  font-size:1.728rem;
+  font-family:Oswald, Helvetica, Arial, sans-serif;
+}
+
+.content-type--landing-4-textoverimage-right .textoverlay .textoverbody, .content-type--landing-4-textoverimage-left .textoverlay .textoverbody {
+  font-family:Oswald, Helvetica, Arial, sans-serif;
+  line-height:1.8;
+}
+
+.content-type--landing-4-textoverimage-right .textoverlay p.textovercta, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta {
+  margin-top:20px;
+  padding:0;text-align:center;
+}
+
+.content-type--landing-4-textoverimage-right .textoverlay p.textovercta a, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a {
+  color:#fff;
+  text-decoration:none;
+  font-family:Oswald, Helvetica, Arial, sans-serif;
+  background:#00665c;
+  padding:20px 8px 20px 8px;
+  width:160px;
+  display:block;
+}
+
+.content-type--landing-4-textoverimage-right .textoverlay p.textovercta a:hover, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a:hover {
+  opacity: 0.8;
+  transition-duration: .5s;
+}
+
+.content-type--landing-4-textoverimage-left .textover-bg-left {
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position:right top;
+  width: 80%;
+  height: 50%;
+  display: block;
+  right: 0;
+  background-size: cover;
+}
+
+.content-type--landing-4-textoverimage-left .textoverlay {
+  background:#e5efee;
+  width:80%;
+  text-align:left;
+  padding: 2% 3% 2% 3%;
+  position: absolute;
+  bottom:0px;
+  left:20px;
+  display: inline-table;
+}
+
 @media only screen and (min-width: 768px) {
   
   .leftbigger, .rightsmaller {
     flex-basis:0;
     flex-grow:1;
+  }
+  
+  .content-type--landing-4-textoverimage-right h2, .content-type--landing-4-textoverimage-left h2 {
+    font-size:2.488rem;
+  }
+  
+  .content-type--landing-4-textoverimage-right .textoverlay .textoversubheading, .content-type--landing-4-textoverimage-left .textoverlay .textoversubheading {
+    font-size:2.074rem;
+  }
+  
+  .content-type--landing-4-textoverimage-left .textovercontainer, .content-type--landing-4-textoverimage-left .textovercontainer {
+    height:500px;
+  }
+  
+  .content-type--landing-4-textoverimage-left .textoverlay {
+    width:35%;
+    top:60px;
+    left:0px;
+    max-height:300px;
+  }
+  
+  .content-type--landing-4-textoverimage-left .textover-bg-left, .content-type--landing-4-textoverimage-right .textover-bg-right {
+    width: 75%;
+    height: 100%;
+  }
+  
+  .content-type--landing-4-textoverimage-right .textoverlay {
+    width:35%;
+    top:60px;
+    right:0px;
+    max-height:300px;
   }
   
 }
