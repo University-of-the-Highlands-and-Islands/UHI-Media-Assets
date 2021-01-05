@@ -65,7 +65,7 @@ function getPrefsUrl(){
 function getNoMediaText() {
   return "<p style='background-color:#666666;color:#ffffff;height:100%;display:inline-block;'>" +
       "We have removed this content.<br/> Please <a href='" + getPrefsUrl() + "' style='color:white;text-decoration: underline;'>change your cookie preferences</a> " +
-      "to see our social media.</p>"; 
+      "to see this content.</p>"; 
 }
 
 function allowPerfCookies() {
@@ -87,8 +87,10 @@ function allowThirdCookies() {
 }
 
 function allowTargetingCookies() {
+
+    var url=document.URL; 
     var cookie = getCookie("_uhic");
-    if (cookie == "") return false;
+    if (cookie == "" || url.indexOf("/cookies") !== -1) return false;
     else return (cookie.charAt(4) == "1") ? true : false;
 }
 
@@ -124,6 +126,15 @@ function getCookie(cname) {
 
 function warningCookieRead(){                             // This is the main/controlling function fired on page load (in main.js)
     var cookie = getCookie("_uhic");
+
+
+dataLayer.push({'allowPerfCookies': allowPerfCookies()}); 
+dataLayer.push({'allowTargetingCookies': allowTargetingCookies()}); 
+
+  //   dataLayer = [{
+  //   'allowPerfCookies': allowPerfCookies(),
+  //   'allowTargetingCookies': allowTargetingCookies()
+  // }];
   
   switch (cookie) {
     case "":                                   // very first visit (or cookie expired)
