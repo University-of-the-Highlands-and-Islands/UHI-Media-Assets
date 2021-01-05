@@ -38,6 +38,12 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+@media only screen and (min-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 /* Sections
    ========================================================================== */
 
@@ -517,7 +523,7 @@ body {
   background-color: #fff;
   color: #222;
   font-family: "Glypha Web", Helvetica, Arial, sans-serif;
-  font-size: 14px; /* 0.9em */
+  font-size: 16px;
   line-height: 1.4;
   text-align: center;
   width: 100%;
@@ -533,9 +539,9 @@ Type Scale
 http://type-scale.com/?size=16&scale=1.200&text=UHI&webfont=&font-family=Verdana&font-weight=&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=
 ***************/
 
-/* from type scale: 2.074 * 14/16 */
+/* from type scale */
 h1 {
-  font-size: 1.815rem
+  font-size: 2.074rem
 }
 
 /* tighten for wrapped headings */
@@ -545,19 +551,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* shouldn't be smaller than base */
 h4, h5, h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 1000px) {
 
   /* central column content in e.g. Left Nav page layouts */
   #portal-column-content {
-    font-size: 16px;
-  }
-
-  /* from type scale */
-  h1 {
-    font-size: 2.074rem;
+    font-size: 18px;
   }
 
   /* shouldn't be smaller than base */
@@ -589,12 +590,12 @@ dd {
 }
 
 dt {
-  font-size: 17px;
+  font-size: 19px;
   margin-top: 1rem;
 }
 
 figcaption {
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   text-align: left;
 }
@@ -883,7 +884,8 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 }
 
 .language-options {
-  display: none;
+  left: -9999px;
+  opacity: 0;
   position: absolute;
   z-index: 1;
   border: 1px solid #fff;
@@ -905,19 +907,16 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   .language-options {
     width: 98%;
   }
-  
-  .language:hover .language-options {
-    display: block;
+   
+   .language:hover .language-options, .lang-switcher:focus > .language-options {
+    left: 0;
+    opacity: 1;
   }
 }
 
-.language-options a {
-    box-shadow: none;
-    border: none;
-}
-
-.language:hover .language-options, .lang-button:focus + .language-options {
-  display: grid;
+.language:hover .language-options, .lang-switcher:focus > .language-options, .lang-switcher:focus-within > .language-options {
+  left: 0;
+  opacity: 1;
 }
 
 .lang-button {
@@ -1088,6 +1087,12 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
+.header.banner .tools .language-options a {
+    box-shadow: none;
+    border: none;
+    display: block;
+}
+
 .students a, .staff a, .alumni a, .lang-button, .old-lang-switcher a {
     border: 1px solid #fff;
 }
@@ -1126,6 +1131,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   padding: 5px 10px;
   background-color: #0f0f0f;
   color: #fff;
+  z-index: 1;
 }
 
 .navigation--home-message p {
@@ -1170,6 +1176,13 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   cursor: pointer;
   font-size: 16px;
   text-decoration: underline dotted;
+}
+
+/* Breadcrumbs font size fixer */
+
+.navigation--breadcrumb {
+  text-transform: lowercase;
+  font-size: 0.9em;
 }
 
 /* NEW COOKIE CSS */

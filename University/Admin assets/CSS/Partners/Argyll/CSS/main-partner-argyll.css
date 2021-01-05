@@ -211,12 +211,6 @@ rules not in other partner-specific stylesheets
   }
 }
 
-@media (max-width: 1024px) {
-  .right-content-flex {
-    background-color: #eee9f2;
-  }
-}
-
 /* Message us colour changes */
 
 .bottommessage, .zoom {

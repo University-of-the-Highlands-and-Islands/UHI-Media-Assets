@@ -198,12 +198,6 @@ native 83px x 294px
   }
 }
 
-@media (max-width: 1024px) {
-  .right-content-flex {
-    background-color: #f1e9ef;
-  }
-}
-
 /* Message us colour changes */
 
 .bottommessage, .zoom {
