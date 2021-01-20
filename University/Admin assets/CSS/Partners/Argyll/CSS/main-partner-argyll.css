@@ -263,9 +263,9 @@ rules not in other partner-specific stylesheets
 /* Hero image and text over image colour changes */
 
 .content-type--landing-4-hero .lower p a {
-  color:#635d86;
+  color:#5a2b82;
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay p.textovercta a, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a {
-  background:#635d86;
+  background:#5a2b82;
 }
