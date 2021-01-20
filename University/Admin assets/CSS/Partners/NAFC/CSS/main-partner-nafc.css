@@ -253,3 +253,13 @@ native 92px x 300px
     background: none;
   }
 }
+
+/* Hero image and text over image colour changes */
+
+.content-type--landing-4-hero .lower p a {
+  color:#00496a;
+}
+
+.content-type--landing-4-textoverimage-right .textoverlay p.textovercta a, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a {
+  background:#00496a;
+}
