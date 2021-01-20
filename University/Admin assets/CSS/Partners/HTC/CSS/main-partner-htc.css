@@ -263,3 +263,13 @@ native 79px x 400px
 .content-type--landing-4-textoverimage-right .textoverlay p.textovercta a, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a {
   background:#761640;
 }
+
+/* Hero image and text over image colour changes */
+
+.content-type--landing-4-hero .lower p a {
+  color:#762864;
+}
+
+.content-type--landing-4-textoverimage-right .textoverlay p.textovercta a, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a {
+  background:#762864;
+}
