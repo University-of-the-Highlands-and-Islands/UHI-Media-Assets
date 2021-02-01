@@ -2433,7 +2433,7 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-post-image-text {
-  background:#e5efee;
+  background:#eee8ef;
   text-align:left;
   display: flex;
   flex-wrap: wrap;
@@ -2483,7 +2483,7 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay {
-  background:#e5efee;
+  background:#eee8ef;
   width:80%;
   text-align:left;
   padding: 2% 3% 2% 3%;
@@ -2532,7 +2532,7 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-textoverimage-left .textoverlay {
-  background:#e5efee;
+  background:#eee8ef;
   width:80%;
   text-align:left;
   padding: 2% 3% 2% 3%;
