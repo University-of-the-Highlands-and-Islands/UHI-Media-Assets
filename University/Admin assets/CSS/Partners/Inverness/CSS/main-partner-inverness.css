@@ -256,3 +256,7 @@ native 83px x 294px
 .content-type--landing-4-textoverimage-right .textoverlay p.textovercta a, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a {
   background:#762864;
 }
+
+.content-type--landing-4-post-image-text, .content-type--landing-4-textoverimage-right .textoverlay, .content-type--landing-4-textoverimage-left .textoverlay {
+  background: #f1e9ef;
+}
