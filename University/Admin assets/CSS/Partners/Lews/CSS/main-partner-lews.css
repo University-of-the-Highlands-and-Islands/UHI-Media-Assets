@@ -7,7 +7,7 @@ changes to this stylesheet should be mirrored across all partners
 
 [accessibility adjustment 20190117]
 Block colour: #007E99 [originally #008eaa]
-10% colour:   #F7FBFC [originally #e5f3f6]
+10% colour:   #EFFCFF [v.1 #F7FBFC | originally #e5f3f6]
 **************************************/
 
 /**********************
@@ -129,7 +129,7 @@ a:visited {
 a.t4Edit-page,
 a.t4Edit-page:visited,
 a.t4Edit-page:active {
-  color: #F7FBFC;
+  color: #EFFCFF;
 }
 
 .content-type--landing-rss-feed__line,
@@ -143,15 +143,15 @@ a.t4Edit-page:active {
 .studying,
 .UHI--button-link--reverse,
 .UHI--paragraph-highlight {
-  background-color: #F7FBFC;
+  background-color: #EFFCFF;
 }
 
 .courses .section.coursefinder.coursepage {
-  background: #F7FBFC none repeat scroll 0 0 !important;
+  background: #EFFCFF none repeat scroll 0 0 !important;
 }
 
 .content-type-modifier--typography blockquote {
-  border-color: #F7FBFC;
+  border-color: #EFFCFF;
 }
 
 /**********************
@@ -175,26 +175,26 @@ native 61px x 400px
 /* News item image colour changes */
 
 .content-type--one-web-news__image {
-  background: #F7FBFC;
+  background: #EFFCFF;
 }
 
 .content-type--one-web-news__image figcaption {
-  background: #F7FBFC;
+  background: #EFFCFF;
 }
 
 /* Right content colour changes */
 
 @media (min-width: 1024px) {
   .content-type-modifier--shading {
-    background-color: #F7FBFC;
+    background-color: #EFFCFF;
   }
   
   .content-type-modifier--shading-image {
-    background-color: #F7FBFC;
+    background-color: #EFFCFF;
   }
   
   .content-type-modifier--shading-image figcaption {
-    background: #F7FBFC;
+    background: #EFFCFF;
   }
 }
 
@@ -258,5 +258,5 @@ native 61px x 400px
 }
 
 .content-type--landing-4-post-image-text, .content-type--landing-4-textoverimage-right .textoverlay, .content-type--landing-4-textoverimage-left .textoverlay {
-  background: #F7FBFC;
+  background: #EFFCFF;
 }
