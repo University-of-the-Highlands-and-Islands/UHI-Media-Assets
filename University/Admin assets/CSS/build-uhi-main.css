@@ -1654,11 +1654,11 @@ section testimonials
     margin-bottom: 10px;
 }
 
-input[type=text] {
+.messageapply input[type=text] {
     width: 90%;
 }
 
-input[type=submit] {
+.messageapply input[type=submit] {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 4px;
@@ -1666,11 +1666,11 @@ input[type=submit] {
     padding: 7px;
 }
 
-input[type=submit]:hover {
+.messageapply input[type=submit]:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-textarea {
+.messageapply textarea {
     width: 90%;
 }
 
