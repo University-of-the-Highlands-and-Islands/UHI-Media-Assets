@@ -2557,7 +2557,7 @@ Landing 4 Image Text Overlay
     font-size:2.074rem;
   }
   
-  .content-type--landing-4-textoverimage-left .textovercontainer, .content-type--landing-4-textoverimage-left .textovercontainer {
+  .content-type--landing-4-textoverimage-left .textovercontainer, .content-type--landing-4-textoverimage-right .textovercontainer {
     height:500px;
   }
   
