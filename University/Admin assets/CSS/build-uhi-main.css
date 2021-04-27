@@ -2478,7 +2478,7 @@ Landing 4 Image Text Overlay
 
 .content-type--landing-4-textoverimage-right .textover-bg-right {
   width: 80%;
-  height: 50%;
+  height: 237.5px;
   display: block;
 }
 
@@ -2488,7 +2488,7 @@ Landing 4 Image Text Overlay
   text-align:left;
   padding: 2% 3% 2% 3%;
   position: absolute;
-  bottom:0px;
+  top: 170px;
   right:20px;
   display: inline-table;
 }
@@ -2526,7 +2526,7 @@ Landing 4 Image Text Overlay
 .content-type--landing-4-textoverimage-left .textover-bg-left {
   position: absolute;
   width: 80%;
-  height: 50%;
+  height: 237.5px;
   display: block;
   right: 0;
 }
@@ -2537,7 +2537,7 @@ Landing 4 Image Text Overlay
   text-align:left;
   padding: 2% 3% 2% 3%;
   position: absolute;
-  bottom:0px;
+  top: 170px;
   left:20px;
   display: inline-table;
 }
