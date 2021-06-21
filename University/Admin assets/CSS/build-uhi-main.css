@@ -4639,9 +4639,15 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
 #mode3ft li,
 #mode3pt li,
 #mode4ft li,
-#mode4pt li {
+#mode4pt li,
+#mode1dl li,
+#mode2dl li,
+#mode3dl li,
+#mode4dl li,
+ {
   list-style-type: none;
-  margin: 2px
+/*  margin: 2px; */
+  display: inline;
 }
 
 @media (min-width: 768px) {
@@ -4657,6 +4663,10 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4 a,
   #mode4ft a,
   #mode4pt a,
+  #mode1dl a,
+  #mode2dl a,
+  #mode3dl a,
+  #mode4dl a,
   #year a {
     font-size: 22px;
   }
@@ -4675,6 +4685,10 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4 a,
   #mode4ft a,
   #mode4pt a,
+  #mode1dl a,
+#mode2dl a,
+#mode3dl a,
+#mode4dl a,
   #year a {
     font-size: 22px;
   }
@@ -4693,6 +4707,10 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4 a,
   #mode4ft a,
   #mode4pt a,
+  #mode1dl a,
+  #mode2dl a,
+  #mode3dl a,
+  #mode4dl a,
   #year a {
     font-size: 22px;
   }

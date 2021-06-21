@@ -41,199 +41,337 @@ jQuery(document).ready(function(){
  }
 
 function thisYear() {
-	showHide('mode1'); 
-	reset('mode2'); 
-	reset('mode3'); 
-	reset('mode4'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('year1'); 
-	untoggle('year2'); 
-	untoggle('year3'); 
-	untoggle('year4'); 
-	untoggle('mode1a'); 
-	untoggle('mode1b'); 
+    showHide("mode1"); 
+    reset("mode2"); 
+    reset("mode3"); 
+    reset("mode4"); 
+    reset("mode1ft"); 
+    reset("mode1pt"); 
+    reset("mode1dl"); 
+    reset("mode2ft"); 
+    reset("mode2pt"); 
+    reset("mode2dl"); 
+    reset("mode3ft"); 
+    reset("mode3pt"); 
+    reset("mode3dl"); 
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl"); 
+    toggle("year1");
+    untoggle("year2");
+    untoggle("year3");
+    untoggle("year4");
+    untoggle("mode1a");
+    untoggle("mode1b");
+    untoggle("mode1c");
 	return false;
  }
 
 function nextYear() {
-	showHide('mode2'); 
-	reset('mode1'); 
-	reset('mode3'); 
-	reset('mode4'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('year2'); 
-	untoggle('year1'); 
-	untoggle('year3'); 
-	untoggle('year4'); 
-	untoggle('mode2a'); 
-	untoggle('mode2b'); 
+    showHide("mode2"); 
+    reset("mode1"); 
+    reset("mode3"); 
+    reset("mode4"); 
+    reset("mode1ft"); 
+    reset("mode1pt"); 
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt");
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("year2");
+    untoggle("year1");
+    untoggle("year3");
+    untoggle("year4");
+    untoggle("mode2a");
+    untoggle("mode2b");
+    untoggle("mode2c");
 	return false;
 }
 
  function threeYear() {									
-	showHide('mode3'); 
-	reset('mode1'); 
-	reset('mode2'); 
-	reset('mode4'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('year3'); 
-	untoggle('year1'); 
-	untoggle('year2'); 
-	untoggle('year4'); 
-	untoggle('mode3a'); 
-	untoggle('mode3b'); 
+    showHide("mode3"); 
+    reset("mode1"); 
+    reset("mode2"); 
+    reset("mode4"); 
+    reset("mode1ft"); 
+    reset("mode1pt"); 
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt"); 
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3pt"); 
+    reset("mode3dl");
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("year3");
+    untoggle("year1");
+    untoggle("year2");
+    untoggle("year4");
+    untoggle("mode3a");
+    untoggle("mode3b");
+    untoggle("mode3c");
 	return false;
  }
  function fourYear() {									
-	showHide('mode4'); 
-	reset('mode1'); 
-	reset('mode2'); 
-	reset('mode3'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('year4'); 
-	untoggle('year1'); 
-	untoggle('year2'); 
-	untoggle('year3'); 
-	untoggle('mode4a'); 
-	untoggle('mode4b'); 
+    showHide("mode4"); 
+    reset("mode1"); 
+    reset("mode2"); 
+    reset("mode3"); 
+    reset("mode1ft"); 
+    reset("mode1pt");
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt"); 
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("year4");
+    untoggle("year1");
+    untoggle("year2");
+    untoggle("year3");
+    untoggle("mode4a");
+    untoggle("mode4b");
+    untoggle("mode4c");
 	return false;
  }
 
 function thisFT() {
-	showHide('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('mode1a'); 
-	untoggle('mode1b'); 
+    showHide("mode1ft"); 
+    reset("mode1pt"); 
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt"); 
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("mode1a");
+    untoggle("mode1b");
+    untoggle("mode1c"); 
 	return false;
 }
 
 function thisPT() {
-	showHide('mode1pt'); 
-	reset('mode1ft'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('mode1b'); 
-	untoggle('mode1a'); 
+    showHide("mode1pt"); 
+    reset("mode1ft"); 
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt"); 
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3pt"); 
+    reset("mode3dl");
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("mode1b");
+    untoggle("mode1a");
+    untoggle("mode1c");
+	return false;
+}
+
+function thisDL() {
+    showHide("mode1dl");
+    reset("mode1ft");
+    reset("mode1pt");
+    reset("mode2ft");
+    reset("mode2pt");
+    reset("mode2dl");
+    reset("mode3ft");
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4ft");
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("mode1c");
+    untoggle("mode1a");
+    untoggle("mode1b");
 	return false;
 }
 
 function nextFT() {								
-	showHide('mode2ft'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('mode2a'); 
-	untoggle('mode2b'); 
+    showHide("mode2ft"); 
+    reset("mode1ft"); 
+    reset("mode1pt"); 
+    reset("mode1dl"); 
+    reset("mode2pt"); 
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("mode2a");
+    untoggle("mode2b");
+    untoggle("mode2c");
 	return false;
 }
 									 
 function nextPT() {									 
-	showHide('mode2pt'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('mode2b'); 
-	untoggle('mode2a'); 
+    showHide("mode2pt"); 
+    reset("mode1ft"); 
+    reset("mode1pt"); 
+    reset("mode1dl"); 
+    reset("mode2ft");
+    reset("mode2dl"); 
+    reset("mode3ft"); 
+    reset("mode3pt"); 
+    reset("mode3dl"); 
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl"); 
+    toggle("mode2b");
+    untoggle("mode2a");
+    untoggle("mode2c");
+	return false;
+}
+
+function nextDL() {
+    showHide("mode2dl");
+    reset("mode1ft");
+    reset("mode1pt");
+    reset("mode1dl");
+    reset("mode2ft");
+    reset("mode2pt");
+    reset("mode3ft");
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4ft");
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("mode2c");
+    untoggle("mode2a");
+    untoggle("mode2b");
 	return false;
 }
 
 function threeFT() {								
-	showHide('mode3ft'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('mode3a'); 
-	untoggle('mode3b'); 
+    showHide("mode3ft"); 
+    reset("mode1ft"); 
+    reset("mode1pt");
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt"); 
+    reset("mode2dl");
+    reset("mode3pt"); 
+    reset("mode3dl");
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("mode3a");
+    untoggle("mode3b");
+    untoggle("mode3c");
 	return false;
 }
 									 
 function threePT() {									 
-	showHide('mode3pt'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode4ft'); 
-	reset('mode4pt'); 
-	toggle('mode3b'); 
-	untoggle('mode3a'); 
+    showHide("mode3pt"); 
+    reset("mode1ft"); 
+    reset("mode1pt"); 
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt");
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3dl");
+    reset("mode4ft"); 
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("mode3b");
+    untoggle("mode3a");
+    untoggle("mode3c");
 	return false;
 }
+
+function threeDL() {
+    showHide("mode3dl");
+    reset("mode1ft");
+    reset("mode1pt");
+    reset("mode1dl");
+    reset("mode2ft");
+    reset("mode2pt");
+    reset("mode2dl");
+    reset("mode3ft");
+    reset("mode3pt");
+    reset("mode4ft");
+    reset("mode4pt");
+    reset("mode4dl");
+    toggle("mode3c");
+    untoggle("mode3a");
+    untoggle("mode3b");
+	return false;
+}
+
+
 function fourFT() {								
-	showHide('mode4ft'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4pt'); 
-	toggle('mode4a'); 
-	untoggle('mode4b'); 
+    showHide("mode4ft"); 
+    reset("mode1ft"); 
+    reset("mode1pt"); 
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt");
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4pt");
+    reset("mode4l");
+    toggle("mode4a");
+    untoggle("mode4b");
+    untoggle("mode4c");
 	return false;
 }
 									 
 function fourPT() {									 
-	showHide('mode4pt'); 
-	reset('mode1ft'); 
-	reset('mode1pt'); 
-	reset('mode2ft'); 
-	reset('mode2pt'); 
-	reset('mode3ft'); 
-	reset('mode3pt'); 
-	reset('mode4ft'); 
-	toggle('mode4b'); 
-	untoggle('mode4a'); 
+    showHide("mode4pt"); 
+    reset("mode1ft"); 
+    reset("mode1pt");
+    reset("mode1dl");
+    reset("mode2ft"); 
+    reset("mode2pt"); 
+    reset("mode2dl");
+    reset("mode3ft"); 
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4ft");
+    reset("mode4dl");
+    toggle("mode4b");
+    untoggle("mode4a");
+    untoggle("mode4c");
+	return false;
+}
+
+function fourDL() {
+    showHide("mode4dl");
+    reset("mode1ft");
+    reset("mode1pt");
+    reset("mode1dl");
+    reset("mode2ft");
+    reset("mode2pt");
+    reset("mode2dl");
+    reset("mode3ft");
+    reset("mode3pt");
+    reset("mode3dl");
+    reset("mode4ft");
+    reset("mode4pt");
+    toggle("mode4c");
+    untoggle("mode4a");
+    untoggle("mode4b");
 	return false;
 }
