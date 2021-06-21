@@ -2478,7 +2478,7 @@ Landing 4 Image Text Overlay
 
 .content-type--landing-4-textoverimage-right .textover-bg-right {
   width: 80%;
-  height: 50%;
+  height: 237.5px;
   display: block;
 }
 
@@ -2488,7 +2488,7 @@ Landing 4 Image Text Overlay
   text-align:left;
   padding: 2% 3% 2% 3%;
   position: absolute;
-  bottom:0px;
+  top: 170px;
   right:20px;
   display: inline-table;
 }
@@ -2526,7 +2526,7 @@ Landing 4 Image Text Overlay
 .content-type--landing-4-textoverimage-left .textover-bg-left {
   position: absolute;
   width: 80%;
-  height: 50%;
+  height: 237.5px;
   display: block;
   right: 0;
 }
@@ -2537,7 +2537,7 @@ Landing 4 Image Text Overlay
   text-align:left;
   padding: 2% 3% 2% 3%;
   position: absolute;
-  bottom:0px;
+  top: 170px;
   left:20px;
   display: inline-table;
 }
@@ -2557,7 +2557,7 @@ Landing 4 Image Text Overlay
     font-size:2.074rem;
   }
   
-  .content-type--landing-4-textoverimage-left .textovercontainer, .content-type--landing-4-textoverimage-left .textovercontainer {
+  .content-type--landing-4-textoverimage-left .textovercontainer, .content-type--landing-4-textoverimage-right .textovercontainer {
     height:500px;
   }
   
@@ -4119,19 +4119,19 @@ https://webaim.org/resources/contrastchecker/
 https://contrast-ratio.com/
 */
 
-.list--background-colours {
+.list--background-colours, .list--background-colours span {
   color: #222;  /* PAW 20191022 default text colour for contrast  */
   background-color:#e7e7e7;
 }
 
-.list--background-colours--1--dark  {color:white;background-color:#572163}
-.list--background-colours--2--dark  {color:white;background-color:#941900}
-.list--background-colours--3--dark  {color:white;background-color:#003585}
-.list--background-colours--4--dark  {color:white;background-color:#008537}
-.list--background-colours--1--light {color:black;background-color:#e5c6ec}
-.list--background-colours--2--light {color:black;background-color:#ffbfb3}
-.list--background-colours--3--light {color:black;background-color:#b3d1ff}
-.list--background-colours--4--light {color:black;background-color:#fff0b3}
+.list--background-colours--1--dark, .list--background-colours--1--dark span  {color:white;background-color:#572163}
+.list--background-colours--2--dark, .list--background-colours--2--dark span  {color:white;background-color:#941900}
+.list--background-colours--3--dark, .list--background-colours--3--dark span  {color:white;background-color:#003585}
+.list--background-colours--4--dark, .list--background-colours--4--dark span  {color:white;background-color:#008537}
+.list--background-colours--1--light, .list--background-colours--1--light span {color:black;background-color:#e5c6ec}
+.list--background-colours--2--light, .list--background-colours--2--light span {color:black;background-color:#ffbfb3}
+.list--background-colours--3--light, .list--background-colours--3--light span {color:black;background-color:#b3d1ff}
+.list--background-colours--4--light, .list--background-colours--4--light span {color:black;background-color:#fff0b3}
 
 /****************************************
 
