@@ -3456,7 +3456,7 @@ table styles also used in:
 
 /* tables
 
-don't use:
+Only use for small screens:
 - table-layout:fixed
 - width:100%
 (repercussions for cell widths etc)
@@ -3470,6 +3470,14 @@ https://www.w3.org/WAI/tutorials/tables/
   line-height: 1.2;
   margin-bottom: 2rem;
   overflow-wrap: break-word;
+}
+
+@media (max-width: 500px) {
+  .content-type-modifier--typography table,
+  .coursedetails table {
+    table-layout: fixed;
+    width: 100%;
+  }
 }
 
 .content-type-modifier--typography table,
