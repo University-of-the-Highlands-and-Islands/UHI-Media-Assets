@@ -17,6 +17,12 @@ Old Name        : build-normalize.css
 
 *********************************************/
 
+/* Custom CSS property declarations */
+
+html {
+  --default-anchor-colour: #722B82; /* slightly lighter version of #572163 to differentiate from bold font */
+}
+
 /********************************************
 
 NORMALIZE
@@ -530,7 +536,7 @@ body {
 }
 
 a {
-  color: #722B82; /* slightly lighter version of #572163 to differentiate from bold font */
+  color: var(--default-anchor-colour);
   text-decoration: none;
 }
 
