@@ -925,6 +925,13 @@ Action button on Home page
   }
 }
 
+/* Makes images responsive when there is no slideshow */
+
+.home-page-image {
+	max-width: 100%;
+	height: auto;
+}
+
 /* Image slideshow */
 
 .slideshow {
@@ -984,11 +991,4 @@ Action button on Home page
 
 #pauseButton:hover {
     background-color: rgba(0,0,0,0.8);
-}
-
-/* Makes images responsive when there is no slideshow */
-
-.home-page-image {
-	max-width: 100%;
-	height: auto;
 }
