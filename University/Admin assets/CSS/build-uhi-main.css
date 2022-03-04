@@ -654,6 +654,7 @@ section coursedetails
   top: 0;
   background: #572163;
   padding-bottom: 5px;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
