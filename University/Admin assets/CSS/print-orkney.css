@@ -1,0 +1,199 @@
+/********************************************
+
+Applies To      : UHI Home & Site pages, all Partner pages
+Description     : Print styles for all UHI & partner pages.
+Media Type      : Print
+Name & Filename : print.css
+Old Name        : build-uhi-main_print.css
+Reference       : 20180531 updated using HTML5 Boilerplate https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+Test Date       : 20180613-1200
+
+*********************************************/
+
+*,
+*:before,
+*:after {
+  background: transparent !important;
+  color: #000 !important; /* Black prints faster */
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a[href]:after {
+  content: " (" attr(href) ")";
+}
+
+/*
+ * Don't show links that are fragment identifiers,
+ * or use the `javascript:` pseudo protocol
+ */
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+  content: "";
+}
+
+abbr[title]:after {
+  content: " (" attr(title) ")";
+}
+
+blockquote,
+pre {
+  border: 1px solid #999;
+}
+
+blockquote,
+img,
+pre,
+tr {
+  page-break-inside: avoid;
+}
+
+body {
+  line-height: 1.6;
+}
+
+h2,
+h3 {
+  page-break-after: avoid;
+}
+
+img {
+  max-width: 100% !important;
+}
+
+p,
+h2,
+h3 {
+  orphans: 3;
+  widows: 3;
+}
+
+pre {
+  white-space: pre-wrap !important;
+}
+
+/*
+ * Printing Tables:
+ * http://css-discuss.incutio.com/wiki/Printing_Tables
+ */
+thead {
+  display: table-header-group;
+}
+
+.course .section .wrap h2,
+.dlhekis,
+.footer ul.nav,
+.header.banner .nav.primary,
+.header.banner .tools,
+.kiswidget,
+.map,
+.message,
+.section.coursedetails .apply,
+.section.coursedetails .tabnav,
+.section.coursefinder .prospectus,
+.section.coursefinder form,
+.section.coursefinder ul.suggestions li.all,
+.section.courselist .col.onequarter,
+.section.ctas .section.apply,
+.section.ctas .section.tour .ctas ul,
+.section.ctas .section.tour p,
+.section.specialise .half img,
+.servicedesk,
+.signpost,
+.t4Edit-page,
+div.quarter,
+div.section.clearfix.course.coursefinder div.wrap h2,
+h1.logo,
+iframe,
+table.prospectus caption a {
+  display: none;
+}
+
+.course .section .wrap .background:after {
+  content: url(<t4 type= "media" formatter= "image/path" id= "69" />);
+}
+
+#printQR,
+.section.coursedetails .tab,
+.section.testimonials blockquote {
+  display: block !important;
+}
+
+.header.banner .logo a {
+  height: auto;
+  width: auto;
+  margin: 0 10px 20px;
+  text-indent: inherit;
+  text-decoration: none;
+}
+
+.mountains2 {
+  padding-top: 0;
+}
+
+.section.connections .text h2,
+.section.connections .text p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section.connections .text,
+.section.coursefinder ul.suggestions li,
+.section.coursefinder ul.suggestions li a {
+  padding: 0;
+}
+
+.section.coursefinder ul.suggestions {
+  padding-left: 40px;
+}
+
+.section.coursefinder ul.suggestions li {
+  display: list-item;
+  list-style: square;
+}
+
+.section.courselist .col.threequarters > ul li a {
+  padding: 4px 0;
+}
+
+.section.ctas,
+.section.intro {
+  min-height: 0;
+}
+
+.section.ctas .section.testimonials {
+  max-width: none;
+}
+
+.section.intro h1,
+.section.intro h2,
+.section.intro p {
+  margin-top: 0;
+}
+
+.section.intro h1,
+.section.intro p {
+  padding: 0 10px;
+}
+
+.section.intro > .wrap {
+  padding-bottom: 0;
+}
+
+.section.intro > .wrap > .tablewrap {
+  height: auto;
+}
+
+table.prospectus {
+  page-break-after: always;
+}
+
+table.prospectus td,
+table.prospectus th {
+  font-size: 11px;
+}
