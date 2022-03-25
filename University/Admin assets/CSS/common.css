@@ -20,8 +20,10 @@ Old Name        : build-normalize.css
 /* Custom CSS property declarations */
 
 html {
-  --default-anchor-colour: #722B82; /* slightly lighter version of #572163 to differentiate from bold font */
+  --default-anchor-colour: var(--uhi-blue);
+
 }
+
 
 /********************************************
 
@@ -525,18 +527,8 @@ HTML ELEMENTS
 
 ********************************************/
 
-body {
-  background-color: #fff;
-  color: #222;
-  font-family: "Glypha Web", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
-  text-align: center;
-  width: 100%;
-}
-
 a {
-  color: var(--default-anchor-colour);
+  color: var(--uhi-blue);
   text-decoration: none;
 }
 
@@ -573,24 +565,6 @@ h4, h5, h6 {
   }
 }
 
-/*
-bold font-family
-don't use font-weight: bold
-*/
-b, dt, h1, h2, h3, h4, h5, h6, strong, th, thead td,
-.footer .nav,
-.header.banner li form .keyword,
-.header.banner .tools li a,
-.lang-button,
-.navigation--home-message,
-.message--cookie > div,
-.section.coursefinder ul.suggestions,
-.section.testimonials blockquote p .quotee .role {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-
 dd {
   margin: 0;
 }
@@ -610,17 +584,6 @@ figure {
   margin: 0;
 }
 
-/*
-italic font-family
-don't use font-style: italic
-selectors from Chrome user agent stylesheet
-*/
-i, cite, em, var, address, dfn {
-  font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-
 img {
   vertical-align: middle;
 }
@@ -638,7 +601,7 @@ table {
 }
 
 td, th {
-  padding: 3px;
+  padding: 6px;
   text-align: left; /* IE11 */
 }
 
@@ -663,471 +626,6 @@ body:after,
   content: "";
   display: table;
   clear: both;
-}
-
-/* footer */
-
-.footer {
-  background-color: #0f0f0f;
-  color: #bebebe;
-  font-size: 13px;
-  padding: 10px 10px 0 10px;
-}
-
-@media (min-width: 768px) {
-  .footer {
-    padding: 30px 0 0;
-  }
-}
-
-@media (min-width: 1000px) {
-  .footer {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .footer {
-    font-size: 16px;
-  }
-}
-
-.footer a,
-.footer a:visited,
-.footer a:active {
-  color: #fff;
-}
-
-.footer a:hover {
-  border-bottom: 1px solid #fff;
-}
-
-.footer p {
-  margin-top: 0;
-}
-
-.footer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer .col.half {
-  font-size: 11px;
-}
-
-@media (min-width: 768px) {
-  .footer .col.half {
-    float: left;
-    width: 46%;
-    margin: 0 2%;
-    text-align: right;
-  }
-
-  .footer .col.half:first-child {
-    text-align: left;
-  }
-}
-
-@media (min-width: 1000px) {
-  .footer .col.half {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .footer .col.half {
-    font-size: 13px;
-  }
-}
-
-@media (min-width: 768px) {
-  .footer .col.quarter {
-    float: left;
-    width: 21%;
-    margin: 0 2%;
-    text-align: left;
-  }
-}
-
-/* footer button links */
-
-.footer .nav {
-  margin: 0 0 10px 0;
-  padding: 0;
-}
-
-@media (min-width: 768px) {
-  .footer .nav {
-    margin-bottom: 30px;
-  }
-}
-
-.footer .nav li {
-  display: inline-block;
-  padding: 4px 2px;
-  list-style: none;
-}
-
-@media (min-width: 768px) {
-  .footer .nav li {
-    padding: 6px 4px;
-  }
-}
-
-.footer .nav li a {
-  background-color: #fff;
-  border-radius: 3px;
-  color: #0f0f0f;
-  display: inline-block;
-  padding: 3px 6px;
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  .footer .nav li a {
-    padding: 5px 13px;
-  }
-}
-
-.footer .nav li a:hover {
-  background-color: #572163;
-  border-bottom: none;
-  color: #fff;
-  text-shadow: 1px 1px 0 #000;
-}
-
-/* footer servicedesk button */
-.footer .servicedesk a:hover {
-  border-bottom: 0;
-}
-
-/*
-footer social links - can be made less specific eg
-https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
-*/
-
-.footer .share li,
-.footer .share li a {
-  display: inline-block;
-  height: 32px;
-  width: 32px;
-}
-
-.footer .share li {
-  margin: 0 3px 9px 0;
-}
-
-.footer .share li a {
-  background-size: cover;
-  text-indent: -9999px;
-}
-
-.footer .share li a:hover {
-  border-bottom: none;
-}
-
-.footer .facebook a {
-  background: url(<t4 type= "media" formatter= "image/path" id= "82" />) no-repeat;
-}
-
-.footer .twitter a {
-  background: url(<t4 type= "media" formatter= "image/path" id= "85" />) no-repeat;
-}
-
-.footer .instagram a {
-  background: url(<t4 type= "media" formatter= "image/path" id= "203921" />) no-repeat;
-}
-
-.footer .youtube a {
-  background: url(<t4 type= "media" formatter= "image/path" id= "87" />) no-repeat;
-}
-
-.footer .flickr a {
-  background: url(<t4 type= "media" formatter= "image/path" id= "83" />) no-repeat;
-}
-
-.footer .linkedin a {
-  background: url(<t4 type= "media" formatter= "image/path" id= "84" />) no-repeat;
-}
-
-.footer .facebook a,
-.footer .twitter a,
-.footer .instagram a,
-.footer .youtube a,
-.footer .flickr a,
-.footer .linkedin a {
-  background-position: 0 100%;
-}
-
-.footer .facebook a:hover,
-.footer .twitter a:hover,
-.footer .instagram a:hover,
-.footer .youtube a:hover,
-.footer .flickr a:hover,
-.footer .linkedin a:hover {
-  background-position: 0 0;
-}
-
-/* footer container */
-
-.footer .wrap {
-  margin: 0 auto 10px auto;
-  max-width: 1340px;
-}
-
-@media (min-width: 768px) {
-  .footer .wrap {
-    margin-bottom: 30px;
-  }
-}
-
-/* header links */
-
-.lang-switcher {
-  position: relative;
-  display: inline-block;
-}
-
-.language-options {
-  left: -9999px;
-  opacity: 0;
-  position: absolute;
-  z-index: 1;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  text-align: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-}
-
-/* Targets Microsoft Edge v13 & v14 */
-@supports (-ms-ime-align: auto) {
-  .language-options {
-    width: 98%;
-  }
-}
-
-/* Targets Microsoft IE 10 & 11 */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .language-options {
-    width: 98%;
-  }
-   
-   .language:hover .language-options, .lang-switcher:focus > .language-options {
-    left: 0;
-    opacity: 1;
-  }
-}
-
-.language:hover .language-options, .lang-switcher:focus > .language-options, .lang-switcher:focus-within > .language-options {
-  left: 0;
-  opacity: 1;
-}
-
-.lang-button {
-  vertical-align: bottom;
-}
-
-.lang-button-up {
-  display: none;
-}
-
-.language:hover .lang-button-up {
-  display: inline-block;
-}
-
-.language:hover .lang-button-down {
-  display: none;
-}
-
-/* needs to be visible for Funnelback Twitter Typeahead
-.header.banner {
-  overflow: hidden;
-}
-*/
-
-.header.banner li form {
-  display: inline-block;
-}
-
-.header.banner li form input[type="submit"] {
-  background-color: #0f0f0f;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  font: bold 21px 'Sosa Web', sans-serif;
-  padding: 1px 3px;
-}
-
-/* search input box should always be open */
-.header.banner li form .keyword {
-  padding-bottom: 5px;
-  border: none;
-  border-bottom: 1px solid #d6d6d6;
-}
-
-/* header banner logo */
-
-.header.banner .logo {
-  margin: 0;
-}
-
-.header.banner .logo a {
-  width: 180px;
-  height: 57px;
-  display: block;
-  margin: 7px auto 3px auto;
-  text-indent: -9999px;
-  background: url(<t4 type= "media" formatter= "image/path" id= "69" />) no-repeat;
-  background-size: 100%;
-}
-
-@media (min-width: 1340px) {
-  .header.banner .logo a {
-    width: 307px;
-    height: 98px;
-  }
-}
-
-/* header banner nav primary */
-
-.header.banner .nav.primary {
-  font: bold 14px Oswald, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  margin: 0 10px 10px;
-}
-
-@media (min-width: 768px) {
-  .header.banner .nav.primary {
-    margin: 22px 0 18px;
-    font-size: 23px;
-    letter-spacing: -0.4px;
-  }
-}
-
-@media (min-width: 1340px) {
-  .header.banner .nav.primary {
-    font-size: 30px;
-  }
-}
-
-.header.banner .nav.primary ul {
-  margin: 0;
-  padding: 0;
-}
-
-.header.banner .nav.primary ul li {
-  display: inline-block;
-  padding: 0 2px;
-  list-style: none;
-  line-height: 2.7;
-}
-
-@media (min-width: 768px) {
-  .header.banner .nav.primary ul li {
-    padding: 0 10px;
-  }
-}
-
-.header.banner .nav.primary ul li a {
-  color: #0f0f0f;
-  text-decoration: none;
-  border-top: 4px solid #0f0f0f;
-  border-bottom: 4px solid #0f0f0f;
-  border-radius: 3px;
-}
-
-@media (min-width: 768px) {
-  .header.banner .nav.primary ul li a {
-    border-top-width: 8px;
-    border-bottom-width: 8px;
-  }
-}
-
-.header.banner .nav.primary ul li a:hover {
-  border-top-width: 5px;
-  border-bottom-width: 5px;
-}
-
-@media (min-width: 768px) {
-  .header.banner .nav.primary ul li a:hover {
-    border-top-width: 10px;
-    border-bottom-width: 10px;
-  }
-}
-
-/* header banner tools */
-
-.header.banner .tools {
-  margin: -2px 0 0;
-  padding: 0;
-  font-size: 12px;
-}
-
-@media (min-width: 768px) {
-  .header.banner .tools {
-    font-size: 16px;
-  }
-}
-
-.header.banner .tools li {
-  display: inline;
-  list-style: none;
-  margin: 0 2px;
-}
-
-@media (min-width: 768px) {
-  .header.banner .tools li {
-    margin: 0 4px;
-  }
-}
-
-.header.banner .tools li a, .lang-button {
-  display: inline-block;
-  margin-bottom: 2px;
-  padding: 3px 6px;
-  color: #fff;
-  border-radius: 0 0 3px 3px;
-  text-decoration: none;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.header.banner .tools .language-options a {
-    box-shadow: none;
-    border: none;
-    display: block;
-}
-
-.students a, .staff a, .alumni a, .lang-button, .old-lang-switcher a {
-    border: 1px solid #fff;
-}
-
-.header.banner .tools li a {
-  vertical-align: top;
-}
-
-.header .tools .language .lang-switcher .lang-button {
-  vertical-align: bottom;
-}
-
-@media (min-width: 768px) {
-  .header.banner .tools li a, .lang-button {
-    padding: 5px 13px;
-  }
-}
-
-.header.banner .tools li a:hover, .lang-button:hover {
-  margin-bottom: 0;
-  padding-top: 5px;
-  transition: all 0.1s;
-}
-
-@media (min-width: 768px) {
-  .header.banner .tools li a:hover, .lang-button:hover {
-    margin-bottom: 0;
-    padding-top: 7px;
-  }
 }
 
 /* top of page messages in black bar */
@@ -1161,29 +659,6 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   color: #999;
 }
 
-.message--cookie {
-  font-family: "Glypha Web", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  background-color: white;
-}
-
-.message--cookie p:first-child {
-  float: right;
-}
-
-.message--cookie p {
-  text-align: left;
-}
-
-.message--cookie > div {
-  cursor: pointer;
-  font-size: 16px;
-  text-decoration: underline dotted;
-}
-
 /* Breadcrumbs font size fixer */
 
 .navigation--breadcrumb {
@@ -1193,18 +668,6 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 
 /* NEW COOKIE CSS */
 
-.cookie-notice {
-    font-family: "Glypha Web", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    background-color: #4A4C4E;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
 .cookie-message {
     text-align: left;
     padding: 10px;
@@ -1213,7 +676,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 }
 
 .cookie-message a {
-  color: #8DC2FC;
+  color: var(--uhi-blue);
   text-decoration: underline;
 }
 
@@ -1222,12 +685,11 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 }
 
 .cookie-accept {
-    color: white;
+    color: var(--uhi-white);
     cursor: pointer;
     font-size: 14px;
-    text-decoration: underline dotted;
-    background-color: #036FE2;
-    padding: 5px 7px;
+    background-color: var(--uhi-blue);
+    padding: 15px 20px;
     border-radius: 3px;
     white-space: nowrap;
     display: inline-block;
@@ -1236,11 +698,10 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 }
 
 .cookie-settings {
-    background-color: #1f1f1f;
-    color: white;
-    padding: 5px 7px;
+    background-color: var(--uhi-white);
+    color: var(--uhi-black);
+    padding: 15px 20px;
     font-size: 14px;
-    text-decoration: underline dotted;
     cursor: pointer;
     border-radius: 3px;
     white-space: nowrap;
@@ -1248,17 +709,21 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
     width: 120px;
     text-align: center;
 }
+  
+.cookie-accept, .cookie-settings {
+    font-size: 16px;
+    font-weight: 700;
+}
 
 /* NEW COOKIE CSS BOTTOM LEFT VERSION */
 
 .cookie-notice-2 {
-    font-family: "Glypha Web", Helvetica, Arial, sans-serif;
     font-size: 14px;
     position: fixed;
     bottom: 0;
     z-index: 99;
-    background-color: #4A4C4E;
-    color: white;
+    background-color: var(--uhi-black);
+    color: var(--uhi-white);
     display: block;
 }
 
@@ -1277,13 +742,6 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
     align-items: center;
 }
 
-/* COOKIE NOTICE MODAL */
-
-#modalAlert {
-  background: #4a4c4e;
-  color: white;
-}
-
 /*  bottom of page campaign banner */
 
 .message--campaign-banner {
@@ -1291,9 +749,9 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   bottom:0; 
   left:0; 
   width:100%; 
-  background:#fdfdfd url("<t4 type= "media" formatter= "image/path" id= "343425" />") repeat-x left top; 
+  background:#fdfdfd url("<t4 type= "media" formatter= "image/path" id= "372366" />") repeat-x left top; 
   z-index:999; 
-  border:1px solid #572163;
+  border:1px solid var(--uhi-black);
 }
 
 .message--campaign-banner img.big {
@@ -1314,7 +772,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   font-weight:bold; 
   padding:2px; 
   margin:2px; 
-  border:1px solid #572163; 
+  border:1px solid var(--uhi-black); 
   width:15px; 
   z-index:50;
 }
@@ -1336,8 +794,7 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 /* section clearfix */
 
 .section.clearfix > .wrap {
-  margin: 0 auto;
-  max-width: 1340px;
+  margin: 10px 5%;
 }
 
 /* section connections */
@@ -1346,7 +803,6 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
 .section.ctas .section.tour .ctas ul {
   margin: 0 0 10px 0;
   padding: 0;
-  font: bold 14px Oswald, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -1363,14 +819,13 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
   padding: 5px 10px;
   color: #fff;
   text-decoration: none;
-  background-color: #0f0f0f;
+  background-color: var(--uhi-black);
   border-radius: 3px;
 }
 
 .section.connections .ctas ul li a:hover,
 .section.ctas .section.tour .ctas ul li a:hover {
-  background-color: #572163;
-  text-shadow: 2px 2px 0 #000;
+  text-decoration: underline;
 }
 
 /* section coursefinder */
@@ -1501,8 +956,8 @@ ul.ui-autocomplete li {
 
 .section.coursefinder ul.suggestions li a:hover {
   color: #fff;
-  background-color: #a3b9c2;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
 }
 
 .section.coursefinder ul.suggestions li.all a {
@@ -1522,11 +977,17 @@ Action button on Home page and eg partner home pages
 .section.coursefinder .prospectus p {
   border-radius: 174px;
   height: 232px;
-  margin: 0 auto -50px auto;
+  margin: 0 0 -74px auto;
   overflow: hidden;
   padding: 0;
   text-align: center;
   width: 232px;
+}
+  
+@media (min-width: 768px) {
+  .section.coursefinder .prospectus p {
+    margin-bottom: -73px;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -1598,7 +1059,6 @@ Action button on Home page and eg partner home pages
 .section.intro {
   position: relative;
   overflow: hidden;
-  background-color: #0f0f0f;
   color: #fff;
   text-align: left;
 }
@@ -1629,8 +1089,8 @@ Action button on Home page and eg partner home pages
 
 .section.testimonials h2 {
   margin: 0 10px;
-  font: 28px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font: 28px/1;
+  font-weight: bold;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -1687,30 +1147,6 @@ Action button on Home page and eg partner home pages
   }
 }
 
-.section.testimonials blockquote:before {
-  float: left;
-  content: "B";
-  font: 30px/0.5 "Sosa Web", sans-serif;
-}
-
-.section.testimonials blockquote:after {
-  float: right;
-  margin-top: -46px;
-  content: "C";
-  font: 30px "Sosa Web", sans-serif;
-}
-
-@media (min-width: 768px) {
-  .section.testimonials blockquote:before {
-    font-size: 60px;
-  }
-
-  .section.testimonials blockquote:after {
-    margin-top: -75px;
-    font-size: 60px;
-  }
-}
-
 @media (min-width: 1000px) {
   .section.testimonials blockquote + blockquote + blockquote {
     display: block;
@@ -1719,25 +1155,11 @@ Action button on Home page and eg partner home pages
 
 .section.testimonials blockquote p {
   padding: 4px 40px 0;
-  font-size: 14px;
 }
 
 @media (min-width: 768px) {
   .section.testimonials blockquote p {
     padding: 18px 80px 0;
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .section.testimonials blockquote p {
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section.testimonials blockquote p {
-    font-size: 16px;
   }
 }
 
@@ -1747,7 +1169,7 @@ Action button on Home page and eg partner home pages
 
 .section.testimonials blockquote p .quotee {
   display: block;
-  color: #e9b6d2;
+  color: var(--uhi-black);
   font-size: 12px;
 }
 
@@ -1769,7 +1191,7 @@ Action button on Home page and eg partner home pages
   }
 }
 
-/* micro-button to access T4 admin for the page */
+/* micro-button to access T4 admin for the page
 
 a.t4Edit-page,
 a.t4Edit-page:visited,
@@ -1783,7 +1205,7 @@ a.t4Edit-page:active {
 
 a.t4Edit-page:hover {
   border-bottom: none;
-}
+} */
 
 /*
 ui-autocomplete
@@ -1838,125 +1260,6 @@ ul.ui-autocomplete {
   width: 1px;
 }
 
-/*
-Twitter Typeahead autocomplete suggestions
-*/
-
-.fb-search .twitter-typeahead {
-  display: block !important;
-}
-
-.fb-search .tt-menu {
-  width: 80%;
-}
-
-@media (min-width: 768px) {
-  .fb-search .tt-menu {
-    width: 95%;
-  }
-}
-
-.tt-menu {
-  box-sizing: border-box;
-}
-
-/*
-ghostly main autosuggestion
-these rules don't work for all contexts
-
-.tt-hint {
-  bottom: 0 !important;
-  top: auto !important;
-}
-*/
-
-@media (min-width: 768px) {
-  .fb-search .tt-hint {
-    padding: 1rem !important;
-  }
-}
-
-.tt-menu {
-  background-clip: padding-box;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
-  font-size: 14px;
-  padding-bottom: 5px;
-  width: 100%;
-}
-
-.tt-menu .tt-suggestion {
-  clear: both;
-  color: #222;
-  cursor: pointer;
-  display: block;
-  font-weight: normal;
-  line-height: 1.42857;
-  padding: 3px 10px;
-  text-align: left;
-}
-
-.tt-menu .tt-suggestion:hover,
-.tt-menu .tt-cursor {
-  background-color: #572163;
-  color: #fff;
-  text-decoration: none;
-}
-
-.tt-menu .tt-category, .tt-menu .tt-group {
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
-}
-
-.tt-menu .tt-category {
-  margin: 3px 0;
-  padding: 7px 5px;
-}
-
-.tt-menu .tt-dataset:first-child .tt-category,
-.tt-horizontal .tt-dataset .tt-category {
-  border-top: none;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  margin-top: 0;
-}
-
-.tt-menu .tt-group {
-  padding: 3px 5px;
-  text-align: center;
-}
-
-.tt-menu .tt-group:first-of-type {
-  border-top: none;
-}
-
-.tt-horizontal {
-  width: 100%;
-}
-
-.tt-horizontal .tt-dataset {
-  float: left;
-  width: 100%;
-}
-
-.tt-scrollable {
-  overflow-y: auto;
-  max-height: 460px;
-}
-
-.tt-hint {
-  color: #ccc !important;
-}
-
-@media (max-width: 414px) {
-  .tt-horizontal .tt-dataset {
-    width: 100% !important;
-  }
-}
-
 /*****************************************************
 
 Site_Config
@@ -1968,3 +1271,4 @@ Site_Config
 .content-type--site-config--search label {
   display: none;
 }
+
