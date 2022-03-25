@@ -1,0 +1,1975 @@
+@import url('//fast.fonts.com/t/1.css?apiType=css&projectid=521be13e-de4c-44ed-af89-612183b2f989');
+
+/*
+licence for Glypha Web fonts from Fonts.com
+https://www.fonts.com/support/faq/how-do-pageviews-work
+*/
+
+/********************************************
+
+Applies To      : UHI Home page, UHI Site pages, all Partner pages
+Description     : Screen styles common to all UHI & partner pages.
+Media Type      : Screen
+Name & Filename : orkney-common.css
+Test Date       : 20180613-1200
+Old Filename    : normalize.css (normalize-1.css)
+Old Name        : build-normalize.css
+
+*********************************************/
+
+/* Custom CSS property declarations */
+
+html {
+  --default-anchor-colour: #722B82; /* slightly lighter version of #572163 to differentiate from bold font */
+
+}
+
+
+/********************************************
+
+NORMALIZE
+
+********************************************/
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+@media only screen and (min-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/* END normalize.css */
+
+/********************************************
+
+FONTS
+
+use ONLY font-family rules NOT font-weight
+
+********************************************/
+
+/* https://css-tricks.com/snippets/css/using-font-face/ */
+/* https://css-tricks.com/whats-deal-declaring-font-properties-font-face/ */
+/* https://developers.google.com/web/updates/2016/02/font-display */
+
+@font-face {
+  font-family: "Glypha Web Light";
+  src: url("<t4 type="media" formatter="path/*" id="28" />");
+  src: url("<t4 type="media" formatter="path/*" id="28" />?#iefix") format("embedded-opentype"),
+url("<t4 type="media" formatter="path/*" id="269485" />") format("woff2"),
+url("<t4 type="media" formatter="path/*" id="34" />") format("woff"),
+url("<t4 type="media" formatter="path/*" id="38" />") format("truetype"),
+url("<t4 type="media" formatter="path/*" id="41" />#4024835f-8aea-4b85-a0e1-d0ede737eefd") format("svg");
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Glypha Web";
+  src: url("<t4 type="media" formatter="path/*" id="22" />");                                        /* IE9 Compat Modes */
+  src: url("<t4 type="media" formatter="path/*" id="22" />?#iefix") format("embedded-opentype"),     /* IE6-IE8 */
+url("<t4 type="media" formatter="path/*" id="269468" />") format("woff2"),                                 /* Super Modern Browsers */
+url("<t4 type="media" formatter="path/*" id="20" />") format("woff"),                                      /* Pretty Modern Browsers */
+url("<t4 type="media" formatter="path/*" id="37" />") format("truetype"),                                  /* Safari, Android, iOS */
+url("<t4 type="media" formatter="path/*" id="25" />#9afb9aeb-d1ab-4165-858b-a9f6a9329cc2") format("svg");  /* Legacy iOS */
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Glypha Web Bold";
+  src: url("<t4 type="media" formatter="path/*" id="43" />");
+  src: url("<t4 type="media" formatter="path/*" id="43" />?#iefix") format("embedded-opentype"),
+url("<t4 type="media" formatter="path/*" id="269488" />") format("woff2"),
+url("<t4 type="media" formatter="path/*" id="31" />") format("woff"),
+url("<t4 type="media" formatter="path/*" id="50" />") format("truetype"),
+url("<t4 type="media" formatter="path/*" id="33" />#124daf03-3c02-409f-aa57-3b8cb061723e") format("svg");
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Glypha Web Black";
+  src: url("<t4 type="media" formatter="path/*" id="27" />");
+  src: url("<t4 type="media" formatter="path/*" id="27" />?#iefix") format("embedded-opentype"),
+url("<t4 type="media" formatter="path/*" id="269490" />") format("woff2"),
+url("<t4 type="media" formatter="path/*" id="48" />") format("woff"),
+url("<t4 type="media" formatter="path/*" id="51" />") format("truetype"),
+url("<t4 type="media" formatter="path/*" id="23" />#5dd3e112-c1ab-4286-8da3-226de603fe4f") format("svg");
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Glypha Web Light Italic";
+  src: url("<t4 type="media" formatter="path/*" id="32" />");
+  src: url("<t4 type="media" formatter="path/*" id="32" />?#iefix") format("embedded-opentype"),
+url("<t4 type="media" formatter="path/*" id="269486" />") format("woff2"),
+url("<t4 type="media" formatter="path/*" id="36" />") format("woff"),
+url("<t4 type="media" formatter="path/*" id="39" />") format("truetype"),
+url("<t4 type="media" formatter="path/*" id="49" />#daa02aa9-fa6d-4fea-acfe-45bc3a7e63c9") format("svg");
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Glypha Web Italic";
+  src: url("<t4 type="media" formatter="path/*" id="24" />");
+  src: url("<t4 type="media" formatter="path/*" id="24" />?#iefix") format("embedded-opentype"),
+url("<t4 type="media" formatter="path/*" id="269487" />") format("woff2"),
+url("<t4 type="media" formatter="path/*" id="47" />") format("woff"),
+url("<t4 type="media" formatter="path/*" id="35" />") format("truetype"),
+url("<t4 type="media" formatter="path/*" id="29" />#31abaea4-3db9-4be2-9da2-c7d6170a00b5") format("svg");
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Glypha Web Bold Italic";
+  src: url("<t4 type="media" formatter="path/*" id="44" />");
+  src: url("<t4 type="media" formatter="path/*" id="44" />?#iefix") format("embedded-opentype"),
+url("<t4 type="media" formatter="path/*" id="269489" />") format("woff2"),
+url("<t4 type="media" formatter="path/*" id="30" />") format("woff"),
+url("<t4 type="media" formatter="path/*" id="21" />") format("truetype"),
+url("<t4 type="media" formatter="path/*" id="40" />#929328f7-c744-496f-98ee-d385c7dfc1a6") format("svg");
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Glypha Web Black Italic";
+  src: url("<t4 type="media" formatter="path/*" id="19" />");
+  src: url("<t4 type="media" formatter="path/*" id="19" />?#iefix") format("embedded-opentype"),
+url("<t4 type="media" formatter="path/*" id="269491" />") format("woff2"),
+url("<t4 type="media" formatter="path/*" id="26" />") format("woff"),
+url("<t4 type="media" formatter="path/*" id="42" />") format("truetype"),
+url("<t4 type="media" formatter="path/*" id="46" />#b7e3572c-9df8-4c2b-865c-0beef74b26ec") format("svg");
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*
+icon font
+http://tenbytwenty.com/?xxxx_posts=sosa
+*/
+@font-face {
+  font-family: "Sosa Web";
+  src: url("<t4 type="media" formatter="path/*" id="52" />");
+  src: url("<t4 type="media" formatter="path/*" id="52" />?#iefix") format("embedded-opentype"),
+url("<t4 type="media" formatter="path/*" id="55" />") format("woff"),
+url("<t4 type="media" formatter="path/*" id="54" />") format("truetype"),
+url("<t4 type="media" formatter="path/*" id="53" />#sosa-regular-webfont") format("svg");
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/********************************************
+
+HTML ELEMENTS
+
+********************************************/
+
+body {
+  background-color: #fff;
+  color: #222;
+  font-family: "Glypha Web", Helvetica, Arial, sans-serif;
+  font-size: 16px; 
+  line-height: 1.4;
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  color: var(--default-anchor-colour);
+  text-decoration: none;
+}
+
+/***************
+Type Scale
+http://type-scale.com/?size=16&scale=1.200&text=UHI&webfont=&font-family=Verdana&font-weight=&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=
+***************/
+
+/* from type scale */
+h1 {
+  font-size: 2.074rem
+}
+
+/* tighten for wrapped headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+}
+
+/* shouldn't be smaller than base */
+h4, h5, h6 {
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+  /* central column content in e.g. Left Nav page layouts */
+  #portal-column-content {
+    font-size: 18px;
+  }
+
+  /* shouldn't be smaller than base */
+  h4, h5, h6 {
+    font-size: 1rem;
+  }
+}
+
+/*
+bold font-family
+don't use font-weight: bold
+*/
+b, dt, h1, h2, h3, h4, h5, h6, strong, th, thead td,
+.footer .nav,
+.header.banner li form .keyword,
+.header.banner .tools li a,
+.lang-button,
+.navigation--home-message,
+.message--cookie > div,
+.section.coursefinder ul.suggestions,
+.section.testimonials blockquote p .quotee .role {
+  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+dd {
+  margin: 0;
+}
+
+dt {
+  font-size: 19px;
+  margin-top: 1rem;
+}
+
+figcaption {
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+}
+
+figure {
+  margin: 0;
+}
+
+/*
+italic font-family
+don't use font-style: italic
+selectors from Chrome user agent stylesheet
+*/
+i, cite, em, var, address, dfn {
+  font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* from type scale */
+small {
+  font-size: 0.833em
+}
+
+/* END type scale */
+
+/* single border cells */
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 6px;
+  text-align: left; /* IE11 */
+}
+
+/****************************************
+
+SORTED MODULES
+
+A-Z
+
+****************************************/
+
+/* https://css-tricks.com/snippets/css/clear-fix/ */
+
+body:before,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+
+body:after,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* footer */
+
+.footer {
+  background-color: #0f0f0f;
+  color: #bebebe;
+  font-size: 13px;
+  padding: 10px 10px 0 10px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 30px 0 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    font-size: 16px;
+  }
+}
+
+.footer a,
+.footer a:visited,
+.footer a:active {
+  color: #fff;
+}
+
+.footer a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.footer p {
+  margin-top: 0;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer .col.half {
+  font-size: 11px;
+}
+
+@media (min-width: 768px) {
+  .footer .col.half {
+    float: left;
+    width: 46%;
+    margin: 0 2%;
+    text-align: right;
+  }
+
+  .footer .col.half:first-child {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer .col.half {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer .col.half {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer .col.quarter {
+    float: left;
+    width: 21%;
+    margin: 0 2%;
+    text-align: left;
+  }
+}
+
+/* footer button links */
+
+.footer .nav {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .footer .nav {
+    margin-bottom: 30px;
+  }
+}
+
+.footer .nav li {
+  display: inline-block;
+  padding: 4px 2px;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .footer .nav li {
+    padding: 6px 4px;
+  }
+}
+
+.footer .nav li a {
+  background-color: #fff;
+  border-radius: 3px;
+  color: #0f0f0f;
+  display: inline-block;
+  padding: 3px 6px;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .footer .nav li a {
+    padding: 5px 13px;
+  }
+}
+
+.footer .nav li a:hover {
+  background-color: #572163;
+  border-bottom: none;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+}
+
+/* footer servicedesk button */
+.footer .servicedesk a:hover {
+  border-bottom: 0;
+}
+
+/*
+footer social links - can be made less specific eg
+https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
+*/
+
+.footer .share li,
+.footer .share li a {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+}
+
+.footer .share li {
+  margin: 0 3px 9px 0;
+}
+
+.footer .share li a {
+  background-size: cover;
+  text-indent: -9999px;
+}
+
+.footer .share li a:hover {
+  border-bottom: none;
+}
+
+.footer .facebook a {
+  background: url(<t4 type= "media" formatter= "image/path" id= "82" />) no-repeat;
+}
+
+.footer .twitter a {
+  background: url(<t4 type= "media" formatter= "image/path" id= "85" />) no-repeat;
+}
+
+.footer .instagram a {
+  background: url(<t4 type= "media" formatter= "image/path" id= "203921" />) no-repeat;
+}
+
+.footer .youtube a {
+  background: url(<t4 type= "media" formatter= "image/path" id= "87" />) no-repeat;
+}
+
+.footer .flickr a {
+  background: url(<t4 type= "media" formatter= "image/path" id= "83" />) no-repeat;
+}
+
+.footer .linkedin a {
+  background: url(<t4 type= "media" formatter= "image/path" id= "84" />) no-repeat;
+}
+
+.footer .facebook a,
+.footer .twitter a,
+.footer .instagram a,
+.footer .youtube a,
+.footer .flickr a,
+.footer .linkedin a {
+  background-position: 0 100%;
+}
+
+.footer .facebook a:hover,
+.footer .twitter a:hover,
+.footer .instagram a:hover,
+.footer .youtube a:hover,
+.footer .flickr a:hover,
+.footer .linkedin a:hover {
+  background-position: 0 0;
+}
+
+/* footer container */
+
+.footer .wrap {
+  margin: 0 auto 10px auto;
+  max-width: 1340px;
+}
+
+@media (min-width: 768px) {
+  .footer .wrap {
+    margin-bottom: 30px;
+  }
+}
+
+/* header links */
+
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-options {
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  text-align: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+
+/* Targets Microsoft Edge v13 & v14 */
+@supports (-ms-ime-align: auto) {
+  .language-options {
+    width: 98%;
+  }
+}
+
+/* Targets Microsoft IE 10 & 11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .language-options {
+    width: 98%;
+  }
+  
+  .language:hover .language-options, .lang-switcher:focus > .language-options {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.language:hover .language-options, .lang-switcher:focus > .language-options, .lang-switcher:focus-within > .language-options {
+  left: 0;
+  opacity: 1;
+}
+
+.lang-button {
+  vertical-align: bottom;
+}
+
+.lang-button-up {
+  display: none;
+}
+
+.language:hover .lang-button-up {
+  display: inline-block;
+}
+
+.language:hover .lang-button-down {
+  display: none;
+}
+
+/* needs to be visible for Funnelback Twitter Typeahead
+.header.banner {
+  overflow: hidden;
+}
+*/
+
+.header.banner li form {
+  display: inline-block;
+}
+
+.header.banner li form input[type="submit"] {
+  background-color: #0f0f0f;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font: bold 21px 'Sosa Web', sans-serif;
+  padding: 1px 3px;
+}
+
+/* search input box should always be open */
+.header.banner li form .keyword {
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+/* header banner logo */
+
+.header.banner .logo {
+  margin: 0;
+}
+
+.header.banner .logo a {
+  width: 180px;
+  height: 57px;
+  display: block;
+  margin: 7px auto 3px auto;
+  text-indent: -9999px;
+  background: url(<t4 type= "media" formatter= "image/path" id= "69" />) no-repeat;
+  background-size: 100%;
+}
+
+@media (min-width: 1340px) {
+  .header.banner .logo a {
+    width: 307px;
+    height: 98px;
+  }
+}
+
+/* header banner nav primary */
+
+.header.banner .nav.primary {
+  font: bold 14px Oswald, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 0 10px 10px;
+}
+
+@media (min-width: 768px) {
+  .header.banner .nav.primary {
+    margin: 22px 0 18px;
+    font-size: 23px;
+    letter-spacing: -0.4px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .header.banner .nav.primary {
+    font-size: 30px;
+  }
+}
+
+.header.banner .nav.primary ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header.banner .nav.primary ul li {
+  display: inline-block;
+  padding: 0 2px;
+  list-style: none;
+  line-height: 2.7;
+}
+
+@media (min-width: 768px) {
+  .header.banner .nav.primary ul li {
+    padding: 0 10px;
+  }
+}
+
+.header.banner .nav.primary ul li a {
+  color: #0f0f0f;
+  text-decoration: none;
+  border-top: 4px solid #0f0f0f;
+  border-bottom: 4px solid #0f0f0f;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .header.banner .nav.primary ul li a {
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+  }
+}
+
+.header.banner .nav.primary ul li a:hover {
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+}
+
+@media (min-width: 768px) {
+  .header.banner .nav.primary ul li a:hover {
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+  }
+}
+
+/* header banner tools */
+
+.header.banner .tools {
+  margin: -2px 0 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .header.banner .tools {
+    font-size: 16px;
+  }
+}
+
+.header.banner .tools li {
+  display: inline;
+  list-style: none;
+  margin: 0 2px;
+}
+
+@media (min-width: 768px) {
+  .header.banner .tools li {
+    margin: 0 4px;
+  }
+}
+
+.header.banner .tools li a, .lang-button {
+  display: inline-block;
+  margin-bottom: 2px;
+  padding: 3px 6px;
+  color: #fff;
+  border-radius: 0 0 3px 3px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header.banner .tools .language-options a {
+    box-shadow: none;
+    border: none;
+    display: block;
+}
+
+.students a, .staff a, .alumni a, .lang-button, .old-lang-switcher a {
+    border: 1px solid #fff;
+}
+
+.header.banner .tools li a {
+  vertical-align: top;
+}
+
+.header .tools .language .lang-switcher .lang-button {
+  vertical-align: bottom;
+}
+
+@media (min-width: 768px) {
+  .header.banner .tools li a, .lang-button {
+    padding: 5px 13px;
+  }
+}
+
+.header.banner .tools li a:hover, .lang-button:hover {
+  margin-bottom: 0;
+  padding-top: 5px;
+  transition: all 0.1s;
+}
+
+@media (min-width: 768px) {
+  .header.banner .tools li a:hover, .lang-button:hover {
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+
+/* top of page messages in black bar */
+
+.navigation--home-message {
+  position: relative;
+  padding: 5px 10px;
+  background-color: #0f0f0f;
+  color: #fff;
+  z-index: 1;
+}
+
+.navigation--home-message p {
+  margin: 0;
+}
+
+.navigation--home-message h2 a,
+.navigation--home-message p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navigation--home-message p .close {
+  color: #fff;
+  font-family: 'Sosa Web', sans-serif;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.navigation--home-message p .close:hover {
+  color: #999;
+}
+
+.message--cookie {
+  font-family: "Glypha Web", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: white;
+}
+
+.message--cookie p:first-child {
+  float: right;
+}
+
+.message--cookie p {
+  text-align: left;
+}
+
+.message--cookie > div {
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline dotted;
+}
+
+/* Breadcrumbs font size fixer */
+
+.navigation--breadcrumb {
+  text-transform: lowercase;
+  font-size: 0.9em;
+}
+
+/* NEW COOKIE CSS */
+
+.cookie-notice {
+    font-family: "Glypha Web", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: #4A4C4E;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.cookie-message {
+    text-align: left;
+    padding: 10px;
+    flex-basis: 70%;
+    flex-grow: 2;
+}
+
+.cookie-message a {
+  color: #8DC2FC;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+    padding-right: 10px;
+}
+
+.cookie-accept {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline dotted;
+    background-color: #036FE2;
+    padding: 5px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+
+.cookie-settings {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 5px 7px;
+    font-size: 14px;
+    text-decoration: underline dotted;
+    cursor: pointer;
+    border-radius: 3px;
+    white-space: nowrap;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+
+/* NEW COOKIE CSS BOTTOM LEFT VERSION */
+
+.cookie-notice-2 {
+    font-family: "Glypha Web", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background-color: #4A4C4E;
+    color: white;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .cookie-notice-2 {
+        bottom: 10px;
+        left: 10px;
+        height: auto;
+        width: 500px;
+        border-radius: 5px;
+    }
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+/* COOKIE NOTICE MODAL */
+
+#modalAlert {
+  background: #4a4c4e;
+  color: white;
+}
+
+/*  bottom of page campaign banner */
+
+.message--campaign-banner {
+  position:fixed; 
+  bottom:0; 
+  left:0; 
+  width:100%; 
+  background:#fdfdfd url("<t4 type= "media" formatter= "image/path" id= "372366" />") repeat-x left top; 
+  z-index:999; 
+  border:1px solid #572163;
+}
+
+.message--campaign-banner img.big {
+  width:100%; 
+  max-width:1300px; 
+  display:none; 
+  margin:auto;
+}
+.message--campaign-banner img.small {
+  width:100%; 
+  max-width:360px;
+}
+.message--campaign-banner .close {
+  position:absolute; 
+  top:0; 
+  right:0;
+  font-size:12px; 
+  font-weight:bold; 
+  padding:2px; 
+  margin:2px; 
+  border:1px solid #572163; 
+  width:15px; 
+  z-index:50;
+}
+
+@media only screen and (min-width: 768px) {
+  .message--campaign-banner img.big {
+    display:inline-block;
+  }
+  .message--campaign-banner img.small {
+    display:none;
+  }
+  .message--campaign-banner .close {
+    font-size:20px; 
+    font-weight:bold; 
+    width:25px;
+  }
+}
+
+/* section clearfix */
+
+.section.clearfix > .wrap {
+  margin: 0 auto;
+  max-width: 1340px;
+}
+
+/* section connections */
+
+.section.connections .ctas ul,
+.section.ctas .section.tour .ctas ul {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font: bold 16px Oswald, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.section.connections .ctas ul li,
+.section.ctas .section.tour .ctas ul li {
+  display: inline-block;
+  padding: 5px;
+  list-style: none;
+}
+
+.section.connections .ctas ul li a,
+.section.ctas .section.tour .ctas ul li a {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #0f0f0f;
+  border-radius: 3px;
+}
+
+.section.connections .ctas ul li a:hover,
+.section.ctas .section.tour .ctas ul li a:hover {
+  background-color: #572163;
+  text-shadow: 2px 2px 0 #000;
+}
+
+/* section coursefinder */
+@media (min-width: 768px) {
+  .section.coursefinder h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursefinder h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder h2 {
+    font-size: 42px;
+  }
+}
+
+.section.coursefinder form {
+  margin: 10px 0;
+}
+
+.section.coursefinder form .keyword,
+ul.ui-autocomplete {
+  padding: 8px 40px 8px 8px;
+  border: medium none;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 80%; /* 250px */
+  text-align: left;
+}
+
+ul.ui-autocomplete li {
+  cursor: default;
+}
+
+@media (min-width: 768px) {
+  .section.coursefinder form .keyword {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursefinder form .keyword {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder form .keyword {
+    padding: 10px 60px 10px 10px;
+    font-size: 23px;
+  }
+}
+
+.section.coursefinder form input[type="submit"] {
+  margin-left: -40px;
+  padding: 0 8px 0 0;
+  border: none;
+  background: none;
+  font: bold 26px "Sosa Web", sans-serif;
+  color: #a3b9c2;
+}
+
+@media (min-width: 768px) {
+  .section.coursefinder form input[type="submit"] {
+    margin-left: -48px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursefinder form input[type="submit"] {
+    margin-left: -50px;
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder form input[type="submit"] {
+    margin-left: -54px;
+    font-size: 36px;
+  }
+}
+
+.section.coursefinder ul.suggestions {
+  margin: 10px;
+  padding: 0;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .section.coursefinder ul.suggestions {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.coursefinder ul.suggestions {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder ul.suggestions {
+    font-size: 16px;
+  }
+}
+
+.section.coursefinder ul.suggestions li {
+  display: inline-block;
+  padding: 4px 2px;
+  list-style: none;
+}
+
+.section.coursefinder ul.suggestions li a {
+  display: inline-block;
+  padding: 3px 6px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #0f0f0f;
+  border-radius: 3px;
+}
+
+.section.coursefinder ul.suggestions li a:hover {
+  color: #fff;
+  background-color: #a3b9c2;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.section.coursefinder ul.suggestions li.all a {
+  color: #0f0f0f;
+  background-color: #fff;
+}
+
+/*
+section coursefinder prospectus
+Action button on Home page and eg partner home pages
+*/
+.section.coursefinder .prospectus b,
+.section.coursefinder .prospectus strong {
+  color: #fff;
+}
+
+.section.coursefinder .prospectus p {
+  border-radius: 174px;
+  height: 232px;
+  margin: 0 auto -50px auto;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  width: 232px;
+}
+
+@media (min-width: 1000px) {
+  .section.coursefinder .prospectus p {
+    width: 282px;
+    height: 282px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder .prospectus p {
+    width: 332px;
+    height: 332px;
+  }
+}
+
+.section.coursefinder .prospectus p a {
+  background-image: url(<t4 type= "media" formatter= "image/path" id= "79" />);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 232px 130px;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .section.coursefinder .prospectus p a {
+    background-size: 282px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder .prospectus p a {
+    background-size: 332px;
+  }
+}
+
+.section.coursefinder .prospectus .download {
+  font-family: "Sosa Web", sans-serif;
+}
+
+.section.coursefinder .prospectus .text {
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 129px;
+  padding: 0 1rem;
+  text-decoration: none;
+  width: 87%;
+}
+
+@media (min-width: 1000px) {
+  .section.coursefinder .prospectus .text {
+    margin-top: 173px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.coursefinder .prospectus .text {
+    margin-top: 210px;
+    font-size: 18px;
+  }
+}
+
+/* section intro */
+
+.section.intro {
+  position: relative;
+  overflow: hidden;
+  background-color: #0f0f0f;
+  color: #fff;
+  text-align: left;
+}
+
+.section.intro p {
+  background-color: #0f0f0f;
+  border-radius: 0 3px 3px 0;
+  clear: left;
+  float: left;
+  font-size: 13px;
+  margin: 15px 10px 0 0;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .section.intro p {
+    max-width: 48%;
+  }
+}
+
+/* section testimonials */
+
+.section.testimonials {
+  color: #fff;
+}
+
+.section.testimonials h2 {
+  margin: 0 10px;
+  font: 28px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .section.testimonials h2 {
+    position: relative;
+    margin: 0 10px 10px 0;
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.testimonials h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.testimonials h2 {
+    font-size: 42px;
+  }
+}
+
+.section.testimonials img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .section.testimonials img {
+    display: inline;
+    width: 100%;
+  }
+}
+
+.section.testimonials blockquote {
+  display: none;
+  margin: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .section.testimonials blockquote {
+    margin: 0;
+    display: block;
+  }
+}
+
+.section.testimonials blockquote:first-child {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .section.testimonials blockquote:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.section.testimonials blockquote:before {
+  float: left;
+  content: "B";
+  font: 30px/0.5 "Sosa Web", sans-serif;
+}
+
+.section.testimonials blockquote:after {
+  float: right;
+  margin-top: -46px;
+  content: "C";
+  font: 30px "Sosa Web", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .section.testimonials blockquote:before {
+    font-size: 60px;
+  }
+
+  .section.testimonials blockquote:after {
+    margin-top: -75px;
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.testimonials blockquote + blockquote + blockquote {
+    display: block;
+  }
+}
+
+.section.testimonials blockquote p {
+  padding: 4px 40px 0;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .section.testimonials blockquote p {
+    padding: 18px 80px 0;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.testimonials blockquote p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.testimonials blockquote p {
+    font-size: 16px;
+  }
+}
+
+.section.testimonials blockquote p:first-child {
+  margin-top: 0;
+}
+
+.section.testimonials blockquote p .quotee {
+  display: block;
+  color: #e9b6d2;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .section.testimonials blockquote p .quotee {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section.testimonials blockquote p .quotee {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.testimonials blockquote p .quotee {
+    font-size: 14px;
+  }
+}
+
+/* micro-button to access T4 admin for the page */
+
+a.t4Edit-page,
+a.t4Edit-page:visited,
+a.t4Edit-page:active {
+  border: 0;
+  clear: both;
+  color: #888;
+  display: block;
+  text-decoration: none;
+}
+
+a.t4Edit-page:hover {
+  border-bottom: none;
+}
+
+/*
+ui-autocomplete
+*/
+
+ul.ui-autocomplete {
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  list-style-type: none;
+  margin-top: -10px;
+  max-height: 200px;
+  overflow-y: scroll;
+  padding: 16px 20px 8px;
+  width: 84%;
+  z-index: 9;
+}
+
+@media (min-width: 768px) {
+  ul.ui-autocomplete {
+    font-size: 13px;
+    width: 73%;
+  }
+}
+
+@media (min-width: 1000px) {
+  ul.ui-autocomplete {
+    width: 540px;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1200px) {
+  ul.ui-autocomplete {
+    padding: 10px;
+    font-size: 23px;
+    width: 655px;
+  }
+}
+
+/* course finder utility */
+
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+Twitter Typeahead autocomplete suggestions
+*/
+
+.fb-search .twitter-typeahead {
+  display: block !important;
+}
+
+.fb-search .tt-menu {
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .fb-search .tt-menu {
+    width: 95%;
+  }
+}
+
+.tt-menu {
+  box-sizing: border-box;
+}
+
+/*
+ghostly main autosuggestion
+these rules don't work for all contexts
+
+.tt-hint {
+  bottom: 0 !important;
+  top: auto !important;
+}
+*/
+
+@media (min-width: 768px) {
+  .fb-search .tt-hint {
+    padding: 1rem !important;
+  }
+}
+
+.tt-menu {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+  font-size: 14px;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.tt-menu .tt-suggestion {
+  clear: both;
+  color: #222;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  line-height: 1.42857;
+  padding: 3px 10px;
+  text-align: left;
+}
+
+.tt-menu .tt-suggestion:hover,
+.tt-menu .tt-cursor {
+  background-color: #572163;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tt-menu .tt-category, .tt-menu .tt-group {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.tt-menu .tt-category {
+  margin: 3px 0;
+  padding: 7px 5px;
+}
+
+.tt-menu .tt-dataset:first-child .tt-category,
+.tt-horizontal .tt-dataset .tt-category {
+  border-top: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-top: 0;
+}
+
+.tt-menu .tt-group {
+  padding: 3px 5px;
+  text-align: center;
+}
+
+.tt-menu .tt-group:first-of-type {
+  border-top: none;
+}
+
+.tt-horizontal {
+  width: 100%;
+}
+
+.tt-horizontal .tt-dataset {
+  float: left;
+  width: 100%;
+}
+
+.tt-scrollable {
+  overflow-y: auto;
+  max-height: 460px;
+}
+
+.tt-hint {
+  color: #ccc !important;
+}
+
+@media (max-width: 414px) {
+  .tt-horizontal .tt-dataset {
+    width: 100% !important;
+  }
+}
+
+/*****************************************************
+
+Site_Config
+
+******************************************************/
+
+/* search box in header */
+
+.content-type--site-config--search label {
+  display: none;
+}
+
+
+
