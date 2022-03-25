@@ -1,11 +1,11 @@
 /********************************************
 
-Applies To        : UHI Site pages & all Partner pages
-Colour Main       : #572163
-Colour Secondary  : #eee8ef
-Description       : Screen styles for all UHI site pages, and partner pages.
-Media Type        : Screen
-Name & Filename   : build-uhi-main.css
+Applies To            : UHI Site pages & all Partner pages
+OLD Colour Main       : #572163
+OLD Colour Secondary  : #eee8ef
+Description           : Screen styles for all UHI site pages, and partner pages.
+Media Type            : Screen
+Name & Filename       : build-uhi-main.css
 
 *********************************************/
 
@@ -18,10 +18,8 @@ MAIN #PORTAL-COLUMN LAYOUT
 .main {
   display: flex; /* make flex container */
   flex-direction: column; /* for mobile */
-  margin: 1rem auto 0; /* center container, with top margin */
-  max-width: 1340px; /* max container width */
+  margin: 1rem 5%; /* center container, with top margin */
   text-align: left; /* all left-aligned text within container by default */
-  width: 100%; /* full container width when < max container width */
   overflow-x: hidden; /* prevents horizontal scrolling */
 }
 
@@ -83,8 +81,7 @@ main content links
 #content-core a,
 #portal-column-two a,
 .courselist a {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "aktiv-grotesk", Arial, sans-serif;
 }
 
 #content-core a:hover,
@@ -164,7 +161,6 @@ content-button
 
 .content-button a {
   color: #fff;
-  font-family: Oswald, Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
@@ -219,87 +215,6 @@ course-search-filter
   }
 }
 
-/*
-header and buttons
-*/
-
-@media (min-width: 768px) {
-  .header.banner {
-    margin: 0 auto;
-    max-width: 1340px;
-  }
-}
-
-@media (min-width: 768px) {
-  .header.banner .logo a {
-    width: 279px;
-    height: 89px;
-    margin: 18px auto -7px auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .header.banner .logo a {
-    margin: 0 0 0 20px;
-    float: left;
-  }
-}
-
-@media (min-width: 1000px) {
-  .header.banner .nav.primary {
-    font-size: 26px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .header.banner .nav.primary {
-    float: right;
-    margin-right: 10px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .header.banner .tools {
-    margin-right: 17px;
-    text-align: right;
-  }
-}
-
-.header.banner .tools li.students a {
-  background-color: #572163;
-  box-shadow: 0 0 0 1px #572163;
-}
-
-.header.banner .tools li.staff a {
-  background-color: #b74783;
-  box-shadow: 0 0 0 1px #b74783;
-}
-
-.header.banner .tools li.alumni a {
-  background-color: #cd4750; /* #d15861 */
-  box-shadow: 0 0 0 1px #cd4750; /* #d15861 */
-}
-
-.header.banner .tools li.language a {
-  background-color: #dd3113; /* #f1765f; */
-}
-
-li.old-lang-switcher a {
-  box-shadow: 0 0 0 1px #dd3113; /* #f1765f; */
-}
-
-.language-options, .lang-button {
-  background-color: #dd3113; /* #f1765f; */
-  box-shadow: 0 0 0 1px #dd3113; /* #f1765f; */
-}
-
-@media (min-width: 768px) {
-  .header.banner li form input[type="submit"] {
-    padding: 1px 7px;
-    font-size: 29px;
-  }
-}
-
 .hostingtext {
   font-size: 35%;
   display: block;
@@ -348,7 +263,6 @@ Unistats widget
   border: medium none;
   border-radius: 3px;
   color: white;
-  font-family: Oswald, Helvetica, Arial, sans-serif;
   font-size: 1.33em;
   font-weight: bold;
   margin: 0.5em 0;
@@ -358,7 +272,6 @@ Unistats widget
 
 .main img {
   border: 0;
-  border-radius: 3px;
   max-width: 100%;
 }
 
@@ -366,8 +279,7 @@ Unistats widget
   background-color: #999;
   border-radius: 3px;
   color: white;
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   margin: 1em 0;
   padding: 0.5em;
 }
@@ -412,26 +324,20 @@ Unistats widget
   border: 8px solid #fff;
 }
 
-@media (min-width: 768px) {
-  .section.coursefinder .prospectus p {
-    box-shadow: 0 -25px 40px 0 rgba(0, 0, 0, 0.3), 0 -10px 40px 0 rgba(0, 0, 0, 0.3);
-  }
-}
-
 .section.coursefinder .prospectus .text {
   background-color: #fff;
-  color: #5a5a5a;
+  color: var(--uhi-grey2);
 }
 
 /* both b and strong needed? */
 .section.coursefinder .prospectus b,
 .section.coursefinder .prospectus strong {
-  color: #0f0f0f;
+  color: var(--uhi-black);
 }
 
 .section.coursefinder .prospectus b:hover,
 .section.coursefinder .prospectus strong:hover {
-  color: #572163;
+  text-decoration: underline;
 }
 
 /*
@@ -440,21 +346,15 @@ Action button with Ribbon
 */
 
 .section.coursefinder.courses .prospectus {
-  margin-top: -230px;
-}
-
-@media (min-width: 768px) {
-  .section.coursefinder.courses .prospectus {
-    float: right;
-    margin-top: -138px;
-    margin-bottom: 50px; /* pushes content below Action button */
-    margin-right: 10px;
-  }
+  margin-top: -190px;
 }
 
 @media (min-width: 1000px) {
   .section.coursefinder.courses .prospectus {
+    float: right;
     margin-top: -178px;
+    margin-bottom: 50px; /* pushes content below Action button */
+    margin-right: 10px;
   }
 }
 
@@ -470,22 +370,26 @@ Action button with Ribbon
   }
 }
 
+@media (max-width: 620px) {
+    .section.coursefinder.courses .prospectus {
+        margin-top: 0px;
+    }
+
+    .section.coursefinder .prospectus p {
+        margin-left: 0px;
+    }
+}
+
 /*
 section clearfix
 landing page row and column layout
 whitespace if row directly after banner
 http://stage-www.inverness.uhi.ac.uk/studying-at-ic/international/
 */
-.section.clearfix.courselist {
-  margin-top: 30px;
-}
 
 /* collapses if rule below applies */
 
 /* whitespace after rows KIF 20180419 */
-.section.clearfix.courselist {
-  margin-bottom: 30px;
-}
 
 /* single column for mobile and tablet */
 .section.clearfix > .wrap > .col.half,
@@ -533,8 +437,7 @@ section coursedetails
 
 .section.coursedetails {
   position: relative;
-  background-color: #572163; /* url(<t4 type= "media" formatter= "image/path" id= "125" />) center bottom no-repeat; */
-  color: #fff;
+  color: var(--uhi-black);
   font-size: 15px;
   text-align: left;
 }
@@ -558,7 +461,7 @@ section coursedetails
 }
 
 .section.coursedetails a {
-  color: #fff;
+  color: var(--uhi-blue);
   text-decoration: underline;
 }
 
@@ -652,29 +555,16 @@ section coursedetails
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  background: #572163;
   padding-bottom: 5px;
-  z-index: 1;
 }
 
 @media (min-width: 768px) {
   .section.coursedetails .tabnav {
     position: relative;
     z-index: 1;
-    margin: -47px 0 0 20px; /* 20180515 */
-    background: none;
-  }
-}
-
-@media (min-width: 1000px) {
-  .section.coursedetails .tabnav {
-    margin-top: -61px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section.coursedetails .tabnav {
-    margin-top: -64px;
+    margin: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0.5rem solid var(--uhi-blue);
   }
 }
 
@@ -694,11 +584,13 @@ section coursedetails
 .section.coursedetails .tabnav li h2 a {
   display: inline-block;
   padding: 3px 6px;
-  background-color: #b74783;
+  background-color: var(--uhi-grey2);
   color: #fff;
   font-size: 16px;
   text-decoration: none;
   border-radius: 3px;
+  font-family: "degular-display", Arial, sans-serif;
+  font-weight: normal;
 }
 
 @media (min-width: 768px) {
@@ -739,15 +631,8 @@ section coursedetails
 }
 
 .section.coursedetails .tabnav li.ui-tabs-active h2 a {
-  background-color: #0f0f0f;
+  background-color: var(--uhi-blue);
   color: #fff;
-}
-
-@media (min-width: 768px) {
-  .section.coursedetails .tabnav li.ui-tabs-active h2 a {
-    background-color: #572163;
-    outline: none;
-  }
 }
 
 .section.coursedetails .tab {
@@ -757,12 +642,12 @@ section coursedetails
 @media (min-width: 768px) {
   .section.coursedetails .tab {
     overflow: hidden;
-    margin: 30px;
+    margin: 30px 10px;
   }
 }
 
 .section.coursedetails h3 {
-  margin: 0;
+  margin: 5px 0px 10px 0px;
 }
 
 @media (min-width: 768px) {
@@ -813,7 +698,6 @@ also campus pages eg http://www.uhi.ac.uk/en/campuses/moray-college-uhi/
 removed background-image: url(<t4 type= "media" formatter= "image/path" id= "63" />);
 */
 .section.coursefinder {
-  background-color: #eee8ef; /* course pages */
   background-position: center center; /* campus pages */
   background-repeat: no-repeat; /* campus pages */
   background-size: cover; /* campus pages */
@@ -839,7 +723,7 @@ https://www.uhi.ac.uk/en/campuses/north-highland-college-uhi/
 */
 .section.coursefinder h2 {
   margin: 30px 10px;
-  font: 30px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
+  font: 30px/1;
   text-shadow: 1px 1px 3px white, -1px -1px 3px white;
 }
 
@@ -890,8 +774,7 @@ Course listing
 /* Course listing right column heading */
 
 .courselist--filter-sets h2 {
-  color: #572163;
-  font: bold 25px Oswald, Helvetica, Arial, sans-serif;
+  font-size: 25px;
   margin: 1rem 0;
   text-transform: uppercase;
 }
@@ -933,14 +816,10 @@ Course listing
 
 /* .section.courselist .col.onequarter > form > ul > li */
 .courselist--filter-sets .accordion > li {
-  background-color: #b74783;
+  background-color: var(--uhi-grey2);
   border-radius: 3px;
   color: #fff;
   margin-bottom: 6px;
-}
-
-.courselist--filter-sets .accordion > li:nth-child(even) {
-  background-color: #572163;
 }
 
 .search-filters {
@@ -994,7 +873,7 @@ https://www.inverness.uhi.ac.uk/
 }
 
 .section.courselist .col.onequarter > ul > li {
-  background-color: #572163;
+  background-color: var(--uhi-grey2);
   border-radius: 3px;
   color: #fff;
   margin-bottom: 6px;
@@ -1083,7 +962,7 @@ https://www.inverness.uhi.ac.uk/
 }
 
 .section.courselist .col.onequarter .quarterlight:hover {
-  box-shadow: 5px 5px 11px #572163;
+  box-shadow: 5px 5px 11px var(--uhi-black);
 }
 
 .section.courselist .col.onequarter .quarterlight h3 {
@@ -1091,7 +970,7 @@ https://www.inverness.uhi.ac.uk/
 }
 
 .section.courselist .col.onequarter .quarterlight a {
-  color: #572163;
+  color: var(--uhi-black);
 }
 
 /*
@@ -1187,25 +1066,19 @@ https://www.uhi.ac.uk/en/courses/
   display: inline-block;
   margin-left: 3px;
   padding: 0 5px;
-  background-color: #595959;
+  background-color: var(--uhi-grey1);
   color: #fff;
   border-radius: 3px;
-  font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* should be #courselist a:hover etc? */
-.section.courselist .col.threequarters > ul li a:hover .modes .mode {
-  background-color: #ccc;
-}
-
 .section.courselist .col.threequarters > ul li a .modes .mode.active {
-  background-color: #b74783; /* for green try #3F6511 - complementary to main purple */
+  background-color: var(--uhi-purple);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .section.courselist .col.threequarters > ul li a .modes .mode.active:first-child {
-  background-color: #cd4750; /* for green try #528316 - lighter shade but still accessible contrast */
+  background-color: var(--uhi-red);
 }
 
 /*
@@ -1226,7 +1099,6 @@ section courses coursefinder
 
 .section.courses.coursefinder form {
   background-color: #0f0f0f;
-  margin: 0;
   padding: 10px;
 }
 
@@ -1249,25 +1121,12 @@ section courses coursefinder
 
 /* section ctas */
 .section.ctas {
-  background-color: #eee8ef;
-  background-image: url(<t4 type= "media" formatter= "image/path" id= "5600" />);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 550px;
-  padding: 10px 0;
-}
-
-@media (min-width: 768px) {
-  .section.ctas {
-    background-image: url(<t4 type= "media" formatter= "image/path" id= "5599" />);
-    min-height: 790px;
-    padding: 30px 0;
-  }
 }
 
 .section.ctas .section.testimonials {
-  max-width: 640px;
   margin: 0 auto;
   background: none;
   text-align: left
@@ -1275,7 +1134,7 @@ section courses coursefinder
 
 .section.testimonials a {
   color: #fff;
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 .section.ctas .section.testimonials h2 {
@@ -1293,8 +1152,18 @@ section courses coursefinder
 }
 
 .section.ctas .section.testimonials blockquote p {
-  color: #fff;
+  color: var(--uhi-white);
   margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.section.ctas .section.testimonials blockquote p:last-child {
+  color: var(--uhi-yellow);
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .section.ctas .section.testimonials blockquote p .quotee {
@@ -1307,11 +1176,9 @@ section courses coursefinder
 
 @media (min-width: 768px) {
   .section.ctas .section.testimonials ul.thumbs {
-    float: left;
-    width: 100%;
-    display: block;
+    display: flex;
     margin: 0 0 30px 0;
-    padding: 0;
+    padding: 0px 0px 0px 80px;
     list-style: none;
   }
 
@@ -1339,12 +1206,11 @@ section courses coursefinder
     width: 210px;
     margin-top: -10px;
     padding-top: 10px;
-    background: url(<t4 type= "media" formatter= "image/path" id= "124" />) 20 px 0 no-repeat;
   }
 
   .section.ctas .section.testimonials ul.thumbs li.ui-state-active .img {
     margin-top: -6px;
-    border: 6px solid #fff;
+    border: 6px solid var(--uhi-yellow);
   }
 
   .section.ctas .section.testimonials ul.thumbs li.ui-state-active .img img {
@@ -1354,18 +1220,16 @@ section courses coursefinder
 
 .section.ctas .section.apply {
   padding-top: 15px;
-  font: bold 15px Oswald, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  color: #fff;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-  background: url(<t4 type= "media" formatter= "image/path" id= "5577" />) top center no-repeat;
+  color: var(--uhi-black);
+  text-align: center;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
   .section.ctas .section.apply {
     padding-top: 30px;
     font-size: 18px;
-    background-image: url(<t4 type= "media" formatter= "image/path" id= "5591" />);
   }
 }
 
@@ -1383,9 +1247,8 @@ section courses coursefinder
 
 .section.ctas .section.apply h2 {
   margin: 0 10px;
-  font: 30px/1 "Glypha Web Black", Helvetica, Arial, sans-serif;
-  /* color: #572163; 20180502 */
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  font: 30px/1 "degular-display", Arial, sans-serif;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
@@ -1407,7 +1270,7 @@ section courses coursefinder
 }
 
 .section.ctas .section.apply a {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--uhi-blue);
   border-radius: 3px;
   color: #fff;
   display: inline-block;
@@ -1439,15 +1302,13 @@ section courses coursefinder
 }
 
 .section.ctas .section.apply a:hover {
-  color: #fff;
-  background-color: #572163;
+  background-color: var(--uhi-grey2);
   text-shadow: 2px 2px 0 #000;
 }
 
 .section.ctas .section.apply p.applyconditions {
-  background-color: #0f0f0f;
+  background-color: var(--uhi-grey2);
   color: #fff;
-  font-family: "Glypha Web", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 15px;
@@ -1455,6 +1316,7 @@ section courses coursefinder
   margin-right: 35px;
   padding: 10px;
   text-transform: none;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -1563,8 +1425,8 @@ section specialistsubjects
 .section.specialistsubjects {
   position: relative;
   padding: 10px 0;
-  background: #572163 url(<t4 type= "media" formatter= "image/path" id= "125" />) center bottom no-repeat;
-  color: #e9b6d2;
+  background: var(--uhi-black) url(<t4 type= "media" formatter= "image/path" id= "125" />) center bottom no-repeat;
+  color: var(--uhi-white);
 }
 
 @media (min-width: 768px) {
@@ -1635,24 +1497,22 @@ section testimonials
 */
 
 .section.testimonials {
-  background: #572163 url(<t4 type= "media" formatter= "image/path" id= "12" />) center bottom no-repeat;
+  background: var(--uhi-black) url(<t4 type= "media" formatter= "image/path" id= "12" />) center bottom no-repeat;
 }
 
 .section.testimonials h2 strong,
 .section.testimonials h2 b {
-  color: #e9b6d2;
-  font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  color: var(--uhi-white);
+  font-weight: bold;
 }
 
 /* Course page message us and apply */
 
 .bottomapply {
-    background-color: #572163;
     padding: 15px;
-    color: white;
-    border-radius: 20px;
+    color: var(--uhi-black);
     margin-bottom: 10px;
+    border: 2px solid var(--uhi-blue);
 }
 
 .messageapply input[type=text] {
@@ -1676,36 +1536,136 @@ section testimonials
 }
 
 .messageapply {
-    background-color: #4a4c4e;
+    background-color: var(--uhi-black);
     padding: 15px;
-    color: white;
-    border-radius: 20px;
+    color: var(--uhi-white);
 }
 
-.zoom {position:fixed; bottom:0; right:0; height: 20px; z-index:100; background:#b74783; padding:5px 5px 8px 5px; width:100%; text-align:left;}
-.zoom a, .zoom a:visited {color:#fff; font-weight: bold;}
-      .smallmargin {margin-left: 20px;}
-.zoom img {display:none;}
-.minimise {display: none;}
-      .bottommessage {display: none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
-      .bottommessage a, .bottommessage a:visted {color:#fff; margin-left:20px; font-weight: bold;}
+.zoom {
+  position:fixed;
+  bottom:0;
+  right:0;
+  height: 20px;
+  z-index:100;
+  background: var(--uhi-blue);
+  padding:5px 5px 8px 5px;
+  width:100%;
+  text-align:left;
+}
+
+.zoom a,
+.zoom a:visited {
+  color:#fff;
+  font-weight: bold;
+}
+
+.smallmargin {
+  margin-left: 20px;
+}
+
+.zoom img {
+  display:none;
+}
+
+.minimise {
+  display: none;
+}
+
+.bottommessage {
+  display: none;
+  position:fixed;
+  bottom: 0;
+  right: 0;
+  height: 20px;
+  z-index:100;
+  background: var(--uhi-blue);
+  padding:5px;
+  width:100%;
+  text-align:left;
+}
+
+.bottommessage a,
+.bottommessage a:visited {
+  color:#fff;
+  margin-left:20px;
+  font-weight: bold;
+}
 
 @media (min-width: 768px) {
-.zoom {bottom:75px; right:10px; height: 80px; background: none; padding:0; width: auto; display: block;}
-.zoom img {width:90px; float: right; display: inline-grid; background: #572163; padding: 4px 3px; border-radius: 9px; display:-ms-inline-grid;}
-.smlscrmsg {display:none; position:fixed; bottom:0; right: 0; height: 20px; z-index:100; background:#b74783; padding:5px; width:100%; text-align:left;}
-.smlscrmsg a {color:#fff; margin-left:20px; font-weight: bold;}
-    .zoom p {background-color: #b74783; color: #fff; padding: 10px; border-radius: 4px; margin: 0 auto 10px; position: relative; font-weight: bold; border: none;}
-    .zoom p::after {
+  .zoom {
+    bottom: 85px;
+    right: 10px;
+    height: 80px;
+    background: none;
+    padding: 0;
+    width: auto;
+    display: block;
+  }
+  
+  .zoom img {
+    width: 90px;
+    float: right;
+    display: inline-grid;
+    background: var(--uhi-blue);
+    padding: 4px 3px;
+    border-radius: 9px;
+    display: -ms-inline-grid;
+  }
+  
+  .smlscrmsg {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 20px;
+    z-index: 100;
+    background: var(--uhi-blue);
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .smlscrmsg a {
+    color:#fff;
+    margin-left:20px;
+    font-weight: bold;
+  }
+
+  .zoom p {
+    background-color: var(--uhi-blue);
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0 auto 10px;
+    position: relative;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .zoom p::after {
         border-left: 20px solid transparent;
-        border-top: 20px solid #b74783;
+        border-top: 20px solid var(--uhi-blue);
         bottom: -10px;
         content: "";
         position: absolute;
         right: 10px;
     }
-    .minimise {background-color: #b74783; color: #fff; font-weight: bold; padding: 0 5px; border-radius: 4px; cursor: pointer; border: 3px solid #963b6b; display: inline; margin-left: 5px;}
-    .minimise:hover {background-color: #963b6b;}
+  
+   .minimise {
+      background-color: var(--uhi-blue);
+      color: #fff;
+      font-weight: bold;
+      padding: 0 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 3px solid var(--uhi-white);
+      display: inline;
+      margin-left: 5px;
+   }
+  
+   .minimise:hover {
+      background-color: var(--uhi-grey1);
+   }
 }
 
 .section.ctas {
@@ -1720,7 +1680,7 @@ section testimonials
 @media (min-width: 768px) {
   .section.clearfix.courseapply .col.half {
     float: left;
-    width: 44%;
+    width: 43%;
     margin-right: 4%;
   }
 
@@ -1744,27 +1704,26 @@ section testimonials
 
 .section.courseapply p.applyconditions {
     color: #fff;
-    font-family: "Glypha Web", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: normal;
     line-height: 17px;
     padding: 10px;
     text-transform: none;
-    background-color: #4a4c4e /* #b74783 */;
+    background-color: var(--uhi-grey2);
     border-radius: 10px;
     margin-top: 10px;
 }
 
 .section.kis-container{
     padding-top: 15px;
-    font: bold 15px Oswald, Helvetica, Arial, sans-serif;
+    font: bold 15px;
     text-transform: uppercase;
     color: #000;
     //background: url(<t4 type= "media" formatter= "image/path" id= "5577" />) top center no-repeat;
 }
 
 .section.clearfix.apply a {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--uhi-blue);
     border-radius: 3px;
     color: #fff;
     display: inline-table;
@@ -1808,7 +1767,8 @@ section testimonials
 
 .section.courseapply a {
   text-decoration: underline;
-    font-weight: bold;
+  font-weight: bold;
+  color: var(--uhi-blue);
 }
       
 .section.courseapply h3 {
@@ -1846,6 +1806,7 @@ section testimonials
 .section.courseapply p,
 .section.courseapply ul {
   margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .section.courseapply ul li {
@@ -2072,7 +2033,7 @@ partner colours are in their theme stylesheets
 
 .fb-search .badge,
 .fb-search .panel-heading {
-  background-color: #572163;
+  background-color: var(--uhi-black);
 }
 
 /* search results list */
@@ -2126,8 +2087,7 @@ partner colours are in their theme stylesheets
 }
 
 .fb-search .result strong {
-  font-weight: normal;
-  font-family: "Glypha Web Black", Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 /* TODO make this h2? */
@@ -2192,6 +2152,7 @@ Can all of these go AFTER content-type-modifiers?
   overflow: hidden;
   position: relative;
   visibility: visible;
+  margin: 0px;
 }
 
 /* so heading and subheading overlay */
@@ -2206,7 +2167,6 @@ Can all of these go AFTER content-type-modifiers?
   background-repeat: no-repeat;
   background-size: cover;
   height: 365px; /* native small banner image height */
-  max-width: 1340px;
 }
 
 @media (min-width: 768px) {
@@ -2243,7 +2203,7 @@ Can all of these go AFTER content-type-modifiers?
   background-color: #0f0f0f;
   border-radius: 0 3px 3px 0;
   float: left;
-  font: 25px Oswald, Helvetica, Arial, sans-serif;
+  font-size: 25px;
   margin: 15px 10px 0 0;
   padding: 10px;
   position: relative;
@@ -2388,44 +2348,42 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-hero .lower {
-  position:absolute;
-  bottom:50px;
-  left:60px;
-  width:80%;
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  width: 80%;
 }
 
 .content-type--landing-4-hero .lower h1 {
-  font-size:2.488rem;
-  color:#fff;
-  text-align:left;
-  font-family:Oswald, Helvetica, Arial, sans-serif;
+  font-size: 2.488rem;
+  color: #fff;
+  text-align: left;
   text-shadow: 2px 2px #222;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .content-type--landing-4-hero .lower h2 {
-  font-size:1.728rem;
-  color:#fff;
-  text-align:left;
-  font-family:Oswald, Helvetica, Arial, sans-serif;
+  font-size: 1.728rem;
+  color: #fff;
+  text-align: left;
   text-shadow: 2px 2px #222;
-  margin-top:0;
+  margin-top: 0;
 }
 
 .content-type--landing-4-hero .lower p {
-  margin-top:40px;
-  padding:0;
-  text-align:center;
+  margin-top: 40px;
+  padding: 0;
+  text-align: center;
 }
 
 .content-type--landing-4-hero .lower p a {
-  color:#572163;
-  text-decoration:none;
-  font-family:Oswald, Helvetica, Arial, sans-serif;
-  background:#fff;
-  font-size:1em;
-  padding:20px 8px 20px 8px;
-  width:160px; display:block;
+  color: var(--uhi-black);
+  text-decoration: none;
+  background: #fff;
+  font-size: 1em;
+  padding: 20px 8px 20px 8px;
+  width: 160px;
+  display: block;
 }
 
 .content-type--landing-4-hero .lower p a:hover {
@@ -2434,47 +2392,44 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-post-image-text {
-  background:#eee8ef;
-  text-align:left;
+  text-align: left;
   display: flex;
   flex-wrap: wrap;
-  font-family:Oswald, Helvetica, Arial, sans-serif;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
 .leftbigger {
-  flex-basis:100%;
-  padding:5%;
-  font-size:2.074rem;
+  flex-basis: 100%;
+  padding: 5%;
+  font-size: 2.074rem;
 }
 
 .rightsmaller {
-  flex-basis:100%;
-  padding:5%;
-  font-size:1.44rem;
-  line-height:1.8;
+  flex-basis: 100%;
+  padding: 5%;
+  font-size: 1.44rem;
+  line-height: 1.8;
 }
 
 .rightsmaller p, .leftbigger p {
-  margin-top:0;
+  margin-top: 0;
 }
 
 .content-type--landing-4-textoverimage-right, .content-type--landing-4-textoverimage-left {
-  width:100%;
-  margin-bottom:25px;
-  text-align:center;
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .content-type--landing-4-textoverimage-right h2, .content-type--landing-4-textoverimage-left h2 {
-  font-size:2.074rem;
-  color:#000;
-  margin-bottom:50px;
-  font-family:Oswald, Helvetica, Arial, sans-serif;
+  font-size: 2.074rem;
+  color: #000;
+  margin-bottom: 50px;
 }
 
 .content-type--landing-4-textoverimage-right .textovercontainer, .content-type--landing-4-textoverimage-left .textovercontainer {
-  height:475px;
-  position:relative;
+  height: 475px;
+  position: relative;
 }
 
 .content-type--landing-4-textoverimage-right .textover-bg-right {
@@ -2484,44 +2439,43 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay {
-  background:#eee8ef;
-  width:80%;
-  text-align:left;
+  background: #f7f7f7;
+  width: 80%;
+  text-align: left;
   padding: 2% 3% 2% 3%;
   position: absolute;
   top: 170px;
-  right:20px;
+  right: 20px;
   display: inline-table;
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay .textoversubheading, .content-type--landing-4-textoverimage-left .textoverlay .textoversubheading {
-  font-size:1.728rem;
-  font-family:Oswald, Helvetica, Arial, sans-serif;
+  font-size: 1.728rem;
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay .textoverbody, .content-type--landing-4-textoverimage-left .textoverlay .textoverbody {
-  font-family:Oswald, Helvetica, Arial, sans-serif;
-  line-height:1.8;
+  line-height: 1.8;
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay p.textovercta, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta {
-  margin-top:20px;
-  padding:0;text-align:center;
+  margin-top: 20px;
+  padding: 0;
+  text-align: center;
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay p.textovercta a, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a {
-  color:#fff;
-  text-decoration:none;
-  font-family:Oswald, Helvetica, Arial, sans-serif;
-  background:#572163;
-  padding:20px 8px 20px 8px;
-  width:160px;
-  display:block;
+  color: #fff;
+  text-decoration: none;
+  background: var(--uhi-blue);
+  padding: 20px 8px 20px 8px;
+  width: 160px;
+  display: block;
 }
 
 .content-type--landing-4-textoverimage-right .textoverlay p.textovercta a:hover, .content-type--landing-4-textoverimage-left .textoverlay p.textovercta a:hover {
   opacity: 0.8;
   transition-duration: .5s;
+  text-decoration: underline;
 }
 
 .content-type--landing-4-textoverimage-left .textover-bg-left {
@@ -2533,13 +2487,13 @@ Landing 4 Image Text Overlay
 }
 
 .content-type--landing-4-textoverimage-left .textoverlay {
-  background:#eee8ef;
-  width:80%;
-  text-align:left;
+  background: #f7f7f7;
+  width: 80%;
+  text-align: left;
   padding: 2% 3% 2% 3%;
   position: absolute;
   top: 170px;
-  left:20px;
+  left: 20px;
   display: inline-table;
 }
 
@@ -2622,12 +2576,11 @@ Content type usage report: Home Page Coloured Links bar
 .content-type--links-bar__element:active {
   opacity: 1;
   transform: scale(1.02);
-  text-decoration: none !important;
+  color: var(--uhi-white);
 }
 
 @media (min-width: 450px) {
   .content-type--links-bar__element {
-    border-radius: 3px; /* doesn't affect colour blocks */
     flex: 1 1 49%;
     margin: 0 1% 1% 0;
     opacity: .9;
@@ -2688,11 +2641,15 @@ Content type usage report: Home Page Coloured Links bar
 /* force the max width for Landing Image Links Bar to maintain aspect ratio irrespective of number of image links PAW 20191025 */
 @media (min-width: 960px) {
 .content-type--landing-image-links-bar a {
-  max-width: 24%;
+/*  max-width: 24%;  */
 }
 }
-
-
+/* v2 PAW 20201120 - largely untested, mind  */
+@media (min-width: 960px) {
+.content-type--landing-image-links-bar a:nth-of-type(2) {
+  flex-grow:4; 
+}
+}
 
 
 /****************************************
@@ -2702,11 +2659,10 @@ Content type usage report: Callout
 ****************************************/
 
 .content-type--callout {
-  background-color: #eee;
-  border-left: .5rem solid #aaa;
+  background-color: #f7f7f7;
+  border-left: .5rem solid var(--uhi-turquoise);
   border-radius: 3px;
-  font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
-  font-style: normal;
+  font-style: italic;
   margin: 1rem 2rem 2rem;
   overflow: hidden; /* when Right Content present 20180426 */;
   color: #000;
@@ -2772,7 +2728,6 @@ Content type usage report: Highlight Content Box
 
 .content-type--one-web-highlight-content-box {
   background-color: #e7e7e7;
-  border-radius: 3px;
   box-sizing: border-box;
   margin: .5rem 0;
   padding: 1rem;
@@ -2904,8 +2859,7 @@ Content type usage report: News
 ****************************************/
 
 .content-type--one-web-news time {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   float: right;
   color: #666666;
 }
@@ -2914,7 +2868,7 @@ Content type usage report: News
   margin: auto;
   width: auto;
   display: table;
-  background: #eee8ef;
+  background: var(--uhi-black);
   padding: 1%;
   border-radius: 3px;
 }
@@ -2924,15 +2878,6 @@ Content type usage report: News
   font-style: normal;
   margin: 5px 0 0;
 }
-
-/* @media (min-width: 1000px) {
-  .content-type--one-web-news__image {
-    float: right;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-    max-width: 350px;
-  }
-} */
 
 .news-image-align {
   display: block;
@@ -2946,10 +2891,11 @@ Content type usage report: News
 .content-type--one-web-news__image figcaption {
   display: table-caption;
   caption-side: bottom;
-  background: #eee8ef;
+  background: var(--uhi-black);
   padding: 0% 1% 1% 1%;
   border-radius: 0px 1px 1px 1px;
   margin-top: -3px;
+  color: var(--uhi-white);
 }
 
 /****************************************
@@ -2974,7 +2920,12 @@ Content type usage report: News Listing
 }
 
 .content-type--one-web-news-listing__article:nth-child(odd) {
-  background-color: #eee8ef;
+  background-color: var(--uhi-black);
+  color: var(--uhi-white);
+}
+
+.content-type--one-web-news-listing__article:nth-child(odd) a {
+  color: var(--uhi-white);
 }
 
 .content-type--one-web-news-listing__article h3 {
@@ -3002,6 +2953,12 @@ Content type usage report: Right Content
   margin: 0 1rem 1rem 0;
   order: 0;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .content-type--one-web-right-content {
+    width: auto;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -3041,8 +2998,7 @@ One-Web Text Banner
 ****************************************/
 
 .content-type--one-web-text-banner {
-  background-color: #572163;
-  border-radius: 3px;
+  background-color: #ffbb00;
   display: flex;
   flex-direction: column;
   margin: 0 0 2rem 0;
@@ -3066,16 +3022,12 @@ One-Web Text Banner
 .content-type--one-web-text-banner,
 .content-type--one-web-text-banner a,
 .content-type--one-web-text-banner a:visited {
-  color: white;
+  color: #000;
 }
 
 .content-type--one-web-text-banner h2 {
   font-size: 2.074rem;
   margin: 0 0 2rem;
-}
-
-.content-type--one-web-text-banner aside a {
-  font-family: Oswald, Helvetica, Arial, sans-serif !important;
 }
 
 .content-type--one-web-text-banner__refer {
@@ -3097,7 +3049,7 @@ One-Web Text Banner
 
 .content-type--one-web-text-banner h2,
 .content-type--one-web-text-banner__refer {
-  font-family: Oswald, Helvetica, Arial, sans-serif;
+  font-family: "aktiv-grotesk", Arial, sans-serif;
 }
 
 .content-type--one-web-text-banner__icon {
@@ -3253,7 +3205,6 @@ used in
 
 .content-type-modifier--collapsible__label {
   cursor: pointer;
-  font-family: Oswald, Arial, Helvetica, sans-serif !important;
 }
 
 .content-type-modifier--collapsible__label:hover {
@@ -3275,9 +3226,9 @@ used in
 /* content blocks */
 
 .content-type-modifier--collapsible__heading {
-  background-color: #eee8ef;
+  background-color: #f7f7f7;
   border-radius: 3px;
-  color: #572163;
+  color: var(--uhi-blue);
   cursor: pointer;
   display: flex;
   margin: 0 0 1rem;
@@ -3349,25 +3300,30 @@ table styles also used in:
 /* blockquote */
 
 .content-type--callout blockquote,
-.content-type-modifier--typography blockquote {
+.content-type-modifier--typography blockquote,
+.content-type--one-web-media-object blockquote {
   border-radius: 3px;
   border-style: solid;
   border-width: 0 0 0 .5rem;
-  font-family: "Glypha Web Italic", Helvetica, Arial, sans-serif;
-  font-style: normal;
+  font-style: italic;
   margin: 2rem 0;
   padding: 0 2rem 0 1rem;
 }
 
 @media (min-width: 640px) {
   .content-type--callout blockquote,
-  .content-type-modifier--typography blockquote {
+  .content-type-modifier--typography blockquote,
+  .content-type--one-web-media-object blockquote {
     margin: 2rem;
   }
 }
 
-.content-type-modifier--typography blockquote {
-  border-color: #eee8ef;
+.content-type-modifier--typography blockquote,
+.content-type--one-web-media-object blockquote{
+    border-color: var(--uhi-turquoise);
+    background-color: #f7f7f7;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 /* headings and font sizes */
@@ -3455,6 +3411,13 @@ table styles also used in:
   list-style-type: lower-latin;
 }
 
+/* Anchor tags */
+
+.content-type-modifier--typography a,
+.content-type--one-web-children-link-list a{
+  color: var(--uhi-blue);
+}
+
 /* tables
 
 Only use for small screens:
@@ -3465,6 +3428,10 @@ Only use for small screens:
 accessibility:
 https://www.w3.org/WAI/tutorials/tables/
 */
+
+th, td {
+  padding: 10px;
+}
 
 .content-type-modifier--typography table,
 .coursedetails table {
@@ -3552,7 +3519,7 @@ in T4 a cell can be:
 }
 
 .content-type-modifier--typography table caption {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   text-align: left;
 }
 
@@ -3621,9 +3588,8 @@ used in:
 
 .content-type-modifier--shading {
   padding: 1rem;
-  background-color: #eee8ef;
+  background-color: #f7f7f7;
   border-color: #ddd;
-  border-radius: 6px;
   border-style: solid;
   border-width: 1px;
 }
@@ -3631,9 +3597,8 @@ used in:
 .content-type-modifier--shading-image {
   padding: 1rem;
   display: table;
-  background-color: #eee8ef;
+  background-color: #f7f7f7;
   border-color: #ddd;
-  border-radius: 6px;
   border-style: solid;
   border-width: 1px;
 }
@@ -3644,12 +3609,11 @@ used in:
   caption-side: bottom;
   padding: 0 1rem 1rem 1rem;
   margin-top: -6px;
-  background: #eee8ef;
+  background: #f7f7f7;
   border-color: #ddd;
   border-bottom: 1px solid #ddd;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  border-radius: 0px 0px 6px 6px;
 }
 
 /****************************************
@@ -3686,7 +3650,7 @@ TODO these rules may be redundant with introduction of new .navigation--contextu
 
 /* line default text color */
 .section.courselist .col.onequarter.news > ul > li {
-  color: #572163;
+  color: var(--uhi-black);
 }
 
 /* line blocks - structure */
@@ -3704,9 +3668,9 @@ TODO these rules may be redundant with introduction of new .navigation--contextu
 
 /* line blocks - skin - heading */
 .section.courselist .col.onequarter.news > ul > li:first-child {
-  background-color: #572163;
+  background-color: var(--uhi-black);
   color: #fff;
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 /* line blocks - hover & active */
@@ -3744,7 +3708,7 @@ https://www.inverness.uhi.ac.uk/
 }
 
 .content-type--landing-rss-feed__heading {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 .content-type--landing-rss-feed ul {
@@ -3753,7 +3717,7 @@ https://www.inverness.uhi.ac.uk/
 }
 
 .content-type--landing-rss-feed__line {
-  background-color: #eee8ef;
+  background-color: #f7f7f7;
   border-radius: 3px;
   font-size: 18px;
   list-style-type: none;
@@ -3825,7 +3789,7 @@ Fancybox plugin - customisations
 
 .fancybox-caption {
   border: none !important;
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif !important;
+  font-weight: bold !important;
   font-size: 18px !important;
   line-height: 1.2 !important;
   padding: 30px !important;
@@ -3901,7 +3865,7 @@ previously used .halflight
 }
 
 .content-type--landing-content-boxes__box:hover {
-  box-shadow: 5px 5px 11px #572163;
+  box-shadow: 5px 5px 11px var(--uhi-turquoise);
 }
 
 /* headings and lists within boxes */
@@ -3913,8 +3877,7 @@ previously used .halflight
 
 .content-type--landing-content-boxes ol,
 .content-type--landing-content-boxes ul {
-  list-style-type: none;
-  padding: 0;
+  padding-left: 18px;
 }
 
 .content-type--landing-content-boxes li {
@@ -3928,7 +3891,7 @@ Content type usage report: Event, Uni Event
 ******************************************************/
 
 .content-type--one-web-event__data {
-  background-color: #eee8ef;
+  background-color: #f7f7f7;
   border-radius: 3px;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -4011,9 +3974,9 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
 }
 
 .content-type--page-button img {
-  border-radius: 3px;
   opacity: 0.85;
   transition: .5s;
+  border-radius: 0px;
 }
 
 .content-type--page-button img:hover {
@@ -4023,13 +3986,11 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
 
 .content-type--page-button,
 .content-type--page-button--landing li {
-  border: 5px solid #fff;
-  box-shadow: 5px 5px 11px #ddd;
+  border: 5px solid var(--uhi-black);
   display: inline-block;
   margin: 0 1rem 1rem 0;
   padding: 0;
   transition: .5s;
-  border-radius: 6px;
 }
 
 .content-type--page-button a,
@@ -4042,7 +4003,6 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
 
 .content-type--page-button span,
 .content-type--page-button--landing strong {
-  font-family: Oswald, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   font-weight: normal;
   left: 5%;
@@ -4090,7 +4050,12 @@ One-Web Soundcloud Embed
 }
 
 .content-type--one-web-soundcloud-embed:nth-child(even) {
-  background: #eee8ef;
+  background: var(--uhi-black);
+  color: var(--uhi-white);
+}
+
+.content-type--one-web-soundcloud-embed:nth-child(even) a {
+  color: var(--uhi-white);
 }
 
 .content-type--one-web-soundcloud-embed h2 {
@@ -4122,28 +4087,10 @@ T4 LISTS
 
 ****************************************/
 
-/*
-One-Web Background Colour Palette
-Accessible foreground and background colours for content containers.
-http://colormind.io/
-https://paletton.com/#uid=74Q1q0klViScuskhPmUqGdUwd8S
-https://webaim.org/resources/contrastchecker/
-https://contrast-ratio.com/
-*/
-
 .list--background-colours, .list--background-colours span {
-  color: #222;  /* PAW 20191022 default text colour for contrast  */
-  background-color:#e7e7e7;
+  color: var(--uhi-white);
+  background-color: var(--uhi-purple);
 }
-
-.list--background-colours--1--dark, .list--background-colours--1--dark span  {color:white;background-color:#572163}
-.list--background-colours--2--dark, .list--background-colours--2--dark span  {color:white;background-color:#941900}
-.list--background-colours--3--dark, .list--background-colours--3--dark span  {color:white;background-color:#003585}
-.list--background-colours--4--dark, .list--background-colours--4--dark span  {color:white;background-color:#008537}
-.list--background-colours--1--light, .list--background-colours--1--light span {color:black;background-color:#e5c6ec}
-.list--background-colours--2--light, .list--background-colours--2--light span {color:black;background-color:#ffbfb3}
-.list--background-colours--3--light, .list--background-colours--3--light span {color:black;background-color:#b3d1ff}
-.list--background-colours--4--light, .list--background-colours--4--light span {color:black;background-color:#fff0b3}
 
 /****************************************
 
@@ -4166,11 +4113,6 @@ common to Landing Page Link Lists and Left Nav
     margin-left: 0;
     margin-right: 0;
   }
-
-  .navigation--contextual h2,
-  .navigation--contextual li {
-    border-radius: 3px;
-  }
 }
 
 /* Landing Page full width on mobile */
@@ -4183,18 +4125,12 @@ common to Landing Page Link Lists and Left Nav
     margin-left: 0;
     margin-right: 0;
   }
-
-  .col .navigation--contextual h2,
-  .col .navigation--contextual li {
-    border-radius: 3px;
-  }
 }
 
 /* Left Nav full column width on wider desktop */
 @media (min-width: 1360px) {
   #portal-column-one .navigation--contextual {
     margin-left: -1rem;
-    margin-right: -1rem;
   }
 }
 
@@ -4215,10 +4151,16 @@ common to Landing Page Link Lists and Left Nav
 
 .navigation--contextual h2,
 .navigation--contextual h2 a {
-  background-color: #572163; /* block colour TODO update partner stylesheets */
+  background-color: #767676; /* block colour TODO update partner stylesheets */
   color: #fff;
   font-size: 18px;
   transition: .3s;
+}
+
+.navigation--contextual h2 {
+    border-bottom: .25rem solid #25B89D;
+    border-radius: 0;
+    font-family: "degular-display", Arial, sans-serif;
 }
 
 .navigation--contextual h2 a:hover {
@@ -4266,8 +4208,7 @@ common to Landing Page Link Lists and Left Nav
 }
 
 .navigation--contextual li a:hover {
-  color: #722B82; /* lighter block, like standard links */
-  text-decoration: none;
+  color: var(--uhi-blue);
 }
 
 .navigation--contextual ul ul li:last-child {
@@ -4278,8 +4219,7 @@ common to Landing Page Link Lists and Left Nav
 .navigation--contextual span[class^="currentbranch"] {
   cursor: initial;
   display: block;
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 /*
@@ -4382,25 +4322,25 @@ each colour contains duplicate styles, for preview in TinyMCE
 /* buttons */
 
 .UHI--button-link--black {
-  background-color: #0f0f0f;
-  color: white; /* only if no link */
+  background-color: var(--uhi-black);
+  color: #f7f7f7; /* only if no link */
   padding: .5rem 1rem;
   text-transform: uppercase;
 }
 
 .UHI--button-link--main {
-  background-color: #572163;
-  color: #eee8ef; /* only if no link (secondary colour) */
+  background-color: var(--uhi-blue);
+  color: #f7f7f7; /* only if no link */
   padding: .5rem 1rem;
   text-transform: uppercase;
 }
 
 .UHI--button-link--reverse {
-  background-color: #eee8ef;
-  border-color: #572163;
+  background-color: #f7f7f7;
+  border-color: var(--uhi-blue);
   border-style: solid;
   border-width: .3rem;
-  color: #572163; /* only if no link */
+  color: var(--uhi-white); /* only if no link */
   padding: .2rem .7rem;
   text-transform: uppercase;
 }
@@ -4410,65 +4350,27 @@ each colour contains duplicate styles, for preview in TinyMCE
 .UHI--button-link--black a,
 .UHI--button-link--black a:visited,
 .UHI--button-link--main a,
-.UHI--button-link--main a:visited {
-  color: white;
+.UHI--button-link--main a:visited,
+a.UHI--button-link--main,
+a.UHI--button-link--black {
+  color: var(--uhi-white);
 }
 
 .UHI--button-link--reverse a,
-.UHI--button-link--reverse a:visited {
-  color: #572163;
+.UHI--button-link--reverse a:visited,
+a.UHI--button-link--reverse {
+  color: var(--uhi-blue);
 }
 
 .UHI--button-link--black,
 .UHI--button-link--main,
 .UHI--button-link--reverse {
-  border-radius: 3px;
   cursor: pointer;
   display: inline-block;
-  font-family: Oswald, Helvetica, Arial, sans-serif !important; /* if no link made */
   font-size: 28px;
   line-height: 1.1;
   margin: 0 1rem 1rem 0;
   transition: .3s;
-}
-
-/* shows when on coloured background */
-.UHI--button-link--main,
-.UHI--button-link--reverse {
-  outline: 1px solid white;
-}
-
-/* hover state above iPad landscape */
-@media (min-width: 1025px) {
-  .UHI--button-link--black,
-  .UHI--button-link--main,
-  .UHI--button-link--reverse {
-    opacity: .85;
-  }
-
-  .UHI--button-link--black:hover,
-  .UHI--button-link--main:hover,
-  .UHI--button-link--reverse:hover {
-    opacity: 1;
-  }
-}
-
-.UHI--button-link--black a,
-.UHI--button-link--main a,
-.UHI--button-link--reverse a {
-  font-family: Oswald, Helvetica, Arial, sans-serif !important;
-}
-
-.UHI--button-link--black a:hover,
-.UHI--button-link--main a:hover,
-.UHI--button-link--reverse a:hover {
-  text-decoration: none !important;
-}
-
-.UHI--button-link--black a:active,
-.UHI--button-link--main a:active,
-.UHI--button-link--reverse a:active {
-  opacity: .5;
 }
 
 /* border on image */
@@ -4487,8 +4389,7 @@ each colour contains duplicate styles, for preview in TinyMCE
 /* highlighted paragraph */
 
 .UHI--paragraph-highlight {
-  background-color: #eee8ef;
-  border-color: #572163;
+  background-color: #f7f7f7;
   border-radius: 3px;
   display: inline-block;
   margin: .5rem 0;
@@ -4594,7 +4495,7 @@ eg https://www.uhi.ac.uk/en/foi/section-8/
 
 .content-type--one-web-general-content__last-updated time,
 .meta--last-updated time {
-  font-family: "Glypha Web Bold", Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 /****************************************
@@ -4655,11 +4556,9 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
 #mode1dl li,
 #mode2dl li,
 #mode3dl li,
-#mode4dl li,
- {
+#mode4dl li {
   list-style-type: none;
-/*  margin: 2px; */
-  display: inline;
+  margin: 2px
 }
 
 @media (min-width: 768px) {
@@ -4698,9 +4597,9 @@ CANDIDATES FOR REMOVAL/REPLACEMENT
   #mode4ft a,
   #mode4pt a,
   #mode1dl a,
-#mode2dl a,
-#mode3dl a,
-#mode4dl a,
+  #mode2dl a,
+  #mode3dl a,
+  #mode4dl a,
   #year a {
     font-size: 22px;
   }
