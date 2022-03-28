@@ -1270,7 +1270,8 @@ main ul {
 }
 
 .content-type--landing-rss-feed ul,
-.section.ctas .section.apply ul {
+.section.ctas .section.apply ul,
+.ui-menu {
   list-style: none;
 }
 
