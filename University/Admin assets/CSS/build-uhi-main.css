@@ -1921,7 +1921,8 @@ partner colours are in their theme stylesheets
 
 /* search input box and button */
 
-.fb-search-input .tt-input {
+.fb-search-input .tt-input,
+.twitter-typeahead .tt-menu {
   box-sizing: border-box; /* iOS iPad view */
   width: 18em !important;
 }
@@ -1932,25 +1933,29 @@ partner colours are in their theme stylesheets
 }
 
 @media (min-width: 400px) {
-  .fb-search-input .tt-input {
+  .fb-search-input .tt-input,
+  .twitter-typeahead .tt-menu {
     width: 24em !important;
   }
 }
 
 @media (min-width: 640px) {
-  .fb-search-input .tt-input {
+  .fb-search-input .tt-input,
+  .twitter-typeahead .tt-menu {
     width: 40em !important;
   }
 }
 
 @media (min-width: 768px) {
-  .fb-search-input .tt-input {
+  .fb-search-input .tt-input,
+  .twitter-typeahead .tt-menu {
     width: 24em !important;
   }
 }
 
-@media (min-width: 1100px) {
-  .fb-search-input .tt-input {
+@media (min-width: 1322px) {
+  .fb-search-input .tt-input,
+  .twitter-typeahead .tt-menu {
     width: 40em !important;
   }
 }
