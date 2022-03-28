@@ -1251,7 +1251,8 @@ main .plus-image img {
 
 .content-type-modifier--typography ul,
 .section.coursedetails ul li,
-.content-type--one-web-media-object ul{
+.content-type--one-web-media-object ul,
+main ul {
   list-style: url(<t4 type="media" id="757658" formatter="path/*" />);
 }
 
