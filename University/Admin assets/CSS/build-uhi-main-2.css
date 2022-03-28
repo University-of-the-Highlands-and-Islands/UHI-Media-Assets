@@ -169,20 +169,20 @@ a:hover,
     position: absolute;
 }
 
-.full-glass form .search-input .tt-menu {
+form .search-input .tt-menu {
     background-color: var(--uhi-white);
     display: none;
     border-radius: 3px;
     margin-top: 4px;
 }
 
-.full-glass form .search-input .tt-menu .tt-suggestion {
+form .search-input .tt-menu .tt-suggestion {
     cursor: pointer;
     padding: 5px;
 }
 
-.full-glass form .search-input .tt-menu .tt-suggestion:hover,
-.full-glass form .search-input .tt-menu .tt-cursor,
+form .search-input .tt-menu .tt-suggestion:hover,
+form .search-input .tt-menu .tt-cursor,
 .colour-bar .flexwrap .search-bar form ul .ui-menu-item:hover,
 .ui-menu .ui-menu-item:hover {
     background-color: var(--uhi-blue);
