@@ -1269,7 +1269,8 @@ main ul {
   margin: 0 auto;
 }
 
-.content-type--landing-rss-feed ul {
+.content-type--landing-rss-feed ul,
+.section.ctas .section.apply ul {
   list-style: none;
 }
 
