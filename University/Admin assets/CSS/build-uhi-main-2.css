@@ -169,14 +169,16 @@ a:hover,
     position: absolute;
 }
 
-form .search-input .tt-menu {
+form .search-input .tt-menu,
+.twitter-typeahead .tt-menu {
     background-color: var(--uhi-white);
     display: none;
     border-radius: 3px;
     margin-top: 4px;
 }
 
-form .search-input .tt-menu .tt-suggestion {
+form .search-input .tt-menu .tt-suggestion,
+.twitter-typeahead .tt-menu .tt-suggestion {
     cursor: pointer;
     padding: 5px;
 }
@@ -184,7 +186,9 @@ form .search-input .tt-menu .tt-suggestion {
 form .search-input .tt-menu .tt-suggestion:hover,
 form .search-input .tt-menu .tt-cursor,
 .colour-bar .flexwrap .search-bar form ul .ui-menu-item:hover,
-.ui-menu .ui-menu-item:hover {
+.ui-menu .ui-menu-item:hover,
+.twitter-typeahead .tt-menu .tt-suggestion:hover,
+.twitter-typeahead .tt-menu .tt-cursor {
     background-color: var(--uhi-blue);
     color: var(--uhi-white);
 }
