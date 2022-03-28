@@ -1939,10 +1939,17 @@ partner colours are in their theme stylesheets
   }
 }
 
-@media (min-width: 725px) {
+@media (min-width: 740px) {
   .fb-search-input .tt-input,
   .twitter-typeahead .tt-menu {
     width: 40em !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .fb-search-input .tt-input,
+  .twitter-typeahead .tt-menu {
+    width: 14em !important;
   }
 }
 
