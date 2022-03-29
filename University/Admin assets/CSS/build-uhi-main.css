@@ -82,6 +82,7 @@ main content links
 #portal-column-two a,
 .courselist a {
   font-family: "aktiv-grotesk", Arial, sans-serif;
+  color: var(--uhi-blue);
 }
 
 #content-core a:hover,
