@@ -4365,18 +4365,27 @@ each colour contains duplicate styles, for preview in TinyMCE
 
 /* buttons additional */
 
-.UHI--button-link--black a,
-.UHI--button-link--black a:visited,
-.UHI--button-link--main a,
-.UHI--button-link--main a:visited,
-a.UHI--button-link--main,
-a.UHI--button-link--black {
+#content-core .UHI--button-link--black a,
+#content-core .UHI--button-link--black a:visited,
+#content-core .UHI--button-link--main a,
+#content-core .UHI--button-link--main a:visited,
+#content-core a.UHI--button-link--main,
+#content-core a.UHI--button-link--black,
+#portal-column-two .UHI--button-link--black a,
+#portal-column-two .UHI--button-link--black a:visited,
+#portal-column-two .UHI--button-link--main a,
+#portal-column-two .UHI--button-link--main a:visited,
+#portal-column-two a.UHI--button-link--main,
+#portal-column-two a.UHI--button-link--black {
   color: var(--uhi-white);
 }
 
-.UHI--button-link--reverse a,
-.UHI--button-link--reverse a:visited,
-a.UHI--button-link--reverse {
+#content-core .UHI--button-link--reverse a,
+#content-core .UHI--button-link--reverse a:visited,
+#content-core a.UHI--button-link--reverse,
+#portal-column-two .UHI--button-link--reverse a,
+#portal-column-two .UHI--button-link--reverse a:visited,
+#portal-column-two a.UHI--button-link--reverse{
   color: var(--uhi-blue);
 }
 
