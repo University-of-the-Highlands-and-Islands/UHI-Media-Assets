@@ -487,7 +487,6 @@ main h1 {
 
 main a {
     text-decoration: none;
-    color: var(--uhi-black);
     font-weight: bold;
 }
 
@@ -806,6 +805,7 @@ main .news-boxes .flexwrap {
 main .news-boxes h1,
 main .news-boxes .flexwrap div a h2 {
     line-height: 1.3;
+    color: var(--uhi-black);
 }
 
 main .news-boxes .flexwrap div p a {
@@ -836,6 +836,11 @@ main .plus-image {
 
 main .plus-image img {
     width: 100%;
+}
+
+main .flexwrap .last-link a,
+main .flexwrap .head-link a {
+  color: var(--uhi-black);
 }
 
 .footer {
