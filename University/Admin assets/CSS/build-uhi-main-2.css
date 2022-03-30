@@ -808,6 +808,10 @@ main .news-boxes .flexwrap div a h2 {
     color: var(--uhi-black);
 }
 
+main .news-boxes .flexwrap div a {
+    color: var(--uhi-black);
+}
+
 main .news-boxes .flexwrap div p a {
     color: var(--uhi-grey2);
 }
