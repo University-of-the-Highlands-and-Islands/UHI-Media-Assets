@@ -3032,9 +3032,9 @@ One-Web Text Banner
   }
 }
 
-.content-type--one-web-text-banner,
-.content-type--one-web-text-banner a,
-.content-type--one-web-text-banner a:visited {
+#content-core .content-type--one-web-text-banner,
+#content-core .content-type--one-web-text-banner a,
+#content-core .content-type--one-web-text-banner a:visited {
   color: #000;
 }
 
