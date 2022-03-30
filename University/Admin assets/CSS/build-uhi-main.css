@@ -4102,10 +4102,16 @@ T4 LISTS
 
 .list--background-colours,
 .list--background-colours span,
+.list--background-colours a,
+.list--background-colours span a,
 #content-core .list--background-colours,
 #content-core .list--background-colours span,
 #content-core .list--background-colours a,
-#content-core .list--background-colours span a {
+#content-core .list--background-colours span a,
+main .list--background-colours,
+main .list--background-colours span,
+main .list--background-colours a,
+main .list--background-colours span a,{
   color: var(--uhi-white);
   background-color: var(--uhi-purple);
 }
@@ -4376,7 +4382,13 @@ each colour contains duplicate styles, for preview in TinyMCE
 #portal-column-two .UHI--button-link--main a,
 #portal-column-two .UHI--button-link--main a:visited,
 #portal-column-two a.UHI--button-link--main,
-#portal-column-two a.UHI--button-link--black {
+#portal-column-two a.UHI--button-link--black,
+main .UHI--button-link--black a,
+main .UHI--button-link--black a:visited,
+main .UHI--button-link--main a,
+main .UHI--button-link--main a:visited,
+main a.UHI--button-link--main,
+main a.UHI--button-link--black {
   color: var(--uhi-white);
 }
 
@@ -4385,7 +4397,10 @@ each colour contains duplicate styles, for preview in TinyMCE
 #content-core a.UHI--button-link--reverse,
 #portal-column-two .UHI--button-link--reverse a,
 #portal-column-two .UHI--button-link--reverse a:visited,
-#portal-column-two a.UHI--button-link--reverse{
+#portal-column-two a.UHI--button-link--reverse,
+main .UHI--button-link--reverse a,
+main .UHI--button-link--reverse a:visited,
+main a.UHI--button-link--reverse {
   color: var(--uhi-blue);
 }
 
