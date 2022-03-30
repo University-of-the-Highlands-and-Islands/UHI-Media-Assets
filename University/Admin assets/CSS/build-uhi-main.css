@@ -4100,7 +4100,12 @@ T4 LISTS
 
 ****************************************/
 
-.list--background-colours, .list--background-colours span {
+.list--background-colours,
+.list--background-colours span,
+#content-core .list--background-colours,
+#content-core .list--background-colours span,
+#content-core .list--background-colours a,
+#content-core .list--background-colours span a {
   color: var(--uhi-white);
   background-color: var(--uhi-purple);
 }
