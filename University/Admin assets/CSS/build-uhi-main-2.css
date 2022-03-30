@@ -706,6 +706,10 @@ main .text-image-right.flexwrap div {
     flex: 1 1 0px;
 }
 
+main .head-text-image-right.flexwrap .feed {
+  margin: 0px 0px 0px 80px;
+}
+
 main .quote-block {
     background-color: var(--uhi-black);
     padding: 50px 5%;
@@ -1148,6 +1152,11 @@ main .plus-image img {
     
     main .text-image-black.flexwrap .speal-right {
         padding: 0px 5%;
+    }
+    
+    main .head-text-image-right.flexwrap .feed {
+      margin: 0px 5%;
+      order: 3;
     }
     
     main .blocks.flexwrap .flexwrap {
