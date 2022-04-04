@@ -4387,7 +4387,13 @@ main .UHI--button-link--black a:visited,
 main .UHI--button-link--main a,
 main .UHI--button-link--main a:visited,
 main a.UHI--button-link--main,
-main a.UHI--button-link--black {
+main a.UHI--button-link--black,
+#content-core .content-type--one-web-text-banner a.UHI--button-link--main,
+#content-core .content-type--one-web-text-banner a.UHI--button-link--black,
+#content-core .content-type--one-web-text-banner .UHI--button-link--main a,
+#content-core .content-type--one-web-text-banner .UHI--button-link--black a,
+#content-core .content-type--one-web-text-banner .UHI--button-link--main a:visited,
+#content-core .content-type--one-web-text-banner .UHI--button-link--black a:visited {
   color: var(--uhi-white);
 }
 
