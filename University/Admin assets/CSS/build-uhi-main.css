@@ -446,6 +446,7 @@ section coursedetails
 @media (min-width: 768px) {
   .section.coursedetails {
     font-size: 16px;
+    margin-top: -40px;
   }
 }
 
@@ -555,8 +556,9 @@ section coursedetails
   padding: 0;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 40px;
   padding-bottom: 5px;
+  background-color: var(--uhi-white);
 }
 
 @media (min-width: 768px) {
@@ -643,7 +645,7 @@ section coursedetails
 @media (min-width: 768px) {
   .section.coursedetails .tab {
     overflow: hidden;
-    margin: 30px 10px;
+    margin: 50px 10px;
   }
 }
 
