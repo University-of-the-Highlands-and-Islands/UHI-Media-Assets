@@ -2587,6 +2587,12 @@ Content type usage report: Home Page Coloured Links bar
   transition: .3s;
 }
 
+#content-core a.content-type--links-bar__element,
+#content-core a.content-type--links-bar__element:hover,
+#content-core a.content-type--links-bar__element:active {
+  color: var(--uhi-white);
+}
+
 .content-type--links-bar__element:hover,
 .content-type--links-bar__element:active {
   opacity: 1;
