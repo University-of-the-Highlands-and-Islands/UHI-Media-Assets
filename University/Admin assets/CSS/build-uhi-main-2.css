@@ -745,6 +745,8 @@ main .more-boxes.flexwrap div div,
 main .news-boxes .flexwrap div div {
     background: var(--uhi-grey1);
     height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main .blocks.flexwrap {
