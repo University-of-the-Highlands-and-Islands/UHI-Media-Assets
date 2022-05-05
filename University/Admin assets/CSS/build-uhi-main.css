@@ -4056,6 +4056,8 @@ Content type usage report: Right Image (?)
 .content-type--one-web-right-image {
   order: 3;
   margin: auto;
+  width: 100%;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
