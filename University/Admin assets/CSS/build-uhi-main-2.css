@@ -682,6 +682,12 @@ main .text-image-right.flexwrap .pic img {
     height: auto;
 }
 
+main .head-text-image-right.flexwrap .pic,
+main .text-image-black.flexwrap .pic-left,
+main .text-image-right.flexwrap .pic {
+  align-self: center;
+}
+
 main .text-image-black.flexwrap {
     padding: 50px 5%;
     background-color: var(--uhi-black);
