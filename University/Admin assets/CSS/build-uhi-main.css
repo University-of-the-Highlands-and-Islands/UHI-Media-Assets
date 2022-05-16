@@ -3126,18 +3126,20 @@ One-Web Highlight Content Box
 3 Landing Page Text layouts in CT
 ****************************************/
 
-.content-type--landing-page-text__video,
 .content-type--one-web-video-embed,
 .videowrapper {
   margin: 1rem 0 3rem;
   max-width: 640px;
 }
 
-.content-type--landing-page-text__video iframe,
 .content-type--one-web-video-embed--youtube iframe,
 .videowrapper iframe {
   border: 1px solid #000;
   border-radius: 3px;
+}
+
+.content-type--landing-page-text__video iframe {
+  border: none;
 }
 
 @media (min-width: 768px) {
