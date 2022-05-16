@@ -1154,10 +1154,7 @@ main .flexwrap .head-link a {
     }
     
     main .head-text-image-right.flexwrap .pic,
-    main .text-image-right.flexwrap .pic {
-        width: auto;
-    }
-    
+    main .text-image-right.flexwrap .pic,
     main .text-image-black.flexwrap .pic-left {
         width: 100%;
     }
