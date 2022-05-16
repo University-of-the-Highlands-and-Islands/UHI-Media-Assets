@@ -652,7 +652,7 @@ main .colour-bar .flexwrap .search-bar form ul .ui-menu-item {
 
 main .text-image-right.flexwrap,
 main .head-text-image-right.flexwrap {
-    margin: 50px 5%;
+    padding: 50px 5%;
 }
 
 main .head-text-image-right.flexwrap .speal,
