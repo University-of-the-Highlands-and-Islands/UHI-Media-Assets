@@ -715,6 +715,18 @@ main .head-text-image-right.flexwrap .feed {
   margin: 0px 0px 0px 80px;
 }
 
+/* adjuster classes for changing bg colours on text-image content types */
+
+.bg-dark {
+    background-color: var(--uhi-black);
+    color: var(--uhi-white);
+}
+
+.bg-light {
+    background-color: var(--uhi-white);
+    color: var(--uhi-black);
+}
+
 main .quote-block {
     background-color: var(--uhi-black);
     padding: 50px 5%;
