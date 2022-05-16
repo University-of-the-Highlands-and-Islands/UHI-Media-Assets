@@ -717,7 +717,7 @@ main .head-text-image-right.flexwrap .feed {
 
 /* adjuster classes for changing bg colours on text-image content types */
 
-.bg-dark {
+main .text-image-black.flexwrap.bg-dark {
     background-color: var(--uhi-black);
     color: var(--uhi-white);
 }
