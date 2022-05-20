@@ -722,9 +722,17 @@ main .head-text-image-right.flexwrap .feed {
     color: var(--uhi-white);
 }
 
+main .flexwrap.bg-dark .last-link a {
+  color: var(--uhi-white);
+}
+
 main .text-image-black.flexwrap.bg-light {
     background-color: var(--uhi-white);
     color: var(--uhi-black);
+}
+
+main .text-image-black.flexwrap.bg-light a {
+  color: var(--uhi-black);
 }
 
 main .quote-block {
