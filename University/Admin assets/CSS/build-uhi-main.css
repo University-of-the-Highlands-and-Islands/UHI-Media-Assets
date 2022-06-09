@@ -2753,7 +2753,8 @@ Content type usage report: Highlight Content Box
   margin: .5rem 0;
   padding: 1rem;
   text-align: center;
-  width: 100%;
+  max-width: 208px;
+  margin-right: 1rem;
 }
 
 .content-type--one-web-highlight-content-box .content-type--one-web-video-embed,
