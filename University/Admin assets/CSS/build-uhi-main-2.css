@@ -735,6 +735,15 @@ main .text-image-black.flexwrap.bg-light a {
   color: var(--uhi-black);
 }
 
+main .text-image-black.flexwrap.bg-light .UHI--button-link--main a,
+main .text-image-black.flexwrap.bg-light .UHI--button-link--black a {
+  color: var(--uhi-white);
+}
+
+main .text-image-black.flexwrap.bg-light .UHI--button-link--reverse a {
+  color: var(--uhi-blue);
+}
+
 main .quote-block {
     background-color: var(--uhi-black);
     padding: 50px 5%;
