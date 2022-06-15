@@ -952,6 +952,10 @@ main .flexwrap .head-link a {
         flex-basis: 55%
 }
 
+.footer .links .partners .footer-highlight {
+  color: var(--uhi-white);
+}
+
 .footer .flexwrap.socialdesk .social li a,
 .burger-menu .tool-social .social-list li a {
     text-indent: -9999px;
