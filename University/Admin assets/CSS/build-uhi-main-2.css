@@ -475,6 +475,26 @@ form .search-input .tt-menu .tt-cursor,
     display: none;
   }
 
+/* COURSE PAGE SCROLL TO TOP BUTTON */
+
+  .scrollTop {
+    position: fixed;
+    background-color: black;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding: 10px;
+    opacity: 1;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+    border-bottom: 5px solid var(--uhi-blue);
+  }
+
+  .showScroll {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 main {
     line-height: 1.7;
 }
