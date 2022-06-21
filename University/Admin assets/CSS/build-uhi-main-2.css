@@ -137,6 +137,7 @@ a:hover,
     background: none;
     color: var(--uhi-white);
     cursor: pointer;
+    border: none;
 }
 
 .header .nav.primary .full-glass,
