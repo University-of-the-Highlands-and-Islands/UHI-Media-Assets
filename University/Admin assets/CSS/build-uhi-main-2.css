@@ -384,6 +384,7 @@ form .search-input .tt-menu .tt-cursor,
     width: 100%;
     height: 99999px;
     z-index: 20;
+    text-indend: -9999px;
 }
 
 .header .nav.primary .hide,
