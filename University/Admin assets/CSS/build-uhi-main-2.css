@@ -132,6 +132,13 @@ a:hover,
     cursor: pointer;
 }
 
+.header .nav.primary ul .glass-button button,
+.nav.sticky ul .glass-button button {
+    background: none;
+    color: var(--uhi-white);
+    cursor: pointer;
+}
+
 .header .nav.primary .full-glass,
 .nav.sticky .full-glass {
     display: none;
