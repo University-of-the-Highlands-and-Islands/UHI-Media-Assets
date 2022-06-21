@@ -265,6 +265,8 @@ form .search-input .tt-menu .tt-cursor,
 .nav.sticky .burger {
     cursor: pointer;
     display: none;
+    border: none;
+    background: none;
 }
 
 .header .nav.primary .burger a,
