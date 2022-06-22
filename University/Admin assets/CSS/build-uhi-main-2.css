@@ -149,8 +149,8 @@ a:hover,
             flex-grow: 1;
 }
 
-.header .nav.primary .full-glass a,
-.nav.sticky .full-glass a {
+.header .nav.primary .full-glass button,
+.nav.sticky .full-glass button {
     z-index: 10;
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -161,6 +161,7 @@ a:hover,
     color: var(--uhi-grey2);
     cursor: pointer;
     margin: 4px 0px;
+    border: none;
 }
 
 .full-glass form,
@@ -225,7 +226,7 @@ form .search-input .tt-menu .tt-cursor,
     padding-top: 3px;
 }
 
-.nav.sticky .full-glass a {
+.nav.sticky .full-glass button {
     padding: 0px 6px 2px 4px;
 }
 
