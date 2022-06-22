@@ -396,6 +396,7 @@ form .search-input .tt-menu .tt-cursor,
     height: 99999px;
     z-index: 20;
     text-indend: -9999px;
+    border: none;
 }
 
 .header .nav.primary .hide,
