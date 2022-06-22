@@ -203,11 +203,14 @@ form .search-input .tt-menu .tt-cursor,
 }
 
 .full-glass form input[type="submit"] {
-    font: bold 22px "sosa-web", sans-serif;
+    font: bold 30px "sosa-web", sans-serif;
     color: var(--uhi-white);
     border: none;
-    background-color: var(--uhi-black);
+    background: none;
     cursor: pointer;
+    position: relative;
+    right: -870px;
+    top: 2px;
 }
 
 .header .nav.primary ul li.apply,
@@ -1077,7 +1080,7 @@ main .flexwrap .head-link a {
     }
     
     .full-glass form input[type="submit"] {
-        font-size: 16px;
+        right: -760px;
     }
 }
 
@@ -1116,6 +1119,10 @@ main .flexwrap .head-link a {
     
     .full-glass form .search-input input {
         width: 680px;
+    }
+  
+    .full-glass form input[type="submit"] {
+        right: -700px;
     }
 }
 
