@@ -1378,3 +1378,7 @@ main ul {
 .content-type--one-web-vacancy h1 {
   margin-bottom: 20px;
 }
+
+img {
+  max-width: 100%;
+}
