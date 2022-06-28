@@ -818,6 +818,7 @@ main .news-boxes .flexwrap div div {
     height: 350px;
     background-repeat: no-repeat;
     background-size: cover;
+    text-indent: -9999px;
 }
 
 main .blocks.flexwrap {
