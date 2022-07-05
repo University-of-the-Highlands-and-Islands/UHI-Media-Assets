@@ -714,7 +714,6 @@ main .text-image-right.flexwrap .pic {
 main .head-text-image-right.flexwrap .pic img,
 main .text-image-black.flexwrap .pic-left img,
 main .text-image-right.flexwrap .pic img {
-    width: 100%;
     height: auto;
 }
 
