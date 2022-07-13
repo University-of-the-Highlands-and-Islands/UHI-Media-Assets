@@ -757,7 +757,7 @@ main .head-text-image-right.flexwrap .feed {
     color: var(--uhi-white);
 }
 
-main .flexwrap.bg-dark .last-link a {
+main .flexwrap.bg-dark .last-link a, .bg-dark a {
   color: var(--uhi-white);
 }
 
