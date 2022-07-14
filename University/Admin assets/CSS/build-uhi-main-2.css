@@ -1394,3 +1394,8 @@ img {
     padding: 5px;
     border-bottom: 5px solid var(--uhi-blue);
 }
+
+.content-type-modifier--typography .exit-site,
+#content-core .exit-site {
+  color: var(--uhi-white);
+}
