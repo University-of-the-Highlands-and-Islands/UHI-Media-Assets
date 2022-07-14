@@ -1382,3 +1382,15 @@ main ul {
 img {
   max-width: 100%;
 }
+
+/* Special CSS */
+
+.exit-site {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--uhi-black);
+    color: var(--uhi-white);
+    padding: 5px;
+    border-bottom: 5px solid var(--uhi-blue);
+}
