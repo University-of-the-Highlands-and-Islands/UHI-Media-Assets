@@ -1393,6 +1393,7 @@ img {
     color: var(--uhi-white);
     padding: 5px;
     border-bottom: 5px solid var(--uhi-blue);
+    z-index: 1;
 }
 
 .content-type-modifier--typography .exit-site,
