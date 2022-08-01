@@ -648,7 +648,7 @@ main .colour-bar .flexwrap .search-bar form input,
 main .colour-bar .flexwrap form input[type="submit"] {
     font: bold 22px "sosa-web", sans-serif;
     background: none;
-    color: var(--uhi-grey1);
+    color: var(--uhi-grey2);
     border: none;
     cursor: pointer;
     margin-left: -40px;
