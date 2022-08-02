@@ -671,7 +671,6 @@ body:after,
 .cookie-message {
     text-align: left;
     padding: 10px;
-    flex-basis: 70%;
     flex-grow: 2;
 }
 
@@ -714,7 +713,7 @@ body:after,
     font-size: 16px;
     font-weight: 700;
     border: none;
-    margin: 1em 0px;
+    margin: 0.5em 0px;
 }
 
 /* NEW COOKIE CSS BOTTOM LEFT VERSION */
