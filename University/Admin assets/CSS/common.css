@@ -713,6 +713,8 @@ body:after,
 .cookie-accept, .cookie-settings {
     font-size: 16px;
     font-weight: 700;
+    border: none;
+    margin: 1em 0px;
 }
 
 /* NEW COOKIE CSS BOTTOM LEFT VERSION */
