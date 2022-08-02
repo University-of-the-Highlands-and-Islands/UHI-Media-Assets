@@ -30,7 +30,8 @@ html {
 
 a:hover,
 .footer a:hover,
-.colour-bar a:hover {
+.colour-bar a:hover,
+button:hover {
     text-decoration: underline;
 }
 
