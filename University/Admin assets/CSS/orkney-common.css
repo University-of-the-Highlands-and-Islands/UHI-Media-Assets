@@ -1235,6 +1235,8 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
     display: inline-block;
     width: 120px;
     text-align: center;
+    border: none;
+    margin: 1em 0px;
 }
 
 .cookie-settings {
@@ -1249,6 +1251,8 @@ https://www.uhi.ac.uk/en/research-enterprise/cultural/centre-for-history/
     display: inline-block;
     width: 120px;
     text-align: center;
+    border: none;
+    margin: 1em 0px;
 }
 
 /* NEW COOKIE CSS BOTTOM LEFT VERSION */
