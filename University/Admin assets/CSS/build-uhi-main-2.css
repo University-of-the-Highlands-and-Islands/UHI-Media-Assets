@@ -139,6 +139,7 @@ button:hover {
     color: var(--uhi-white);
     cursor: pointer;
     border: none;
+    text-decoration: none;
 }
 
 .header .nav.primary .full-glass,
