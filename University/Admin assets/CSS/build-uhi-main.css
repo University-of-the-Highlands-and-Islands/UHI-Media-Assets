@@ -4197,7 +4197,7 @@ common to Landing Page Link Lists and Left Nav
 }
 
 .navigation--contextual h2 {
-    border-bottom: .25rem solid #25B89D;
+    border-bottom: .25rem solid var(--uhi-turquoise);
     border-radius: 0;
     font-family: "degular-display", Arial, sans-serif;
 }
