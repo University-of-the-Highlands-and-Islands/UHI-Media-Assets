@@ -1230,7 +1230,10 @@ main .flexwrap .head-link a {
     
     main .head-text-image-right.flexwrap .pic,
     main .text-image-right.flexwrap .pic,
-    main .text-image-black.flexwrap .pic-left {
+    main .text-image-black.flexwrap .pic-left,
+    main .head-text-image-right.flexwrap .pic img,
+    main .text-image-right.flexwrap .pic img,
+    main .text-image-black.flexwrap .pic-left img {
         width: 100%;
     }
     
