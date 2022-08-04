@@ -236,8 +236,7 @@ form .search-input .tt-menu .tt-cursor,
 }
 
 .nav.sticky .full-glass form input[type="submit"] {
-    font-size: 16px;
-    text-indent: -9999px;
+    top: -1px;
 }
 
 .nav.sticky {
