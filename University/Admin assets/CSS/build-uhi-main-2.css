@@ -1257,6 +1257,11 @@ main .flexwrap .head-link a {
       margin: 0px 5%;
       order: 3;
     }
+  
+    main .text-image-black.flexwrap .speal-right, main .text-image-right.flexwrap .speal {
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
     
     main .blocks.flexwrap .flexwrap {
         -webkit-box-orient: horizontal;
