@@ -231,7 +231,7 @@ form .search-input .tt-menu .tt-cursor,
     padding-top: 3px;
 }
 
-.nav.sticky .full-glass button {
+.header .nav.sticky .full-glass button {
     padding: 0px 6px 2px 4px;
 }
 
@@ -239,15 +239,22 @@ form .search-input .tt-menu .tt-cursor,
     top: -1px;
 }
 
-.nav.sticky {
-    height: 45px;
-    position: sticky;
-    top: -1px;
-    display: none;
-    list-style: none;
+.header .sticker.sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
 }
 
-.nav.sticky ul li.apply {
+.nav.primary.sticky {
+    height: 45px;
+}
+
+.header .nav.primary.sticky ul {
+    font-size: 18px;
+}
+
+.header .nav.sticky ul li.apply {
     line-height: 25px
 }
 
