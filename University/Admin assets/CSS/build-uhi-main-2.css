@@ -246,7 +246,7 @@ form .search-input .tt-menu .tt-cursor,
     z-index: 99;
 }
 
-.nav.primary.sticky {
+.header .nav.primary.sticky {
     height: 45px;
 }
 
@@ -254,7 +254,7 @@ form .search-input .tt-menu .tt-cursor,
     font-size: 18px;
 }
 
-.header .nav.sticky ul li.apply {
+.header .nav.primary.sticky ul li.apply {
     line-height: 25px
 }
 
