@@ -746,7 +746,7 @@ main .text-image-right.flexwrap .speal {
 }
 
 main .text-image-black.flexwrap .speal-right a {
-    color: var(--uhi-white);
+    color: var(--uhi-yellow);
 }
 
 main .head-text-image-right.flexwrap div,
@@ -767,7 +767,7 @@ main .head-text-image-right.flexwrap .feed {
 }
 
 main .flexwrap.bg-dark .last-link a, .bg-dark a {
-  color: var(--uhi-white);
+  color: var(--uhi-yellow);
 }
 
 main .text-image-black.flexwrap.bg-light {
@@ -776,7 +776,7 @@ main .text-image-black.flexwrap.bg-light {
 }
 
 main .text-image-black.flexwrap.bg-light a {
-  color: var(--uhi-black);
+  color: var(--uhi-blue);
 }
 
 main .text-image-black.flexwrap.bg-light .UHI--button-link--main a,
@@ -922,11 +922,6 @@ main .plus-image {
 
 main .plus-image img {
     width: 100%;
-}
-
-main .flexwrap .last-link a,
-main .flexwrap .head-link a {
-  color: var(--uhi-black);
 }
 
 .footer {
