@@ -406,7 +406,7 @@ form .search-input .tt-menu .tt-cursor,
     width: 100%;
     height: 99999px;
     z-index: 20;
-    text-indend: -9999px;
+    text-indent: -9999px;
     border: none;
 }
 
@@ -810,6 +810,7 @@ main .more-boxes.flexwrap {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    gap: 20px;
 }
 
 main .more-boxes.flexwrap div,
@@ -817,7 +818,10 @@ main .news-boxes .flexwrap div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0px;
-    padding-right: 20px;
+}
+
+main .news-boxes .flexwrap div {
+    min-width: 420px;
 }
 
 main .more-boxes.flexwrap div div,
@@ -882,6 +886,8 @@ main .news-boxes .flexwrap {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     padding-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 main .news-boxes h1,
@@ -899,7 +905,7 @@ main .news-boxes .flexwrap div p a {
 }
 
 main .news-boxes .flexwrap div a div {
-    background: url(<t4 type="media" id="824589" formatter="path/*" />);
+    background-image: url(<t4 type="media" id="824589" formatter="path/*" />);
 }
 
 main .more-boxes.flexwrap .more1 .more-picture1,
@@ -1010,28 +1016,28 @@ main .plus-image img {
 
 .footer .flexwrap.socialdesk .social .facebook a,
 .burger-menu .tool-social .social-list .facebook a {
-    background: url(<t4 type="media" id="757586" formatter="path/*" />);
+    background: url(<t4 type="media" id="819877" formatter="path/*" />);
 }
 
 .footer .flexwrap.socialdesk .social .twitter a,
 .burger-menu .tool-social .social-list .twitter a {
-    background: url(<t4 type="media" id="757588" formatter="path/*" />);  
+    background: url(<t4 type="media" id="819879" formatter="path/*" />);  
 }
 
 .footer .flexwrap.socialdesk .social .instagram a,
 .burger-menu .tool-social .social-list .instagram a {
-    background: url(<t4 type="media" id="757587" formatter="path/*" />);  
+    background: url(<t4 type="media" id="819876" formatter="path/*" />);  
 }
 
 .footer .flexwrap.socialdesk .social .youtube a,
 .burger-menu .tool-social .social-list .youtube a {
-    background: url(<t4 type="media" id="757589" formatter="path/*" />);
+    background: url(<t4 type="media" id="819878" formatter="path/*" />);
     width: 43px;
 }
 
 .footer .flexwrap.socialdesk .social .linkedin a,
 .burger-menu .tool-social .social-list .linkedin a {
-    background: url(<t4 type="media" id="757863" formatter="path/*" />);
+    background: url(<t4 type="media" id="819880" formatter="path/*" />);
     width: 35px;
 }
 
@@ -1247,7 +1253,7 @@ main .plus-image img {
     main .text-image-black.flexwrap .speal-right {
         padding: 0px 5%;
     }
-    
+  
     main .head-text-image-right.flexwrap .feed {
       margin: 0px 5%;
       order: 3;
@@ -1286,20 +1292,19 @@ main .plus-image img {
         padding-right: 0px;
     }
     
-    main .more-boxes.flexwrap, main .news-boxes .flexwrap {
+    main .more-boxes.flexwrap {
         flex-direction: row;
     }
-}
-
-@media (max-width: 870px) {
-    main .more-boxes.flexwrap, main .news-boxes .flexwrap {
+  
+    main .news-boxes .flexwrap {
         flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
         padding-left: 5%;
-    }
-    
-    main .more-boxes.flexwrap, main .news-boxes {
+        flex-wrap: nowrap;
+    }    
+
+    main .news-boxes {
         margin: 50px 0px;
     }
     
@@ -1307,7 +1312,28 @@ main .plus-image img {
         margin: 0px 5%
     }
     
-    main .more-boxes.flexwrap div, main .news-boxes .flexwrap div {
+    main .news-boxes .flexwrap div {
+        min-width: 80%;
+    }
+  
+    main .news-boxes .flexwrap div a h2 {
+      margin: 0px;
+    }
+}
+
+@media (max-width: 870px) {
+    main .more-boxes.flexwrap {
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-left: 5%;
+    }
+  
+    main .more-boxes.flexwrap {
+        margin: 50px 0px;
+    }
+    
+    main .more-boxes.flexwrap div {
         min-width: 80%;
     }
 }
@@ -1342,7 +1368,13 @@ main .plus-image img {
     }
 }
 
-@media (max-height: 570px) {
+@media (max-height: 700px) {
+  .section.intro {
+    display: none;
+  }
+}
+
+@media (max-height: 600px) {
     .burger-menu .tool-social {
         display: none;
     }
@@ -1365,7 +1397,7 @@ main .plus-image img {
 .section.coursedetails ul li,
 .content-type--one-web-media-object ul,
 main ul {
-  list-style: url(<t4 type="media" id="757658" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="824435" formatter="path/*" />);
 }
 
 .section.courseapply {
