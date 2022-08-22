@@ -4033,7 +4033,8 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
 .content-type--page-button--landing li,
 .content-type--page-button a,
 .content-type--page-button--landing a,
-.content-type--page-button img {
+.content-type--page-button img,
+.t4-landing-page .col .content-type--page-button img {
   height: 110px;
   width: 225px;
 }
