@@ -443,8 +443,6 @@ form .search-input .tt-menu .tt-cursor,
     padding: 5px;
     text-align: center;
     background-color: var(--uhi-grey2);
-    width: -webkit-fill-available;
-    width: -moz-available;
   }
   
   /* Targets Microsoft Edge v13 & v14 */
