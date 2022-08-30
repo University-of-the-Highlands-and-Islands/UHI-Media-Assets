@@ -840,6 +840,11 @@ main .blocks.flexwrap {
     padding: 50px 5%;
 }
 
+main .blocks.flexwrap h1 {
+    color: var(--uhi-white);
+    margin-left: 10px;
+}
+
 main .blocks.flexwrap .flexwrap {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
