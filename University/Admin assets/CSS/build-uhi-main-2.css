@@ -1399,7 +1399,7 @@ main .plus-image img {
 .content-type-modifier--typography ul,
 .section.coursedetails ul li,
 .content-type--one-web-media-object ul,
-main ul {
+main ul, .content-type--one-web-right-content {
   list-style: url(<t4 type="media" id="824435" formatter="path/*" />);
 }
 
