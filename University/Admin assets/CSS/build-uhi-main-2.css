@@ -1113,7 +1113,7 @@ main .plus-image img {
     }
     
     .header .nav.primary ul,
-    .nav.sticky ul {
+    .header .nav.primary.sticky ul {
         font-size: 16px;
     }
     
