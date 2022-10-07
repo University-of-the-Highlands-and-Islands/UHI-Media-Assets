@@ -4082,8 +4082,8 @@ One-Web Soundcloud Embed
   color: var(--uhi-white);
 }
 
-.content-type--one-web-soundcloud-embed:nth-child(even) a {
-  color: var(--uhi-white);
+#content-core .content-type--one-web-soundcloud-embed:nth-child(even) a {
+  color: var(--uhi-yellow);
 }
 
 .content-type--one-web-soundcloud-embed h2 {
