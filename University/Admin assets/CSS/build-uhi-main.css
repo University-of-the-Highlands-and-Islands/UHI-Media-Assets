@@ -1523,14 +1523,14 @@ section testimonials
 
 .messageapply input[type=submit] {
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--uhi-blue);
     border-radius: 4px;
     border: none;
-    padding: 7px;
+    padding: 10px;
 }
 
 .messageapply input[type=submit]:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #203c66;
 }
 
 .messageapply textarea {
