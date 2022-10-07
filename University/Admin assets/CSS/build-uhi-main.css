@@ -1527,6 +1527,7 @@ section testimonials
     border-radius: 4px;
     border: none;
     padding: 10px;
+    cursor: pointer;
 }
 
 .messageapply input[type=submit]:hover {
