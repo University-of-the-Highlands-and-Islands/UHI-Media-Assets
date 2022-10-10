@@ -574,6 +574,12 @@ main .hero-banner h1 a:lang(en) {
   word-spacing: 9999px;
 }
 
+main .hero-banner h1 a:lang(hi) {
+  flex: auto;
+  padding: 0px 5%;
+  text-align: center;
+}
+
 @media (max-width: 650px) {
   main .hero-banner h1 a:lang(gd) {
     font-size: 66px;
