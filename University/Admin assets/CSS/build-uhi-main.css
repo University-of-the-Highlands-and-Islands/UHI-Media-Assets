@@ -3331,7 +3331,7 @@ table styles also used in:
 
 /* blockquote */
 
-blockquote,
+.t4-landing-page blockquote,
 .content-type--callout blockquote,
 .content-type-modifier--typography blockquote,
 .content-type--one-web-media-object blockquote {
@@ -3351,7 +3351,7 @@ blockquote,
   }
 }
 
-blockquote,
+.t4-landing-page blockquote,
 .content-type-modifier--typography blockquote,
 .content-type--one-web-media-object blockquote{
     border-color: var(--uhi-turquoise);
