@@ -1409,6 +1409,15 @@ main ul, .content-type--one-web-right-content {
   list-style: url(<t4 type="media" id="824435" formatter="path/*" />);
 }
 
+.text-image-right.bg-dark ul,
+.text-image-black ul {
+  list-style: url(<t4 type="media" id="970916" formatter="path/*" />);
+}
+
+.text-image-black.bg-light ul {
+  list-style: url(<t4 type="media" id="824435" formatter="path/*" />);
+}
+
 .section.courseapply {
   margin: 10px 0 5px 0;
 }
