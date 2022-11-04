@@ -499,6 +499,7 @@ form .search-input .tt-menu .tt-cursor,
 
 /* COURSE PAGE SCROLL TO TOP BUTTON */
 
+  #content-core a.scrollTop,
   .scrollTop {
     position: fixed;
     background-color: black;
@@ -512,6 +513,7 @@ form .search-input .tt-menu .tt-cursor,
     border-bottom: 5px solid var(--uhi-blue);
   }
 
+  #content-core a.showScroll,
   .showScroll {
     opacity: 1;
     transform: translateY(0);
