@@ -360,21 +360,15 @@ function cookieConfigInit(){
     var cookie = getCookie("_uhic");
   if (cookie == "" || cookie == "0000"|| cookie == "0111" || cookie == "1111" || cookie == "91111" || cookie == "91000") { 
     setCookie("_uhic","00000",90);
- //   $("#cFunct").prop("checked", true);
- //   $("#cPerf").prop("checked", true);
- //   $("#cThird").prop("checked", true);
- //   $("#cTarget").prop("checked", true);
- //   $("#cAll").prop("checked", true);
- 
   }
-  else
-  {
+ // else
+//  {
     if (cookie.charAt(1) == "0") $("#cFunct").prop("checked", false);
     if (cookie.charAt(2) == "0") $("#cPerf").prop("checked", false);
     if (cookie.charAt(3) == "0") $("#cThird").prop("checked", false);   
     if (cookie.charAt(4) == "0") $("#cTarget").prop("checked", false);   
     (cookie == "11111") ? $("#cAll").prop("checked", true) : $("#cAll").prop("checked", false);  
-  }
+//  }
 }
 
 function cookieConfigChange(cInput){ 
