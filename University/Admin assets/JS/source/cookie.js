@@ -62,6 +62,20 @@ function getPrefsUrl(){
   
 }
 
+function getPrefsUrlOnClick(){
+  var url=document.URL; 
+  if(url.indexOf("/en/") !== -1)
+  {
+    return String.raw`https://www.uhi.ac.uk/en/cookies`;     // live
+  // return "http://dev-www.uhi.ac.uk/en/cookies";       // dev
+  }
+  else
+  { 
+    return String.raw`https://` + window.location.hostname + String.raw`/cookies`;
+  }
+  
+}
+
 function getNoMediaText() {
   return "<p style='background-color:#666666;color:#ffffff;height:100%;display:inline-block;'>" +
       "We have removed this content.<br/> Please <a href='" + getPrefsUrl() + "' style='color:white;text-decoration: underline;'>change your cookie preferences</a> " +
@@ -216,8 +230,8 @@ function showCookieMessage() {
           cAlert +='<p>We use cookies you accept along with necessary cookies to help us run this website and to promote the university using social media and other online tools. If you’re happy with this, click Accept all. If you would like to know more, click on Settings. You are free to amend your settings at any time from our cookies page.</p>';
           cAlert +='</div>';
           cAlert +='<div class="cookie-buttons">';
-          cAlert +='<p><a class="cookie-accept" onclick="warningCookieContinue();">Accept all</a></p>';
-          cAlert +='<p><a class="cookie-settings" href="' + getPrefsUrl() + '">Settings</a></p>';
+          cAlert +='<button class="cookie-accept" onclick="warningCookieContinue();">Accept all</button>';
+          cAlert +='<button class="cookie-settings" onclick="location.href=`' + getPrefsUrl() + '`;">Settings</button>';
           cAlert +='</div>';
           cAlert +='</div>';
           cAlert +='</div>';
@@ -345,7 +359,7 @@ function warningCookieContinue(){
 function cookieConfigInit(){ 
     var cookie = getCookie("_uhic");
   if (cookie == "" || cookie == "0000"|| cookie == "0111" || cookie == "1111" || cookie == "91111" || cookie == "91000") { 
-    setCookie("_uhic","11111",90);
+    setCookie("_uhic","00000",90);
  //   $("#cFunct").prop("checked", true);
  //   $("#cPerf").prop("checked", true);
  //   $("#cThird").prop("checked", true);
