@@ -211,7 +211,7 @@ form .search-input .tt-menu .tt-cursor,
     background: none;
     cursor: pointer;
     position: relative;
-    right: -746px;
+    right: -755px;
     top: 2px;
 }
 
@@ -1097,7 +1097,7 @@ main .plus-image img {
     }
     
     .full-glass form input[type="submit"] {
-        right: -634px;
+        right: -645px;
     }
 }
 
@@ -1139,7 +1139,7 @@ main .plus-image img {
     }
   
     .full-glass form input[type="submit"] {
-        right: -573px;
+        right: -585px;
     }
 }
 
