@@ -211,7 +211,7 @@ form .search-input .tt-menu .tt-cursor,
     background: none;
     cursor: pointer;
     position: relative;
-    right: -870px;
+    right: -746px;
     top: 2px;
 }
 
@@ -260,10 +260,6 @@ form .search-input .tt-menu .tt-cursor,
 
 .nav.sticky .logo a img {
     height: 30px;
-}
-
-.full-glass form label {
-    display: none;
 }
 
 .header .nav.primary .burger .press .bar1,
@@ -1101,7 +1097,7 @@ main .plus-image img {
     }
     
     .full-glass form input[type="submit"] {
-        right: -760px;
+        right: -634px;
     }
 }
 
@@ -1143,7 +1139,7 @@ main .plus-image img {
     }
   
     .full-glass form input[type="submit"] {
-        right: -700px;
+        right: -573px;
     }
 }
 
