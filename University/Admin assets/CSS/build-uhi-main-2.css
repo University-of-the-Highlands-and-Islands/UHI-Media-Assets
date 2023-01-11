@@ -1443,6 +1443,14 @@ img {
   max-width: 100%;
 }
 
+.content-type--one-web-event {
+  word-break: break-word;
+}
+
+.content-type--one-web-event a {
+  word-break: break-all;
+}
+
 /* Special CSS */
 
 .exit-site {
