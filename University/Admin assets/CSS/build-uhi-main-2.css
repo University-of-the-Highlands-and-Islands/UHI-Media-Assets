@@ -1048,6 +1048,11 @@ main .plus-image img {
     width: 35px;
 }
 
+.footer .flexwrap.socialdesk .social .tiktok a,
+.burger-menu .tool-social .social-list .tiktok a {
+    background: url(<t4 type="media" id="1002773" formatter="path/*" />);
+}
+
 .footer .flexwrap.socialdesk .servicedesk p a,
 .cookie-ll .cookie-buttons .cookie-accept,
 .cookie-ll .cookie-buttons .cookie-settings {
