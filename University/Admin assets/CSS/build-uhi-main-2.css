@@ -692,6 +692,10 @@ main .colour-bar .flexwrap .search-bar {
             flex-grow: 3;
 }
 
+main .colour-bar .flexwrap .prospectus-down img {
+  vertical-align: inherit;
+}
+
 main .colour-bar .flexwrap .search-bar form ul .ui-menu-item {
   color: var(--uhi-black);
   cursor: pointer;
