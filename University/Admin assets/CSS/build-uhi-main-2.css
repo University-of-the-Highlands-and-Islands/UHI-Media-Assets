@@ -1461,10 +1461,6 @@ img {
   word-break: break-word;
 }
 
-.content-type--one-web-event a {
-  word-break: break-all;
-}
-
 /* Special CSS */
 
 .exit-site {
