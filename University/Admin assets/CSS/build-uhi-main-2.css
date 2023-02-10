@@ -812,6 +812,10 @@ main .quote-block .cite {
     color: var(--uhi-yellow);
 }
 
+main .more-boxes-header {
+  margin: 0px 5%;
+}
+
 main .more-boxes.flexwrap {
     margin: 50px 5%;
     -webkit-box-pack: space-evenly;
