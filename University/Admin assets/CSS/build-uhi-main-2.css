@@ -816,12 +816,20 @@ main .more-boxes-header {
   margin: 0px 5%;
 }
 
+main #content-core .more-boxes-header {
+  margin: 0;
+}
+
 main .more-boxes.flexwrap {
     margin: 50px 5%;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     gap: 20px;
+}
+
+main #content-core .more-boxes.flexwrap {
+  margin: 50px 0;
 }
 
 main .more-boxes.flexwrap div,
@@ -895,6 +903,10 @@ main .blocks.flexwrap .flexwrap a h2 {
 
 main .news-boxes {
     margin: 50px 5%;
+}
+
+main #content-core .news-boxes {
+  margin: 50px 0;
 }
 
 main .news-boxes .flexwrap {
