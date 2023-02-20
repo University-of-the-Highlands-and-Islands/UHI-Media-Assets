@@ -928,6 +928,10 @@ main .news-boxes .flexwrap div a {
     color: var(--uhi-black);
 }
 
+main .news-boxes .flexwrap div.box-text a {
+    color: var(--uhi-blue);
+}
+
 main .news-boxes .flexwrap div p a {
     color: var(--uhi-grey2);
 }
