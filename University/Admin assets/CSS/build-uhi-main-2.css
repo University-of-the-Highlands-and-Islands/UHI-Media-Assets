@@ -918,6 +918,14 @@ main .news-boxes .flexwrap {
     gap: 20px;
 }
 
+main .news-boxes.uhi-media-page .flexwrap {
+    padding-top: 0;
+}
+
+main .news-boxes.uhi-media-page h1 {
+    margin: 0;
+}
+
 main .news-boxes h1,
 main .news-boxes .flexwrap div a h2 {
     line-height: 1.3;
