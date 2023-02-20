@@ -1353,7 +1353,7 @@ main .plus-image img {
         margin: 50px 0px;
     }
     
-    main .news-boxes h1, main .news-boxes a {
+    main .news-boxes h1, main .news-boxes a, main .news-boxes.uhi-media-page h1 {
         margin: 0px 5%
     }
     
