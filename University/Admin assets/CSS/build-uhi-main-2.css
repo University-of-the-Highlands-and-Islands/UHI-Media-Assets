@@ -1341,7 +1341,7 @@ main .plus-image img {
         flex-direction: row;
     }
   
-    main .news-boxes .flexwrap {
+    /* main .news-boxes .flexwrap {
         flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
@@ -1363,7 +1363,7 @@ main .plus-image img {
   
     main .news-boxes .flexwrap div a h2 {
       margin: 0px;
-    }
+    } */
 }
 
 @media (max-width: 870px) {
