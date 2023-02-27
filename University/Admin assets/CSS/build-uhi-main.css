@@ -3129,6 +3129,9 @@ One-Web Highlight Content Box
 .content-type--one-web-video-embed,
 .videowrapper {
   margin: 1rem 0 3rem;
+}
+
+.content-vid-wrapper {
   max-width: 640px;
 }
 
