@@ -1388,6 +1388,10 @@ main .plus-image img {
         font-size: 66px;
         line-height: 66px;
     }
+  
+  main .news-boxes .flexwrap div {
+    min-width: auto;
+  }
 }
 
 @media (max-width: 400px) {
