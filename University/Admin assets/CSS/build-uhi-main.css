@@ -4463,7 +4463,7 @@ main .text-image-black.flexwrap .speal-right .UHI--button-link--reverse a:visite
 .UHI--paragraph-highlight {
   background-color: #f7f7f7;
   border-radius: 3px;
-  display: inline-block;
+  display: table;
   margin: .5rem 0;
   padding: .5rem;
 }
