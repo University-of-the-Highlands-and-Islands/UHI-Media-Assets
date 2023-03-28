@@ -1521,3 +1521,8 @@ img {
   white-space: nowrap;
   border: 0;
 }
+
+main .UHI--button-link--main a,
+#content-core .UHI--button-link--main a {
+  word-break: break-word;
+}
