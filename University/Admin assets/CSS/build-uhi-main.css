@@ -2890,7 +2890,7 @@ Content type usage report: News
   width: auto;
   display: table;
   background: var(--uhi-black);
-  padding: 1%;
+  padding: 13px;
   border-radius: 3px;
 }
 
@@ -2913,7 +2913,7 @@ Content type usage report: News
   display: table-caption;
   caption-side: bottom;
   background: var(--uhi-black);
-  padding: 0% 1% 1% 1%;
+  padding: 0 13px 5px 13px;
   border-radius: 0px 1px 1px 1px;
   margin-top: -3px;
   color: var(--uhi-white);
