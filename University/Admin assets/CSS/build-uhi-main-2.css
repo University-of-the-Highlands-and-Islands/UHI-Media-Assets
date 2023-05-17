@@ -568,6 +568,7 @@ main .hero-banner h1 a.word-line {
         -ms-flex: 0;
             flex: 0;
   text-align: initial;
+  word-spacing: 9999px;
 }
 
 @media (max-width: 650px) {
