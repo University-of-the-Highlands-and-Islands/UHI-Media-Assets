@@ -1245,7 +1245,8 @@ main .plus-image img {
     
     main .colour-bar .flexwrap .extra-links,
     main .colour-bar .flexwrap .prospectus-down {
-        padding-top: 10px
+        padding-top: 10px;
+        padding-right: 53px;
     }
     
     main .colour-bar .flexwrap .search-bar {
