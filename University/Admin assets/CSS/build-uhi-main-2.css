@@ -560,12 +560,14 @@ main .hero-banner h1 a {
     line-height: 90px;
     text-shadow: 2px 3px var(--uhi-grey2);
     padding: 0px 5%;
+    text-align: center;
 }
 
 main .hero-banner h1 a.word-line {
       -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
+  text-align: initial;
 }
 
 @media (max-width: 650px) {
