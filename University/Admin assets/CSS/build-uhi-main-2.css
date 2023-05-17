@@ -553,39 +553,25 @@ main .hero-banner h1 {
     display: contents;
 }
 
-main .hero-banner h1:lang(gd) {
-  display: block;
-  width: 600px;
-}
-
 main .hero-banner h1 a {
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
     color: var(--uhi-white);
     font-family: "aktiv-grotesk", Arial, sans-serif;
     font-size: 90px;
     line-height: 90px;
     text-shadow: 2px 3px var(--uhi-grey2);
+    padding: 0px 5%;
 }
 
-main .hero-banner h1 a:lang(en) {
-  word-spacing: 9999px;
-}
-
-main .hero-banner h1 a:lang(hi) {
-  flex: auto;
-  padding: 0px 5%;
-  text-align: center;
+main .hero-banner h1 a.word-line {
+      -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
 }
 
 @media (max-width: 650px) {
   main .hero-banner h1 a:lang(gd) {
     font-size: 66px;
     line-height: 66px;
-  }
-  
-  main .hero-banner h1:lang(gd) {
     padding-left: 5%;
     width: 460px;
   }
@@ -595,9 +581,6 @@ main .hero-banner h1 a:lang(hi) {
   main .hero-banner h1 a:lang(gd) {
     font-size: 40px;
     line-height: 40px;
-  }
-  
-  main .hero-banner h1:lang(gd) {
     line-height: 40px;
     width: 280px;
   }
