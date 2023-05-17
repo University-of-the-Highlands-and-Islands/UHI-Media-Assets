@@ -1110,6 +1110,10 @@ main .plus-image img {
     padding-bottom: 10px;
 }
 
+.footer .flexwrap.links .site .footer-logo img {
+  width: 80px;
+}
+
 @media (max-width: 1907px) {
     
     .header .nav.primary ul,
