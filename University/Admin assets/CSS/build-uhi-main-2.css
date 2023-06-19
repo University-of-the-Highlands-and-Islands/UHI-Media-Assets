@@ -856,6 +856,14 @@ main .blocks.flexwrap h1 {
     margin-left: 10px;
 }
 
+main .blocks.flexwrap .courses-link {
+  margin: 0 0 0 10px;
+}
+
+main .blocks.flexwrap .courses-link a {
+  color: var(--uhi-yellow);
+}
+
 main .blocks.flexwrap .flexwrap {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
