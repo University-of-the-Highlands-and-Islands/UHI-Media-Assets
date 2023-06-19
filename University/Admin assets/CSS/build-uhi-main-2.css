@@ -549,6 +549,10 @@ main .hero-banner {
     background-position: center top;
 }
 
+main .hero-banner.short {
+    height: 500px;
+}
+
 main .hero-banner h1 {
     display: contents;
 }
@@ -875,6 +879,10 @@ main .blocks.flexwrap .flexwrap a {
     transition: transform .5s ease;
     transition: transform .5s ease, -webkit-transform .5s ease;
     color: var(--uhi-white);
+}
+
+main .blocks.flexwrap.courses-landing .flexwrap a {
+    height: 160px;
 }
 
 main .blocks.flexwrap .flexwrap a:hover {
@@ -1310,6 +1318,10 @@ main .plus-image img {
     main .blocks.flexwrap .flexwrap a {
         height: 300px;
     }
+  
+    main .blocks.flexwrap.courses-landing .flexwrap a {
+        height: 160px;
+    }
     
     main .plus-image {
         padding: 50px 0px;
@@ -1332,7 +1344,7 @@ main .plus-image img {
         flex-direction: row;
     }
   
-    /* main .news-boxes .flexwrap {
+   /* main .news-boxes .flexwrap {
         flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
