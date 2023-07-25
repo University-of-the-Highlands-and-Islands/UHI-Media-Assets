@@ -199,7 +199,8 @@ form .search-input .tt-menu .tt-cursor,
 .colour-bar .flexwrap .search-bar form ul .ui-menu-item:hover,
 .ui-menu .ui-menu-item:hover,
 .twitter-typeahead .tt-menu .tt-suggestion:hover,
-.twitter-typeahead .tt-menu .tt-cursor {
+.twitter-typeahead .tt-menu .tt-cursor,
+.search-bar form ul .ui-state-active {
     background-color: var(--uhi-blue);
     color: var(--uhi-white);
 }
