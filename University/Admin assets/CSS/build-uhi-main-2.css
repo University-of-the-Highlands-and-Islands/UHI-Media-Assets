@@ -656,6 +656,7 @@ main .colour-bar .flexwrap form input[type="submit"] {
     border: none;
     cursor: pointer;
     margin-left: -40px;
+    position: relative;
 }
 
 main .colour-bar .flexwrap form input[id="auto"] {
