@@ -634,6 +634,7 @@ main .colour-bar .flexwrap {
 main .colour-bar .flexwrap .search-bar form .keyword {
     width: 80%;
     padding-right: 30px;
+    position: relative;
 }
 
 main .colour-bar .flexwrap .search-bar form input,
