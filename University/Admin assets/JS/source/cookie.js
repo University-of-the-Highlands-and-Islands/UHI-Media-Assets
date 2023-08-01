@@ -52,8 +52,9 @@ function getPrefsUrl(){
   var url=document.URL; 
   if(url.indexOf("/en/") !== -1)
   {
-    return "https://www.uhi.ac.uk/en/cookies";     // live
+  //  return "https://www.uhi.ac.uk/en/cookies";     // live
   // return "http://dev-www.uhi.ac.uk/en/cookies";       // dev
+      return "https://" + window.location.hostname + "/en/cookies";  // live
   }
   else
   { 
@@ -359,7 +360,8 @@ function warningCookieContinue(){
 function cookieConfigInit(){ 
     var cookie = getCookie("_uhic");
   if (cookie == "" || cookie == "0000"|| cookie == "0111" || cookie == "1111" || cookie == "91111" || cookie == "91000") { 
-    setCookie("_uhic","00000",90);
+    setCookie("_uhic","10000",90);
+    cookie = "10000";
   }
  // else
 //  {
