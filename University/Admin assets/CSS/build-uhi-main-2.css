@@ -1540,3 +1540,15 @@ main .UHI--button-link--main a,
 #content-core .UHI--button-link--main a {
   word-break: break-word;
 }
+
+div#libchat_bc0a7b85def26790e316a94c9391e9ee button.libchat_online {
+    font-size: 28px;
+    line-height: 1.1;
+    margin: 0 1rem 1rem 0;
+    background-color: var(--uhi-blue);
+    color: var(--uhi-white);
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0;
+}
