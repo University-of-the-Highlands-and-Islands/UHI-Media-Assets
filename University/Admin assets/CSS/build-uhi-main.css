@@ -4387,6 +4387,13 @@ each colour contains duplicate styles, for preview in TinyMCE
   text-transform: uppercase;
 }
 
+.UHI--button-link--yellow {
+  background-color: var(--uhi-yellow);
+  color: #f7f7f7; /* only if no link */
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+}
+
 /* buttons additional */
 
 #content-core .UHI--button-link--black a,
@@ -4434,9 +4441,24 @@ main .text-image-black.flexwrap .speal-right .UHI--button-link--reverse a:visite
   color: var(--uhi-blue);
 }
 
+#content-core .UHI--button-link--yellow a,
+#content-core .UHI--button-link--yellow a:visited,
+#content-core a.UHI--button-link--yellow,
+#portal-column-two .UHI--button-link--yellow a,
+#portal-column-two .UHI--button-link--yellow a:visited,
+#portal-column-two a.UHI--button-link--yellow,
+main .UHI--button-link--yellow a,
+main .UHI--button-link--yellow a:visited,
+main a.UHI--button-link--yellow,
+main .text-image-black.flexwrap .speal-right .UHI--button-link--yellow a,
+main .text-image-black.flexwrap .speal-right .UHI--button-link--yellow a:visited {
+  color: var(--uhi-black);
+}
+
 .UHI--button-link--black,
 .UHI--button-link--main,
-.UHI--button-link--reverse {
+.UHI--button-link--reverse,
+.UHI--button-link--yellow {
   cursor: pointer;
   display: inline-block;
   font-size: 28px;
