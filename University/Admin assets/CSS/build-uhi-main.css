@@ -3021,6 +3021,10 @@ Content type usage report: Right Content
   padding: 0 2rem;
 }
 
+#portal-column-two .content-type--one-web-right-content ul li {
+  padding-bottom: 8px;
+}
+
 /****************************************
 One-Web Text Banner
 
