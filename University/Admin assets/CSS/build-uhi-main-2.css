@@ -1571,3 +1571,7 @@ div#libchat_bc0a7b85def26790e316a94c9391e9ee button.libchat_online {
 #mc_embed_signup form .button:hover {
     background-color: #203c66;
 }
+
+.landing-code-item {
+    margin: 0px 5%;
+}
