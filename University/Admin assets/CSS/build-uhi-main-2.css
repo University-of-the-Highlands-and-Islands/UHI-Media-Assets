@@ -1437,7 +1437,7 @@ main .plus-image img {
   }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 645px) {
     .burger-menu .tool-social {
         display: none;
     }
