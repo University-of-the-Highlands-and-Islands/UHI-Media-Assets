@@ -1553,6 +1553,12 @@ div#libchat_bc0a7b85def26790e316a94c9391e9ee button.libchat_online {
     border-radius: 0;
 }
 
+.landing-code-item {
+    margin: 0px 5%;
+}
+
+/* mailchimp embed */
+
 #mc_embed_signup {
     background-color: var(--uhi-black);
     color: var(--uhi-white);
@@ -1572,6 +1578,8 @@ div#libchat_bc0a7b85def26790e316a94c9391e9ee button.libchat_online {
     background-color: #203c66;
 }
 
-.landing-code-item {
-    margin: 0px 5%;
+#mc_embed_signup form .mailer-pn {
+    color: var(--uhi-yellow);
+    font-style: italic;
+    font-size: 14px;
 }
