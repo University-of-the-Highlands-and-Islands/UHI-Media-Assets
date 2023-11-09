@@ -533,6 +533,20 @@ aside a {
     font-weight: bold;
 }
 
+/* Blocking landing page content from normal pages */
+
+#portal-columns main .colour-bar,
+#portal-columns main .more-boxes-header,
+#portal-columns main .more-boxes.flexwrap,
+#portal-columns main .plus-image,
+#portal-columns main .text-image-right.flexwrap,
+#portal-columns main .head-text-image-right.flexwrap,
+#portal-columns main .text-image-black.flexwrap,
+#portal-columns main .blocks.flexwrap,
+#portal-columns main .quote-block {
+    display: none;
+}
+
 main .hero-banner {
     width: 100%;
     height: 845px;
