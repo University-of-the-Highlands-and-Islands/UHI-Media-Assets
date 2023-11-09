@@ -2915,7 +2915,7 @@ Content type usage report: News
   caption-side: bottom;
   background: var(--uhi-black);
   padding: 0 13px 5px 13px;
-  border-radius: 0px 1px 1px 1px;
+  border-radius: 0px 0px 3px 3px;
   margin-top: -3px;
   color: var(--uhi-white);
 }
