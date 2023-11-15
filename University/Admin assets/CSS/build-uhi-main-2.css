@@ -121,6 +121,7 @@ button:hover {
 
 .logo a img {
     height: 50px;
+    color-scheme: only light;
 }
 
 #header-name {
@@ -1490,14 +1491,6 @@ main .plus-image img {
     .burger-menu .lang-main .main-list li a,
     .burger-menu .lang-main .main-list li a, .burger-menu ul .burger-search a {
         font-size: 20px;
-    }
-}
-
-/* Dark Mode Styles */
-
-@media (prefers-color-scheme: dark) {
-    .nav.sticky .logo a span.dark-invert img {
-      filter: invert(1);
     }
 }
 
