@@ -3039,6 +3039,7 @@ One-Web Text Banner
   flex-direction: column;
   margin: 0 0 2rem 0;
   padding: 2rem 1rem;
+  color-scheme: only light;
 }
 
 .content-type--one-web-text-banner__col:first-child {
