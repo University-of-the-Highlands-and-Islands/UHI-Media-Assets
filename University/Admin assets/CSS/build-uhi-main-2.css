@@ -1493,6 +1493,14 @@ main .plus-image img {
     }
 }
 
+/* Dark Mode Styles */
+
+@media (prefers-color-scheme: dark) {
+    .nav.sticky .logo a span.dark-invert img {
+      filter: invert(1);
+    }
+}
+
 /* OVERRIDE STYLES */
 
 .main .navigation--breadcrumb ol li a {
