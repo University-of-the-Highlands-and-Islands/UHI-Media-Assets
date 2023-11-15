@@ -567,6 +567,8 @@ section coursedetails
     margin: 0px;
     padding-bottom: 0px;
     border-bottom: 0.5rem solid var(--uhi-blue);
+    color-scheme: only light;
+    background-color: transparent;
   }
 }
 
