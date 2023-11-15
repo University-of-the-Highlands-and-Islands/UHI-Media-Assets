@@ -703,6 +703,7 @@ main .colour-bar .flexwrap .search-bar {
 
 main .colour-bar .flexwrap .prospectus-down img {
   vertical-align: inherit;
+  color-scheme: only light;
 }
 
 main .colour-bar .flexwrap .search-bar form ul .ui-menu-item {
