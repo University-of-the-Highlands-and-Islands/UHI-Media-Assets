@@ -1134,6 +1134,7 @@ main .plus-image img {
 
 .footer .flexwrap.links .site .footer-logo img {
   width: 80px;
+  color-scheme: only light;
 }
 
 @media (max-width: 1907px) {
