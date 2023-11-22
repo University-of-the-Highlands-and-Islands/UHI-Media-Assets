@@ -1524,6 +1524,18 @@ main ul, .content-type--one-web-right-content {
   list-style: url(<t4 type="media" id="1010192" formatter="path/*" />);
 }
 
+@media (prefers-color-scheme: dark) {
+  
+  .content-type-modifier--typography ul,
+  .section.coursedetails ul li,
+  .content-type--one-web-media-object ul,
+  main ul, .content-type--one-web-right-content {
+    list-style: url(<t4 type="media" id="1131137" formatter="path/*" />);
+    color-scheme: only light;
+  }
+  
+}
+
 .section.courseapply {
   margin: 10px 0 5px 0;
 }
