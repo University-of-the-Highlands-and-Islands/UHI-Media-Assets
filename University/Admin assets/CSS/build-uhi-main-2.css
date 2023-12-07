@@ -1498,6 +1498,18 @@ main .plus-image img {
     }
 }
 
+@media (max-height: 350px) {
+    .burger-menu .lang-main .main-list li a,
+    .burger-menu .lang-main .main-list li a, .burger-menu ul .burger-search a {
+        font-size: 18px;
+    }
+  
+    .burger-menu .lang-main .main-list li,
+    .burger-menu ul .burger-search {
+        padding: 2px 0px;
+    }
+}
+
 /* OVERRIDE STYLES */
 
 .main .navigation--breadcrumb ol li a {
