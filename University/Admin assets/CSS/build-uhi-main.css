@@ -4615,6 +4615,10 @@ https://www.uhi.ac.uk/en/courses/
   background-color: #eaeaea;
 }
 
+#courselist .colour-bar a:hover {
+  background-color: transparent;
+}
+
 /*
 #coursesearch-filters
 */
