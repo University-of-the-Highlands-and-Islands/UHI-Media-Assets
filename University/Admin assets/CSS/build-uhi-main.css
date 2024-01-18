@@ -2766,7 +2766,9 @@ Content type usage report: Highlight Content Box
 }
 
 .content-type--one-web-highlight-content-box img {
-  width: 200px;
+    max-width: 100%;
+    transition: .5s;
+    width: auto;
 }
 
 .content-type--one-web-highlight-content-box h2 {
@@ -2800,12 +2802,6 @@ Content type usage report: Highlight Content Box
 
   .content-type--one-web-highlight-content-box a:hover {
     cursor: pointer;
-  }
-
-  .content-type--one-web-highlight-content-box img {
-    max-width: 100%;
-    transition: .5s;
-    width: auto;
   }
 
   .content-type--one-web-highlight-content-box img:hover {
