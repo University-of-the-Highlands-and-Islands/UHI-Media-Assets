@@ -860,6 +860,7 @@ main .news-boxes .flexwrap div div {
     background-repeat: no-repeat;
     background-size: cover;
     text-indent: -9999px;
+    background-position: center top;
 }
 
 main .blocks.flexwrap {
@@ -1404,7 +1405,7 @@ main .plus-image img {
         flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
-        padding-left: 5%;
+        padding: 0px 5%;
     }
   
     main .more-boxes.flexwrap {
