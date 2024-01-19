@@ -1371,11 +1371,11 @@ main .plus-image img {
         padding-right: 0px;
     }
     
-    main .more-boxes.flexwrap {
+   /* main .more-boxes.flexwrap {
         flex-direction: row;
     }
   
-   /* main .news-boxes .flexwrap {
+    main .news-boxes .flexwrap {
         flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
@@ -1402,19 +1402,19 @@ main .plus-image img {
 
 @media (max-width: 870px) {
     main .more-boxes.flexwrap {
-        flex-direction: row;
-        overflow-x: auto;
-        justify-content: flex-start;
+        margin: 50px 0px;
         padding: 0px 5%;
     }
   
-    main .more-boxes.flexwrap {
-        margin: 50px 0px;
+   /* main .more-boxes.flexwrap {
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: flex-start;
     }
     
     main .more-boxes.flexwrap div {
         min-width: 80%;
-    }
+    } */
 }
 
 @media (max-width: 510px) {
