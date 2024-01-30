@@ -1618,6 +1618,10 @@ div#libchat_bc0a7b85def26790e316a94c9391e9ee button.libchat_online {
     margin: 50px 5%;
 }
 
+.content-anchor {
+    scroll-margin-top: 120px;
+}
+
 /* mailchimp embed */
 
 #mc_embed_signup {
