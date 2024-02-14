@@ -5,6 +5,8 @@
 * Browsers: last 4 version
 */
 
+/* Imports Sosa Web font for symbols */
+
 @font-face {
   font-family: "sosa-web";
   src: url(<t4 type="media" id="52" formatter="path/*" />) format("embedded-opentype"), url(<t4 type="media" id="55" formatter="path/*" />) format("woff"), url(<t4 type="media" id="54" formatter="path/*" />) format("truetype"), url(<t4 type="media" id="53" formatter="path/*" />) format("svg");
@@ -12,6 +14,8 @@
   font-style: normal;
   font-weight: bold;
 }
+
+/* Setting base font family and size and brand colour custom parameters */
 
 html {
     font-family: "aktiv-grotesk", Arial, sans-serif;
@@ -28,6 +32,8 @@ html {
     --uhi-yellow: #FFBB50;
 }
 
+/* Anchor/link text underline on hover apart from landing banner text which should have no hover state */
+
 a:hover,
 .footer a:hover,
 .colour-bar a:hover,
@@ -39,10 +45,14 @@ button:hover {
     text-decoration: none;
 }
 
+/* Removes scroll bar and locks viewport at current place when using the searchbar in the top nav */
+
 .scroll-lock {
     height: 100%;
     overflow: hidden;
 }
+
+/* Top grey bar styling */
 
 .header .tools {
     list-style: none;
@@ -80,6 +90,8 @@ button:hover {
 .burger-language .lang-switcher .burger-language-options a:hover {
   background: var(--uhi-black);
 }
+
+/* Top level nav styling */
 
 .header .nav.primary,
 .nav.sticky {
@@ -127,6 +139,8 @@ button:hover {
 #header-name {
     text-indent: -9999px;
 }
+
+/* Top level nav searchbar styling */
 
 .header .nav.primary ul .glass-button,
 .nav.sticky ul .glass-button {
@@ -217,6 +231,8 @@ form .search-input .tt-menu .tt-cursor,
     top: 2px;
 }
 
+/* Top level nav blue button styling */
+
 .header .nav.primary ul li.apply,
 .nav.sticky ul li.apply {
     background-color: var(--uhi-blue);
@@ -228,6 +244,8 @@ form .search-input .tt-menu .tt-cursor,
 .nav.sticky ul li.apply a {
     font-weight: bold;
 }
+
+/* Top level nav styling once scrolled to have it stick to top */
 
 .nav.sticky .full-glass {
     padding-top: 3px;
@@ -263,6 +281,8 @@ form .search-input .tt-menu .tt-cursor,
 .nav.sticky .logo a img {
     height: 30px;
 }
+
+/* Top level nav burger menu styling, for small screens */
 
 .header .nav.primary .burger .press .bar1,
 .header .nav.primary .burger .press .bar2,
@@ -314,6 +334,8 @@ form .search-input .tt-menu .tt-cursor,
             transform: rotate(45deg) translate(-6px, -6px);
 }
 
+/* Landing Top message styling */
+
 .header .topmessage {
     padding: 0px 5%;
     -webkit-box-pack: justify;
@@ -341,6 +363,8 @@ form .search-input .tt-menu .tt-cursor,
 .header .topmessage.turquoise {
   background-color: var(--uhi-turquoise);
 }
+
+/* Top level nav burger menu styling, for small screens */
 
 .burger-menu {
     display: none;
@@ -397,6 +421,8 @@ form .search-input .tt-menu .tt-cursor,
     font-size: 32px;
 }
 
+/* Darkens page content when using the top level nav searchbar */
+
 .grey-out {
     display: none;
     background-color: rgba(0, 0, 0, 0.5);
@@ -407,6 +433,8 @@ form .search-input .tt-menu .tt-cursor,
     text-indent: -9999px;
     border: none;
 }
+
+/* Top level nav searchbar show/hide classes */
 
 .header .nav.primary .hide,
 .nav.sticky .hide {
@@ -419,6 +447,8 @@ form .search-input .tt-menu .tt-cursor,
     display: -ms-inline-flexbox;
     display: inline-flex;
 }
+
+/* Grey bar and burger menu language switcher */
 
 .language,
 .burger-language {
@@ -519,6 +549,15 @@ form .search-input .tt-menu .tt-cursor,
     transform: translateY(0);
   }
 
+/*
+Main body base styles
+
+-setting base font spacing
+-setting h1 font family and size
+-removing any underline from anchors/links
+-setting all anchors/links to be bold
+*/
+
 main {
     line-height: 1.7;
 }
@@ -548,6 +587,8 @@ aside a {
 #portal-columns main .quote-block {
     display: none;
 }
+
+/* Landing Banner sytling */
 
 main .hero-banner {
     width: 100%;
@@ -614,6 +655,8 @@ main .hero-banner h1 a .diff {
     color: var(--uhi-white);
     text-decoration: underline;
 }
+
+/* Landing colour bar styling */
 
 main .colour-bar {
     padding: 18px 5%;
@@ -712,6 +755,12 @@ main .colour-bar .flexwrap .search-bar form ul .ui-menu-item {
   cursor: pointer;
 }
 
+/*
+Landing Head Text Right Image
+Landing Text Image Right
+Landing Text Image Left
+*/
+
 main .text-image-right.flexwrap,
 main .head-text-image-right.flexwrap {
     padding: 50px 5%;
@@ -776,7 +825,7 @@ main .head-text-image-right.flexwrap .feed {
   margin: 0px 0px 0px 80px;
 }
 
-/* adjuster classes for changing bg colours on text-image content types */
+/* adjuster classes for changing bg colours on Landing text image left and right content types */
 
 .bg-dark {
     background-color: var(--uhi-black);
@@ -805,6 +854,8 @@ main .text-image-black.flexwrap.bg-light .UHI--button-link--reverse a {
   color: var(--uhi-blue);
 }
 
+/* Landing Quote Block styling */
+
 main .quote-block {
     background-color: var(--uhi-black);
     padding: 50px 5%;
@@ -821,6 +872,11 @@ main .quote-block .quote {
 main .quote-block .cite {
     color: var(--uhi-yellow);
 }
+
+/*
+Landing More Boxes
+Landing RSS
+*/
 
 main .more-boxes-header {
   margin: 0px 5%;
@@ -984,6 +1040,8 @@ main .news-boxes .flexwrap .box3 .box3-pic {
     background-size: cover;
 }
 
+/* Landing Big Image Styling */
+
 main .plus-image {
     background-color: var(--uhi-black);
     padding: 50px 5%;
@@ -992,6 +1050,8 @@ main .plus-image {
 main .plus-image img {
     width: 100%;
 }
+
+/* Footer styling */
 
 .footer {
     background-color: var(--uhi-black);
@@ -1026,11 +1086,15 @@ main .plus-image img {
     line-height: 20px;
 }
 
+/* Flexbox container class */
+
 .flexwrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
+
+/* Footer styling cont. */
 
 .flexwrap.links {
     padding-top: 60px;
@@ -1139,6 +1203,14 @@ main .plus-image img {
   color-scheme: only light;
 }
 
+/*
+Adjusting for smaller screens 1
+
+-Top level nav
+-Landing Colour Bar
+-Searchbars
+*/
+
 @media (max-width: 1907px) {
     
     .header .nav.primary ul,
@@ -1167,6 +1239,14 @@ main .plus-image img {
         right: -645px;
     }
 }
+
+/*
+Adjusting for smaller screens 2
+
+-Top Grey bar
+-Top level nav
+-Searchbars
+*/
 
 @media (max-width: 1771px) {
   
@@ -1210,12 +1290,34 @@ main .plus-image img {
     }
 }
 
+/*
+Adjusting for smaller screens 3
+
+-Top level nav logo adjustment
+*/
+
 @media (max-width: 1354px) {
   .logo a img,
   .nav.sticky .logo a img {
         height: 20px;
     }
 }
+
+/*
+Adjusting for smaller screens 4
+
+-Top level nav
+-Footer
+-Flexbox
+-Landing Colour Bar
+-Landing Head Text Right Image
+-Landing Text Image Left
+-Landing Text Image Right
+-Landing Image Blocks
+-Landing RSS
+-Landing Top Message
+-Landing Big Image
+*/
 
 @media (max-width: 1168px) {
     
@@ -1371,7 +1473,10 @@ main .plus-image img {
         padding-right: 0px;
     }
     
-   /* main .more-boxes.flexwrap {
+  /*
+    Horizontal scrolling for Landing RSS feeds - LEGACY
+  
+    main .more-boxes.flexwrap {
         flex-direction: row;
     }
   
@@ -1397,8 +1502,15 @@ main .plus-image img {
   
     main .news-boxes .flexwrap div a h2 {
       margin: 0px;
-    } */
+    }
+  */
 }
+
+/*
+Adjusting for smaller screens 5
+
+-Landing More Boxes
+*/
 
 @media (max-width: 870px) {
     main .more-boxes.flexwrap {
@@ -1406,7 +1518,10 @@ main .plus-image img {
         padding: 0px 5%;
     }
   
-   /* main .more-boxes.flexwrap {
+  /*
+    Horizontal Scrolling for Landing More Boxes - LEGACY  
+  
+    main .more-boxes.flexwrap {
         flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
@@ -1414,8 +1529,16 @@ main .plus-image img {
     
     main .more-boxes.flexwrap div {
         min-width: 80%;
-    } */
+    }
+  */
 }
+
+/*
+Adjusting for smaller screens 6
+
+-Landing Banner
+-Landing RSS
+*/
 
 @media (max-width: 510px) {
   main .hero-banner h1 a {
@@ -1427,6 +1550,13 @@ main .plus-image img {
     min-width: auto;
   }
 }
+
+/*
+Adjusting for smaller screens 7
+
+-Landing Banner
+-Top Level Nav logo
+*/
 
 @media (max-width: 400px) {
     .logo a img,
@@ -1444,12 +1574,24 @@ main .plus-image img {
     }  
 }
 
+/*
+Adjusting for smaller screens 8
+
+-Top Level Nav logo
+*/
+
 @media (max-width: 310px) {
     .logo a img,
     .nav.sticky .logo a img {
         height: 13px;
     }
 }
+
+/*
+Adjusting for smaller screens 9
+
+-Burger menu height adjustments
+*/
 
 @media (max-height: 700px) {
   .section.intro {
@@ -1517,24 +1659,26 @@ main .plus-image img {
   color: var(--uhi-grey2);
 }
 
+/* Setting list icons to plus motif */
+
 .content-type-modifier--typography ul,
 .section.coursedetails ul li,
 .content-type--one-web-media-object ul,
 main ul, .content-type--one-web-right-content {
-  list-style: url(<t4 type="media" id="824435" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="824435" formatter="path/*" />); /* Turquoise/Green colour */
 }
 
 .text-image-right.bg-dark ul,
 .text-image-black ul {
-  list-style: url(<t4 type="media" id="970916" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="970916" formatter="path/*" />); /* Yellow colour */
 }
 
 .text-image-black.bg-light ul {
-  list-style: url(<t4 type="media" id="824435" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="824435" formatter="path/*" />); /* Turquoise/Green colour */
 }
 
 .content-type--one-web-text-banner ul {
-  list-style: url(<t4 type="media" id="1010192" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="1010192" formatter="path/*" />); /* Black colour */
 }
 
 .section.courseapply {
