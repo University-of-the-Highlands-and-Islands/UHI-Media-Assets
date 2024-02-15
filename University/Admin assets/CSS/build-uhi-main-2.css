@@ -1655,6 +1655,12 @@ Adjusting for smaller screens 9
     }
 }
 
+/* One-Web General - Video Second Column */
+
+.content-type--one-web-general-video-second-column {
+  margin: 0 0 1rem 0;
+}
+
 /* OVERRIDE STYLES */
 
 .main .navigation--breadcrumb ol li a {
