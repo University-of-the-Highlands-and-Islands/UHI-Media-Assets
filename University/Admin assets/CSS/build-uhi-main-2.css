@@ -32,7 +32,7 @@ html {
     --uhi-yellow: #FFBB50;
 }
 
-/* Anchor/link text underline on hover apart from landing banner text which should have no hover state */
+/* Anchor/link text underline on hover */
 
 a:hover,
 .footer a:hover,
@@ -40,6 +40,8 @@ a:hover,
 button:hover {
     text-decoration: underline;
 }
+
+/* Excluding Landing Banner link from hover state */
 
 .hero-banner a:hover {
     text-decoration: none;
@@ -245,7 +247,7 @@ form .search-input .tt-menu .tt-cursor,
     font-weight: bold;
 }
 
-/* Top level nav styling once scrolled to have it stick to top */
+/* Top level nav styling sticky edition */
 
 .nav.sticky .full-glass {
     padding-top: 3px;
@@ -282,7 +284,7 @@ form .search-input .tt-menu .tt-cursor,
     height: 30px;
 }
 
-/* Top level nav burger menu styling, for small screens */
+/* Top level nav burger menu icon styling, for small screens */
 
 .header .nav.primary .burger .press .bar1,
 .header .nav.primary .burger .press .bar2,
