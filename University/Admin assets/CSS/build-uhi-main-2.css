@@ -1071,7 +1071,7 @@ main .landing-stat-bar > div {
 }
 
 main .landing-stat-bar > div img {
-  width: 100px;
+  width: 90px;
   height: fit-content;
   align-self: center;
 }
