@@ -1140,7 +1140,8 @@
                     top: "100%",
                     left: "0",
                     zIndex: "100",
-                    display: "none"
+                    display: "none",
+                    background-color: "white"
                 },
                 ltr: {
                     left: "0",
@@ -3148,4 +3149,5 @@ jQuery(document).ready(function() {
     logging: false
   });
     jQuery('input[name="query"]').closest('form').find('input[type="text"]').first().attr('id', "funnelbackInjected");
+    jQuery('<label for="funnelbackInjected">Search suggestions test</label>').insertBefore("#funnelbackInjected");
 });

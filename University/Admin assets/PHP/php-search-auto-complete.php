@@ -18,6 +18,10 @@ parse_str($_SERVER['QUERY_STRING'], $queries);
             $documentsSource = 'https://www.'. PARTNERS[$queries["q"]] .'.uhi.ac.uk/courses/course-search-xml/index.xml';    
     }
 
+    if (strpos($_SERVER["DOCUMENT_ROOT"], 'nwh') !== false) {
+        $documentsSource = '/en/courses/course-search-xml/index.xml';
+    }
+
  //   $documentsSource = '<t4 type="navigation" name="Path to course search XML file" id="94" />index.xml';        
     require_once(realpath($_SERVER['DOCUMENT_ROOT']).'<t4 type="media" formatter="image/path" id="278300" />');  
     

@@ -3,14 +3,15 @@ $(function() {
 	$(".lt-ie9 .header.banner .logo a").html('<img src="/img/logo.gif" alt="University of the Highlands and Islands"/>');
 	handheldNav();
 	siteMessage();
-	scrollingParallax();
-    var waypoint = document.getElementsByClassName("pin")[0];  
-    if (waypoint) { waypointsInit(); }  
+	//scrollingParallax();
+  //  var waypoint = document.getElementsByClassName("pin")[0];  
+  //  if (waypoint) { waypointsInit(); }  
 	courseFilter();
 //	hashlinks();
 	applyNow();
     warningCookieRead(); 
     makeFlexContainer();
+    campaignCookieRead();
     var uhiacc = document.getElementsByClassName("content-type-modifier--collapsible__heading")[0];
     if (uhiacc) uhicollapsibleSections();
 });
@@ -38,6 +39,20 @@ function courseFilter() {
 			$('.arrow', this).html('&#9668;');
 		}
 	    });
+
+	$('#coursefilter .course-filter-title').on('keypress', function(event) {
+		event.preventDefault();
+		const code = event.which;
+		if ((code === 13) || (code === 32)) {
+		$(this).parent().toggleClass('open').find('ul').slideToggle('fast');
+		if($(this).parent().hasClass('open')) {
+			$('.arrow', this).html('&#9660;');
+		} else {
+			$('.arrow', this).html('&#9668;');
+		}
+	}
+	    });
+
 }
 
 function scrollingParallax() {
@@ -47,14 +62,14 @@ function scrollingParallax() {
 	//adjuster - y position to start from
 	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	$('.home .mountains3').parallax("50%", 455, -.35, true);
-	$('.home .mountains2').parallax("50%", 455, -.2, true);
-	$('.home .section.intro').parallax("50%", -780, -.05, true);
-	$('.home .section.coursefinder').parallax("50%", 1600, .5, true);
-	$('.home .section.connections').parallax("50%", 3040, .5, true);
+//	$('.home .mountains3').parallax("50%", 455, -.35, true);
+//	$('.home .mountains2').parallax("50%", 455, -.2, true);
+//	$('.home .section.intro').parallax("50%", -780, -.05, true);
+//	$('.home .section.coursefinder').parallax("50%", 1600, .5, true);
+//	$('.home .section.connections').parallax("50%", 3040, .5, true);
 
 	// $('.section.intro .background').parallax("50%", 230, .1, true);			// course pages - NO LONGER WANTED - KIF
-	$('.campus .section.coursefinder').parallax("50%", 1000, .5, true);		// campus pages
+//	$('.campus .section.coursefinder').parallax("50%", 1000, .5, true);		// campus pages
 }
 
 function handheldNav() {

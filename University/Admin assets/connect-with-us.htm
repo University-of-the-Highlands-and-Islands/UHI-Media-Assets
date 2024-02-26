@@ -1,0 +1,218 @@
+<div>What would you like to talk with us about?</div>
+
+<style>
+  form {margin-bottom: 1rem}
+  th:first-child {width: 25%}
+  tr.hiddenRow {display: none}
+
+.main form input[type="text"] {
+  width: 99%;
+}
+
+.main form input[type="text"]::-webkit-input-placeholder {
+  color: var(--uhi-grey2);
+  opacity: 1;
+}
+
+.main form input[type="text"]::-moz-placeholder {
+  color: var(--uhi-grey2);
+  opacity: 1;
+}
+
+.main form input[type="text"]:-ms-input-placeholder {
+  color: var(--uhi-grey2);
+  opacity: 1;
+}
+
+.main form input[type="text"]::-ms-input-placeholder {
+  color: var(--uhi-grey2);
+  opacity: 1;
+}
+
+.main form input[type="text"]::placeholder {
+  color: var(--uhi-grey2);
+  opacity: 1;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.wrapper div {
+  background-color: var(--uhi-black);
+  color: var(--uhi-white);
+  padding: 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  min-width: 250px;
+  -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+}
+.wrapper div:hover {
+  background-color: var(--uhi-blue);
+  -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+
+#modalAlert {
+  background-color: var(--uhi-blue);
+  color: var(--uhi-white);
+}
+
+#modalAlert a {
+  color: var(--uhi-black);
+}
+
+.box {cursor:pointer;}
+
+button {
+  border: none;
+}
+
+@media (max-width: 1023px) {
+.main form input[type="text"] {
+  width: 97%;
+}
+}
+
+@media (max-width: 376px) {
+.main form input[type="text"] {
+  width: 95%;
+}
+.wrapper div {
+  min-width: 210px;
+}
+}
+</style>
+
+<div class="content-type-modifier--typography">
+  
+<form>
+        <input id="keyword" type="text" name="keyword" placeholder="Studying, research, business opportunities, STEM…
+" autocomplete="off" title="connection search keyword field">
+       <button type="submit" id="filter" class="btn btn-primary pull-right js-submit UHI--button-link--main">Filter</button>
+       <button type="submit" id="reset" class="btn btn-primary pull-right js-submit UHI--button-link--main">See A-Z list</button>
+</form>
+
+<div id="modalAlert" class="modal"></div>
+
+<div id="wrapper" class="wrapper">
+</div>
+<div id="connectBody">
+</div>
+
+
+
+<div id="test"></div>
+<script>
+
+function isEmpty(val){
+    return (val === undefined || val == null || val.length <= 0) ? true : false;
+}
+
+function showModal(message) {
+      event.preventDefault();
+      $('head').append('<script src="<t4 type="media" formatter="path/*" id="962047" />" type="text/css" /> <!-- jquery.modal.min.js -->');
+      $('head').append('<link rel="stylesheet" href="<t4 type="media" formatter="path/*" id="962048" />" type="text/css" /> <!-- jquery.modal.min.css -->');
+         var cAlert = '<div class="">';
+          cAlert += message;
+         cAlert +='</div>';
+   
+         document.getElementById("modalAlert").innerHTML = cAlert ;
+       $('#modalAlert').modal('show');
+       $("#modalAlert").modal({
+  //        escapeClose: false,
+  //        clickClose: false,
+  //        showClose: false
+       });
+}
+
+
+function createBox(obj){
+        var cdesc =  obj.desc == "" ? obj.name : obj.desc;
+    document.getElementById("wrapper").innerHTML +=  "<div tabindex='0' class='box' title='" + cdesc + "' data-id='" + obj.name + "'><h2>" + obj.name + "</h2></div>";
+}
+
+
+var connections = [
+  <t4 type="navigation" name="Connect with us data" id="537" />
+  ];
+var cNames = [];
+var cKeywords = [];
+$.each(connections, function(i, obj) {
+    createBox(obj);
+    cNames.push({value: obj.name});
+var aKeywords = obj.keywords.split(',');
+
+$.each( aKeywords, function( i, val ) {
+if(val !="") { cKeywords.push({value: val}); }
+ });
+
+});
+
+$( "#keyword" ).autocomplete({
+               minLength: 0,
+               source: cKeywords,
+               focus: function( event, ui ) {
+                  $( "#keyword" ).val( ui.item.value);
+                     return false;
+               },
+})
+
+$(function () {
+   $('#filter').click(function () {
+   event.preventDefault();
+    var filterVal= [[$('#keyword').val(),1]];
+    var keyword= $('#keyword').val().toLowerCase();
+    document.getElementById("wrapper").innerHTML = "";
+    document.getElementById("connectBody").innerHTML = "";
+  $.each(connections, function(i, obj) {
+       if(obj.keywords.toLowerCase().includes(keyword) || obj.fixed == "Yes") {
+          createBox(obj);
+        }
+    });
+ });
+
+   $('#reset').click(function () {
+   event.preventDefault();
+    document.getElementById("wrapper").innerHTML = "";
+  $.each(connections, function(i, obj) {
+       createBox(obj);
+    });
+ });
+
+   $('#wrapper').on( "click", ".box", function() {
+       event.preventDefault();
+       var title = $(this).attr("data-id");
+       var connBody = connections.find(({ name }) => name === title);
+      var desc =  connBody.desc == "" ? "" : " : " + connBody.desc;
+    showModal("<h3>" + connBody.name + desc + "</h3>" +  connBody.body);
+    });
+
+   $("#wrapper div").keypress(function (event) {
+    if (event.which == 13 || event.which == 32) {
+        event.preventDefault();
+        var title = $(this).attr("data-id");
+        alert(title);
+        var connBody = connections.find(({ name }) => name === title);
+        var desc =  connBody.desc == "" ? "" : " : " + connBody.desc;
+        showModal("<h3>" + connBody.name + desc + "</h3>" +  connBody.body);
+    }
+});
+
+
+
+
+
+});
+
+</script>

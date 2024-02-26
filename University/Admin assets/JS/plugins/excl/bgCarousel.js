@@ -7,6 +7,8 @@
 //** Modified Jan 23th, 12'- Fixed bug with auto rotate bug in "manual" mode
 //** Modified Feb 21st, 12'- Fixed bug with carousel not always initializing in IE8 and less
 
+//** PAW Aug 22 : Hacked direction buttons to be a pause button, added .keypress for button accesibility
+
 function bgCarousel(options){
     var $=jQuery
     this.setting={displaymode:{type:'auto', pause:2000, stoponclick:false, cycles:2, pauseonmouseover:true}, activeslideclass:'selectedslide', orientation:'h', persist:true, slideduration:500} //default settings
@@ -103,7 +105,7 @@ bgCarousel.prototype={
         setting.dimensions=[this.$wrapperdiv.width(), this.$wrapperdiv.height()]
         this.$wrapperdiv.css({position:'relative', visibility:'visible', overflow:'hidden', backgroundImage:'none', width:setting.dimensions[0], height:setting.dimensions[1]}) //main DIV
         if (this.$wrapperdiv.length==0){ //if no wrapper DIV found
-            alert("Error: DIV with ID \""+setting.wrapperid+"\" not found on page.")
+         //   alert("Error: DIV with ID \""+setting.wrapperid+"\" not found on page.")
             return
         }
         this.$wrapperdiv.html(slidesHTML)
@@ -114,22 +116,34 @@ bgCarousel.prototype={
             .stop().animate({opacity:1})
             .find('div.desc').slideDown()
         var orientation=setting.orientation
-         var controlpaths=(orientation=="h")? setting.navbuttons.slice(0, 2) : setting.navbuttons.slice(2)
-         var $controls =  $('')
+        var controlpaths=(orientation=="h")? setting.navbuttons.slice(0, 2) : setting.navbuttons.slice(2)
+        // var $controls =  $('')
+         var $controls =  $('<img class="navbutton" title="Play-pause slideshow" alt="Play-pause slideshow" tabindex="0" src="'+controlpaths[1]+'" data-dir="forth" style="position:absolute; z-index:5; cursor:pointer; ' + (orientation=='v'? 'bottom:8px; left:46%' : 'top:46%; right:8px;') + '" />'
+         //   + '<img class="navbutton" src="'+controlpaths[0]+'" data-dir="back" style="position:absolute;z-index:5; cursor:pointer; ' + (orientation=='v'? 'top:8px; left:45%' : 'top:45%; left:8px;') + '" />'
+         )
+         .css({opacity:100})
         .click(function(){
             var keyword = this.getAttribute('data-dir')
-            setting.curslide = (keyword == "right")? (setting.curslide == setting.content.length-1? 0 : setting.curslide + 1)
-                : (setting.curslide == 0? setting.content.length-1 : setting.curslide - 1)
-            slideshow.navigate(keyword)
+            setting.curslide = (keyword == "forth")? (slideshow.ismouseover=true,this.setAttribute('data-dir','unforth'))
+                : (slideshow.ismouseover=false,this.setAttribute('data-dir','forth'))
+          //  slideshow.navigate(keyword)
         })
+        .keypress(function (event) {
+            if (event.which == 13 || event.which == 32) {
+                 var keyword = this.getAttribute('data-dir')
+                 setting.curslide = (keyword == "forth")? (slideshow.ismouseover=true,this.setAttribute('data-dir','unforth')) 
+                     : (slideshow.ismouseover=false,this.setAttribute('data-dir','forth'))
+            }
+        })
+
         $controls.appendTo(this.$wrapperdiv)
         if (setting.displaymode.type=="auto"){ //auto slide mode?
             setting.displaymode.pause+=setting.slideduration
             this.maxsteps=setting.displaymode.cycles * this.$imageslides.length
-            if (setting.displaymode.pauseonmouseover){
-                this.$wrapperdiv.mouseenter(function(){slideshow.ismouseover=true})
-                this.$wrapperdiv.mouseleave(function(){slideshow.ismouseover=false})
-            }
+            //if (setting.displaymode.pauseonmouseover){
+             //   this.$wrapperdiv.mouseenter(function(){slideshow.ismouseover=true})
+             //   this.$wrapperdiv.mouseleave(function(){slideshow.ismouseover=false})
+            //}
             this.rotatetimer=setTimeout(function(){slideshow.rotate()}, setting.displaymode.pause)
         }
     }

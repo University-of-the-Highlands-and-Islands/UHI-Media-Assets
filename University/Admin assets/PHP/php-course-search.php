@@ -1722,7 +1722,7 @@ class RelatedTermsFacet extends Facet
                 $class = 'class="'.$this->labelClass.'"';
             }
 
-            $output .= '<label '.$class.'><input type="checkbox" value="'.$term.'" name="'.$this->elementToSearchBy.'"> '.$term.'</label>';
+            $output .= '<label '.$class.'><input type="checkbox" tabindex="0" value="'.$term.'" name="'.$this->elementToSearchBy.'"> '.$term.'</label>';
             $this->i++;
         }
         return $output;
@@ -1812,9 +1812,9 @@ class ListFacet extends Facet
             $output .= '<li><label '.$class.'>'.$item;
 
             if ($this->checkCurrentQuery($item)) {
-                $output .= '<input type="checkbox" value="'.$item.'" name="'.$this->element.'" checked>';
+                $output .= '<input type="checkbox" tabindex="0" value="'.$item.'" name="'.$this->element.'" checked>';
             } else {
-                $output .= '<input type="checkbox" value="'.$item.'" name="'.$this->element.'">';
+                $output .= '<input type="checkbox" tabindex="0" value="'.$item.'" name="'.$this->element.'">';
             }
 
             $output .= '</label></li>';
