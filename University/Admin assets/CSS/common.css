@@ -607,7 +607,7 @@ body:after,
     font-size: 14px;
     position: fixed;
     bottom: 0;
-    z-index: 99;
+    z-index: 9999;
     background-color: var(--uhi-black);
     color: var(--uhi-white);
     display: block;
@@ -631,50 +631,29 @@ body:after,
 /*  bottom of page campaign banner */
 
 .message--campaign-banner {
-  position:fixed; 
-  bottom:0; 
-  left:0; 
-  width:100%; 
-  background:#fdfdfd url("<t4 type= "media" formatter= "image/path" id= "372366" />") repeat-x left top; 
-  z-index:999; 
-  border:1px solid var(--uhi-black);
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  z-index:999;
+  color: var(--uhi-white);
+  background-color: var(--uhi-black);
 }
 
-.message--campaign-banner img.big {
-  width:100%; 
-  max-width:1300px; 
-  display:none; 
-  margin:auto;
-}
-.message--campaign-banner img.small {
-  width:100%; 
-  max-width:360px;
-}
-.message--campaign-banner .close {
-  position:absolute; 
-  top:0; 
-  right:0;
-  font-size:12px; 
-  font-weight:bold; 
-  padding:2px; 
-  margin:2px; 
-  border:1px solid var(--uhi-black); 
-  width:15px; 
-  z-index:50;
+.message--campaign-banner .campaign-content {
+  margin: 0px 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-@media only screen and (min-width: 768px) {
-  .message--campaign-banner img.big {
-    display:inline-block;
-  }
-  .message--campaign-banner img.small {
-    display:none;
-  }
-  .message--campaign-banner .close {
-    font-size:20px; 
-    font-weight:bold; 
-    width:25px;
-  }
+.message--campaign-banner a {
+  color: var(--uhi-yellow);
+  font-weight: bold;
+}
+
+a.campaign-banner-close {
+  font-size: 24px;
 }
 
 /* section clearfix */

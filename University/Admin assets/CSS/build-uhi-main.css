@@ -567,6 +567,8 @@ section coursedetails
     margin: 0px;
     padding-bottom: 0px;
     border-bottom: 0.5rem solid var(--uhi-blue);
+    color-scheme: only light;
+    background-color: transparent;
   }
 }
 
@@ -2748,7 +2750,7 @@ Content type usage report: Highlight Content Box
 ****************************************/
 
 .content-type--one-web-highlight-content-box {
-  background-color: #e7e7e7;
+  background-color: #f7f7f7;
   box-sizing: border-box;
   margin: .5rem 0;
   padding: 1rem;
@@ -2764,7 +2766,9 @@ Content type usage report: Highlight Content Box
 }
 
 .content-type--one-web-highlight-content-box img {
-  width: 200px;
+    max-width: 100%;
+    transition: .5s;
+    width: auto;
 }
 
 .content-type--one-web-highlight-content-box h2 {
@@ -2789,7 +2793,7 @@ Content type usage report: Highlight Content Box
 
   /* double width (eg video) column */
   .content-type--one-web-highlight-content-box--x2 {
-    width: 420px;
+    width: 395px;
   }
 
   .content-type--one-web-highlight-content-box:hover {
@@ -2798,11 +2802,6 @@ Content type usage report: Highlight Content Box
 
   .content-type--one-web-highlight-content-box a:hover {
     cursor: pointer;
-  }
-
-  .content-type--one-web-highlight-content-box img {
-    max-width: 100%;
-    transition: .5s;
   }
 
   .content-type--one-web-highlight-content-box img:hover {
@@ -2890,7 +2889,7 @@ Content type usage report: News
   width: auto;
   display: table;
   background: var(--uhi-black);
-  padding: 1%;
+  padding: 13px;
   border-radius: 3px;
 }
 
@@ -2913,8 +2912,8 @@ Content type usage report: News
   display: table-caption;
   caption-side: bottom;
   background: var(--uhi-black);
-  padding: 0% 1% 1% 1%;
-  border-radius: 0px 1px 1px 1px;
+  padding: 0 13px 5px 13px;
+  border-radius: 0px 0px 3px 3px;
   margin-top: -3px;
   color: var(--uhi-white);
 }
@@ -3021,6 +3020,10 @@ Content type usage report: Right Content
   padding: 0 2rem;
 }
 
+#portal-column-two .content-type--one-web-right-content ul li {
+  padding-bottom: 8px;
+}
+
 /****************************************
 One-Web Text Banner
 
@@ -3032,6 +3035,7 @@ One-Web Text Banner
   flex-direction: column;
   margin: 0 0 2rem 0;
   padding: 2rem 1rem;
+  color-scheme: only light;
 }
 
 .content-type--one-web-text-banner__col:first-child {
@@ -3129,6 +3133,9 @@ One-Web Highlight Content Box
 .content-type--one-web-video-embed,
 .videowrapper {
   margin: 1rem 0 3rem;
+}
+
+.content-vid-wrapper {
   max-width: 640px;
 }
 
@@ -4037,7 +4044,6 @@ Content type usage report: Landing Image Boxes (and Landing Page Buttons)
   padding-right: 5%;
   position: absolute;
   text-shadow: 0 0 8px #000, 0 0 3px #000;
-  text-transform: lowercase;
   top: 5%;
   z-index: 2;
   color: #fff;
@@ -4384,6 +4390,13 @@ each colour contains duplicate styles, for preview in TinyMCE
   text-transform: uppercase;
 }
 
+.UHI--button-link--yellow {
+  background-color: var(--uhi-yellow);
+  color: #f7f7f7; /* only if no link */
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+}
+
 /* buttons additional */
 
 #content-core .UHI--button-link--black a,
@@ -4431,9 +4444,24 @@ main .text-image-black.flexwrap .speal-right .UHI--button-link--reverse a:visite
   color: var(--uhi-blue);
 }
 
+#content-core .UHI--button-link--yellow a,
+#content-core .UHI--button-link--yellow a:visited,
+#content-core a.UHI--button-link--yellow,
+#portal-column-two .UHI--button-link--yellow a,
+#portal-column-two .UHI--button-link--yellow a:visited,
+#portal-column-two a.UHI--button-link--yellow,
+main .UHI--button-link--yellow a,
+main .UHI--button-link--yellow a:visited,
+main a.UHI--button-link--yellow,
+main .text-image-black.flexwrap .speal-right .UHI--button-link--yellow a,
+main .text-image-black.flexwrap .speal-right .UHI--button-link--yellow a:visited {
+  color: var(--uhi-black);
+}
+
 .UHI--button-link--black,
 .UHI--button-link--main,
-.UHI--button-link--reverse {
+.UHI--button-link--reverse,
+.UHI--button-link--yellow {
   cursor: pointer;
   display: inline-block;
   font-size: 28px;
@@ -4460,7 +4488,7 @@ main .text-image-black.flexwrap .speal-right .UHI--button-link--reverse a:visite
 .UHI--paragraph-highlight {
   background-color: #f7f7f7;
   border-radius: 3px;
-  display: inline-block;
+  display: table;
   margin: .5rem 0;
   padding: .5rem;
 }
@@ -4581,6 +4609,10 @@ https://www.uhi.ac.uk/en/courses/
 
 #courselist a:hover {
   background-color: #eaeaea;
+}
+
+#courselist .colour-bar a:hover {
+  background-color: transparent;
 }
 
 /*

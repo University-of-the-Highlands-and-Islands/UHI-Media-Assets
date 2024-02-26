@@ -5,6 +5,8 @@
 * Browsers: last 4 version
 */
 
+/* Imports Sosa Web font for symbols */
+
 @font-face {
   font-family: "sosa-web";
   src: url(<t4 type="media" id="52" formatter="path/*" />) format("embedded-opentype"), url(<t4 type="media" id="55" formatter="path/*" />) format("woff"), url(<t4 type="media" id="54" formatter="path/*" />) format("truetype"), url(<t4 type="media" id="53" formatter="path/*" />) format("svg");
@@ -12,6 +14,8 @@
   font-style: normal;
   font-weight: bold;
 }
+
+/* Setting base font family and size and brand colour custom parameters */
 
 html {
     font-family: "aktiv-grotesk", Arial, sans-serif;
@@ -28,6 +32,8 @@ html {
     --uhi-yellow: #FFBB50;
 }
 
+/* Anchor/link text underline on hover */
+
 a:hover,
 .footer a:hover,
 .colour-bar a:hover,
@@ -35,14 +41,20 @@ button:hover {
     text-decoration: underline;
 }
 
+/* Excluding Landing Banner link from hover state */
+
 .hero-banner a:hover {
     text-decoration: none;
 }
+
+/* Removes scroll bar and locks viewport at current place when using the searchbar in the top nav */
 
 .scroll-lock {
     height: 100%;
     overflow: hidden;
 }
+
+/* Top grey bar styling */
 
 .header .tools {
     list-style: none;
@@ -80,6 +92,8 @@ button:hover {
 .burger-language .lang-switcher .burger-language-options a:hover {
   background: var(--uhi-black);
 }
+
+/* Top level nav styling */
 
 .header .nav.primary,
 .nav.sticky {
@@ -121,11 +135,14 @@ button:hover {
 
 .logo a img {
     height: 50px;
+    color-scheme: only light;
 }
 
 #header-name {
     text-indent: -9999px;
 }
+
+/* Top level nav searchbar styling */
 
 .header .nav.primary ul .glass-button,
 .nav.sticky ul .glass-button {
@@ -199,7 +216,8 @@ form .search-input .tt-menu .tt-cursor,
 .colour-bar .flexwrap .search-bar form ul .ui-menu-item:hover,
 .ui-menu .ui-menu-item:hover,
 .twitter-typeahead .tt-menu .tt-suggestion:hover,
-.twitter-typeahead .tt-menu .tt-cursor {
+.twitter-typeahead .tt-menu .tt-cursor,
+.search-bar form ul .ui-state-active {
     background-color: var(--uhi-blue);
     color: var(--uhi-white);
 }
@@ -215,6 +233,8 @@ form .search-input .tt-menu .tt-cursor,
     top: 2px;
 }
 
+/* Top level nav blue button styling */
+
 .header .nav.primary ul li.apply,
 .nav.sticky ul li.apply {
     background-color: var(--uhi-blue);
@@ -226,6 +246,8 @@ form .search-input .tt-menu .tt-cursor,
 .nav.sticky ul li.apply a {
     font-weight: bold;
 }
+
+/* Top level nav styling sticky edition */
 
 .nav.sticky .full-glass {
     padding-top: 3px;
@@ -261,6 +283,8 @@ form .search-input .tt-menu .tt-cursor,
 .nav.sticky .logo a img {
     height: 30px;
 }
+
+/* Top level nav burger menu icon styling, for small screens */
 
 .header .nav.primary .burger .press .bar1,
 .header .nav.primary .burger .press .bar2,
@@ -312,6 +336,8 @@ form .search-input .tt-menu .tt-cursor,
             transform: rotate(45deg) translate(-6px, -6px);
 }
 
+/* Landing Top message styling */
+
 .header .topmessage {
     padding: 0px 5%;
     -webkit-box-pack: justify;
@@ -339,6 +365,8 @@ form .search-input .tt-menu .tt-cursor,
 .header .topmessage.turquoise {
   background-color: var(--uhi-turquoise);
 }
+
+/* Top level nav burger menu styling, for small screens */
 
 .burger-menu {
     display: none;
@@ -395,6 +423,8 @@ form .search-input .tt-menu .tt-cursor,
     font-size: 32px;
 }
 
+/* Darkens page content when using the top level nav searchbar */
+
 .grey-out {
     display: none;
     background-color: rgba(0, 0, 0, 0.5);
@@ -405,6 +435,8 @@ form .search-input .tt-menu .tt-cursor,
     text-indent: -9999px;
     border: none;
 }
+
+/* Top level nav searchbar show/hide classes */
 
 .header .nav.primary .hide,
 .nav.sticky .hide {
@@ -417,6 +449,8 @@ form .search-input .tt-menu .tt-cursor,
     display: -ms-inline-flexbox;
     display: inline-flex;
 }
+
+/* Grey bar and burger menu language switcher */
 
 .language,
 .burger-language {
@@ -439,6 +473,7 @@ form .search-input .tt-menu .tt-cursor,
     padding: 5px;
     text-align: center;
     background-color: var(--uhi-grey2);
+    width: 100%;
   }
   
   /* Targets Microsoft Edge v13 & v14 */
@@ -507,6 +542,7 @@ form .search-input .tt-menu .tt-cursor,
     transform: translateY(100px);
     transition: all 0.5s ease;
     border-bottom: 5px solid var(--uhi-blue);
+    color-scheme: only light;
   }
 
   #content-core a.showScroll,
@@ -514,6 +550,15 @@ form .search-input .tt-menu .tt-cursor,
     opacity: 1;
     transform: translateY(0);
   }
+
+/*
+Main body base styles
+
+-setting base font spacing
+-setting h1 font family and size
+-removing any underline from anchors/links
+-setting all anchors/links to be bold
+*/
 
 main {
     line-height: 1.7;
@@ -530,6 +575,22 @@ aside a {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Blocking landing page content from normal pages */
+
+#portal-columns main .colour-bar,
+#portal-columns main .more-boxes-header,
+#portal-columns main .more-boxes.flexwrap,
+#portal-columns main .plus-image,
+#portal-columns main .text-image-right.flexwrap,
+#portal-columns main .head-text-image-right.flexwrap,
+#portal-columns main .text-image-black.flexwrap,
+#portal-columns main .blocks.flexwrap,
+#portal-columns main .quote-block {
+    display: none;
+}
+
+/* Landing Banner sytling */
 
 main .hero-banner {
     width: 100%;
@@ -548,43 +609,36 @@ main .hero-banner {
     background-position: center top;
 }
 
+main .hero-banner.short {
+    height: 500px;
+}
+
 main .hero-banner h1 {
     display: contents;
 }
 
-main .hero-banner h1:lang(gd) {
-  display: block;
-  width: 600px;
-}
-
 main .hero-banner h1 a {
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
     color: var(--uhi-white);
     font-family: "aktiv-grotesk", Arial, sans-serif;
     font-size: 90px;
     line-height: 90px;
     text-shadow: 2px 3px var(--uhi-grey2);
+    padding: 0px 5%;
+    text-align: center;
 }
 
-main .hero-banner h1 a:lang(en) {
+main .hero-banner h1 a.word-line {
+      -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  text-align: initial;
   word-spacing: 9999px;
-}
-
-main .hero-banner h1 a:lang(hi) {
-  flex: auto;
-  padding: 0px 5%;
-  text-align: center;
 }
 
 @media (max-width: 650px) {
   main .hero-banner h1 a:lang(gd) {
     font-size: 66px;
     line-height: 66px;
-  }
-  
-  main .hero-banner h1:lang(gd) {
     padding-left: 5%;
     width: 460px;
   }
@@ -594,9 +648,6 @@ main .hero-banner h1 a:lang(hi) {
   main .hero-banner h1 a:lang(gd) {
     font-size: 40px;
     line-height: 40px;
-  }
-  
-  main .hero-banner h1:lang(gd) {
     line-height: 40px;
     width: 280px;
   }
@@ -606,6 +657,8 @@ main .hero-banner h1 a .diff {
     color: var(--uhi-white);
     text-decoration: underline;
 }
+
+/* Landing colour bar styling */
 
 main .colour-bar {
     padding: 18px 5%;
@@ -642,6 +695,7 @@ main .colour-bar .flexwrap {
 main .colour-bar .flexwrap .search-bar form .keyword {
     width: 80%;
     padding-right: 30px;
+    position: relative;
 }
 
 main .colour-bar .flexwrap .search-bar form input,
@@ -663,6 +717,7 @@ main .colour-bar .flexwrap form input[type="submit"] {
     border: none;
     cursor: pointer;
     margin-left: -40px;
+    position: relative;
 }
 
 main .colour-bar .flexwrap form input[id="auto"] {
@@ -694,12 +749,19 @@ main .colour-bar .flexwrap .search-bar {
 
 main .colour-bar .flexwrap .prospectus-down img {
   vertical-align: inherit;
+  color-scheme: only light;
 }
 
 main .colour-bar .flexwrap .search-bar form ul .ui-menu-item {
   color: var(--uhi-black);
   cursor: pointer;
 }
+
+/*
+Landing Head Text Right Image
+Landing Text Image Right
+Landing Text Image Left
+*/
 
 main .text-image-right.flexwrap,
 main .head-text-image-right.flexwrap {
@@ -765,7 +827,7 @@ main .head-text-image-right.flexwrap .feed {
   margin: 0px 0px 0px 80px;
 }
 
-/* adjuster classes for changing bg colours on text-image content types */
+/* adjuster classes for changing bg colours on Landing text image left and right content types */
 
 .bg-dark {
     background-color: var(--uhi-black);
@@ -794,6 +856,8 @@ main .text-image-black.flexwrap.bg-light .UHI--button-link--reverse a {
   color: var(--uhi-blue);
 }
 
+/* Landing Quote Block styling */
+
 main .quote-block {
     background-color: var(--uhi-black);
     padding: 50px 5%;
@@ -811,12 +875,29 @@ main .quote-block .cite {
     color: var(--uhi-yellow);
 }
 
+/*
+Landing More Boxes
+Landing RSS
+*/
+
+main .more-boxes-header {
+  margin: 0px 5%;
+}
+
+main #content-core .more-boxes-header {
+  margin: 0;
+}
+
 main .more-boxes.flexwrap {
     margin: 50px 5%;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     gap: 20px;
+}
+
+main #content-core .more-boxes.flexwrap {
+  margin: 50px 0;
 }
 
 main .more-boxes.flexwrap div,
@@ -837,6 +918,7 @@ main .news-boxes .flexwrap div div {
     background-repeat: no-repeat;
     background-size: cover;
     text-indent: -9999px;
+    background-position: center top;
 }
 
 main .blocks.flexwrap {
@@ -851,6 +933,14 @@ main .blocks.flexwrap {
 main .blocks.flexwrap h1 {
     color: var(--uhi-white);
     margin-left: 10px;
+}
+
+main .blocks.flexwrap .courses-link {
+  margin: 0 0 0 10px;
+}
+
+main .blocks.flexwrap .courses-link a {
+  color: var(--uhi-yellow);
 }
 
 main .blocks.flexwrap .flexwrap {
@@ -878,6 +968,10 @@ main .blocks.flexwrap .flexwrap a {
     color: var(--uhi-white);
 }
 
+main .blocks.flexwrap.courses-landing .flexwrap a {
+    height: 160px;
+}
+
 main .blocks.flexwrap .flexwrap a:hover {
     -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
@@ -892,6 +986,10 @@ main .news-boxes {
     margin: 50px 5%;
 }
 
+main #content-core .news-boxes {
+  margin: 0 0 50px 0;
+}
+
 main .news-boxes .flexwrap {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
@@ -899,6 +997,14 @@ main .news-boxes .flexwrap {
     padding-top: 20px;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+main .news-boxes.uhi-media-page .flexwrap {
+    padding-top: 0;
+}
+
+main .news-boxes.uhi-media-page h1 {
+    margin: 0;
 }
 
 main .news-boxes h1,
@@ -909,6 +1015,10 @@ main .news-boxes .flexwrap div a h2 {
 
 main .news-boxes .flexwrap div a {
     color: var(--uhi-black);
+}
+
+main .news-boxes .flexwrap div.box-text a {
+    color: var(--uhi-blue);
 }
 
 main .news-boxes .flexwrap div p a {
@@ -932,6 +1042,8 @@ main .news-boxes .flexwrap .box3 .box3-pic {
     background-size: cover;
 }
 
+/* Landing Big Image Styling */
+
 main .plus-image {
     background-color: var(--uhi-black);
     padding: 50px 5%;
@@ -940,6 +1052,36 @@ main .plus-image {
 main .plus-image img {
     width: 100%;
 }
+
+/* Landing Stats Bar Styling */
+
+main .landing-stat-bar {
+  margin: 0 5%;
+  display: flex;
+  gap: 1%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+main .landing-stat-bar > div {
+  display: flex;
+  gap: 10px;
+  margin: 1%;
+  align-items: center;
+}
+
+main .landing-stat-bar > div img {
+  width: 80px;
+  height: fit-content;
+  align-self: center;
+}
+
+main .landing-stat-bar > div div {
+  max-width: 180px;
+  line-height: 1.4;
+}
+
+/* Footer styling */
 
 .footer {
     background-color: var(--uhi-black);
@@ -974,11 +1116,15 @@ main .plus-image img {
     line-height: 20px;
 }
 
+/* Flexbox container class */
+
 .flexwrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
+
+/* Footer styling cont. */
 
 .flexwrap.links {
     padding-top: 60px;
@@ -1018,6 +1164,7 @@ main .plus-image img {
     text-indent: -9999px;
     height: 30px;
     width: 30px;
+    color-scheme: only light;
 }
 
 .footer .flexwrap.socialdesk .social li,
@@ -1081,6 +1228,19 @@ main .plus-image img {
     padding-bottom: 10px;
 }
 
+.footer .flexwrap.links .site .footer-logo img {
+  width: 80px;
+  color-scheme: only light;
+}
+
+/*
+Adjusting for smaller screens 1
+
+-Top level nav
+-Landing Colour Bar
+-Searchbars
+*/
+
 @media (max-width: 1907px) {
     
     .header .nav.primary ul,
@@ -1109,6 +1269,14 @@ main .plus-image img {
         right: -645px;
     }
 }
+
+/*
+Adjusting for smaller screens 2
+
+-Top Grey bar
+-Top level nav
+-Searchbars
+*/
 
 @media (max-width: 1771px) {
   
@@ -1152,12 +1320,34 @@ main .plus-image img {
     }
 }
 
+/*
+Adjusting for smaller screens 3
+
+-Top level nav logo adjustment
+*/
+
 @media (max-width: 1354px) {
   .logo a img,
   .nav.sticky .logo a img {
         height: 20px;
     }
 }
+
+/*
+Adjusting for smaller screens 4
+
+-Top level nav
+-Footer
+-Flexbox
+-Landing Colour Bar
+-Landing Head Text Right Image
+-Landing Text Image Left
+-Landing Text Image Right
+-Landing Image Blocks
+-Landing RSS
+-Landing Top Message
+-Landing Big Image
+*/
 
 @media (max-width: 1168px) {
     
@@ -1226,7 +1416,8 @@ main .plus-image img {
     
     main .colour-bar .flexwrap .extra-links,
     main .colour-bar .flexwrap .prospectus-down {
-        padding-top: 10px
+        padding-top: 10px;
+        padding-right: 53px;
     }
     
     main .colour-bar .flexwrap .search-bar {
@@ -1290,6 +1481,10 @@ main .plus-image img {
     main .blocks.flexwrap .flexwrap a {
         height: 300px;
     }
+  
+    main .blocks.flexwrap.courses-landing .flexwrap a {
+        height: 160px;
+    }
     
     main .plus-image {
         padding: 50px 0px;
@@ -1308,6 +1503,9 @@ main .plus-image img {
         padding-right: 0px;
     }
     
+  /*
+    Horizontal scrolling for Landing RSS feeds - LEGACY
+  
     main .more-boxes.flexwrap {
         flex-direction: row;
     }
@@ -1324,7 +1522,7 @@ main .plus-image img {
         margin: 50px 0px;
     }
     
-    main .news-boxes h1, main .news-boxes a {
+    main .news-boxes h1, main .news-boxes a, main .news-boxes.uhi-media-page h1 {
         margin: 0px 5%
     }
     
@@ -1335,31 +1533,60 @@ main .plus-image img {
     main .news-boxes .flexwrap div a h2 {
       margin: 0px;
     }
+  */
 }
 
+/*
+Adjusting for smaller screens 5
+
+-Landing More Boxes
+*/
+
 @media (max-width: 870px) {
+    main .more-boxes.flexwrap {
+        margin: 50px 0px;
+        padding: 0px 5%;
+    }
+  
+  /*
+    Horizontal Scrolling for Landing More Boxes - LEGACY  
+  
     main .more-boxes.flexwrap {
         flex-direction: row;
         overflow-x: auto;
         justify-content: flex-start;
-        padding-left: 5%;
-    }
-  
-    main .more-boxes.flexwrap {
-        margin: 50px 0px;
     }
     
     main .more-boxes.flexwrap div {
         min-width: 80%;
     }
+  */
 }
+
+/*
+Adjusting for smaller screens 6
+
+-Landing Banner
+-Landing RSS
+*/
 
 @media (max-width: 510px) {
   main .hero-banner h1 a {
         font-size: 66px;
         line-height: 66px;
     }
+  
+  main .news-boxes .flexwrap div {
+    min-width: auto;
+  }
 }
+
+/*
+Adjusting for smaller screens 7
+
+-Landing Banner
+-Top Level Nav logo
+*/
 
 @media (max-width: 400px) {
     .logo a img,
@@ -1377,6 +1604,12 @@ main .plus-image img {
     }  
 }
 
+/*
+Adjusting for smaller screens 8
+
+-Top Level Nav logo
+*/
+
 @media (max-width: 310px) {
     .logo a img,
     .nav.sticky .logo a img {
@@ -1384,23 +1617,76 @@ main .plus-image img {
     }
 }
 
+/*
+Adjusting for smaller screens 9
+
+-Burger menu height adjustments
+*/
+
 @media (max-height: 700px) {
   .section.intro {
     display: none;
   }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 550px) {
+    .burger-menu .tool-social {
+        padding: 0px;
+    }
+  
+    .burger-menu .tool-social .tool-list {
+        margin: 9px 0px 0px 0px;
+    }
+  
+    .burger-menu .tool-social .tool-list li {
+        padding: 3px 0px 0px 0px;
+    }
+  
+    .burger-menu .tool-social .tool-list li a {
+        font-size: 14px;
+    }
+  
+    .burger-menu .tool-social .social-list {
+        margin: 0px 0px 9px 0px
+    }
+}
+
+@media (max-height: 465px) {
     .burger-menu .tool-social {
         display: none;
     }
 }
 
-@media (max-height: 380px) {
+@media (max-height: 645px) {
     .burger-menu .lang-main .main-list li a,
     .burger-menu .lang-main .main-list li a, .burger-menu ul .burger-search a {
         font-size: 24px;
     }
+}
+
+@media (max-height: 580px) {
+    .burger-menu .lang-main .main-list li a,
+    .burger-menu .lang-main .main-list li a, .burger-menu ul .burger-search a {
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 350px) {
+    .burger-menu .lang-main .main-list li a,
+    .burger-menu .lang-main .main-list li a, .burger-menu ul .burger-search a {
+        font-size: 18px;
+    }
+  
+    .burger-menu .lang-main .main-list li,
+    .burger-menu ul .burger-search {
+        padding: 2px 0px;
+    }
+}
+
+/* One-Web General - Video Second Column */
+
+.content-type--one-web-general-video-second-column {
+  margin: 0 0 1rem 0;
 }
 
 /* OVERRIDE STYLES */
@@ -1409,24 +1695,26 @@ main .plus-image img {
   color: var(--uhi-grey2);
 }
 
+/* Setting list icons to plus motif */
+
 .content-type-modifier--typography ul,
 .section.coursedetails ul li,
 .content-type--one-web-media-object ul,
 main ul, .content-type--one-web-right-content {
-  list-style: url(<t4 type="media" id="824435" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="824435" formatter="path/*" />); /* Turquoise/Green colour */
 }
 
 .text-image-right.bg-dark ul,
 .text-image-black ul {
-  list-style: url(<t4 type="media" id="970916" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="970916" formatter="path/*" />); /* Yellow colour */
 }
 
 .text-image-black.bg-light ul {
-  list-style: url(<t4 type="media" id="824435" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="824435" formatter="path/*" />); /* Turquoise/Green colour */
 }
 
 .content-type--one-web-text-banner ul {
-  list-style: url(<t4 type="media" id="1010192" formatter="path/*" />);
+  list-style: url(<t4 type="media" id="1010192" formatter="path/*" />); /* Black colour */
 }
 
 .section.courseapply {
@@ -1460,10 +1748,6 @@ img {
   word-break: break-word;
 }
 
-.content-type--one-web-event a {
-  word-break: break-all;
-}
-
 /* Special CSS */
 
 .exit-site {
@@ -1491,4 +1775,56 @@ img {
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border: 0;
+}
+
+main .UHI--button-link--main a,
+#content-core .UHI--button-link--main a {
+  word-break: break-word;
+}
+
+div#libchat_bc0a7b85def26790e316a94c9391e9ee button.libchat_online {
+    font-size: 28px;
+    line-height: 1.1;
+    margin: 0 1rem 1rem 0;
+    background-color: var(--uhi-blue);
+    color: var(--uhi-white);
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+.landing-code-item {
+    margin: 50px 5%;
+}
+
+.content-anchor {
+    scroll-margin-top: 120px;
+}
+
+/* mailchimp embed */
+
+#mc_embed_signup {
+    background-color: var(--uhi-black);
+    color: var(--uhi-white);
+    padding: 5px 0px;
+}
+
+#mc_embed_signup form .mc-field-group {
+    padding-bottom: 10px;
+}
+
+#mc_embed_signup form .button {
+    background-color: var(--uhi-blue);
+    font-weight: bold;
+}
+
+#mc_embed_signup form .button:hover {
+    background-color: #203c66;
+}
+
+#mc_embed_signup form .mailer-pn {
+    color: var(--uhi-yellow);
+    font-style: italic;
+    font-size: 14px;
 }
