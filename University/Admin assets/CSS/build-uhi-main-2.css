@@ -1056,7 +1056,7 @@ main .plus-image img {
 /* Landing Stats Bar Styling */
 
 main .landing-stat-bar {
-  margin: 30px 5%;
+  margin: 0 5%;
   display: flex;
   gap: 1%;
   flex-wrap: wrap;
