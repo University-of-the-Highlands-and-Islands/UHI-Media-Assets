@@ -1071,13 +1071,14 @@ main .landing-stat-bar > div {
 }
 
 main .landing-stat-bar > div img {
-  width: 90px;
+  width: 80px;
   height: fit-content;
   align-self: center;
 }
 
 main .landing-stat-bar > div div {
   max-width: 180px;
+  line-height: 1.4;
 }
 
 /* Footer styling */
