@@ -1081,6 +1081,21 @@ main .landing-stat-bar > div div {
   line-height: 1.4;
 }
 
+/* Landing Slider/Carousel Styling */
+
+main .slick-wrapper {
+    margin: 0 5% 30px 5%;
+}
+
+main .slick-wrapper .slick-content {
+    padding: 50px 10px 10px 10px;
+}
+
+main .slick-wrapper .slick-content .text-image-right.flexwrap,
+main .slick-wrapper .slick-content .text-image-black.flexwrap {
+    padding: 0;
+}
+
 /* Footer styling */
 
 .footer {
@@ -1347,6 +1362,7 @@ Adjusting for smaller screens 4
 -Landing RSS
 -Landing Top Message
 -Landing Big Image
+-Landing Slider/Carousel
 */
 
 @media (max-width: 1168px) {
@@ -1534,12 +1550,26 @@ Adjusting for smaller screens 4
       margin: 0px;
     }
   */
+
+    main .slick-wrapper .slick-content {
+        padding: 10px;
+    }
+
+    main .slick-wrapper .slick-content .text-image-right.flexwrap .speal {
+        margin: 0;
+    }
+    
+    main .slick-wrapper .slick-content .text-image-black.flexwrap .speal-right {
+        padding: 0;
+    }
+  
 }
 
 /*
 Adjusting for smaller screens 5
 
 -Landing More Boxes
+-Landing Slider/Carousel
 */
 
 @media (max-width: 870px) {
@@ -1561,6 +1591,17 @@ Adjusting for smaller screens 5
         min-width: 80%;
     }
   */
+  
+    .slick-prev:before, .slick-next:before {
+        font-size: 35px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 35px;
+        height: 30px;
+    }
+  
 }
 
 /*
@@ -1568,6 +1609,7 @@ Adjusting for smaller screens 6
 
 -Landing Banner
 -Landing RSS
+-Landing Slider/Carousel
 */
 
 @media (max-width: 510px) {
@@ -1579,6 +1621,22 @@ Adjusting for smaller screens 6
   main .news-boxes .flexwrap div {
     min-width: auto;
   }
+  
+    main .slick-wrapper .slick-content {
+        margin: 5px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 30px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 30px;
+        height: 25px;
+    }
+
 }
 
 /*
@@ -1586,6 +1644,7 @@ Adjusting for smaller screens 7
 
 -Landing Banner
 -Top Level Nav logo
+-Landing Slider/Carousel
 */
 
 @media (max-width: 400px) {
@@ -1601,7 +1660,12 @@ Adjusting for smaller screens 7
     main .hero-banner h1 a {
         font-size: 45px;
         line-height: 45px;
-    }  
+    }
+  
+    main .slick-wrapper .slick-content {
+        margin: 8px;
+    }
+  
 }
 
 /*
