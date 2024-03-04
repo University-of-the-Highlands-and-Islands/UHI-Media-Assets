@@ -586,7 +586,8 @@ aside a {
 #portal-columns main .head-text-image-right.flexwrap,
 #portal-columns main .text-image-black.flexwrap,
 #portal-columns main .blocks.flexwrap,
-#portal-columns main .quote-block {
+#portal-columns main .quote-block,
+#portal-columns main .landing-stat-bar {
     display: none;
 }
 
