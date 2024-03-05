@@ -1249,6 +1249,17 @@ main .slick-wrapper .slick-content .text-image-black.flexwrap {
   color-scheme: only light;
 }
 
+/* content-type--one-web-event-listing table width adjuster */
+
+.content-type--one-web-event-listing table thead tr th.event-title {
+  width: 70%;
+}
+
+.content-type--one-web-event-listing table thead tr th.start-time,
+.content-type--one-web-event-listing table thead tr th.end-time {
+  width: 15%;
+}
+
 /*
 Adjusting for smaller screens 1
 
@@ -1571,6 +1582,7 @@ Adjusting for smaller screens 5
 
 -Landing More Boxes
 -Landing Slider/Carousel
+-content-type--one-web-event-listing table width adjuster
 */
 
 @media (max-width: 870px) {
@@ -1601,6 +1613,10 @@ Adjusting for smaller screens 5
     .slick-next {
         width: 35px;
         height: 30px;
+    }
+
+    .content-type--one-web-event-listing table thead tr th.event-title {
+      width: 25%;
     }
   
 }
