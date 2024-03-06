@@ -1097,6 +1097,14 @@ main .slick-wrapper .slick-content .text-image-black.flexwrap {
     padding: 0;
 }
 
+main .slick-wrapper .slick-content iframe {
+  display: none;
+}
+
+main .slick-wrapper .slick-content.slick-active iframe {
+  display: block;
+}
+
 /* Footer styling */
 
 .footer {
