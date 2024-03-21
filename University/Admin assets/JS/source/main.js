@@ -331,5 +331,48 @@ function lastModified(slastmodified,location){
 	}
 }
 
+function closeButton() {
+	document.getElementById("topmessage").style.display = "none";
+}
 
+function showGlass() {
+        document.getElementById("navList").classList.add("hide");
+        document.getElementById("fullGlass").classList.add("show-iflex");
+        document.body.classList.add("scroll-lock");
+        document.getElementById("greyOut").style.display = "block";
+        document.querySelector("#fullGlass #funnelbackQuery").focus();
+}
+    
+function hideGlass() {
+        document.getElementById("navList").classList.remove("hide");
+        document.getElementById("fullGlass").classList.remove("show-iflex");
+        document.body.classList.remove("scroll-lock");
+        document.getElementById("greyOut").style.display = "none";
+}
 
+function burgerBars(x) {
+        x.classList.toggle("change");
+        document.body.classList.toggle("scroll-lock");
+        document.getElementById("burgerMenu").classList.toggle("show");
+        document.getElementById("barsSearch").classList.toggle("hide");
+}
+
+function stickyNav() {
+	var navbar = document.querySelector(".sticker");
+	var nav = document.querySelector(".nav.primary");
+	var limit = navbar.offsetTop;
+	var topButton = document.getElementById("scrollUp");
+	if (window.pageYOffset > limit) {
+		navbar.classList.add("sticky");
+		nav.classList.add("sticky");
+		if (topButton !== null) {
+			topButton.classList.add("showScroll");
+		}
+	} else {
+		navbar.classList.remove("sticky");
+		nav.classList.remove("sticky");
+		if (topButton !== null) {
+			topButton.classList.remove("showScroll");
+		}
+	}
+}
