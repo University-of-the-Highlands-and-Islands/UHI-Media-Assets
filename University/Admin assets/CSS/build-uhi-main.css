@@ -4518,7 +4518,7 @@ https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/
 /* Offsetting anchor to account for sticky top header */
 
 a.utils--hidden {
-  margin-top: -80px;
+  margin-top: -150px;
 }
 
 /* float images when sufficient screen width, otherwise block */
