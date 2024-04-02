@@ -86,6 +86,7 @@ main content links
 }
 
 #content-core a:hover,
+#content-core a span:hover,
 #portal-column-two div a:hover,
 .courselist a:hover {
   text-decoration: underline;
