@@ -2588,6 +2588,7 @@ Content type usage report: Home Page Coloured Links bar
 
 .content-type--links-bar__element {
   transition: .3s;
+  margin: 0 1% 1% 0;
 }
 
 #content-core a.content-type--links-bar__element,
