@@ -4474,8 +4474,13 @@ main .text-image-black.flexwrap .speal-right .UHI--button-link--yellow a:visited
 p:has(span.UHI--button-link--black),
 p:has(span.UHI--button-link--main),
 p:has(span.UHI--button-link--reverse),
-p:has(span.UHI--button-link--yellow) {
+p:has(span.UHI--button-link--yellow),
+p:has(a span.UHI--button-link--black),
+p:has(a span.UHI--button-link--main),
+p:has(a span.UHI--button-link--reverse),
+p:has(a span.UHI--button-link--yellow) {
   display: inline-block;
+  margin: 0 1rem 1rem 0;
 }
 
 /* border on image */
