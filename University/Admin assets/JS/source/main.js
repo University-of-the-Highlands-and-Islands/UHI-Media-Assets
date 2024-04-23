@@ -1,3 +1,4 @@
+warningCookieRead(); 
 $(function() {
 	$(".section.intro .video, .section.tour .video, .content-type--one-web-video-embed, .content-type--landing-page-text__video, .videowrapper").fitVids( {customSelector: "iframe[src^='https://stream.uhi.ac.uk']"});
 	$(".lt-ie9 .header.banner .logo a").html('<img src="/img/logo.gif" alt="University of the Highlands and Islands"/>');
@@ -9,7 +10,7 @@ $(function() {
 	courseFilter();
 //	hashlinks();
 	applyNow();
-    warningCookieRead(); 
+  //  warningCookieRead(); 
     makeFlexContainer();
     campaignCookieRead();
     var uhiacc = document.getElementsByClassName("content-type-modifier--collapsible__heading")[0];
