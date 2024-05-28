@@ -1833,6 +1833,10 @@ img {
   word-break: break-word;
 }
 
+.content-type--one-web-event .content-type--landing-page-text__video {
+  margin-bottom: 20px;
+}
+
 /* Special CSS */
 
 .exit-site {
