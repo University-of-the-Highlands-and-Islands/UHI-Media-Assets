@@ -3361,11 +3361,16 @@ table styles also used in:
 
 .t4-landing-page blockquote,
 .content-type-modifier--typography blockquote,
-.content-type--one-web-media-object blockquote{
+.content-type--one-web-media-object blockquote {
     border-color: var(--uhi-turquoise);
     background-color: #f7f7f7;
     padding-top: 4px;
     padding-bottom: 4px;
+}
+
+.t4-landing-page .text-image-black blockquote {
+  border-color: var(--uhi-yellow);
+  background-color: #595959;
 }
 
 /* headings and font sizes */
