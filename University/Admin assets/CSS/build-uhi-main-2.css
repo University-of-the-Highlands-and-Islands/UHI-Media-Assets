@@ -1802,6 +1802,10 @@ main ul, .content-type--one-web-right-content {
   list-style: url(<t4 type="media" id="1010192" formatter="path/*" />); /* Black colour */
 }
 
+.content-type--one-web-highlight-content-box.list--background-colours ul {
+    list-style: url(<t4 type="media" id="1131137" formatter="path/*" />); /* White colour */
+}
+
 .section.courseapply {
   margin: 10px 0 5px 0;
 }
